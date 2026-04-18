@@ -12,9 +12,11 @@
 |------|------|----------|
 | [**amazon-one-shot**](./amazon-one-shot/README.md) | ✅ 可用 | **一个ASIN → 9份专业报告。** 通过Playwright浏览器自动化实时抓取Amazon产品页数据，依次执行：产品信息提取、关键词研究（搜索竞争密度+品牌分布）、竞品对比分析（3-4个直接竞品）、评论深度分析（差评归因+UGC营销文案）、FBA费用与销量估算（BSR映射+评论增长验证）、Listing 8维度审计、图片策略评分、可复用写作模板提取、选品可行性评分（3种策略加权评分）。全部报告共享同一份底层数据，分析结论自动关联。输出到 `reports/{日期}_{ASIN}/` 目录。 |
 
-**原理要点：**一站式调研是其他技能的编排层（Orchestration Layer）。它将原本需要6-8个独立工具分别完成的分析任务，整合为一次调用即可完成的端到端工作流。数据采集使用Playwright浏览器自动化技术，通过DOM选择器从Amazon产品页实时提取结构化数据（标题、Bullet、A+、评论、BSR、产品参数表等），确保分析结果的时效性。销量估算采用BSR-销量映射和评论增长反推两种独立方法交叉验证。竞品发现通过Amazon搜索结果页ASIN正则提取实现。共享评论池检测通过对比多ASIN的评论数/BSR/星级分布一致性实现。已验证3个产品：Disney Buzz Lightyear (B07PQFT83F)、Sonic 4"动作人偶 (B07KW2FPX1)、MOTU Origins Ram Man (B0FJ27KPKG)。
+**原理要点：**
+一站式调研是其他技能的编排层（Orchestration Layer）。它将原本需要6-8个独立工具分别完成的分析任务，整合为一次调用即可完成的端到端工作流。数据采集使用Playwright浏览器自动化技术，通过DOM选择器从Amazon产品页实时提取结构化数据（标题、Bullet、A+、评论、BSR、产品参数表等），确保分析结果的时效性。销量估算采用BSR-销量映射和评论增长反推两种独立方法交叉验证。竞品发现通过Amazon搜索结果页ASIN正则提取实现。共享评论池检测通过对比多ASIN的评论数/BSR/星级分布一致性实现。已验证3个产品：Disney Buzz Lightyear (B07PQFT83F)、Sonic 4"动作人偶 (B07KW2FPX1)、MOTU Origins Ram Man (B0FJ27KPKG)。
 
-**触发方式：** "深度调研 B07PQFT83F"、"deep research B07PQFT83F"、"调研 https://www.amazon.com/dp/B07PQFT83F"、"选品分析 B07PQFT83F" 等。需Playwright MCP支持。建议先登录Amazon以获取40+条分星级评论（未登录仅10条）。
+**触发方式：** 
+"深度调研 B07PQFT83F"、"deep research B07PQFT83F"、"调研 https://www.amazon.com/dp/B07PQFT83F"、"选品分析 B07PQFT83F" 等。需Playwright MCP支持。建议先登录Amazon以获取40+条分星级评论（未登录仅10条）。
 
 ---
 

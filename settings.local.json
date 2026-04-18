@@ -10,7 +10,18 @@
       "Bash(bash scripts/research.sh \"buzz lightyear\" us)",
       "mcp__playwright__browser_wait_for",
       "mcp__playwright__browser_tabs",
-      "WebSearch"
+      "WebSearch",
+      "Bash(python3 scripts/calculator.py '{\"length\": 11.8, \"width\": 4.7, \"height\": 6.3, \"weight\": 2.2, \"selling_price\": 28.0, \"product_cost\": 10.0, \"inbound_shipping_cost\": 1.50, \"category\": \"toys\"}' --zh)",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_click",
+      "Bash(taskkill /F /IM chrome.exe)",
+      "Bash(taskkill /F /IM ms-playwright*)",
+      "Bash(taskkill /F /IM chromium*)",
+      "Bash(rm -rf /tmp/playwright-*)",
+      "Bash(pkill -f \"chrome\")",
+      "Bash(netstat -ano)",
+      "Bash(node -e ' *)",
+      "Bash(npx playwright *)"
     ]
   }
 }

@@ -13,7 +13,6 @@ Calculate Amazon shipping and fulfillment costs for FBA and FBM. Dimensional wei
 
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.
 
 ## Install
 
@@ -54,11 +53,3 @@ Calculate all FBA costs for my product: 14 x 10 x 3 inches, weighs 1.8 lbs, sell
 - Provide prioritized action items
 - Mark estimates with ⚠️ when based on incomplete data
 - End with concrete next steps
-
-## Other Skills
-
-More e-commerce skills: [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills)
-
-Amazon-specific skills: [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills)
-
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.

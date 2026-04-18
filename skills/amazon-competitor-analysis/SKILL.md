@@ -13,7 +13,6 @@ Full-spectrum Amazon competitor analysis. Compare listings, pricing, reviews, ad
 
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.
 
 ## Install
 
@@ -44,6 +43,41 @@ Compare my product (ASIN B0EXAMPLE1) against these competitors: B0EXAMPLE2, B0EX
 
 **Step 3:** Research and analyze using the frameworks and methodology below.
 
+### Listing Quality Comparison Framework
+
+- **A9/A10 SEO Scoring:** Rate each listing on title keyword coverage, bullet point information density, image quality (CTR and scene richness), and A+ content completeness.
+- **Keyword Gap Analysis:** Identify which high-volume search terms competitors rank for that you don't.
+- **Content Depth Evaluation:** Compare bullet points — do they address consumer pain points and selling points comprehensively?
+
+### Review Sentiment Analysis Model
+
+- **Complaint Theme Extraction:** Identify recurring negative themes (quality issues, sizing deviations, shipping complaints). These are your differentiation opportunities.
+- **Praise Keyword Mining:** Extract high-frequency positive keywords revealing what customers value most. Use for listing copy and ad messaging.
+- **Sentiment Distribution:** Compare star rating distribution across competitors. 4.5+ avg = baseline expectation you must meet.
+
+### Pricing Positioning Map
+
+- **Price-Review-Quality Matrix:** Plot competitors on 2D map with price and review count/rating as axes. Identify price band gaps and underserved segments.
+- **Price War Detection:** Identify if market is in destructive price competition (prices near cost).
+
+### Advertising Visibility Assessment
+
+- **Ad Placement Frequency:** Monitor competitor sponsored ad frequency on target keywords.
+- **Budget Inference:** Top ad positions on high-traffic keywords = substantial ad budget and mature strategy.
+- **Low-Hanging Fruit Keywords:** Keywords with few advertisers = opportunity for cost-effective traffic.
+
+### Data Sources
+
+- **Amazon Product Pages:** Scrape titles, prices, bullets, images, ratings, reviews, BSR via web_fetch.
+- **Web Search (site:amazon.com):** Assess competitor search visibility and ad distribution.
+
+### Limitations
+
+- Cannot access internal data (real ad budget, conversion rates, inventory levels).
+- Ad visibility is snapshot-based. Frequent changes mean single analysis may be outdated.
+- Market conditions change constantly. Regular updates needed for时效性.
+- New competitors with few reviews lack statistically significant sentiment data.
+
 **Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
 
 ## Output Format
@@ -53,11 +87,3 @@ Compare my product (ASIN B0EXAMPLE1) against these competitors: B0EXAMPLE2, B0EX
 - Provide prioritized action items
 - Mark estimates with ⚠️ when based on incomplete data
 - End with concrete next steps
-
-## Other Skills
-
-More e-commerce skills: [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills)
-
-Amazon-specific skills: [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills)
-
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.

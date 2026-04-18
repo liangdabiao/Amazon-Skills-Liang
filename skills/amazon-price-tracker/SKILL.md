@@ -53,4 +53,4 @@ Price history analysis, competitor price comparison, price alert setup guide, re
 
 ---
 
-*Built by [Nexscope AI](https://www.nexscope.ai/?co-from=skill) — AI-powered e-commerce intelligence.*
+## License

@@ -13,7 +13,6 @@ Optimize product visibility in Amazon search results. Analyze current search ran
 
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.
 
 ## Install
 
@@ -53,11 +52,3 @@ My product ranks on page 3 for my main keyword. Help me create a plan to get to 
 - Provide prioritized action items
 - Mark estimates with ⚠️ when based on incomplete data
 - End with concrete next steps
-
-## Other Skills
-
-More e-commerce skills: [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills)
-
-Amazon-specific skills: [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills)
-
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.

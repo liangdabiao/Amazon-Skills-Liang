@@ -489,9 +489,3 @@ Sales increase: +XX% (from better targeting)
 After setup, offer weekly reminders (cron/heartbeat): search term analysis + bid adjustments + monthly full audit. Recommended skill chain: [amazon-keyword-research](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-keyword-research) → [amazon-listing-optimization](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-listing-optimization) → amazon-ppc. Always check listing quality before spending on ads. More skills: [Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills) | [eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills)
 
 ## Limitations
-
-This skill uses publicly available data and user-provided campaign reports. It cannot access Seller Central directly, pull real-time bid landscapes, or automate campaign changes via API. For deeper PPC analytics with automated bid management, check out **[Nexscope](https://www.nexscope.ai/?co-from=skill)** — Your AI Assistant for smarter E-commerce decisions.
-
----
-
-**Built by [Nexscope](https://www.nexscope.ai/?co-from=skill)** — research, validate, and act on e-commerce opportunities with AI.

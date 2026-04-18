@@ -290,8 +290,6 @@ Size the "dog shirt" market on Amazon US. Show top sellers and price distributio
 
 ## Integration with Other Skills
 
-This skill works well when chained with other skills from the [Nexscope Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills) and [eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills) repositories.
-
 ### With amazon-keyword-research
 
 ```bash
@@ -336,16 +334,4 @@ Step 2: "Build PPC campaigns with 30% ACoS target"
 
 ### More Skills
 
-Browse all available skills:
-- **Amazon Skills:** https://github.com/nexscope-ai/Amazon-Skills
-- **eCommerce Skills:** https://github.com/nexscope-ai/eCommerce-Skills
-
----
-
 ## Limitations
-
-This skill uses publicly available data from Amazon product pages. It cannot access historical BSR data, actual seller sales figures, or PPC conversion metrics. For deeper analytics and historical trends, check out **[Nexscope](https://www.nexscope.ai/?co-from=skill)** — Your AI Assistant for smarter E-commerce decisions.
-
----
-
-**Built by [Nexscope](https://www.nexscope.ai/?co-from=skill)** — research, validate, and act on e-commerce opportunities with AI.

@@ -13,7 +13,6 @@ Interpret and act on Amazon Brand Analytics data. Analyze Search Frequency Rank 
 
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.
 
 ## Install
 
@@ -44,6 +43,45 @@ Help me analyze my Amazon Brand Analytics data. My top search term has SFR #5,20
 
 **Step 3:** Research and analyze using the frameworks and methodology below.
 
+### Search Frequency Rank (SFR) Analysis Framework
+
+- **SFR Interpretation:** Lower number = higher search frequency. SFR #1 = most searched term on marketplace. Core value is detecting trend changes — when SFR moves from 5,000 to 2,000, demand is rapidly heating up.
+- **Trend Detection:** Compare SFR across time periods. Rising SFR trend = growing demand or seasonal shift. Falling SFR = declining interest.
+- **Relative vs Absolute:** SFR is a relative ranking, not absolute volume. When overall search volume spikes (e.g., Prime Day), SFR changes may not reflect true search interest changes.
+
+### Click Share vs Conversion Share Diagnostic Model
+
+- **Click Share > Conversion Share:** Consumers show initial interest but drop off at detail page. Root causes: listing quality, pricing, weak reviews, or delivery options.
+- **Conversion Share > Click Share:** High conversion efficiency. Consider increasing ad spend to capture more clicks.
+- **Gap Analysis:** Calculate difference (e.g., 15% click share with 8% conversion share = 7% leak). Larger gap = more urgent listing optimization needed.
+
+### Market Basket Analysis Framework
+
+- **Cross-Sell Opportunities:** Identify products frequently purchased together. Consider bundle strategies or targeted ads on complementary products.
+- **Competitor Intelligence:** Analyze which competitor products appear in same basket = understand substitution patterns.
+- **Association Strength:** Higher co-purchase frequency = stronger consumer behavior link. Prioritize high-frequency associations.
+
+### Repeat Purchase Behavior Model
+
+- **High Repeat Rate:** Products with good user experience and consumable demand (skincare, food). Suitable for Subscribe & Save to lock long-term revenue.
+- **Low Repeat Rate:** May indicate quality issues or product category is one-time purchase. Compensate by expanding product line for higher customer lifetime value.
+
+### Data Sources
+
+- User exports CSV from Seller Central Brand Analytics dashboard.
+- Requires: SFR data, click share, conversion share (minimum).
+- Optional: market basket data, repeat purchase data, multiple time periods for trend analysis.
+- No direct API connection to Seller Central.
+
+### Limitations
+
+- Brand Analytics available only to brand registry members. Data has ~72 hour delay.
+- SFR is relative ranking — cannot compare directly across different overall search volume periods.
+- Click/conversion share only shows top 3 brands. Lower-ranked brands need estimation.
+- Market basket only shows highest frequency items — may miss low-frequency high-margin opportunities.
+- Cannot distinguish why consumers drop off (price, reviews, product issues) — requires additional data inference.
+- Cross-marketplace data may have different formats. Analyze each marketplace independently.
+
 **Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
 
 ## Output Format
@@ -53,11 +91,3 @@ Help me analyze my Amazon Brand Analytics data. My top search term has SFR #5,20
 - Provide prioritized action items
 - Mark estimates with ⚠️ when based on incomplete data
 - End with concrete next steps
-
-## Other Skills
-
-More e-commerce skills: [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills)
-
-Amazon-specific skills: [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills)
-
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.

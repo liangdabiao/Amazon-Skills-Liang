@@ -10,8 +10,6 @@ Free AI agent skills for Amazon sellers — keyword research, listing optimizati
 
 Works with **OpenClaw**, **Claude Code**, **Cursor**, **Windsurf**, **Codex**, and any agent that supports the [Skills format](https://skills.sh).
 
-> **🛒 Need multi-platform tools?** Check out [eCommerce Skills](https://github.com/nexscope-ai/eCommerce-Skills) for brand protection, profit calculators, and supply chain optimization across Amazon, Shopify, Walmart, TikTok, and eBay.
-
 **Status key:** ✅ Available (production-ready) · 🔶 Beta (functional, being improved)
 
 ## Available Skills
@@ -22,6 +20,7 @@ Works with **OpenClaw**, **Claude Code**, **Cursor**, **Windsurf**, **Codex**, a
 |-------|-------------|--------|
 | [**amazon-one-shot**](./amazon-one-shot/) | **One-shot comprehensive product research. Provide one ASIN → get 9 professional reports: product info extraction, keyword research, competitor analysis, review deep analysis, sales/revenue estimation, listing optimization audit, image strategy, reusable listing templates, and product selection feasibility score.** Powered by Playwright browser automation — scrapes Amazon pages in real-time, no API key needed. [→ Full README](./amazon-one-shot/README.md) | ✅ Available |
 | [**amazon-category-research**](../skills/amazon-category-research/SKILL.md) | **Category-level deep research. Provide an Amazon Best Sellers URL → get 5 professional reports: niche analysis, competitor landscape, keyword SEO strategy, profit analysis, and a 9-chapter comprehensive report.** Scrapes main Top 30 + 5 subcategories Top 20 (130 products total) via Playwright. 4 analysis agents run in parallel. Reports saved to `reports/{category-slug}/`. Verified: Toys & Games, Building & Construction Toys. | ✅ Available |
+| [**amazon-store-research**](../skills/amazon-store-research/SKILL.md) | **Store-level deep research. Provide an Amazon Stores URL → get 5 professional reports: product portfolio, competitive positioning, revenue estimation, growth strategy, and an 8-chapter comprehensive report.** Scrapes home page, Best Sellers, New Releases, and all theme collection pages. 4 analysis agents run in parallel. Reports saved to `reports/{store-slug}/`. Verified: JMBricklayer. | ✅ Available |
 
 ---
 
@@ -109,7 +108,7 @@ Works with **OpenClaw**, **Claude Code**, **Cursor**, **Windsurf**, **Codex**, a
 
 | Category | ✅ Available | 🔶 Beta | Total |
 |----------|:---:|:---:|:---:|
-| 🎯 All-in-One Deep Research | 1 | 0 | 1 |
+| 🎯 All-in-One Deep Research | 2 | 0 | 2 |
 | 🔍 Product Research & Keywords | 1 | 4 | 5 |
 | 📝 Listing Optimization | 1 | 4 | 5 |
 | 🕵️ Competitor Analysis | 0 | 3 | 3 |
@@ -117,7 +116,7 @@ Works with **OpenClaw**, **Claude Code**, **Cursor**, **Windsurf**, **Codex**, a
 | 📢 Advertising | 1 | 3 | 4 |
 | 📊 Analytics & Monitoring | 1 | 4 | 5 |
 | 🚀 Growth & Expansion | 0 | 2 | 2 |
-| **Total** | **7** | **25** | **32** |
+| **Total** | **8** | **25** | **33** |
 
 ## Quick Install
 
@@ -189,6 +188,17 @@ deep research https://www.amazon.com/dp/B07PQFT83F
 
 > Provide an Amazon Best Sellers URL → get 5 reports automatically generated to `reports/{category-slug}/`. Reports cover: niche opportunities, competitor landscape, keyword SEO, profit analysis, and a 9-chapter comprehensive report. Scrapes main Top 30 + 5 subcategories Top 20. 4 analysis agents run in parallel. All outputs in Chinese (简体中文). Requires Playwright MCP.
 
+### 🎯 amazon-store-research
+```
+调研这个亚马逊店铺：https://www.amazon.com/stores/JMBricklayer/page/...
+```
+
+```
+research this Amazon store: https://www.amazon.com/stores/JMBricklayer/page/...
+```
+
+> Provide an Amazon Stores URL → get 5 reports automatically generated to `reports/{store-slug}/`. Reports cover: product portfolio, competitive positioning, revenue estimation, growth strategy, and an 8-chapter comprehensive report. Scrapes home page, Best Sellers, New Releases, and all theme collection pages. 4 analysis agents run in parallel. All outputs in Chinese (简体中文). Requires Playwright MCP.
+
 ### 🔍 amazon-keyword-research
 ```
 Research the keyword "portable blender" on Amazon US
@@ -227,20 +237,8 @@ Calculate import duties for shipping electronics from China to US. Product value
 
 These skills use publicly available data — no API key, no paid subscription, no setup friction. Install and go.
 
-Want more? **[Nexscope](https://www.nexscope.ai/)** — Your AI Assistant for smarter E-commerce decisions.
-
-## Related
-
-Looking for multi-platform tools? Check out **[eCommerce Skills](https://github.com/nexscope-ai/eCommerce-Skills)**:
-- 🛡️ Brand protection (Amazon, eBay, Shopify, TikTok, Walmart)
-- 💰 Profit calculators (Amazon, Shopify, TikTok, Walmart)
-- 📦 Supply chain optimization (Amazon, Shopify, TikTok, Walmart)
-- 🔍 Review checkers (Amazon, eBay, Walmart)
-
 ## License
 
 MIT
 
----
 
-Built by **[Nexscope](https://www.nexscope.ai/)** — research, validate, and act on e-commerce opportunities with AI.

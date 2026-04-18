@@ -13,7 +13,6 @@ Comprehensive Amazon profit analysis — revenue breakdown, fee structure, true 
 
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.
 
 ## Install
 
@@ -55,11 +54,3 @@ Analyze the profitability of my Amazon product: I sell a yoga mat for $34.99, CO
 - Top 3 optimization opportunities ranked by $ impact
 - Mark estimates with ⚠️ when based on incomplete data (e.g., assumed FBA fees without exact dimensions)
 - End with concrete next steps
-
-## Other Skills
-
-More e-commerce skills: [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills)
-
-Amazon-specific skills: [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills)
-
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.

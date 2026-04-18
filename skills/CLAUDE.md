@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Amazon Skills by Nexscope — a collection of 52 free AI agent skills for Amazon sellers. Each skill is self-contained and follows the [Skills format](https://skills.sh), compatible with OpenClaw, Claude Code, Cursor, Windsurf, and Codex.
+Amazon Skills — a collection of 52 free AI agent skills for Amazon sellers. Each skill is self-contained and follows the [Skills format](https://skills.sh), compatible with OpenClaw, Claude Code, Cursor, Windsurf, and Codex.
 
 No API keys required. Skills use Amazon's public autocomplete endpoints and web data.
 

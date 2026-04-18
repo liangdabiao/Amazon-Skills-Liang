@@ -13,7 +13,6 @@ Track and analyze Amazon keyword rankings. Set up rank monitoring workflows, int
 
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.
 
 ## Install
 
@@ -45,6 +44,49 @@ Track my rankings for these 10 keywords. My product is a stainless steel water b
 
 **Step 3:** Research and analyze using the frameworks and methodology below.
 
+### A10/A11 Algorithm Ranking Factor System
+
+Core ranking factors analyzed by Amazon's search algorithm:
+- **Sales Velocity:** Recent sales weight is highest, especially within 24-72 hours.
+- **Conversion Rate:** Search-to-purchase conversion efficiency is the core ranking signal.
+- **Text Relevance:** Keyword matching in title, bullet points, and Search Terms.
+- **Review Count & Rating:** Social proof signals affect CTR and conversion.
+- **Inventory & Fulfillment:** FBA and Prime eligibility receive ranking boost.
+- **Click-Through Rate:** Ad and organic position CTR reflects product attractiveness.
+
+### Rank Change Attribution Diagnosis Framework
+
+For each keyword ranking fluctuation, systematically identify:
+- **Internal Fluctuations (Self-Caused):** Sales velocity changes, conversion rate fluctuations, Listing content modifications, inventory status changes, promotional activity impacts.
+- **External Fluctuations (Competition-Caused):** Competitor sales surge, new competitor entries, seasonal demand shifts.
+
+### Keyword Priority Matrix
+
+Keyword prioritization using "Search Volume x Relevance x Ranking Upside" 3D evaluation:
+- **Critical Breakthrough Point:** High search volume + high relevance + currently ranking on page 2-3. Highest ROI for optimization effort. Small push can break to page 1.
+- **Defense Mode:** Already in top 3 of page 1. Focus on maintaining ranking.
+- **Long-Term Build Mode:** Ranking beyond page 5. Requires sustained foundational optimization.
+
+### Organic vs Sponsored Rank Interaction
+
+- High-quality ad campaigns boost sales velocity and conversion rate, indirectly improving organic ranking.
+- Higher organic ranking reduces ad dependency, lowering TACoS.
+- Strategy: Coordinate advertising and SEO for synergistic ranking improvement.
+
+### Data Sources
+
+- **Amazon Search Results Pages:** Manual web_fetch for ranking snapshots.
+- **Google Search (site:amazon.com):** Verify product index status.
+- **Note:** This skill provides strategy framework, not automated tracking. For continuous monitoring, integrate with tools like Helium 10, Jungle Scout, or Merchant Words.
+
+### Limitations
+
+- Amazon doesn't publish algorithm details. Analysis based on industry research and seller community experience.
+- Ranking data has latency and deviation across third-party tools.
+- Different times, regions, and devices show different results.
+- Strategy effectiveness is dynamically affected by competitor optimization.
+- New vs mature product ranking strategies differ significantly.
+
 **Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
 
 ## Output Format
@@ -54,11 +96,3 @@ Track my rankings for these 10 keywords. My product is a stainless steel water b
 - Provide prioritized action items
 - Mark estimates with ⚠️ when based on incomplete data
 - End with concrete next steps
-
-## Other Skills
-
-More e-commerce skills: [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills)
-
-Amazon-specific skills: [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills)
-
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.

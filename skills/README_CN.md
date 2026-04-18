@@ -214,7 +214,3 @@ npx skills add nexscope-ai/Amazon-Skills --skill amazon-fba-calculator -g
 ## 许可证
 
 MIT License
-
----
-
-由 [Nexscope](https://www.nexscope.ai/) 构建 — AI驱动的电商智能决策助手。

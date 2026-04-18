@@ -13,7 +13,6 @@ Complete FBA preparation guide. Product labeling, packaging requirements, shipme
 
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.
 
 ## Install
 
@@ -45,6 +44,60 @@ I'm sending my first FBA shipment — 500 units of a glass water bottle. Walk me
 
 **Step 3:** Research and analyze using the frameworks and methodology below.
 
+### FNSKU Labeling System
+
+- **FNSKU Definition:** Unique identifier Amazon assigns to each seller SKU for inventory tracking in fulfillment centers.
+- **Label Requirements:** Must cover original product barcode.贴在平整表面, not curved or wrinkled areas.
+- **Specifications:** 1"x2" size, 300+ DPI print quality for successful scanning. Adequate white space around barcode required.
+- **Barcode Override:** If product already has UPC/EAN, FNSKU can directly cover it. If no barcode, must attach FNSKU label.
+
+### Packaging Compliance Framework
+
+Amazon packaging requirements based on two core principles: product protection (prevent damage during transit) and worker safety.
+
+- **General:** All items must have scannable outer packaging barcode.
+- **裸装 Products (e.g., hardware items):** Must use clear polyethylene bag with suffocation warning label and barcode.
+- **Fragile Items:** Bubble wrap or foam packaging required, mark "Fragile" clearly.
+- **Sharp Edge Products:** Must add protective covers.
+- **Liquid Products:** Leak-proof sealed packaging required.
+- **Multi-Pack:** Must use manufacturer tape or specific labels to prevent separation.
+- **Weight Limit:** Standard carton max 50 lbs / 23 kg. Exceeding = additional fees or rejection.
+
+### Shipment Planning and Carton Optimization
+
+- **Shipment Plan:** Amazon assigns fulfillment center based on inventory capacity and demand. System may split shipments to multiple centers.
+- **Carton Packing Optimization:** Maximize carton utilization within weight/dimension limits to minimize per-unit shipping cost.
+- **Fee Structure:** Different rates for standard-size vs oversize items. Precise calculation critical for large items.
+
+### Prep Fee Avoidance Strategy
+
+- **Prep Service Fee:** $0.30-$1.50 per unit depending on prep type (labeling, bagging, bubble wrapping).
+- **Self-Prep vs Outsourcing:** Compare labor cost, equipment investment, time efficiency, quality consistency.
+- **Rejection Risk:** If prep too complex or item condition poor, Amazon may reject entire shipment or dispose inventory.
+
+### Common Rejection Root Cause Analysis
+
+- **Unscannable FNSKU:** Poor print quality, damaged label, wrong placement.
+- **Damaged/Missing Packaging:** Packaging damaged or missing during handling.
+- **Oversize/Overweight Cartons:** Exceeds standard limits.
+- **Missing Safety Labels:** Suffocation warnings, sharp edge warnings not attached.
+- **Multi-Pack Separation:** Not properly sealed causing items to散开.
+- **Mismatch:** Product doesn't match shipment plan declaration (dimension classification errors).
+- **Missing Carton Labels:** Cannot identify shipment destination.
+
+### Data Sources
+
+- Amazon Seller Central FBA prep requirements page for product-specific specs.
+- User provides product type, size classification, target marketplace, barcode status.
+
+### Limitations
+
+- FBA requirements vary by product type and change frequently — always check latest guidelines.
+- Special categories (hazmat, lithium batteries, liquids, food) have additional compliance requirements.
+- Prep fees add significant cost for complex prep items.
+- Rejection can result in inventory disposal — substantial financial loss.
+- Shipping costs vary by carton utilization efficiency.
+
 **Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
 
 ## Output Format
@@ -54,11 +107,3 @@ I'm sending my first FBA shipment — 500 units of a glass water bottle. Walk me
 - Provide prioritized action items
 - Mark estimates with ⚠️ when based on incomplete data
 - End with concrete next steps
-
-## Other Skills
-
-More e-commerce skills: [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills)
-
-Amazon-specific skills: [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills)
-
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.

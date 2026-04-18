@@ -13,7 +13,6 @@ Amazon repricing strategy advisor — competitive pricing rules, Buy Box optimiz
 
 **Supported platforms:** Amazon (all marketplaces — US, UK, DE, CA, JP, AU, etc.).
 
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.
 
 ## Install
 
@@ -57,11 +56,3 @@ I'm losing the Buy Box on 30% of my listings. I have 200 SKUs in electronics, pr
 - KPIs to track: Buy Box %, margin %, velocity, revenue impact
 - Mark estimates with ⚠️ when based on incomplete data
 - End with concrete next steps
-
-## Other Skills
-
-More e-commerce skills: [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills)
-
-Amazon-specific skills: [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills)
-
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.

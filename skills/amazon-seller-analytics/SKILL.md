@@ -13,7 +13,6 @@ Analyze Amazon seller storefronts and product portfolios. Estimate revenue, iden
 
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.
 
 ## Install
 
@@ -44,6 +43,44 @@ Analyze this Amazon seller's strategy: they sell kitchen gadgets and have about 
 
 **Step 3:** Research and analyze using the frameworks and methodology below.
 
+### Seller Storefront Structure Analysis Model
+
+- **Product Portfolio Stratification:** Classify seller's products by sales contribution (BSR as proxy). Head products (core bestsellers), middle products (stable contributors), tail products (strategic experiments). Distribution reveals if strategy is "bestseller-driven" vs "long-tail coverage".
+- **Category Span Assessment:** Analyze category coverage and inter-category relationships. Cross-category sellers have stronger supply chain integration but higher operational complexity.
+- **Variation Strategy Identification:** Determine if variations are "horizontal expansion" (many variants for different preferences) or "vertical depth" (maximum quality in each variant).
+
+### Revenue Estimation Engine
+
+- **BSR-to-Sales Mapping Model:** Map BSR ranking to estimated monthly sales using category-specific conversion rate benchmarks. Different categories have very different BSR-to-sales relationships.
+- **Category Benchmark Calibration:** Calibrate model using known reference products from industry reports or public data.
+- **Price-Weighted Revenue Calculation:** Multiply estimated sales volume by current price for each product, aggregate to seller monthly revenue range (output as range to reflect uncertainty).
+- **Seasonal Adjustment:** Apply seasonal factors if analysis period is off-peak season.
+
+### Product Lifecycle Positioning
+
+- **New Product Detection:** Identify recent launches by listing age, review count, and BSR trajectory.
+- **Mature Product Identification:** Products with stable BSR, sufficient reviews, and slowing growth = profit pillars but at risk of being overtaken.
+- **Declining Product Detection:** Products with continuously falling BSR, stagnant review growth = candidates for clearance or discontinuation.
+
+### Strategy Pattern Recognition
+
+- **Pricing Pattern:** Frequent price adjustments = automated repricing tool usage. Stable prices = brand premium positioning.
+- **Advertising Intensity Inference:** Correlate BSR changes with ranking changes to infer ad dependency. Stable ranking + volatile BSR = organic traffic driven. Synchronized changes = ad-driven.
+- **Launch Rhythm Analysis:** Detect if launches are burst-style or continuous, seasonal patterns.
+- **Review Acquisition Strategy:** Analyze review velocity patterns to identify Vine program usage, request review features, or other legitimate review tactics.
+
+### Data Sources
+
+- **Amazon Seller Storefront Pages:** Scrape product listings via web_fetch — titles, prices, review counts, ratings, listing dates.
+- **Product Detail Pages:** Individual BSR data requires separate web_fetch per product.
+- **Built-in BSR Models:** Industry statistics and experience-based parameters for BSR-to-sales mapping.
+
+### Limitations
+
+- All analysis based on publicly visible information. Cannot access private operational data.
+- BSR-to-sales estimates have inherent error margins (typically ±30% to ±50%).
+- Large storefronts require significant data collection time (one BSR fetch per product).
+
 **Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
 
 ## Output Format
@@ -53,11 +90,3 @@ Analyze this Amazon seller's strategy: they sell kitchen gadgets and have about 
 - Provide prioritized action items
 - Mark estimates with ⚠️ when based on incomplete data
 - End with concrete next steps
-
-## Other Skills
-
-More e-commerce skills: [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills)
-
-Amazon-specific skills: [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills)
-
-Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.

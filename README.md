@@ -11,12 +11,20 @@
 | 技能 | 状态 | 核心能力 |
 |------|------|----------|
 | [**amazon-one-shot**](./amazon-one-shot/README.md) | ✅ 可用 | **一个ASIN → 9份专业报告。** 通过Playwright浏览器自动化实时抓取Amazon产品页数据，依次执行：产品信息提取、关键词研究（搜索竞争密度+品牌分布）、竞品对比分析（3-4个直接竞品）、评论深度分析（差评归因+UGC营销文案）、FBA费用与销量估算（BSR映射+评论增长验证）、Listing 8维度审计、图片策略评分、可复用写作模板提取、选品可行性评分（3种策略加权评分）。全部报告共享同一份底层数据，分析结论自动关联。输出到 `reports/{日期}_{ASIN}/` 目录。 |
+| [**amazon-category-research**](../skills/amazon-category-research/SKILL.md) | ✅ 可用 | **一个Best Sellers URL → 5份品类报告。** 通过Playwright浏览器自动化抓取Amazon Best Sellers页面，采集主榜Top 30 + 自动发现子品类并采集5个子品类各Top 20（共130个产品数据点）。并行启动4个分析Agent（利基分析、竞品格局、关键词SEO、利润分析），最终整合为9章节综合研究报告。全部报告中文输出，按品类分子文件夹保存到 `reports/{品类slug}/`。已验证品类：Toys & Games、Building & Construction Toys。 |
 
 **原理要点：**
-一站式调研是其他技能的编排层（Orchestration Layer）。它将原本需要6-8个独立工具分别完成的分析任务，整合为一次调用即可完成的端到端工作流。数据采集使用Playwright浏览器自动化技术，通过DOM选择器从Amazon产品页实时提取结构化数据（标题、Bullet、A+、评论、BSR、产品参数表等），确保分析结果的时效性。销量估算采用BSR-销量映射和评论增长反推两种独立方法交叉验证。竞品发现通过Amazon搜索结果页ASIN正则提取实现。共享评论池检测通过对比多ASIN的评论数/BSR/星级分布一致性实现。已验证3个产品：Disney Buzz Lightyear (B07PQFT83F)、Sonic 4"动作人偶 (B07KW2FPX1)、MOTU Origins Ram Man (B0FJ27KPKG)。
+一站式调研（one-shot）和品类调研（category-research）是两大核心编排层技能。one-shot 聚焦于**单品深度分析**（一个ASIN），category-research 聚焦于**品类全景扫描**（整个Best Sellers类目）。两者互补：先用category-research锁定有潜力的品类方向，再用one-shot对具体产品做深度验证。
 
-**触发方式：** 
-"深度调研 B07PQFT83F"、"deep research B07PQFT83F"、"调研 https://www.amazon.com/dp/B07PQFT83F"、"选品分析 B07PQFT83F" 等。需Playwright MCP支持。建议先登录Amazon以获取40+条分星级评论（未登录仅10条）。
+category-research 的数据采集使用Playwright浏览器自动化，通过页面文本解析（非DOM选择器）提取排名、标题、价格、评分、评论数。子品类发现通过侧边栏导航链接实现。4个分析Agent并行运行，每个Agent基于全量原始数据独立分析（利基机会、竞争壁垒、关键词策略、利润模型），最终综合报告交叉引用4份分析结论，确保一致性。
+
+**触发方式：**
+
+one-shot: "深度调研 B07PQFT83F"、"deep research B07PQFT83F"、"选品分析 B07PQFT83F"
+
+category-research: "调研这个亚马逊品类：https://www.amazon.com/gp/bestsellers/toys-and-games/"、"分析Amazon Best Sellers Building Toys"、"深度调研Amazon类目 https://..."
+
+两者均需Playwright MCP支持。
 
 ---
 

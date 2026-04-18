@@ -21,6 +21,7 @@ Works with **OpenClaw**, **Claude Code**, **Cursor**, **Windsurf**, **Codex**, a
 | Skill | Description | Status |
 |-------|-------------|--------|
 | [**amazon-one-shot**](./amazon-one-shot/) | **One-shot comprehensive product research. Provide one ASIN → get 9 professional reports: product info extraction, keyword research, competitor analysis, review deep analysis, sales/revenue estimation, listing optimization audit, image strategy, reusable listing templates, and product selection feasibility score.** Powered by Playwright browser automation — scrapes Amazon pages in real-time, no API key needed. [→ Full README](./amazon-one-shot/README.md) | ✅ Available |
+| [**amazon-category-research**](../skills/amazon-category-research/SKILL.md) | **Category-level deep research. Provide an Amazon Best Sellers URL → get 5 professional reports: niche analysis, competitor landscape, keyword SEO strategy, profit analysis, and a 9-chapter comprehensive report.** Scrapes main Top 30 + 5 subcategories Top 20 (130 products total) via Playwright. 4 analysis agents run in parallel. Reports saved to `reports/{category-slug}/`. Verified: Toys & Games, Building & Construction Toys. | ✅ Available |
 
 ---
 
@@ -175,6 +176,18 @@ deep research https://www.amazon.com/dp/B07PQFT83F
 ```
 
 > Provide one ASIN or Amazon URL → get 9 reports automatically generated to `reports/{YYYY-MM-DD}_{ASIN}/`. Reports cover: product info, keywords, competitors, reviews, sales estimation, listing audit, image strategy, listing templates, and final selection score. Requires Playwright MCP for browser automation. Log in to Amazon first for deeper review analysis (40+ reviews vs 10).
+
+### 🎯 amazon-category-research (Category Deep Research)
+
+```
+调研这个亚马逊品类：https://www.amazon.com/gp/bestsellers/toys-and-games/
+```
+
+```
+分析Amazon Best Sellers Building Toys
+```
+
+> Provide an Amazon Best Sellers URL → get 5 reports automatically generated to `reports/{category-slug}/`. Reports cover: niche opportunities, competitor landscape, keyword SEO, profit analysis, and a 9-chapter comprehensive report. Scrapes main Top 30 + 5 subcategories Top 20. 4 analysis agents run in parallel. All outputs in Chinese (简体中文). Requires Playwright MCP.
 
 ### 🔍 amazon-keyword-research
 ```

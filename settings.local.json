@@ -21,7 +21,11 @@
       "Bash(pkill -f \"chrome\")",
       "Bash(netstat -ano)",
       "Bash(node -e ' *)",
-      "Bash(npx playwright *)"
+      "Bash(npx playwright *)",
+      "Read(//c/Users/49707/.claude/plugins/cache/claude-plugins-official/skill-creator/bb7730114d87/skills/**)",
+      "Read(//c/Users/49707/.claude/skills/**)",
+      "Bash(mv \"D:/Amazon-Skills-n/reports/toys_games_\"* \"D:/Amazon-Skills-n/reports/toys-and-games/\")",
+      "Bash(mv \"D:/Amazon-Skills-n/reports/building_toys_\"* \"D:/Amazon-Skills-n/reports/building-toys/\")"
     ]
   }
 }

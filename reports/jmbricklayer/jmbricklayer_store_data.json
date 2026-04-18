@@ -1,0 +1,229 @@
+{
+  "storeInfo": {
+    "brandName": "JMBricklayer",
+    "storeUrl": "https://www.amazon.com/stores/JMBricklayer/page/3CACFA02-74C5-4F9D-81DB-0BF560B7BA47",
+    "category": "Toys & Games > Building Toys",
+    "storefrontId": "3CACFA02-74C5-4F9D-81DB-0BF560B7BA47",
+    "scrapeDate": "2026-04-19",
+    "navigation": [
+      {"name": "Home", "type": "link"},
+      {"name": "All Deals", "type": "link"},
+      {"name": "Occasion", "type": "link"},
+      {"name": "New Releases", "type": "link"},
+      {"name": "Best Sellers", "type": "link"},
+      {"name": "Shop By Theme", "type": "dropdown", "children": [
+        "Vehicle", "Ship", "World Railway", "Medieval Architecture",
+        "Fantastic Ideas", "Military", "Botanical Collection", "Nature", "Art", "Mythical Series"
+      ]},
+      {"name": "By Difficulty", "type": "dropdown", "children": ["Level 1", "Level 2", "Level 3", "Level 4"]},
+      {"name": "About us", "type": "link"}
+    ],
+    "totalUniqueASINs": 45,
+    "totalThemeCollections": 8,
+    "priceRange": "$18.99 - $251.95"
+  },
+  "homePage": {
+    "source": "Store Home Page",
+    "products": [
+      {"asin": "B0CC7X9ZS8", "title": "JMBricklayer Pirate Ship Building Toys with Lights, Ghost Ship Flying Dutchman Model Ship Boat 40001 (1100 PCS)", "price": "$59.94", "reviews": "982", "rating": "4.6"},
+      {"asin": "B0DMNM5KXM", "title": "JMBricklayer Pirate Ship Building Toys with Lights, Pearl Pirate Ship Model Boat Kit 40002 (1713 PCS)", "price": "$79.94", "reviews": "283", "rating": "4.4"},
+      {"asin": "B0BG1GR2KM", "title": "JMBricklayer Flowers Succulents Botanical Valentines Building Sets", "price": "$29.99", "reviews": "1K", "rating": "4.5"},
+      {"asin": "B0C2V9FGQM", "title": "JMBricklayer Typewriter Walkman Television Building Toys 20131 (660 Pieces)", "price": "$30.59", "reviews": "564", "rating": "4.6"},
+      {"asin": "B0F83TRN52", "title": "JMBricklayer Pegasus Building Set for Adults/Women 70015", "price": "$79.95", "reviews": "32", "rating": "3.6"},
+      {"asin": "B0C2VC1F1H", "title": "JMBricklayer Adult Vintage Building Sets 20132 (552 Pieces)", "price": "$30.59", "reviews": "564", "rating": "4.6"},
+      {"asin": "B0BYRW1PPV", "title": "JMBricklayer Nuclear Submarine Building Sets for Adults Men (1498PCS)", "price": "$55.60", "reviews": "474", "rating": "4.4"},
+      {"asin": "B0CG5SQNB4", "title": "JMBricklayer Flowers Sunflower Building Sets for Adult with Lights 70004", "price": "$68.29", "reviews": "415", "rating": "4.5"},
+      {"asin": "B0BKZW9L55", "title": "JMBricklayer Dragon Set for Adults 70105", "price": null, "reviews": "381", "rating": "4.2"},
+      {"asin": "B0C9QS8VTL", "title": "JMBricklayer Friend Game Console Building Set 20134", "price": "$39.99", "reviews": "127", "rating": "4.6"},
+      {"asin": "B0CBPSSSSV", "title": "JMBricklayer Dragon Building Set for Adults 70134", "price": "$61.99", "reviews": "139", "rating": "4.4"},
+      {"asin": "B0D4VBX39K", "title": "JMBricklayer Toy Battleship Building Set 60011 Missouri (2228 Pcs)", "price": "$69.99", "reviews": "135", "rating": "4.4"},
+      {"asin": "B0FFGVYJ7W", "title": "JMBricklayer Space Astronaut Building Block Sets 70131 (1008 PCS)", "price": "$39.99", "reviews": "72", "rating": "4.2"},
+      {"asin": "B0D7HNG3MB", "title": "JMBricklayer Vintage Cars Building Sets for Adults with Lights 50001 (1297 PCS)", "price": "$59.99", "reviews": "321", "rating": "3.8"},
+      {"asin": "B0F3J8LZC4", "title": "JMBricklayer Jellyfish Building Set with LED Lights", "price": "$69.99", "reviews": "91", "rating": "4.0"},
+      {"asin": "B0F3JFW3XR", "title": "JMBricklayer Mechanical Hummingbird Building Set with LED Light", "price": null, "reviews": "51", "rating": "3.6"},
+      {"asin": "B0CB7S5Y3X", "title": "JMBricklayer F-22 Raptor Fighter Jet Building Block Set 60003 (1837PCS)", "price": null, "reviews": "100", "rating": "4.5"},
+      {"asin": "B0BKZY6LS2", "title": "JMBricklayer Pirate Ship Royal Fleet Ship (2830 Pieces)", "price": "$149.99", "reviews": "157", "rating": "4.1"},
+      {"asin": "B0D9NNRKSZ", "title": "JMBricklayer Space Telescope Building Sets 70009 (995PCS)", "price": "$59.99", "reviews": "344", "rating": "4.2"},
+      {"asin": "B0BMK9WN7K", "title": "JMBricklayer Ship Building Toy White Swan 40104", "price": "$59.33", "reviews": "227", "rating": "4.4"}
+    ]
+  },
+  "bestSellers": {
+    "source": "Store Best Sellers Page",
+    "products": [
+      {"asin": "B0BG1GR2KM", "title": "Flowers Succulents Botanical", "price": "$29.99", "reviews": "1K", "rating": "4.5"},
+      {"asin": "B0G19V9MMC", "title": "Mythic Dragon Tiles 70019", "price": "$69.99", "reviews": "22", "rating": "4.0"},
+      {"asin": "B0CC7X9ZS8", "title": "Ghost Ship Flying Dutchman 40001", "price": "$59.94", "reviews": "982", "rating": "4.6"},
+      {"asin": "B0DMNM5KXM", "title": "Pearl Pirate Ship 40002", "price": "$79.94", "reviews": "283", "rating": "4.4"},
+      {"asin": "B0BYRW1PPV", "title": "Nuclear Submarine", "price": "$55.60", "reviews": "474", "rating": "4.4"},
+      {"asin": "B0D4VBX39K", "title": "Missouri Battleship 60011", "price": "$69.99", "reviews": "135", "rating": "4.4"},
+      {"asin": "B0CG5SQNB4", "title": "Sunflower 70004", "price": "$68.29", "reviews": "415", "rating": "4.5"},
+      {"asin": "B0C9QS8VTL", "title": "Mini Game Console 20134", "price": "$39.99", "reviews": "127", "rating": "4.6"},
+      {"asin": "B0D7HNG3MB", "title": "Vintage Cars 50001", "price": "$59.99", "reviews": "321", "rating": "3.8"},
+      {"asin": "B0BKZW9L55", "title": "Dragon Head 70105", "price": null, "reviews": "381", "rating": "4.2"},
+      {"asin": "B0CBPSSSSV", "title": "Divine Dragon 70134", "price": "$61.99", "reviews": "139", "rating": "4.4"},
+      {"asin": "B0C2VC1F1H", "title": "Vintage Game Console 20132", "price": "$30.59", "reviews": "564", "rating": "4.6"},
+      {"asin": "B0C2V9FGQM", "title": "Typewriter TV Set 20131", "price": "$30.59", "reviews": "564", "rating": "4.6"},
+      {"asin": "B0BKZY6LS2", "title": "Royal Fleet Ship (2830 Pieces)", "price": "$149.99", "reviews": "157", "rating": "4.1"},
+      {"asin": "B0CQMY4N4Z", "title": "Mechanical Dragon Ying Long 70141", "price": "$44.99", "reviews": "162", "rating": "4.2"},
+      {"asin": "B0CB7S5Y3X", "title": "F-22 Raptor 60003", "price": null, "reviews": "100", "rating": "4.5"},
+      {"asin": "B0DHKY9V69", "title": "Magical Unicorn 70008", "price": null, "reviews": "78", "rating": "3.4"},
+      {"asin": "B0D9NNRKSZ", "title": "Space Telescope 70009", "price": "$59.99", "reviews": "344", "rating": "4.2"},
+      {"asin": "B0BWN1VP16", "title": "Science Museum 21104", "price": "$139.95", "reviews": "33", "rating": "3.8"},
+      {"asin": "B0BMK9WN7K", "title": "White Swan Ship 40104", "price": "$59.33", "reviews": "227", "rating": "4.4"},
+      {"asin": "B0D16VBKHH", "title": "Flying Dutchman Large 5865 PCS", "price": "$251.95", "reviews": "982", "rating": "4.6"},
+      {"asin": "B0C2Z4G3T7", "title": "Medieval Castle 41106", "price": "$95.99", "reviews": "41", "rating": "4.3"},
+      {"asin": "B0D4VD4GXY", "title": "B2 Military Bomber 60013", "price": "$95.99", "reviews": "85", "rating": "3.4"},
+      {"asin": "B0C1NVZPX1", "title": "Space Shuttle 70122", "price": "$59.94", "reviews": "344", "rating": "4.2"},
+      {"asin": "B0DK3B3HFY", "title": "Mechanical Chameleon 70124", "price": null, "reviews": "50", "rating": "4.5"}
+    ]
+  },
+  "newReleases": {
+    "source": "Store New Releases Page",
+    "products": [
+      {"asin": "B0GF74Y7MX", "title": "V6 L4 B4 Engine Model 3-in-1 STEM", "price": "$39.99", "reviews": null, "rating": null},
+      {"asin": "B0G1BKM1S4", "title": "Anubis Mythical Building Set (Egyptian God)", "price": "$139.99", "reviews": "12", "rating": "3.8"},
+      {"asin": "B0GF7G1SKY", "title": "3-in-1 Mini Engine V8 V12 W16", "price": "$39.99", "reviews": "21", "rating": "4.6"},
+      {"asin": "B0G1BNHL16", "title": "Mythic Dragon Tiles 70020", "price": "$69.99", "reviews": "20", "rating": "4.4"},
+      {"asin": "B0G1BQR8DG", "title": "Butterfly Building Set with Light", "price": "$49.99", "reviews": "34", "rating": "3.6"},
+      {"asin": "B0G19V9MMC", "title": "Mythic Dragon Tiles 70019", "price": "$69.99", "reviews": "22", "rating": "4.0"},
+      {"asin": "B0FX3TBFV8", "title": "LED Light Kit Blue 2x6", "price": "$22.99", "reviews": "19", "rating": "4.8"},
+      {"asin": "B0FX3SD8BC", "title": "LED Light Kit Red 2x6", "price": "$22.99", "reviews": "17", "rating": "4.6"},
+      {"asin": "B0FX3TC6C8", "title": "LED Light Kit Blue&Red 2x6", "price": "$22.99", "reviews": "22", "rating": "4.7"},
+      {"asin": "B0F83TRN52", "title": "Pegasus 70015 New Upgrade", "price": "$79.95", "reviews": "32", "rating": "3.6"},
+      {"asin": "B0FL6NVJJ9", "title": "Mechanical Mantis Shrimp with LED", "price": "$63.74", "reviews": "28", "rating": "3.6"},
+      {"asin": "B0FG7V8M5X", "title": "Camera Telephone Record Player 20039", "price": "$54.99", "reviews": "37", "rating": "4.0"},
+      {"asin": "B0FJKZH2FN", "title": "Bismarck Battleship 60015 (2537 PCS)", "price": null, "reviews": "71", "rating": "3.9"},
+      {"asin": "B0F6XNDSX9", "title": "Phoenix Nirvana with LED Lights", "price": null, "reviews": "43", "rating": "3.6"},
+      {"asin": "B0FG7YYQGJ", "title": "LED Light Kit 2x6 (Standard)", "price": "$18.99", "reviews": "43", "rating": "4.2"},
+      {"asin": "B0F6Y242RF", "title": "Impression Sunrise Building Set", "price": null, "reviews": "116", "rating": "3.6"},
+      {"asin": "B0FFGVYJ7W", "title": "Space Astronaut 70131 (1008 PCS)", "price": "$39.99", "reviews": "72", "rating": "4.2"},
+      {"asin": "B0FDQPZHNF", "title": "Unicorn 70008 (1492 PCS)", "price": "$79.99", "reviews": "67", "rating": "3.7"},
+      {"asin": "B0F3J8LZC4", "title": "Jellyfish Building Set with LED", "price": "$69.99", "reviews": "91", "rating": "4.0"},
+      {"asin": "B0F3JFW3XR", "title": "Mechanical Hummingbird with LED", "price": null, "reviews": "51", "rating": "3.6"},
+      {"asin": "B0D7HNG3MB", "title": "Vintage Cars 50001 (1297 PCS)", "price": "$59.99", "reviews": "321", "rating": "3.8"}
+    ]
+  },
+  "collections": {
+    "Ship": {
+      "productCount": 9,
+      "products": [
+        {"asin": "B0GK8SYS24", "title": "Revenge Pirate Ship 40003 (2527PCS)", "price": "$99.99", "reviews": "8", "rating": "4.4"},
+        {"asin": "B0DMNM5KXM", "title": "Pearl Pirate Ship 40002 (1713 PCS)", "price": "$79.94", "reviews": "283", "rating": "4.4"},
+        {"asin": "B0CC7X9ZS8", "title": "Flying Dutchman 40001 (1100 PCS)", "price": "$59.94", "reviews": "982", "rating": "4.6"},
+        {"asin": "B0D16VBKHH", "title": "Flying Dutchman Large (5865 PCS)", "price": "$251.95", "reviews": "982", "rating": "4.6"},
+        {"asin": "B0BMK9WN7K", "title": "White Swan Ship 40104", "price": "$59.33", "reviews": "227", "rating": "4.4"},
+        {"asin": "B0BGBQ6Y2J", "title": "Black Pearl Mysterious 40102 (3180 PCS)", "price": "$139.99", "reviews": "40102", "rating": "4.3"},
+        {"asin": "B0BR9RW5L6", "title": "Queen Anna's Revenge 40107", "price": null, "reviews": "68", "rating": "4.3"},
+        {"asin": "B0BKZY6LS2", "title": "Royal Fleet Ship (2830 PCS)", "price": "$149.99", "reviews": "157", "rating": "4.1"},
+        {"asin": "B0B6DRMTXS", "title": "Large MOC Ship 40101 (4364 PCS)", "price": "$165.94", "reviews": "97", "rating": "4.0"}
+      ]
+    },
+    "Military": {
+      "productCount": 9,
+      "products": [
+        {"asin": "B0CB7S5Y3X", "title": "F-22 Raptor 60003 (1837PCS)", "price": null, "reviews": "100", "rating": "4.5"},
+        {"asin": "B0BYRW1PPV", "title": "Nuclear Submarine (1498PCS)", "price": "$55.60", "reviews": "474", "rating": "4.4"},
+        {"asin": "B0C9HMPBRB", "title": "Bismarck Battleship 60006", "price": "$59.46", "reviews": "74", "rating": "4.3"},
+        {"asin": "B0D4VBX39K", "title": "Missouri Battleship 60011 (2228 Pcs)", "price": "$69.99", "reviews": "135", "rating": "4.4"},
+        {"asin": "B0FJKZH2FN", "title": "Bismarck Large 60015 (2537 PCS)", "price": null, "reviews": "71", "rating": "3.9"},
+        {"asin": "B0CB7RFV58", "title": "F-35 Lightning II 60004", "price": "$79.96", "reviews": "4", "rating": "4.5"},
+        {"asin": "B0D4VD4GXY", "title": "B2 Bomber 60013", "price": "$95.99", "reviews": "85", "rating": "3.4"},
+        {"asin": "B0C4TCDLNR", "title": "Ka-27 Helicopter 61510 (1800 PCS)", "price": "$63.95", "reviews": "13", "rating": "4.5"},
+        {"asin": "B0C2794YS4", "title": "Rocket Artillery Tank 61507", "price": "$89.95", "reviews": "14", "rating": "4.5"}
+      ]
+    },
+    "Botanical Collection": {
+      "productCount": 4,
+      "products": [
+        {"asin": "B0BG1GR2KM", "title": "Succulents Botanical", "price": "$29.99", "reviews": "1K", "rating": "4.5"},
+        {"asin": "B0CG5SQNB4", "title": "Sunflower 70004", "price": "$68.29", "reviews": "415", "rating": "4.5"},
+        {"asin": "B0DHKVWC7P", "title": "12 Pack Tiny Succulents", "price": "$19.99", "reviews": "1K", "rating": "4.5"},
+        {"asin": "B0F3JFW3XR", "title": "Mechanical Hummingbird", "price": null, "reviews": "51", "rating": "3.6"}
+      ]
+    },
+    "Mythical Series": {
+      "productCount": 4,
+      "products": [
+        {"asin": "B0F83TRN52", "title": "Pegasus 70015", "price": "$79.95", "reviews": "32", "rating": "3.6"},
+        {"asin": "B0BKZW9L55", "title": "Dragon Head 70105", "price": null, "reviews": "381", "rating": "4.2"},
+        {"asin": "B0D9W4P4G6", "title": "Dragon Kit 70007 (1364 PCS)", "price": "$59.46", "reviews": "162", "rating": "4.2"},
+        {"asin": "B0CBPSSSSV", "title": "Divine Dragon 70134", "price": "$61.99", "reviews": "139", "rating": "4.4"}
+      ]
+    },
+    "Art": {
+      "productCount": 7,
+      "products": [
+        {"asin": "B0DHKVWC7P", "title": "12 Pack Tiny Succulents", "price": "$19.99", "reviews": "1K", "rating": "4.5"},
+        {"asin": "B0G1BQR8DG", "title": "Butterfly with Light", "price": "$49.99", "reviews": "34", "rating": "3.6"},
+        {"asin": "B0F6Y242RF", "title": "Impression Sunrise", "price": null, "reviews": "116", "rating": "3.6"},
+        {"asin": "B0G19V9MMC", "title": "Dragon Tiles 70019", "price": "$69.99", "reviews": "22", "rating": "4.0"},
+        {"asin": "B0G1BNHL16", "title": "Dragon Tiles 70020", "price": "$69.99", "reviews": "20", "rating": "4.4"},
+        {"asin": "B0CG5SQNB4", "title": "Sunflower 70004", "price": "$68.29", "reviews": "415", "rating": "4.5"},
+        {"asin": "B0BG1GR2KM", "title": "Succulents Botanical", "price": "$29.99", "reviews": "1K", "rating": "4.5"}
+      ]
+    },
+    "Nature": {
+      "productCount": 9,
+      "products": [
+        {"asin": "B0G1BQR8DG", "title": "Butterfly with Light", "price": "$49.99", "reviews": "34", "rating": "3.6"},
+        {"asin": "B0F3J8LZC4", "title": "Jellyfish with LED", "price": "$69.99", "reviews": "91", "rating": "4.0"},
+        {"asin": "B0F83TRN52", "title": "Pegasus 70015", "price": "$79.95", "reviews": "32", "rating": "3.6"},
+        {"asin": "B0F3JFW3XR", "title": "Mechanical Hummingbird", "price": null, "reviews": "51", "rating": "3.6"},
+        {"asin": "B0BKZW9L55", "title": "Dragon Head 70105", "price": null, "reviews": "381", "rating": "4.2"},
+        {"asin": "B0CSDFJ17X", "title": "Space Panda 70005 (829 PCS)", "price": "$54.94", "reviews": "47", "rating": "4.6"},
+        {"asin": "B0DK3B3HFY", "title": "Mechanical Chameleon 70124", "price": null, "reviews": "50", "rating": "4.5"},
+        {"asin": "B0CBPSSSSV", "title": "Divine Dragon 70134", "price": "$61.99", "reviews": "139", "rating": "4.4"},
+        {"asin": "B0D9W4P4G6", "title": "Dragon Kit 70007 (1364 PCS)", "price": "$59.46", "reviews": "162", "rating": "4.2"}
+      ]
+    },
+    "Fantastic Ideas": {
+      "productCount": 10,
+      "products": [
+        {"asin": "B0F83TRN52", "title": "Pegasus 70015", "price": "$79.95", "reviews": "32", "rating": "3.6"},
+        {"asin": "B0D9NNRKSZ", "title": "Space Telescope 70009 (995PCS)", "price": "$59.99", "reviews": "344", "rating": "4.2"},
+        {"asin": "B0C2V9FGQM", "title": "Typewriter TV 20131 (660 PCS)", "price": "$30.59", "reviews": "564", "rating": "4.6"},
+        {"asin": "B0C2VC1F1H", "title": "Vintage Game Console 20132 (552 PCS)", "price": "$30.59", "reviews": "564", "rating": "4.6"},
+        {"asin": "B0CSDFJ17X", "title": "Space Panda 70005 (829 PCS)", "price": "$54.94", "reviews": "47", "rating": "4.6"},
+        {"asin": "B0BKZW9L55", "title": "Dragon Head 70105", "price": null, "reviews": "381", "rating": "4.2"},
+        {"asin": "B0C9QS8VTL", "title": "Mini Game Console 20134", "price": "$39.99", "reviews": "127", "rating": "4.6"},
+        {"asin": "B0C1NSY2B6", "title": "Space Rocket 70110", "price": "$59.94", "reviews": "344", "rating": "4.2"},
+        {"asin": "B0C4TCXMPX", "title": "Mech Robot Swordsman 70127 (920 PCS)", "price": "$29.97", "reviews": "83", "rating": "4.4"},
+        {"asin": "B0D7LH7VTJ", "title": "6 Mini Game Console 20127", "price": "$20.86", "reviews": "127", "rating": "4.6"}
+      ]
+    },
+    "Medieval Architecture": {
+      "productCount": 6,
+      "products": [
+        {"asin": "B0D6BMTDR9", "title": "Medieval Mystery Mansion 30121", "price": "$144.46", "reviews": "15", "rating": "3.8"},
+        {"asin": "B0D65NGSJ3", "title": "Euro Bookstore 30126", "price": null, "reviews": "15", "rating": "3.8"},
+        {"asin": "B0CSFHDSYS", "title": "Medieval Tavern 30124", "price": "$74.95", "reviews": "32", "rating": "3.8"},
+        {"asin": "B0CSFG486W", "title": "Medieval Blacksmith Shop", "price": "$67.46", "reviews": "32", "rating": "3.8"},
+        {"asin": "B0BK18S12R", "title": "Medieval Lighthouse 41103", "price": null, "reviews": "16", "rating": "3.7"},
+        {"asin": "B0BR9RVRHK", "title": "Medieval Tavern 30108", "price": "$136.95", "reviews": "15", "rating": "4.0"}
+      ]
+    },
+    "World Railway": {
+      "productCount": 2,
+      "products": [
+        {"asin": "B0CX4STYMF", "title": "Steam Locomotive Express 51110", "price": null, "reviews": "10", "rating": "4.9"},
+        {"asin": "B0CT52BTJH", "title": "Diesel Locomotive 51109", "price": null, "reviews": "5", "rating": "4.3"}
+      ]
+    },
+    "Vehicle": {
+      "productCount": 1,
+      "products": [
+        {"asin": "B0D7HNG3MB", "title": "Vintage Cars 50001 (1297 PCS)", "price": "$59", "reviews": null, "rating": "3.8"}
+      ]
+    }
+  },
+  "productNumberingSystem": {
+    "description": "JMBricklayer uses a 5-digit product number system where the first digit indicates the theme category",
+    "codes": {
+      "2xxxx": "Medieval Architecture / Buildings",
+      "4xxxx": "Ships & Pirates",
+      "5xxxx": "Vehicles & Trains",
+      "6xxxx": "Military",
+      "7xxxx": "Nature / Art / Mythical / Fantastic"
+    }
+  }
+}

@@ -81,7 +81,7 @@ Amazon packaging requirements based on two core principles: product protection (
 - **Damaged/Missing Packaging:** Packaging damaged or missing during handling.
 - **Oversize/Overweight Cartons:** Exceeds standard limits.
 - **Missing Safety Labels:** Suffocation warnings, sharp edge warnings not attached.
-- **Multi-Pack Separation:** Not properly sealed causing items to散开.
+- **Multi-Pack Separation:** Not properly sealed causing items to separate.
 - **Mismatch:** Product doesn't match shipment plan declaration (dimension classification errors).
 - **Missing Carton Labels:** Cannot identify shipment destination.
 

@@ -10,7 +10,7 @@
 
 | 技能 | 状态 | 核心能力 |
 |------|------|----------|
-| [**amazon-one-shot**](./amazon-one-shot/README.md) | ✅ 可用 | **一个ASIN → 9份专业报告。** 通过Playwright浏览器自动化实时抓取Amazon产品页数据，依次执行：产品信息提取、关键词研究（搜索竞争密度+品牌分布）、竞品对比分析（3-4个直接竞品）、评论深度分析（差评归因+UGC营销文案）、FBA费用与销量估算（BSR映射+评论增长验证）、Listing 8维度审计、图片策略评分、可复用写作模板提取、选品可行性评分（3种策略加权评分）。全部报告共享同一份底层数据，分析结论自动关联。输出到 `reports/{日期}_{ASIN}/` 目录。 |
+| [**amazon-one-shot**](./skills/amazon-one-shot/README.md) | ✅ 可用 | **一个ASIN → 9份专业报告。** 通过Playwright浏览器自动化实时抓取Amazon产品页数据，依次执行：产品信息提取、关键词研究（搜索竞争密度+品牌分布）、竞品对比分析（3-4个直接竞品）、评论深度分析（差评归因+UGC营销文案）、FBA费用与销量估算（BSR映射+评论增长验证）、Listing 8维度审计、图片策略评分、可复用写作模板提取、选品可行性评分（3种策略加权评分）。全部报告共享同一份底层数据，分析结论自动关联。输出到 `reports/{日期}_{ASIN}/` 目录。 |
 | [**amazon-category-research**](../skills/amazon-category-research/SKILL.md) | ✅ 可用 | **一个Best Sellers URL → 5份品类报告。** 通过Playwright浏览器自动化抓取Amazon Best Sellers页面，采集主榜Top 30 + 自动发现子品类并采集5个子品类各Top 20（共130个产品数据点）。并行启动4个分析Agent（利基分析、竞品格局、关键词SEO、利润分析），最终整合为9章节综合研究报告。全部报告中文输出，按品类分子文件夹保存到 `reports/{品类slug}/`。已验证品类：Toys & Games、Building & Construction Toys。 |
 | [**amazon-store-research**](../skills/amazon-store-research/SKILL.md) | ✅ 可用 | **一个Amazon Stores URL → 5份店铺报告。** 通过Playwright浏览器自动化抓取Amazon卖家店铺页面，采集首页产品、Best Sellers、New Releases及全部主题合集页产品数据。并行启动4个分析Agent（产品组合、竞争定位、收入估算、增长策略），最终整合为8章节综合研究报告。全部报告中文输出，按店铺分子文件夹保存到 `reports/{店铺slug}/`。已验证店铺：JMBricklayer。 |
 
@@ -35,11 +35,11 @@ store-research: "调研这个亚马逊店铺：https://www.amazon.com/stores/JMB
 
 | 技能 | 状态 | 核心能力 |
 |------|------|----------|
-| [amazon-keyword-research](./amazon-keyword-research/README_CN.md) | ✅ 可用 | 通过Amazon自动补全API挖掘长尾关键词，结合竞争分析和季节性趋势，输出市场机会评分 |
-| [amazon-trending-products](./amazon-trending-products/README_CN.md) | 🔶 Beta | 基于BSR趋势分析、新品势能追踪和季节性预测，发现上升趋势中的产品和品类 |
-| [amazon-product-research](./amazon-product-research/README_CN.md) | 🔶 Beta | 从需求、竞争、利润、壁垒四个维度评估产品机会，使用HHI指数量化竞争强度 |
-| [amazon-niche-finder](./amazon-niche-finder/README_CN.md) | 🔶 Beta | 综合需求信号、竞争密度、利润空间和增长潜力评分，筛选低竞争高需求的利基市场 |
-| [amazon-seller-analytics](./amazon-seller-analytics/README_CN.md) | 🔶 Beta | 分析卖家店铺结构，通过BSR估算营收，识别产品生命周期和运营策略模式 |
+| [amazon-keyword-research](./skills/amazon-keyword-research/README_CN.md) | ✅ 可用 | 通过Amazon自动补全API挖掘长尾关键词，结合竞争分析和季节性趋势，输出市场机会评分 |
+| [amazon-trending-products](./skills/amazon-trending-products/README_CN.md) | 🔶 Beta | 基于BSR趋势分析、新品势能追踪和季节性预测，发现上升趋势中的产品和品类 |
+| [amazon-product-research](./skills/amazon-product-research/README_CN.md) | 🔶 Beta | 从需求、竞争、利润、壁垒四个维度评估产品机会，使用HHI指数量化竞争强度 |
+| [amazon-niche-finder](./skills/amazon-niche-finder/README_CN.md) | 🔶 Beta | 综合需求信号、竞争密度、利润空间和增长潜力评分，筛选低竞争高需求的利基市场 |
+| [amazon-seller-analytics](./skills/amazon-seller-analytics/README_CN.md) | 🔶 Beta | 分析卖家店铺结构，通过BSR估算营收，识别产品生命周期和运营策略模式 |
 
 **原理要点**：关键词研究类工具的核心数据源是Amazon公开的自动补全API（`completion.amazon.com`），该API返回的搜索建议直接来自真实买家的搜索行为聚合，是零成本的需求数据来源。通过前缀扩展和字母后缀扩展策略，可将单个种子关键词扩展为100-200个长尾词。
 
@@ -49,11 +49,11 @@ store-research: "调研这个亚马逊店铺：https://www.amazon.com/stores/JMB
 
 | 技能 | 状态 | 核心能力 |
 |------|------|----------|
-| [amazon-listing-optimization](./amazon-listing-optimization/README_CN.md) | ✅ 可用 | 双模式（创建/优化）Listing引擎，基于A9算法关键词权重分布生成文案，8维度审计评分 |
-| [amazon-a-plus-content](./amazon-a-plus-content/README_CN.md) | 🔶 Beta | 策划A+内容模块布局，设计说服链路，生成对比图表和图片需求文档 |
-| [amazon-backend-keywords](./amazon-backend-keywords/README_CN.md) | 🔶 Beta | 在250字节限制内最大化关键词覆盖率，实现三级去重（精确/词根/语义）和拼写变体覆盖 |
-| [amazon-search-optimization](./amazon-search-optimization/README_CN.md) | 🔶 Beta | 解析A9/COSMO算法排名因素（相关性、销量、满意度），提供索引验证和排名提升方案 |
-| [amazon-listing-images](./amazon-listing-images/README_CN.md) | 🔶 Beta | 七张图片战略规划，信息图表设计原理，生活场景拍摄需求，移动端显示优化 |
+| [amazon-listing-optimization](./skills/amazon-listing-optimization/README_CN.md) | ✅ 可用 | 双模式（创建/优化）Listing引擎，基于A9算法关键词权重分布生成文案，8维度审计评分 |
+| [amazon-a-plus-content](./skills/amazon-a-plus-content/README_CN.md) | 🔶 Beta | 策划A+内容模块布局，设计说服链路，生成对比图表和图片需求文档 |
+| [amazon-backend-keywords](./skills/amazon-backend-keywords/README_CN.md) | 🔶 Beta | 在250字节限制内最大化关键词覆盖率，实现三级去重（精确/词根/语义）和拼写变体覆盖 |
+| [amazon-search-optimization](./skills/amazon-search-optimization/README_CN.md) | 🔶 Beta | 解析A9/COSMO算法排名因素（相关性、销量、满意度），提供索引验证和排名提升方案 |
+| [amazon-listing-images](./skills/amazon-listing-images/README_CN.md) | 🔶 Beta | 七张图片战略规划，信息图表设计原理，生活场景拍摄需求，移动端显示优化 |
 
 **原理要点**：Amazon搜索排名的核心是A9算法，其关键词权重分布为：标题 > 卖点 > 描述 > 后台搜索词。Listing优化的本质是将目标关键词按优先级分配到对应位置，实现最大覆盖率。8维度审计体系（满分100分）量化了Listing质量，其中SEO覆盖率占10分。
 
@@ -63,9 +63,9 @@ store-research: "调研这个亚马逊店铺：https://www.amazon.com/stores/JMB
 
 | 技能 | 状态 | 核心能力 |
 |------|------|----------|
-| [amazon-competitor-analysis](./amazon-competitor-analysis/README_CN.md) | 🔶 Beta | 全维度竞品对比——Listing质量、评论情感、定价策略、广告可见度和市场定位 |
-| [amazon-brand-analytics](./amazon-brand-analytics/README_CN.md) | 🔶 Beta | 解读品牌分析数据——搜索频率排名(SFR)、点击份额vs转化份额差距诊断、购物篮分析 |
-| [amazon-review-analyzer](./amazon-review-analyzer/README_CN.md) | 🔶 Beta | 从评论中提取情感模式、重复投诉、功能需求和竞品洞察，转化为产品改进优先级矩阵 |
+| [amazon-competitor-analysis](./skills/amazon-competitor-analysis/README_CN.md) | 🔶 Beta | 全维度竞品对比——Listing质量、评论情感、定价策略、广告可见度和市场定位 |
+| [amazon-brand-analytics](./skills/amazon-brand-analytics/README_CN.md) | 🔶 Beta | 解读品牌分析数据——搜索频率排名(SFR)、点击份额vs转化份额差距诊断、购物篮分析 |
+| [amazon-review-analyzer](./skills/amazon-review-analyzer/README_CN.md) | 🔶 Beta | 从评论中提取情感模式、重复投诉、功能需求和竞品洞察，转化为产品改进优先级矩阵 |
 
 **原理要点**：品牌分析中"点击份额高但转化份额低"是最关键的诊断信号——说明你的Listing被看到了但没能说服买家，需要优化图片、价格或评论。购物篮分析（"经常一起购买"）揭示交叉销售机会。
 
@@ -75,13 +75,13 @@ store-research: "调研这个亚马逊店铺：https://www.amazon.com/stores/JMB
 
 | 技能 | 状态 | 核心能力 |
 |------|------|----------|
-| [amazon-fba-calculator](./amazon-fba-calculator/README_CN.md) | ✅ 可用 | 基于产品尺寸/重量自动判定尺寸等级，精确计算全部FBA费用（配送费、仓储费、长期仓储费、佣金）及利润分析 |
+| [amazon-fba-calculator](./skills/amazon-fba-calculator/README_CN.md) | ✅ 可用 | 基于产品尺寸/重量自动判定尺寸等级，精确计算全部FBA费用（配送费、仓储费、长期仓储费、佣金）及利润分析 |
 | [tariff-calculator-amazon](./tariff-calculator-amazon/README_CN.md) | ✅ 可用 | 通用关税与到岸成本计算——HS编码查询、Section 301附加税、VAT/GST、贸易协定优惠、完整成本链 |
-| [amazon-profit-analyzer](./amazon-profit-analyzer/README_CN.md) | 🔶 Beta | 收入瀑布模型——从营收到净利润的完整费用链拆解，含隐藏费用识别（长期仓储、移除、优惠券成本） |
-| [amazon-repricing-strategy](./amazon-repricing-strategy/README_CN.md) | 🔶 Beta | 基于Buy Box算法的价格调整规则设计——底价/天花板价、竞品响应策略、分时段定价 |
-| [amazon-buy-box](./amazon-buy-box/README_CN.md) | 🔶 Beta | Buy Box多因素评分算法分析——价格权重、FBA结构性优势、卖家绩效指标和库存充足率 |
-| [amazon-deal-finder](./amazon-deal-finder/README_CN.md) | 🔶 Beta | 四种促销类型ROI对比（秒杀/镇店之宝/优惠券/Prime专享），叠加策略风险与收益计算 |
-| [amazon-shipping-calculator](./amazon-shipping-calculator/README_CN.md) | 🔶 Beta | FBA完整费用计算（体积重量、月度仓储、长期仓储、移除费）与FBA vs FBM决策框架 |
+| [amazon-profit-analyzer](./skills/amazon-profit-analyzer/README_CN.md) | 🔶 Beta | 收入瀑布模型——从营收到净利润的完整费用链拆解，含隐藏费用识别（长期仓储、移除、优惠券成本） |
+| [amazon-repricing-strategy](./skills/amazon-repricing-strategy/README_CN.md) | 🔶 Beta | 基于Buy Box算法的价格调整规则设计——底价/天花板价、竞品响应策略、分时段定价 |
+| [amazon-buy-box](./skills/amazon-buy-box/README_CN.md) | 🔶 Beta | Buy Box多因素评分算法分析——价格权重、FBA结构性优势、卖家绩效指标和库存充足率 |
+| [amazon-deal-finder](./skills/amazon-deal-finder/README_CN.md) | 🔶 Beta | 四种促销类型ROI对比（秒杀/镇店之宝/优惠券/Prime专享），叠加策略风险与收益计算 |
+| [amazon-shipping-calculator](./skills/amazon-shipping-calculator/README_CN.md) | 🔶 Beta | FBA完整费用计算（体积重量、月度仓储、长期仓储、移除费）与FBA vs FBM决策框架 |
 
 **原理要点**：FBA费用计算的核心是尺寸分级——产品被归入6个等级（小标/大标/小超大/中超大/大超大/特殊超大），每个等级对应完全不同的配送费率。体积重量公式为 `(长×宽×高)/139`，当体积重量超过实际重量的1.5倍时，优化包装尺寸是最有效的降本手段。关税计算的核心公式为：到岸成本 = FOB + 运费 + 保险 + 进口关税 + VAT/GST + 各项杂费。
 
@@ -91,11 +91,11 @@ store-research: "调研这个亚马逊店铺：https://www.amazon.com/stores/JMB
 
 | 技能 | 状态 | 核心能力 |
 |------|------|----------|
-| [amazon-ppc-campaign](./amazon-ppc-campaign/README_CN.md) | ✅ 可用 | PPC完整策略引擎——ACoS财务框架（盈亏平衡/目标ACoS/最大CPC）、4层广告架构、关键词漏斗模型 |
-| [amazon-advertising-strategy](./amazon-advertising-strategy/README_CN.md) | 🔶 Beta | 全漏斗广告策略（SP+SB+SD），预算边际收益分配，产品生命周期ACoS目标设定 |
-| [amazon-negative-keywords](./amazon-negative-keywords/README_CN.md) | 🔶 Beta | 搜索词效率分层筛选，否定精准vs否定词组选择逻辑，节省金额预估模型 |
-| [amazon-display-ads](./amazon-display-ads/README_CN.md) | 🔶 Beta | SD广告策略——受众重定向漏斗回收、竞品商品页拦截、情境定位与受众定位互补 |
-| [amazon-dayparting-strategy](./amazon-dayparting-strategy/README_CN.md) | 🔶 Beta | 分时投放策略——消费者购物时段行为模式、时段转化率差异与竞价调整 |
+| [amazon-ppc-campaign](./skills/amazon-ppc-campaign/README_CN.md) | ✅ 可用 | PPC完整策略引擎——ACoS财务框架（盈亏平衡/目标ACoS/最大CPC）、4层广告架构、关键词漏斗模型 |
+| [amazon-advertising-strategy](./skills/amazon-advertising-strategy/README_CN.md) | 🔶 Beta | 全漏斗广告策略（SP+SB+SD），预算边际收益分配，产品生命周期ACoS目标设定 |
+| [amazon-negative-keywords](./skills/amazon-negative-keywords/README_CN.md) | 🔶 Beta | 搜索词效率分层筛选，否定精准vs否定词组选择逻辑，节省金额预估模型 |
+| [amazon-display-ads](./skills/amazon-display-ads/README_CN.md) | 🔶 Beta | SD广告策略——受众重定向漏斗回收、竞品商品页拦截、情境定位与受众定位互补 |
+| [amazon-dayparting-strategy](./skills/amazon-dayparting-strategy/README_CN.md) | 🔶 Beta | 分时投放策略——消费者购物时段行为模式、时段转化率差异与竞价调整 |
 
 **原理要点**：PPC优化的基石是三个公式：盈亏平衡ACoS = 利润率，目标ACoS = 盈亏平衡ACoS - 期望利润率，最大CPC = 售价 × 目标ACoS × 转化率。关键词漏斗（Auto → Broad → Exact）是核心优化循环，每上移一级必须在原广告中添加否定词以防止内部竞价。
 
@@ -105,10 +105,10 @@ store-research: "调研这个亚马逊店铺：https://www.amazon.com/stores/JMB
 
 | 技能 | 状态 | 核心能力 |
 |------|------|----------|
-| [amazon-sales-estimator](./amazon-sales-estimator/README_CN.md) | ✅ 可用 | 基于BSR的销量估算——幂律分布模型、品类系数和站点系数修正、市场集中度分析 |
-| [amazon-rank-tracker](./amazon-rank-tracker/README_CN.md) | 🔶 Beta | 关键词排名追踪与排名变动归因诊断（相关性/销量/转化率/评论/库存因素） |
-| [amazon-keyword-tracker](./amazon-keyword-tracker/README_CN.md) | 🔶 Beta | SERP动态分析，统计基线方法区分正常波动与异常排名变化 |
-| [amazon-price-tracker](./amazon-price-tracker/README_CN.md) | 🔶 Beta | Buy Box动态竞争博弈分析，促销检测与影响评估，历史价格周期模式识别 |
+| [amazon-sales-estimator](./skills/amazon-sales-estimator/README_CN.md) | ✅ 可用 | 基于BSR的销量估算——幂律分布模型、品类系数和站点系数修正、市场集中度分析 |
+| [amazon-rank-tracker](./skills/amazon-rank-tracker/README_CN.md) | 🔶 Beta | 关键词排名追踪与排名变动归因诊断（相关性/销量/转化率/评论/库存因素） |
+| [amazon-keyword-tracker](./skills/amazon-keyword-tracker/README_CN.md) | 🔶 Beta | SERP动态分析，统计基线方法区分正常波动与异常排名变化 |
+| [amazon-price-tracker](./skills/amazon-price-tracker/README_CN.md) | 🔶 Beta | Buy Box动态竞争博弈分析，促销检测与影响评估，历史价格周期模式识别 |
 
 **原理要点**：BSR与销量呈幂律反比关系（非线性衰减），通过品类系数（电子产品1.2x、服装0.8x等）和站点系数（美国1.0x、日本0.6x等）修正后可得到相对可靠的估算值。市场集中度分析判断机会：Top 3占比 < 30% 为碎片化市场，新卖家有进入空间。
 
@@ -118,28 +118,28 @@ store-research: "调研这个亚马逊店铺：https://www.amazon.com/stores/JMB
 
 | 技能 | 状态 | 核心能力 |
 |------|------|----------|
-| [amazon-global-selling](./amazon-global-selling/README_CN.md) | 🔶 Beta | 国际站点拓展规划——市场评估、各国法规合规（CE/UKCA/PSE认证）、物流模式对比、本地化策略 |
-| [amazon-fba-prep](./amazon-fba-prep/README_CN.md) | 🔶 Beta | FBA入库准备——FNSKU标签规范、包装合规、装箱优化、常见拒收原因规避 |
-| [amazon-brand-registry](./amazon-brand-registry/README_CN.md) | 🔶 Beta | 品牌注册指南——商标资格、审核流程、三层品牌保护体系、A+内容权限解锁 |
-| [amazon-brand-tailored-promotions](./amazon-brand-tailored-promotions/README_CN.md) | 🔶 Beta | 品牌定制促销——买家受众细分、差异化折扣、竞品流量拦截 |
-| [amazon-category-ungating](./amazon-category-ungating/README_CN.md) | 🔶 Beta | 类目解锁——风险分级管理、资质验证、各品类审核标准 |
-| [amazon-coupon-strategy](./amazon-coupon-strategy/README_CN.md) | 🔶 Beta | 促销策略——优惠券展示机制、叠加风险计算、各工具费用结构对比 |
-| [amazon-enhanced-brand-content](./amazon-enhanced-brand-content/README_CN.md) | 🔶 Beta | 高级A+与品牌故事——视觉层级设计、生活化场景营销、产品对比图表 |
-| [amazon-international-listings](./amazon-international-listings/README_CN.md) | 🔶 Beta | 多站点Listing管理——BIL同步机制、本地化翻译、跨市场定价 |
-| [amazon-inventory-management](./amazon-inventory-management/README_CN.md) | 🔶 Beta | FBA库存管理——补货时机模型、安全库存公式、IPI四维度优化、滞留库存恢复 |
-| [amazon-private-label](./amazon-private-label/README_CN.md) | 🔶 Beta | 自有品牌发售——蓝海选品、品牌资产构建、供应商管理、差异化竞争 |
-| [amazon-product-bundling](./amazon-product-bundling/README_CN.md) | 🔶 Beta | 捆绑销售——虚拟捆绑机制、多件装阶梯定价、搜索权重叠加效应 |
-| [amazon-product-compliance](./amazon-product-compliance/README_CN.md) | 🔶 Beta | 产品合规——各国认证体系（FDA/CE/PSE）、标签规范、受限物质管控 |
-| [amazon-product-photography](./amazon-product-photography/README_CN.md) | 🔶 Beta | 产品摄影——拍摄清单、灯光布置、信息图表简报、生活场景规划 |
-| [amazon-return-reduction](./amazon-return-reduction/README_CN.md) | 🔶 Beta | 退货率降低——根因分析法、Listing准确性管理、包装改进、尺码指南优化 |
-| [amazon-review-strategy](./amazon-review-strategy/README_CN.md) | 🔶 Beta | 评论获取策略——Request a Review自动化、跟进邮件合规、Vine计划机制 |
-| [amazon-seasonal-planning](./amazon-seasonal-planning/README_CN.md) | 🔶 Beta | 季节性规划——年度销售日历、库存前置时间管理、促销提报、广告季节性调整 |
-| [amazon-storefront-design](./amazon-storefront-design/README_CN.md) | 🔶 Beta | 品牌店铺设计——页面布局、品牌故事、可购物图片、流量引导、转化优化 |
-| [amazon-subscribe-save](./amazon-subscribe-save/README_CN.md) | 🔶 Beta | 订阅省钱优化——折扣阶梯、配送频率优化、留存分析 |
-| [amazon-suspension-appeal](./amazon-suspension-appeal/README_CN.md) | 🔶 Beta | 账号申诉——政策违规分析、行动计划（POA）编写、恢复流程 |
-| [amazon-variation-strategy](./amazon-variation-strategy/README_CN.md) | 🔶 Beta | 变体策略——父子ASIN合并/拆分规则、颜色/尺寸变体、排名权重共享机制 |
-| [amazon-vine-program](./amazon-vine-program/README_CN.md) | 🔶 Beta | Vine评论计划——产品选择、时机策略、评论质量最大化 |
-| [amazon-wholesale-sourcing](./amazon-wholesale-sourcing/README_CN.md) | 🔶 Beta | 批发选品——供应商发现、谈判策略、MOQ优化、利润率分析 |
+| [amazon-global-selling](./skills/amazon-global-selling/README_CN.md) | 🔶 Beta | 国际站点拓展规划——市场评估、各国法规合规（CE/UKCA/PSE认证）、物流模式对比、本地化策略 |
+| [amazon-fba-prep](./skills/amazon-fba-prep/README_CN.md) | 🔶 Beta | FBA入库准备——FNSKU标签规范、包装合规、装箱优化、常见拒收原因规避 |
+| [amazon-brand-registry](./skills/amazon-brand-registry/README_CN.md) | 🔶 Beta | 品牌注册指南——商标资格、审核流程、三层品牌保护体系、A+内容权限解锁 |
+| [amazon-brand-tailored-promotions](./skills/amazon-brand-tailored-promotions/README_CN.md) | 🔶 Beta | 品牌定制促销——买家受众细分、差异化折扣、竞品流量拦截 |
+| [amazon-category-ungating](./skills/amazon-category-ungating/README_CN.md) | 🔶 Beta | 类目解锁——风险分级管理、资质验证、各品类审核标准 |
+| [amazon-coupon-strategy](./skills/amazon-coupon-strategy/README_CN.md) | 🔶 Beta | 促销策略——优惠券展示机制、叠加风险计算、各工具费用结构对比 |
+| [amazon-enhanced-brand-content](./skills/amazon-enhanced-brand-content/README_CN.md) | 🔶 Beta | 高级A+与品牌故事——视觉层级设计、生活化场景营销、产品对比图表 |
+| [amazon-international-listings](./skills/amazon-international-listings/README_CN.md) | 🔶 Beta | 多站点Listing管理——BIL同步机制、本地化翻译、跨市场定价 |
+| [amazon-inventory-management](./skills/amazon-inventory-management/README_CN.md) | 🔶 Beta | FBA库存管理——补货时机模型、安全库存公式、IPI四维度优化、滞留库存恢复 |
+| [amazon-private-label](./skills/amazon-private-label/README_CN.md) | 🔶 Beta | 自有品牌发售——蓝海选品、品牌资产构建、供应商管理、差异化竞争 |
+| [amazon-product-bundling](./skills/amazon-product-bundling/README_CN.md) | 🔶 Beta | 捆绑销售——虚拟捆绑机制、多件装阶梯定价、搜索权重叠加效应 |
+| [amazon-product-compliance](./skills/amazon-product-compliance/README_CN.md) | 🔶 Beta | 产品合规——各国认证体系（FDA/CE/PSE）、标签规范、受限物质管控 |
+| [amazon-product-photography](./skills/amazon-product-photography/README_CN.md) | 🔶 Beta | 产品摄影——拍摄清单、灯光布置、信息图表简报、生活场景规划 |
+| [amazon-return-reduction](./skills/amazon-return-reduction/README_CN.md) | 🔶 Beta | 退货率降低——根因分析法、Listing准确性管理、包装改进、尺码指南优化 |
+| [amazon-review-strategy](./skills/amazon-review-strategy/README_CN.md) | 🔶 Beta | 评论获取策略——Request a Review自动化、跟进邮件合规、Vine计划机制 |
+| [amazon-seasonal-planning](./skills/amazon-seasonal-planning/README_CN.md) | 🔶 Beta | 季节性规划——年度销售日历、库存前置时间管理、促销提报、广告季节性调整 |
+| [amazon-storefront-design](./skills/amazon-storefront-design/README_CN.md) | 🔶 Beta | 品牌店铺设计——页面布局、品牌故事、可购物图片、流量引导、转化优化 |
+| [amazon-subscribe-save](./skills/amazon-subscribe-save/README_CN.md) | 🔶 Beta | 订阅省钱优化——折扣阶梯、配送频率优化、留存分析 |
+| [amazon-suspension-appeal](./skills/amazon-suspension-appeal/README_CN.md) | 🔶 Beta | 账号申诉——政策违规分析、行动计划（POA）编写、恢复流程 |
+| [amazon-variation-strategy](./skills/amazon-variation-strategy/README_CN.md) | 🔶 Beta | 变体策略——父子ASIN合并/拆分规则、颜色/尺寸变体、排名权重共享机制 |
+| [amazon-vine-program](./skills/amazon-vine-program/README_CN.md) | 🔶 Beta | Vine评论计划——产品选择、时机策略、评论质量最大化 |
+| [amazon-wholesale-sourcing](./skills/amazon-wholesale-sourcing/README_CN.md) | 🔶 Beta | 批发选品——供应商发现、谈判策略、MOQ优化、利润率分析 |
 
 ---
 

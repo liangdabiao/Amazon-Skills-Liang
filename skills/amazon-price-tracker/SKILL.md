@@ -1,50 +1,77 @@
 ---
 nexscope:
-  name: "Amazon Price Tracker"
-  category: "Monitoring & Alerts"
+  name: "亚马逊价格追踪器"
+  category: "监控与提醒"
   version: "1.0.0"
   author: "Nexscope AI"
   tags:
     - "amazon"
-    - "price-tracking"
-    - "monitoring"
-    - "competitor-analysis"
+    - "价格追踪"
+    - "监控"
+    - "竞品分析"
   model: "any"
   tokens: "~2000"
   keywords:
     - "amazon price tracker"
 ---
 
-# Amazon Price Tracker
+# 亚马逊价格追踪器
 
-AI-powered Amazon price tracking and monitoring skill. Analyzes price history, competitor pricing patterns, and generates price alert strategies for Amazon sellers.
+AI驱动的亚马逊价格跟踪和监控技能。分析价格历史、竞争对手定价模式，并为亚马逊卖家生成价格提醒策略。
 
-## Capabilities
+## 功能
 
-- Generates actionable monitoring & alerts frameworks based on your specific business context
-- Works across major e-commerce platforms (Amazon, Shopify, Walmart, WooCommerce, Etsy, TikTok Shop)
-- Provides data-driven recommendations with industry benchmarks
-- Outputs ready-to-implement plans, not just generic advice
+- 根据您的特定业务背景生成可操作的监控和提醒框架
+- 适用于主要电商平台（亚马逊、Shopify、Walmart、WooCommerce、Etsy、TikTok Shop）
+- 提供数据驱动的建议和行业基准
+- 输出可立即实施的计划，而非泛泛的建议
 
-## Usage
+## 使用方法
 
-**Input:**
-ASIN, product URL, or keyword
+**输入：**
+ASIN、产品URL或关键词
 
-**Output:**
-Price history analysis, competitor price comparison, price alert setup guide, repricing strategy recommendations
+**输出：**
+价格历史分析、竞争对手价格比较、价格提醒设置指南、重新定价策略建议
 
-### Example Prompt
+### 示例提示
 
-> "I run a [your business type] on [platform]. Help me set up amazon price tracker for my business. Here's my current situation: [describe context]."
+> "我在[您的业务类型]上运营[平台]。帮我为我的业务设置亚马逊价格追踪器。这是我的现状：[描述背景]。"
 
-## Limitations
+## 工作流程
 
-- Requires your specific business data for accurate recommendations
-- Market benchmarks are based on US/EU data — adjust for other regions
-- Recommendations should be validated against your platform's current policies
-- Does not replace dedicated monitoring SaaS tools — designs the strategy and framework
+**第一步：** 监控目标设定。确定价格监控范围，包括：需要监控的竞争对手数量和具体ASIN、监控频率（热销产品每日多次、常规产品每日一次）、关注的异常价格变动阈值（如降价超过5%触发预警）、购物车归属的监控需求。
+
+**第二步：** 基线建立与历史分析。通过一次性多选题补充产品定价策略、成本结构、当前利润率等上下文信息后，建立价格监控基线数据，包括：当前市场价格区间、自身与竞争对手的价格差距、购物车归属的近期历史、历史价格变动趋势总结。
+
+**第三步：** 使用以下框架和方法论进行研究分析。
+
+**黄金购物车动态竞争机制：** 亚马逊购物车并非固定归属于某一卖家，而是通过复杂算法动态决定。核心因素包括：价格竞争力（在同品Listing中是否为最低价或接近最低价）、配送方式（FBA卖家在购物车竞争中享有显著优势）、卖家绩效指标（订单缺陷率、迟发率等）、库存充足率、销售历史和评价数量。理解价格变动对购物车归属的影响权重，制定科学定价策略。
+
+**竞争定价博弈分析模型：** 同一产品Listing下多个卖家之间的定价行为本质上是重复博弈过程。当一个卖家降价时，其他卖家可能跟进导致价格螺旋式下降。引入博弈分析框架，识别哪些价格变动是战略性的（如清库存、推新品），哪些是短期性的（如限时促销），避免对每一次竞品降价都做出过度反应。提供基于"价格弹性"的定价建议——分析不同价位下销量变化的敏感度，找到利润最大化的最优价格点。
+
+**促销活动检测与影响评估：** 竞争对手促销活动（Lightning Deals、优惠券、会员专享折扣等）是价格监控重要维度。识别异常价格下降（可能暗示促销活动）、追踪促销活动持续时间（判断是短期促销还是长期调价）、评估促销活动对自身流量和销量的量化影响。
+
+**历史价格趋势与周期性模式识别：** 产品价格存在可识别的周期性模式。识别季节性价格波动（节假日前后涨价或降价）、周末与工作日的价格差异、月末季末的清仓降价模式。理解这些周期性模式有助于提前规划定价策略，在竞争对手降价前做好应对准备。
+
+**第四步：** 定价策略建议与调价执行。基于监控数据的综合分析，提供定价策略建议，包括：当前是否需要调价、调价幅度建议、调价时机选择（如是否等待竞品促销结束后再调整）、基于价格弹性分析的最优定价区间。同时提供与自动调价工具配合使用的策略框架。
+
+## 输出格式
+
+- 当前状态诊断：价格竞争力分析、利润空间评估、市场位置判断
+- 价格监控框架：具体规则设置、阈值参数、预警机制设计
+- 调价策略建议：是否调价决策、调价幅度、时机选择
+- 工具推荐与配置指导
+- 实施时间线与优先级安排
+- 跟踪的KPI：价格变动频率、购物车百分比、利润率变化
+- 当基于不完整数据时用⚠️标记估计值
+- 以具体的后续步骤结束
 
 ---
 
-## License
+## 局限性
+
+- 需要您的特定业务数据以提供准确建议
+- 市场基准基于美国/欧盟数据 — 其他地区需调整
+- 建议应根据您平台的当前政策进行验证
+- 不能替代专用监控SaaS工具 — 设计策略和框架

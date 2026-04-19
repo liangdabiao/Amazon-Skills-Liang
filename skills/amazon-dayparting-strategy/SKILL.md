@@ -1,98 +1,97 @@
 ---
 name: amazon-dayparting-strategy
-description: "PPC dayparting — bid scheduling by hour/day, peak shopping times, budget optimization by time slot"
+description: "PPC分时出价 — 按小时/天安排竞价、高峰购物时段、按时间段优化预算"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Dayparting Strategy
+# Amazon 分时出价策略
 
-PPC dayparting — bid scheduling by hour/day, peak shopping times, budget optimization by time slot
+PPC分时出价 — 按小时/天安排竞价、高峰购物时段、按时间段优化预算
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon dayparting strategy for my e-commerce business.
+帮我处理亚马逊分时出价策略。
 ```
 
-## Capabilities
+## 功能
 
-- PPC dayparting
-- bid scheduling by hour/day
-- peak shopping times
-- budget optimization by time slot
+- PPC分时出价
+- 按小时/天安排竞价
+- 高峰购物时段
+- 按时间段优化预算
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Consumer Shopping Behavior Patterns by Time
+### 消费者购物行为时间模式
 
-- **Morning Commute (7-9 AM):** Mobile traffic rises but conversion rate low (fragmented browsing).
-- **Lunch Break (12-2 PM):** Desktop traffic first peak of day, moderate conversion rate.
-- **Evening Peak (7-11 PM):** Highest shopping activity and conversion rate of day. Consumers have more time to browse and compare.
-- **Late Night (11 PM - 6 AM):** Both traffic and conversion at lowest point.
-- **Weekend Patterns:** May differ significantly from weekday patterns — analyze separately.
+- **早间通勤（7-9 AM）：** 移动流量上升但转化率低（碎片化浏览）。
+- **午休（12-2 PM）：** 桌面流量一天中第一个峰值，转化率中等。
+- **晚间高峰（7-11 PM）：** 一天中最高的购物活动和转化率。消费者有更多时间浏览和比较。
+- **深夜（11 PM - 6 AM）：** 流量和转化都处于最低点。
+- **周末模式：** 可能与工作日显著不同 — 需要单独分析。
 
-### Conversion Rate Differential and Bid Optimization
+### 转化率差异和竞价优化
 
-- **Core Assumption:** Different time periods have different CVR = each click has different value.
-- **High CVR Periods:** Each click more likely to convert = worth higher bids to secure ad placement.
-- **Low CVR Periods:** Reduce bids to avoid wasting budget on无效 clicks.
-- **Mathematical Basis:** If period CVR is 2x average, increasing bid 1.5-2x during that period significantly increases high-value ad share.
-- **Bid Adjustment Range:** Increase high periods 20-100%, decrease low periods 30-70%. Stay conservative to avoid ranking volatility.
+- **核心假设：** 不同时段有不同的CVR = 每次点击有不同的价值。
+- **高CVR时段：** 每次点击更可能转化 = 值得更高出价以确保广告位置。
+- **低CVR时段：** 降低出价以避免在无效点击上浪费预算。
+- **数学基础：** 如果时段CVR是平均值的2倍，在该时段增加1.5-2倍出价会显著增加高价值广告份额。
+- **出价调整范围：** 高峰时段增加20-100%，低谷时段减少30-70%。保持保守以避免排名波动。
 
-### Budget Allocation Efficiency Model
+### 预算分配效率模型
 
-- **Problem with Even Distribution:** Low CVR periods waste budget, high CVR periods may exhaust daily budget before peak evening.
-- **Solution:** Ensure budget concentrates during high CVR periods.
-- **Critical for Limited Budgets:** If daily budget exhausts at 3 AM, you miss entire evening peak.
-- **Strategy:** Slow budget burn in low periods by reducing bids — ensures budget available during highest-value evening hours.
+- **均匀分布的问题：** 低CVR时段浪费预算，高CVR时段可能在晚间高峰前耗尽每日预算。
+- **解决方案：** 确保预算集中在高CVR时段。
+- **预算有限时的关键：** 如果每日预算在凌晨3点耗尽，您将错过整个晚间高峰。
+- **策略：** 在低时段降低出价以减缓预算消耗 — 确保在高价值的晚间时段有预算可用。
 
-### Product Category Time-of-Day Differences
+### 产品类目时段差异
 
-- **Office Supplies:** Highest demand during workday hours (9 AM - 5 PM) — B2B buyers purchasing during work.
-- **Home & Kitchen:** Peaks in evening and weekends — consumers browsing during leisure time.
-- **Electronics:** Shopping peaks around payday and weekends.
-- **Holiday Gifts:** Significant spikes 1-2 weeks before specific holidays.
-- **Customization Required:** Cannot apply generic patterns — must analyze based on actual category data.
+- **办公用品：** 工作时间（9 AM - 5 PM）需求最高 — B2B买家在工作期间购买。
+- **家居厨房：** 晚间和周末达到高峰 — 消费者在休闲时间浏览。
+- **电子产品：** 发薪日和周末左右购物高峰。
+- **节日礼品：** 节前1-2周显著飙升。
+- **需要定制：** 不能应用通用模式 — 必须基于实际类目数据分析。
 
-### Mobile vs Desktop Time-of-Day Differences
+### 移动端 vs 桌面端时段差异
 
-- **Workday Daytime:** Desktop dominates (office场景). Mobile has lower traffic but stronger purchase intent.
-- **Evening & Weekends:** Mobile dominates (home leisure场景). Higher browsing volume but potentially lower CVR due to fragmented behavior.
-- **Strategy:** Combine dayparting with device bid adjustments — increase desktop bids during high CVR periods, increase mobile bids during high-traffic low-CVR periods.
+- **工作日白天：** 桌面端主导（办公室场景）。移动端流量较低但购买意图更强。
+- **晚间和周末：** 移动端主导（家庭休闲场景）。浏览量更高但由于碎片化行为可能导致CVR较低。
+- **策略：** 结合分时出价和设备出价调整 — 在高CVR时段增加桌面端出价，在高流量低CVR时段增加移动端出价。
 
-### Data Sources
+### 数据来源
 
-- Historical campaign data (30-60 days): impressions, clicks, spend, orders, sales by hour.
-- Calculate hourly: CTR, CVR, CPC, ACoS, ROAS.
-- Analyze weekday vs weekend separately.
-- Device breakdown (mobile/desktop/tablet) if available.
-- Heatmap or line chart visualization of time-of-day performance.
+- 历史广告系列数据（30-60天）：展示、点击、花费、订单、按小时销售的销售额。
+- 计算每小时：CTR、CVR、CPC、ACoS、ROAS。
+- 分别分析工作日和周末。
+- 设备细分（移动端/桌面端/平板电脑）如果有的话。
+- 时段表现的热力图或折线图可视化。
 
-### Limitations
+### 局限性
 
-- Amazon doesn't natively support dayparting (unlike Google Ads). Requires bid rules or third-party tools.
-- Limited historical data makes new campaigns harder to optimize.
-- Seasonal changes can shift shopping time patterns — re-analyze monthly.
-- Over-aggressive bid adjustments can cause ranking volatility.
-- Dayparting benefits diminish with very small daily budgets.
+- 亚马逊本身不支持分时出价（与Google Ads不同）。需要出价规则或第三方工具。
+- 历史数据有限使新广告系列更难优化。
+- 季节性变化可能改变购物时间模式 — 每月重新分析。
+- 过于激进的出价调整可能导致排名波动。
+- 分时出价的好处对于非常小的每日预算会减弱。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

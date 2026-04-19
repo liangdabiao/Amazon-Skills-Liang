@@ -1,103 +1,102 @@
 ---
 name: amazon-category-ungating
-description: "Category and brand ungating — requirements, documentation, appeal process, restricted categories guide"
+description: "类目与品牌解锁 — 要求、文件材料、申诉流程、受限类目指南"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Category Ungating
+# Amazon 类目解锁
 
-Category and brand ungating — requirements, documentation, appeal process, restricted categories guide
+类目与品牌解锁 — 要求、文件材料、申诉流程、受限类目指南
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon category ungating for my e-commerce business.
+帮我处理亚马逊类目解锁。
 ```
 
-## Capabilities
+## 功能
 
-- Category and brand ungating
-- requirements
-- documentation
-- appeal process
-- restricted categories guide
+- 类目与品牌解锁
+- 要求
+- 文件材料
+- 申诉流程
+- 受限类目指南
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Risk Classification System
+### 风险分类系统
 
-Amazon categorizes products into three tiers:
-- **Open Categories:** No approval needed.
-- **Restricted Categories:** Require approval with documentation.
-- **Highly Restricted Categories:** Require detailed qualification review.
+亚马逊将产品分为三个层级：
+- **开放类目：** 无需批准。
+- **受限类目：** 需要文件材料批准。
+- **高度受限类目：** 需要详细资格审核。
 
-Risk factors: direct human contact (food, cosmetics), safety hazards (electronics, toys), high-value counterfeitable goods (jewelry, luxury), regulatory strictness.
+风险因素：直接人体接触（食品、化妆品）、安全风险（电子产品、玩具）、高价值易假货（珠宝、奢侈品）、监管严格度。
 
-### Qualification Verification and Supply Chain Traceability
+### 资格验证与供应链可追溯性
 
-Core documentation requirements:
-- **Manufacturer Authorization Letter:** Proves right to sell brand/manufacturer products.
-- **Quality Inspection Report:** From ISO 17025 accredited lab — proves safety standards compliance.
-- **Product Compliance Certifications:** FDA registration, CE certification, FCC certification as applicable.
-- **Product Packaging/Label Photos:** Showing compliant labels.
-- **Purchase Invoices:** Proving genuine product source.
+核心文件要求：
+- **制造商授权书：** 证明有权销售品牌/制造商产品。
+- **质检报告：** 来自ISO 17025认可实验室 — 证明安全标准合规。
+- **产品合规认证：** 适用的FDA注册、CE认证、FCC认证。
+- **产品包装/标签照片：** 显示合规标签。
+- **采购发票：** 证明真实产品来源。
 
-All documents must form a complete, traceable evidence chain.
+所有文件必须形成完整、可追溯的证据链。
 
-### Category-Specific Requirements
+### 类目特定要求
 
-Each restricted category has unique requirements:
-- **Food:** FDA registration, food production license, nutrition label compliance.
-- **Cosmetics:** Ingredient list, Safety Data Sheet (SDS), animal testing statement.
-- **Jewelry:** Precious metal composition report, gemstone certification.
-- **Auto Parts:** Vehicle model compatibility documentation.
-- **Children's Toys:** CPSIA compliance certificate, third-party safety testing.
+每个受限类目有独特要求：
+- **食品：** FDA注册、食品生产许可、营养标签合规。
+- **化妆品：** 成分表、安全数据表（SDS）、动物测试声明。
+- **珠宝：** 贵金属成分报告、宝石鉴定证书。
+- **汽车配件：** 车型兼容性文件。
+- **儿童玩具：** CPSIA合规证书、第三方安全测试。
 
-### Appeal and Supplemental Review Process
+### 申诉和补充审核流程
 
-- **Common Rejection Reasons:** Incomplete documents, information mismatch (invoice product info vs application), quality reports not meeting Amazon standards, authorization letter format issues, product photos unclear.
-- **Appeal Strategy:** Submit detailed Plan of Action — specific corrective measures taken, not template language.
-- **Re-submission:** After addressing each issue point-by-point, resubmit with corrected documentation.
+- **常见驳回原因：** 文件不完整、信息不匹配（发票产品信息与申请不符）、质检报告不符合亚马逊标准、授权书格式问题、产品照片不清晰。
+- **申诉策略：** 提交详细的行动计划 — 具体纠正措施，而非模板语言。
+- **重新提交：** 逐项解决每个问题后，用更正的文件重新提交。
 
-### Brand Authorization vs Category Ungating
+### 品牌授权 vs 类目解锁
 
-Two independent approval flows:
-- **Category Ungating:** Permission to sell in restricted category.
-- **Brand Authorization:** Permission to sell specific brands (requires Letter of Authorization from brand owner).
-- Both may need separate applications and reviews.
+两个独立的审批流程：
+- **类目解锁：** 在受限类目销售的许可。
+- **品牌授权：** 销售特定品牌的许可（需要品牌所有者出具的授权书）。
+- 两者可能需要单独的申请和审核。
 
-### Data Sources
+### 数据来源
 
-- No external data sources. Based on Amazon seller help documentation and approval experience.
-- User provides target category info and existing qualification documents.
+- 无外部数据源。基于亚马逊卖家帮助文档和审批经验。
+- 用户提供目标类目信息和现有资质文件。
 
-### Limitations
+### 局限性
 
-- Approval standards change — monitor latest policies.
-- Strictly restricted categories (certain food, drug) have very low approval rates even with complete documentation.
-- Third-party testing costs and timelines vary significantly.
-- Manufacturer authorization depends on manufacturer cooperation — not all manufacturers will provide it.
-- Some categories require suppliers to have good sales history on Amazon — new sellers may face barriers.
-- Document forgery or inconsistency may trigger account health review.
-- Post-approval, random spot checks may occur — maintain ongoing compliance.
+- 批准标准会变化 — 需要监控最新政策。
+- 严格受限类目（某些食品、药品）即使文件完整批准率也很低。
+- 第三方测试成本和时间差异很大。
+- 制造商授权取决于制造商配合 — 并非所有制造商都会提供。
+- 某些类目要求供应商在亚马逊有良好的销售历史 — 新卖家可能面临壁垒。
+- 文件伪造或不一致可能触发账号健康审核。
+- 批准后可能进行随机抽查 — 需要保持持续合规。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

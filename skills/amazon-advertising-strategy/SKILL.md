@@ -1,87 +1,86 @@
 ---
 name: amazon-advertising-strategy
-description: "Build a comprehensive Amazon advertising strategy combining Sponsored Products, Sponsored Brands, and Sponsored Display. Budget allocation, campaign structure, keyword strategy, and ACoS optimization."
+description: "构建综合亚马逊广告策略，涵盖 Sponsored Products、Sponsored Brands 和 Sponsored Display。预算分配、活动结构、关键词策略和 ACoS 优化。"
 metadata:
   nexscope:
     emoji: "📣"
     category: amazon
 ---
 
-# Amazon Advertising Strategy 📣
+# Amazon 广告策略 📣
 
-Build a comprehensive Amazon advertising strategy combining Sponsored Products, Sponsored Brands, and Sponsored Display. Budget allocation, campaign structure, keyword strategy, and ACoS optimization.
+构建综合亚马逊广告策略，涵盖 Sponsored Products、Sponsored Brands 和 Sponsored Display。预算分配、活动结构、关键词策略和 ACoS 优化。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Build an ad strategy for my Amazon product line (5 products in kitchen category). Monthly budget: $3,000. Current ACoS: 35%. Target: 25%.
+为我的亚马逊产品线（厨房类目5个产品）制定广告策略。月预算3000美元。当前ACoS：35%。目标：25%。
 ```
 
-## Capabilities
+## 功能
 
-- Full-funnel ad strategy (SP + SB + SD)
-- Campaign structure design (auto, broad, phrase, exact)
-- Budget allocation across campaign types
-- ACoS/TACoS target setting by product lifecycle stage
-- Keyword harvesting and negative keyword management workflow
-- Bid optimization methodology
-- New product launch advertising playbook
+- 全漏斗广告策略（SP + SB + SD）
+- 活动结构设计（自动、广泛、短语、精确）
+- 各活动类型间的预算分配
+- 按产品生命周期阶段的 ACoS/TACoS 目标设定
+- 关键词收割与负关键词管理工作流
+- 出价优化方法论
+- 新品上架广告 playbook
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Full-Funnel Advertising Theory
+### 全漏斗广告理论
 
-- **SP (Sponsored Products):** Bottom of funnel —精准触达已产生明确购买意图的买家. Highest conversion rate, limited reach.
-- **SB (Sponsored Brands):** Middle of funnel — guide potential buyers through brand store to understand brand. Balances awareness and conversion.
-- **SD (Sponsored Display):** Full-funnel —再营销触达浏览未购买访客 + 受众定向触达竞品买家. Key for brand defense and competitor traffic capture.
+- **SP（Sponsored Products）：** 漏斗底部 — 精准触达已产生明确购买意图的买家。最高转化率，覆盖有限。
+- **SB（Sponsored Brands）：** 漏斗中部 — 引导潜在买家通过品牌旗舰店了解品牌。在认知和转化间取得平衡。
+- **SD（Sponsored Display）：** 全漏斗 — 再营销触达浏览未购买访客 + 受众定向触达竞品买家。品牌防御和竞品流量捕获的关键。
 
-### ACoS and TACoS Dual Optimization Framework
+### ACoS 和 TACoS 双优化框架
 
-- **ACoS** = Ad Spend / Ad Revenue — measures ad campaign profitability.
-- **TACoS** = Ad Spend / Total Revenue — links ad efficiency to overall business health.
-- **Product Lifecycle Strategy:** New products tolerate higher ACoS for exposure; growth phase optimizes to target ACoS; mature phase focuses on TACoS control.
+- **ACoS** = 广告支出 / 广告营收 — 衡量广告活动盈利性。
+- **TACoS** = 广告支出 / 总营收 — 将广告效率与整体业务健康关联。
+- **产品生命周期策略：** 新品容忍更高 ACoS 以获取曝光；成长期优化至目标 ACoS；成熟期关注 TACoS 控制。
 
-### Budget Allocation Marginal Revenue Principle
+### 预算分配边际收益原则
 
-- Allocate budget to highest marginal revenue ad types and keywords.
-- Core keywords: SP phrase/exact match has highest marginal revenue.
-- Competitor defense: SD product targeting has outstanding efficiency.
-- Brand building: SB video ads have strongest awareness impact.
+- 将预算分配到边际收益最高的广告类型和关键词。
+- 核心关键词：SP 短语/精确匹配具有最高边际收益。
+- 竞品防御：SD 产品定向效率出众。
+- 品牌建设：SB 视频广告认知影响力最强。
 
-### Keyword Harvesting Mechanism
+### 关键词收割机制
 
-- Continuously "harvest" high-converting search terms from broad/match and auto campaigns.
-- Graduate winners to exact match single-campaign deployment.
-- Add irrelevant terms to negative keyword lists.
-- This dynamic cycle keeps ad spend concentrated on efficient direction.
+- 从广泛/匹配和自动活动中持续"收割"高转化搜索词。
+- 将赢家升级为精确匹配单活动部署。
+- 将无关词添加到负关键词列表。
+- 这一动态循环保持广告支出集中在高效方向。
 
-### Data Sources
+### 数据来源
 
-- No external API calls. All strategy based on Amazon Advertising official documentation.
-- Industry benchmarks (CPC ranges, ACoS targets by category) from public industry reports.
-- User provides their own ad performance data for personalized recommendations.
+- 无外部 API 调用。所有策略基于亚马逊广告官方文档。
+- 行业基准（CPC 范围、各类目 ACoS 目标）来自公开行业报告。
+- 用户提供自己的广告表现数据以获得个性化建议。
 
-### Limitations
+### 局限性
 
-- Cannot access Amazon Ad dashboard real-time data. All recommendations are strategic frameworks.
-- Amazon algorithm and rules update frequently. Strategies may need adaptation.
-- Different categories have vastly different ad competition.通用策略 needs category-specific calibration.
+- 无法访问亚马逊广告后台实时数据。所有建议均为战略框架。
+- 亚马逊算法和规则频繁更新。策略可能需要调整。
+- 不同类目广告竞争差异巨大。通用策略需要类目特定校准。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

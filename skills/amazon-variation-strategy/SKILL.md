@@ -1,98 +1,97 @@
 ---
 name: amazon-variation-strategy
-description: "Parent-child variation planning — when to merge/split, color/size variations, ranking benefits"
+description: "父子变体规划 — 何时合并/拆分、颜色/尺寸变体、排名优势"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Variation Strategy
+# Amazon 变体策略
 
-Parent-child variation planning — when to merge/split, color/size variations, ranking benefits
+父子变体规划 — 何时合并/拆分、颜色/尺寸变体、排名优势
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon variation strategy for my e-commerce business.
+帮我处理亚马逊变体策略。
 ```
 
-## Capabilities
+## 功能
 
-- Parent-child variation planning
-- when to merge/split
-- color/size variations
-- ranking benefits
+- 父子变体规划
+- 何时合并/拆分
+- 颜色/尺寸变体
+- 排名优势
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Review Sharing and Trust Transfer Principle
+### 评论共享与信任转移原则
 
-Core advantage of variation structure — when child ASINs under same parent accumulate reviews, all children display these shared reviews.
-- New child variations can "inherit" existing review accumulation — no need to start from zero.
-- Greatly accelerates cold start process for new specifications, reduces new product promotion difficulty and cost.
+变体结构的核心优势 — 当同一父体下的子ASIN积累评论时，所有子产品都会显示这些共享评论。
+- 新子变体可以"继承"现有评论积累 — 无需从零开始。
+- 大大加速新规格的冷启动过程，降低新产品推广难度和成本。
 
-### Traffic Aggregation and Keyword Weight Concentration Principle
+### 流量聚合与关键词权重集中原则
 
-Multiple related child variations under same parent ASIN = convergent search traffic.
-- Consumers searching "Product A" may land on one child, but can easily browse other specifications through variation switch.
-- Increases overall page dwell time and purchase probability.
-- Parent ASIN accumulates keyword search data from all children — core keyword weight becomes more concentrated and powerful.
+同一父ASIN下的多个相关子变体 = 聚合的搜索流量。
+- 搜索"产品A"的消费者可能进入一个子产品，但可以通过变体切换轻松浏览其他规格。
+- 增加整体页面停留时间和购买概率。
+- 父ASIN从所有子产品累积关键词搜索数据 — 核心关键词权重变得更加集中和强大。
 
-### Variation Relationship and Amazon Compliance Boundary Principle
+### 变体关系与亚马逊合规边界原则
 
-Amazon has strict compliance requirements for variations:
-- Acceptable variations must be based on "Thematic Variation" — different versions of same product, not different products.
-- **Acceptable:** Color variations, size variations, package quantity variations.
-- **Prohibited:** Merging functionally different products as variations — violates policy.
-- Amazon algorithm and manual review regularly scan variation structure compliance.
-- Violations result in forced split + potential account warning or suspension.
+亚马逊对变体有严格的合规要求：
+- 可接受的变体必须基于"主题变体" — 同一产品的不同版本，而非不同产品。
+- **可接受：** 颜色变体、尺寸变体、包装数量变体。
+- **禁止：** 将功能不同的产品合并为变体 — 违反政策。
+- 亚马逊算法和人工审核定期扫描变体结构合规性。
+- 违规将导致强制拆分 + 可能面临账号警告或暂停。
 
-### Best Child Selection Principle
+### 最佳子产品选择原则
 
-Amazon typically displays "Best Child" information in search results — image, price, reviews.
-- Best Child determined by: sales velocity, conversion rate, inventory status.
-- Seller needs to ensure main child variation performs well on all metrics to get best search result display.
+亚马逊通常在搜索结果中显示"最佳子产品"信息 — 图片、价格、评论。
+- 最佳子产品由以下因素决定：销售速度、转化率、库存状态。
+- 卖家需要确保主变体在所有指标上表现良好，以获得最佳搜索结果展示。
 
-### Merge vs Split Strategic Timing Principle
+### 合并与拆分战略时机原则
 
-**Merge Scenarios:**
-- New product launch needs to leverage existing review accumulation.
-- Using variation relationship to fix negative review impact.
+**合并场景：**
+- 新产品上架需要利用现有评论积累。
+- 使用变体关系来修复负面评论影响。
 
-**Split Scenarios:**
-- Some child variations' negative reviews severely drag down overall performance.
-- Certain child variations have independent development capability.
+**拆分场景：**
+- 某些子变体的负面评论严重拖累整体表现。
+- 某些子变体具有独立发展能力。
 
-Timing requires comprehensive data metrics and market environment analysis.
+时机需要综合数据指标和市场环境分析。
 
-### Data Sources
+### 数据来源
 
-- User provides: existing product catalog, review distribution, sales performance, keyword ranking status.
-- No external data dependencies.
+- 用户提供：现有产品目录、评论分布、销售表现、关键词排名状态。
+- 无外部数据依赖。
 
-### Limitations
+### 局限性
 
-- Not all products suitable for variation — requires genuine product relationship.
-- Violation attempts (fake variations, review manipulation) risk account suspension.
-- Negative reviews on one child can affect all children in same parent.
-- Complex inventory management when variations share stock.
-- Certain categories don't support variations (check category-specific rules).
+- 并非所有产品都适合变体 — 需要真实的产品关联。
+- 违规尝试（虚假变体、评论操纵）面临账号暂停风险。
+- 一个子产品的负面评论可能影响同一父体下的所有子产品。
+- 变体共享库存时库存管理复杂。
+- 某些类目不支持变体（检查类目特定规则）。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

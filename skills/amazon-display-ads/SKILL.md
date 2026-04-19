@@ -1,97 +1,96 @@
 ---
 name: amazon-display-ads
-description: "Plan and optimize Amazon Sponsored Display campaigns. Audience targeting, product targeting, retargeting strategy, and creative optimization for awareness and conversion."
+description: "规划和优化亚马逊 Sponsored Display 广告系列。受众定向、产品定向、再营销策略、以及品牌认知和转化的创意优化。"
 metadata:
   nexscope:
     emoji: "🖼️"
     category: amazon
 ---
 
-# Amazon Display Ads 🖼️
+# Amazon 展示广告 🖼️
 
-Plan and optimize Amazon Sponsored Display campaigns. Audience targeting, product targeting, retargeting strategy, and creative optimization for awareness and conversion.
+规划和优化亚马逊 Sponsored Display 广告系列。受众定向、产品定向、再营销策略、以及品牌认知和转化的创意优化。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Set up a Sponsored Display strategy for my product. I already run SP campaigns profitably. Budget: $500/month for SD. Goal: defend my listing from competitors.
+为我的产品设置 Sponsored Display 策略。我已经盈利运行SP广告系列。预算：每月$500用于SD。目标：保护我的listing免受竞品侵害。
 ```
 
-## Capabilities
+## 功能
 
-- Sponsored Display campaign structure design
-- Audience targeting strategy (views remarketing, similar products, interests)
-- Product targeting selection (complementary, competitor, category)
-- Creative headline and logo optimization
-- Bid and budget optimization for SD campaigns
-- SD attribution and performance measurement
-- Cross-campaign integration (SP + SB + SD funnel)
+- Sponsored Display 广告系列结构设计
+- 受众定向策略（浏览再营销、相似产品、兴趣）
+- 产品定向选择（互补、竞品、类目）
+- 创意标题和标志优化
+- SD广告系列竞价和预算优化
+- SD归因和效果衡量
+- 跨广告系列整合（SP + SB + SD 漏斗）
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Remarketing Funnel Recovery Mechanism
+### 再营销漏斗恢复机制
 
-- **Conversion Funnel:** Only 2-10% of first-time visitors purchase immediately. Rest form large "unconverted traffic pool."
-- **Views Remarketing:** Track users who viewed your product or similar products. Re-display ads when they continue browsing Amazon.
-- **Mid-Funnel Recovery:** Remarketing converts mid-funnel drop-offs. Higher conversion rate than cold traffic because触达 already expressed interest buyers.
-- **Attribution Window:** SD remarketing typically 14-day window — understand this affects performance metrics.
+- **转化漏斗：** 只有2-10%的首次访问者立即购买。其余形成大量"未转化流量池"。
+- **浏览再营销：** 跟踪浏览过您的产品或类似产品的用户。当他们继续浏览亚马逊时重新展示广告。
+- **中漏斗恢复：** 再营销转化中漏斗流失者。比冷流量更高的转化率，因为触达的用户已经表达了购买兴趣。
+- **归因窗口：** SD再营销通常14天窗口 — 理解这会影响效果指标。
 
-### Competitor Intercept Strategy
+### 竞品拦截策略
 
-- **Product Targeting:** Place ads directly on specific competitor product detail pages — most aggressive traffic acquisition tactic.
-- **Target Selection Matrix:** Prioritize competitors where you have: price advantage, higher rating, or clear feature differentiation.
-- **Avoid:** Targeting competitors where you're outcompeted — wastes budget on unwinnable placements.
-- **Competitive Response:** Be aware that competitor targeting may provoke retaliatory ads, raising CPC.
+- **产品定向：** 直接在特定竞品产品详情页放置广告 — 最激进的流量获取策略。
+- **定向选择矩阵：** 优先定向您有优势的竞品：价格优势、更高的评分或明确的功能差异化。
+- **避免：** 定向您处于劣势的竞品 — 在无法获胜的位置上浪费预算。
+- **竞争响应：** 注意竞品定向可能引发报复性广告，提高CPC。
 
-### Contextual vs Audience Targeting Framework
+### 上下文 vs 受众定向框架
 
-- **Contextual Targeting:** Shows ads based on content relevance (category/ASIN pages). Good for new products to gain initial exposure.
-- **Audience Targeting:** Based on user behavior — view remarketing, purchase remarketing, interest audiences. Better for products with existing traffic for deep conversion.
-- **Dynamic Adjustment:** Shift ratio based on product lifecycle stage.
+- **上下文定向：** 基于内容相关性展示广告（类目/ASIN页面）。适合新产品获得初始曝光。
+- **受众定向：** 基于用户行为 — 浏览再营销、购买再营销、兴趣受众。适合有现有流量进行深度转化的产品。
+- **动态调整：** 根据产品生命周期阶段调整比例。
 
-### Creative Optimization Principles
+### 创意优化原则
 
-- **Visual-First:** SD ads are visual (unlike SP text-only). Title must be concise and powerful within character limits.
-- **Image Selection:** Highlight usage scenarios and differentiated features, not just white-background product shots.
-- **CTR Factors:** Headline clarity, product image appeal, brand logo visibility.
+- **视觉优先：** SD广告是视觉的（不像SP纯文字）。标题必须在字符限制内简洁有力。
+- **图片选择：** 突出使用场景和差异化特点，而不仅仅是白底产品图。
+- **点击率因素：** 标题清晰度、产品图片吸引力、品牌标志可见度。
 
-### Full-Funnel Coverage Strategy
+### 全漏斗覆盖策略
 
-- **Top Funnel (Awareness):** Display ads on relevant category pages to build awareness.
-- **Mid-Funnel (Consideration):** Remarketing to viewers who didn't convert.
-- **Bottom Funnel (Conversion):** Purchase remarketing to drive final conversion.
+- **顶部漏斗（认知）：** 在相关类目页面展示广告以建立认知。
+- **中部漏斗（考虑）：** 对未转化的浏览者进行再营销。
+- **底部漏斗（转化）：** 购买再营销推动最终转化。
 
-### Data Sources
+### 数据来源
 
-- No external API calls. Strategy based on Amazon Sponsored Display official documentation.
-- Industry benchmarks (CPC ranges by category) from public reports.
-- User provides: current SP ad performance data (CPC, CVR, ACoS), SD budget, brand registry status, product info, competitor list.
+- 无外部API调用。策略基于亚马逊 Sponsored Display 官方文档。
+- 行业基准（各类目CPC范围）来自公开报告。
+- 用户提供：当前SP广告效果数据（CPC、CVR、ACoS）、SD预算、品牌备案状态、产品信息、竞品列表。
 
-### Limitations
+### 局限性
 
-- Audience size data not available to sellers — limited visibility into audience scale.
-- Some categories have small audiences, limiting ad frequency potential.
-- Attribution model differs from SP — 14-day window adds complexity.
-- Off-Amazon placements (third-party sites/apps) typically lower quality than on-Amazon.
-- Competitor targeting may trigger CPC arms race.
-- Brand registry required for some SD features (brand storefront targeting).
-- Strategies need ongoing validation against actual campaign data.
+- 卖家无法获得受众规模数据 — 对受众规模可见度有限。
+- 某些类目受众较小，限制广告频率潜力。
+- 归因模型与SP不同 — 14天窗口增加复杂性。
+- 站外投放（第三方网站/应用）质量通常低于亚马逊站内。
+- 竞品定向可能引发CPC军备竞赛。
+- 某些SD功能需要品牌备案（品牌旗舰店定向）。
+- 策略需要根据实际广告系列数据持续验证。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

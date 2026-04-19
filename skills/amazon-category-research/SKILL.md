@@ -1,51 +1,45 @@
 ---
 name: amazon-category-research
 description: >
-  Perform comprehensive deep-dive research on any Amazon Best Sellers category. Use this skill whenever the user
-  wants to research an Amazon product category, analyze Amazon bestsellers, investigate a niche on Amazon,
-  do market research for Amazon selling, or provides an Amazon bestsellers/gp/bestsellers URL. Also triggers on
-  requests like "调研这个亚马逊品类", "分析这个Amazon类目", "深度调研Amazon Best Sellers", "分析亚马逊畅销榜",
-  "Amazon品类机会分析", or any request to study/analyze/research an Amazon category or bestsellers page.
+  对任何亚马逊畅销榜类目进行全面的深度研究。当用户提供类目URL时使用此skill，包括研究亚马逊产品类目、分析亚马逊畅销榜、
+  调查亚马逊细分市场、为亚马逊销售进行市场调研，或提供亚马逊畅销榜/gp/bestsellers URL。也可在以下请求时触发：
+  "调研这个亚马逊品类"、"分析这个Amazon类目"、"深度调研Amazon Best Sellers"、"分析亚马逊畅销榜"、
+  "Amazon品类机会分析"，或任何研究/分析/调查亚马逊类目或畅销榜的请求。
 ---
 
-# Amazon Category Deep Research
+# Amazon 类目深度研究
 
-Autonomous end-to-end research workflow for any Amazon Best Sellers category. The user provides a category URL;
-the skill collects data, runs parallel analyses, and produces a comprehensive Chinese-language report package.
+任何亚马逊畅销榜类目的端到端自主研究工作流。用户提供类目URL；skill收集数据、运行并行分析，并生成全面的中文报告包。
 
-## Prerequisites
+## 前置条件
 
-- **Playwright MCP server** must be available (browser_navigate, browser_evaluate, browser_snapshot, browser_close)
-- **Agent tool** for launching parallel analysis subagents
-- Reports are saved to `{project_root}/reports/{category-slug}/` (e.g., `reports/toys-and-games/`, `reports/building-toys/`).
-  Create the subdirectory at the start of each run.
+- **Playwright MCP服务器** 必须可用（browser_navigate、browser_evaluate、browser_snapshot、browser_close）
+- **Agent工具** 用于启动并行分析子代理
+- 报告保存到 `{project_root}/reports/{category-slug}/`（例如 `reports/toys-and-games/`、`reports/building-toys/`）。
+  在每次运行开始时创建子目录。
 
-## Workflow Overview
+## 工作流程概览
 
-The skill runs in three phases: Data Collection, Parallel Analysis, and Report Synthesis. Track progress with
-TaskCreate/TaskUpdate throughout.
+skill分三个阶段运行：数据收集、并行分析、报告综合。使用TaskCreate/TaskUpdate追踪进度。
 
-**Important**: All file outputs (JSON data, analysis reports, comprehensive report) must go into the category-specific
-subfolder under `reports/`. Extract a human-readable slug from the category name (e.g., "Building & Construction Toys"
-→ `building-toys`, "Toys & Games" → `toys-and-games`). Create the directory before saving any files.
+**重要**：所有文件输出（JSON数据、分析报告、综合报告）必须进入 `reports/` 下的类目特定子文件夹。从类目名称中提取人类可读的slug（例如 "Building & Construction Toys" → `building-toys`，"Toys & Games" → `toys-and-games`）。在保存任何文件之前创建目录。
 
 ---
 
-## Phase 1: Data Collection
+## 第一阶段：数据收集
 
-### Step 1.1 — Parse User Input
+### 步骤1.1 — 解析用户输入
 
-Extract from the user's message:
-- **Category URL** (required) — the Amazon Best Sellers URL, e.g. `https://www.amazon.com/gp/bestsellers/toys-and-games/`
-- **Subcategories** (optional) — specific subcategories to deep-dive. If omitted, auto-select the top 5 most relevant
-  based on product overlap with the main Top 30 list.
-- **Report language** (optional, default: 简体中文)
+从用户消息中提取：
+- **类目URL**（必填）— 亚马逊畅销榜URL，例如 `https://www.amazon.com/gp/bestsellers/toys-and-games/`
+- **子类目**（可选）— 特定的子类目进行深度研究。如果省略，自动选择与主Top 30列表最相关的Top 5。
+- **报告语言**（可选，默认：简体中文）
 
-### Step 1.2 — Scrape Main Category Top 30
+### 步骤1.2 — 抓取主类目 Top 30
 
-Navigate to the category URL using `mcp__playwright__browser_navigate`. Wait for the page to fully load.
+使用 `mcp__playwright__browser_navigate` 导航到类目URL。等待页面完全加载。
 
-Use `mcp__playwright__browser_evaluate` with this extraction script:
+使用 `mcp__playwright__browser_evaluate` 运行此提取脚本：
 
 ```javascript
 () => {
@@ -75,11 +69,11 @@ Use `mcp__playwright__browser_evaluate` with this extraction script:
 }
 ```
 
-Save the result to `reports/{category-slug}/{category-slug}_top30.json` (use a human-readable slug like `building-toys`).
+将结果保存到 `reports/{category-slug}/{category-slug}_top30.json`（使用人类可读的slug如 `building-toys`）。
 
-### Step 1.3 — Discover Subcategories
+### 步骤1.3 — 发现子类目
 
-On the same page, use `mcp__playwright__browser_evaluate` to find the subcategory navigation links:
+在同一页面上，使用 `mcp__playwright__browser_evaluate` 查找子类目导航链接：
 
 ```javascript
 () => {
@@ -98,101 +92,99 @@ On the same page, use `mcp__playwright__browser_evaluate` to find the subcategor
 }
 ```
 
-This returns the full list of subcategory links from the left sidebar. If this fails (returns empty), try
-alternative selectors: `a[href*="/zgbs/"]`, or extract from the "Any Department" dropdown text.
+这会从左侧边栏返回完整的子类目链接列表。如果失败（返回空），尝试替代选择器：`a[href*="/zgbs/"]`，或从"任何部门"下拉菜单文本提取。
 
-If the user specified subcategories, match by name. Otherwise, auto-select **5 subcategories** using this logic:
-1. Map each Top 30 product to its most likely subcategory
-2. Rank subcategories by frequency of appearance in Top 30
-3. Select the top 5 (excluding the main category itself)
-4. If fewer than 5 subcategories appear, fill with adjacent categories
+如果用户指定了子类目，按名称匹配。否则，使用以下逻辑自动选择 **5个子类目**：
+1. 将每个Top 30产品映射到其最可能的子类目
+2. 按在Top 30中出现频率对子类目排序
+3. 选择前5名（排除主类目本身）
+4. 如果少于5个出现，用相邻类目填充
 
-### Step 1.4 — Scrape Each Subcategory Top 20
+### 步骤1.4 — 抓取每个子类目 Top 20
 
-For each selected subcategory:
-1. Navigate to its URL with `mcp__playwright__browser_navigate`
-2. Run the same extraction script as Step 1.2 (but `.slice(0, 20)` instead of 30)
-3. Save to `reports/{category-slug}/{subcategory_slug}_top20.json`
+对于每个选定的子类目：
+1. 使用 `mcp__playwright__browser_navigate` 导航到其URL
+2. 运行与步骤1.2相同的提取脚本（但用 `.slice(0, 20)` 而不是30）
+3. 保存到 `reports/{category-slug}/{subcategory_slug}_top20.json`
 
-Do this sequentially (Playwright uses a single browser tab). Target 5 subcategories max.
+按顺序执行（Playwright使用单个浏览器标签）。最多定位5个子类目。
 
-### Step 1.5 — Close Browser
+### 步骤1.5 — 关闭浏览器
 
-Run `mcp__playwright__browser_close` when all scraping is complete.
-
----
-
-## Phase 2: Parallel Analysis
-
-Launch **4 analysis agents simultaneously** using the Agent tool with `run_in_background: true` and `subagent_type: "general-purpose"`.
-Each agent receives the full raw data and writes its report to `reports/`.
-
-### Agent 1 — Niche Analysis
-
-File: `reports/{category-slug}/{category-slug}_niche_analysis.md`
-
-Prompt the agent to analyze:
-1. **Product type distribution** — which categories dominate the Top 30, percentage breakdown
-2. **Price band analysis** — $0-7 / $7-15 / $15-30 / $30-50 / $50+ distribution and viability
-3. **Star rating patterns** — identify quality gaps (high demand + low ratings = opportunity)
-4. **Top 5 niche recommendations** — ranked by: demand level, competition intensity, profit potential, entry difficulty
-5. **Supply chain guidance** — sourcing locations (Yiwu, Shantou, Dongguan, etc.), factory types, MOQ expectations
-6. **Risk assessment** — compliance, seasonality, IP, competitive risks
-
-### Agent 2 — Competitor Analysis
-
-File: `reports/{category-slug}/{category-slug}_competitor_analysis.md`
-
-Prompt the agent to analyze:
-1. **Brand landscape** — identify repeat brands, brand concentration, Chinese vs US seller ratio
-2. **Product strategy** — SKU matrix/variant play, bundling, IP licensing, pricing strategies
-3. **Review barrier** — estimate review thresholds by price tier for new sellers to compete
-4. **Entry difficulty rating** (1-5 stars) for each major subcategory
-5. **Top 3 entry recommendations** with target price, differentiation angle, and risk level
-6. **Review building strategy** — Vine program, Request a Review, social seeding timeline
-
-### Agent 3 — Keyword Analysis
-
-File: `reports/{category-slug}/{category-slug}_keyword_analysis.md`
-
-Prompt the agent to analyze:
-1. **High-frequency keywords** — extract from all product titles, rank by frequency, group by subcategory
-2. **Search intent analysis** — by age group (0-2, 2-4, 4-8, 8-12), by scenario (birthday, education, travel, holiday)
-3. **Keyword strategy** — high-volume low-competition opportunities, title formula per subcategory, backend keywords template (250 bytes)
-4. **PPC keyword matrix** — for the top 4 subcategories: broad/phrase/exact match suggestions + negative keywords
-5. **Seasonal keyword calendar** — month-by-month planning for Q2 (summer), Q3 (back-to-school), Q4 (holidays)
-
-### Agent 4 — Profit Analysis
-
-File: `reports/{category-slug}/{category-slug}_profit_analysis.md`
-
-Prompt the agent to analyze:
-1. **Price tier profit models** — for each price band ($0-7, $7-15, $15-30, $30-50, $50+): estimate COGS from Alibaba,
-   FBA fees (referral 15%, fulfillment, storage), net margin range
-2. **Per-category unit economics** — for the top 5 subcategories: estimated COGS, FBA fees, net profit per unit, margin %
-3. **FBA optimization** — packaging size tier reduction strategies, storage tips
-4. **Startup cost model** — minimum viable launch budget (2 SKUs x 500 units), advertising budget recommendation
-5. **Break-even analysis** — monthly unit sales needed to cover fixed costs
-6. **ROI ranking** — rank subcategories by estimated return on investment
-
-**Important**: Pass the actual scraped data (not summaries) to each agent. Include all product titles, prices, ratings,
-and review counts. The agents need real data to produce meaningful analysis.
+所有抓取完成后运行 `mcp__playwright__browser_close`。
 
 ---
 
-## Phase 3: Report Synthesis
+## 第二阶段：并行分析
 
-Wait for all 4 agents to complete (you'll receive task notifications). Then launch one final synthesis agent
-(`subagent_type: "general-purpose"`, foreground this time since we need the result) to generate the comprehensive report.
+使用 `run_in_background: true` 和 `subagent_type: "general-purpose"` 同时启动 **4个分析代理**。
+每个代理接收完整的原始数据并将报告写入 `reports/`。
 
-### Final Report
+### 代理1 — 细分市场分析
 
-File: `reports/{category-slug}/{category-slug}_comprehensive_report.md`
+文件：`reports/{category-slug}/{category-slug}_niche_analysis.md`
 
-The synthesis agent should:
-1. Read all 4 analysis reports from `reports/`
-2. Combine with the raw product data
-3. Produce a comprehensive report with this exact structure:
+提示代理分析：
+1. **产品类型分布** — 哪些类目主导Top 30，百分比细分
+2. **价格带分析** — $0-7 / $7-15 / $15-30 / $30-50 / $50+ 分布和可行性
+3. **星级评分模式** — 识别质量差距（高需求 + 低评分 = 机会）
+4. **Top 5细分市场推荐** — 按：需求水平、竞争强度、利润潜力、入场难度排序
+5. **供应链指导** — 采购地点（义乌、汕头、东莞等）、工厂类型、最小起订量预期
+6. **风险评估** — 合规性、季节性、知识产权、竞争风险
+
+### 代理2 — 竞品分析
+
+文件：`reports/{category-slug}/{category-slug}_competitor_analysis.md`
+
+提示代理分析：
+1. **品牌格局** — 识别重复品牌、品牌集中度、中国卖家vs美国卖家比例
+2. **产品策略** — SKU矩阵/变体玩法、捆绑、IP许可、定价策略
+3. **评论壁垒** — 按价格层级估计新卖家竞争的评论阈值
+4. **入场难度评级**（1-5星）用于每个主要子类目
+5. **Top 3入场推荐** 包含目标价格、差异化角度和风险级别
+6. **评论建立策略** — Vine计划、请求评论、社交播种时间线
+
+### 代理3 — 关键词分析
+
+文件：`reports/{category-slug}/{category-slug}_keyword_analysis.md`
+
+提示代理分析：
+1. **高频关键词** — 从所有产品标题提取，按频率排序，按子类目分组
+2. **搜索意图分析** — 按年龄段（0-2、2-4、4-8、8-12）、按场景（生日、教育、旅行、节日）
+3. **关键词策略** — 高量低竞争机会、每个子类目的标题公式、后端关键词模板（250字节）
+4. **PPC关键词矩阵** — 针对前4个子类目：广泛/短语/精确匹配建议 + 负关键词
+5. **季节性关键词日历** — 按月计划Q2（夏季）、Q3（返校）、Q4（节日）
+
+### 代理4 — 利润分析
+
+文件：`reports/{category-slug}/{category-slug}_profit_analysis.md`
+
+提示代理分析：
+1. **价格层级利润模型** — 每个价格带（$0-7、$7-15、$15-30、$30-50、$50+）：从阿里估计COGS、
+   FBA费用（推荐费15%、配送费、仓储费）、净利率范围
+2. **每个类目的单位经济学** — 针对前5个子类目：估计COGS、FBA费用、每单位净利润、利润率%
+3. **FBA优化** — 包装尺寸层级降低策略、仓储技巧
+4. **启动成本模型** — 最小可行启动预算（2个SKU x 500件）、广告预算建议
+5. **盈亏平衡分析** — 覆盖固定成本所需的月度单位销量
+6. **投资回报率排名** — 按估计投资回报率对子类目排序
+
+**重要**：将实际抓取的数据（不是摘要）传递给每个代理。包含所有产品标题、价格、评分和评论数。代理需要真实数据才能产生有意义的分析。
+
+---
+
+## 第三阶段：报告综合
+
+等待所有4个代理完成（你将收到任务通知）。然后启动一个最终综合代理
+（`subagent_type: "general-purpose"`，这次是前台运行，因为我们需要结果）来生成综合报告。
+
+### 最终报告
+
+文件：`reports/{category-slug}/{category-slug}_comprehensive_report.md`
+
+综合代理应：
+1. 从 `reports/` 读取所有4份分析报告
+2. 结合原始产品数据
+3. 生成具有以下确切结构的综合报告：
 
 ```markdown
 # 亚马逊美国站 {Category Name} 品类综合研究报告
@@ -209,35 +201,31 @@ The synthesis agent should:
 9. 行动路线图
 ```
 
-**Key sections must include:**
+**必须包含的关键部分：**
 
-- **Executive Summary**: 1-page overview with top 5 opportunities table (niche, score, margin, startup cost, payback period)
-- **Category Landscape**: Top 30 product type distribution table, price band analysis with FBA fee ratios
-- **Subcategory Deep Dives**: For each scraped subcategory: market characteristics, competitive landscape, pricing analysis,
-  key players, entry difficulty rating (1-5 stars)
-- **Market Opportunity Matrix**: Rate 8-12 niches on 4 dimensions (demand, competition, profit, difficulty),
-  assign S/A/B/C grades
-- **Entry Strategy**: 3 phases — Validation (month 1-2), Expansion (month 3-6), Brand Building (month 6-12)
-- **Operational Playbook**: Listing title formula, keyword strategy, PPC phased plan, review building, seasonal calendar
-- **Financial Model**: Two startup budgets (lean $3-5K, standard $8-15K), unit economics for top 3 products,
-  break-even analysis, 6-month P&L projection
-- **Risk Management**: Compliance checklist (CPC/CPSIA/ASTM/FCC as applicable), IP protection, seasonal inventory, competitive defense
-- **Action Roadmap**: Detailed 30/60/90 day plan with milestones
+- **执行摘要**：1页概览，包含Top 5机会表（细分市场、评分、利润、启动成本、回本周期）
+- **品类格局**：Top 30产品类型分布表、按FBA费用比率的价格带分析
+- **子类目深度研究**：每个抓取的子类目：市场特征、竞争格局、定价分析、主要参与者、入场难度评级（1-5星）
+- **市场机会矩阵**：按4个维度（需求、竞争、利润、难度）对8-12个细分市场评级，分配S/A/B/C等级
+- **入场策略**：3个阶段 — 验证期（1-2月）、扩展期（3-6月）、品牌建设期（6-12月）
+- **运营手册**：Listing标题公式、关键词策略、PPC分阶段计划、评论建立、季节性日历
+- **财务模型**：两个启动预算（精简版$3-5K、标准版$8-15K）、前3个产品的单位经济学、盈亏平衡分析、6个月损益预测
+- **风险管理**：合规清单（适用的CPC/CPSIA/ASTM/FCC）、知识产权保护、季节性库存、竞争防御
+- **行动路线图**：详细的30/60/90天计划及里程碑
 
 ---
 
-## Output Summary
+## 输出总结
 
-After all phases complete, present the user with:
+所有阶段完成后，向用户呈现：
 
-1. A summary table of all generated reports with file paths
-2. The top 5 key findings from the research
-3. The top 3 recommended action items
+1. 所有生成报告的汇总表及文件路径
+2. 研究的Top 5关键发现
+3. Top 3推荐行动项
 
-## Error Handling
+## 错误处理
 
-- If Playwright navigation fails, retry once, then try `mcp__web_reader__webReader` as fallback
-- If the extraction script returns empty results, the page structure may differ — use `browser_snapshot` to inspect
-  the page structure and adapt the selectors
-- If subcategory discovery fails, ask the user to provide subcategory URLs manually
-- If any analysis agent fails, regenerate just that one report
+- 如果Playwright导航失败，重试一次，然后尝试 `mcp__web_reader__webReader` 作为备选
+- 如果提取脚本返回空结果，页面结构可能不同 — 使用 `browser_snapshot` 检查页面结构并调整选择器
+- 如果子类目发现失败，要求用户提供子类目URL
+- 如果任何分析代理失败，重新生成该报告

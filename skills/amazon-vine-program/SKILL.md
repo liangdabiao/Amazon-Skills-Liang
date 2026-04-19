@@ -1,94 +1,93 @@
 ---
 name: amazon-vine-program
-description: "Vine review program strategy — enrollment, product selection, timing, review quality maximization"
+description: "Vine评论计划策略 — 注册、产品选择、时机、最大化评论质量"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Vine Program
+# Amazon Vine计划
 
-Vine review program strategy — enrollment, product selection, timing, review quality maximization
+Vine评论计划策略 — 注册、产品选择、时机、最大化评论质量
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon vine program for my e-commerce business.
+帮我处理亚马逊Vine计划。
 ```
 
-## Capabilities
+## 功能
 
-- Vine review program strategy
-- enrollment
-- product selection
-- timing
-- review quality maximization
+- Vine评论计划策略
+- 注册
+- 产品选择
+- 时机
+- 最大化评论质量
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Social Proof and Trust Building Principle
+### 社交证明与信任建立原则
 
-Reviews are critical decision factors for consumers:
-- Product reviews 0→10: conversion rate can increase 50-150%.
-- Product reviews 10→50: conversion rate still increases 20-40%.
-- Vine's core value: help new products quickly cross "zero reviews" stage, establish initial social proof.
-- Once baseline reviews exist, natural reviewers become more willing to leave reviews.
+评论是消费者决策的关键因素：
+- 产品评论从0到10：转化率可增加50-150%。
+- 产品评论从10到50：转化率仍增加20-40%。
+- Vine的核心价值：帮助新产品快速跨越"零评论"阶段，建立初始社交证明。
+- 一旦有基线评论，自然评论者更愿意留下评论。
 
-### Review Quality and Information Richness Principle
+### 评论质量和信息丰富度原则
 
-Vine reviewers typically write more detailed, comprehensive reviews including photos, videos, and usage scenario descriptions.
-- High-quality review content provides rich product information, reduces purchase decision uncertainty.
-- Vine review multimedia content (photos/videos) displays as "buyer photos" in search results — enhances visual appeal and CTR.
+Vine评论者通常撰写更详细、更全面的评论，包括照片、视频和使用场景描述。
+- 高质量评论内容提供丰富的产品信息，减少购买决策不确定性。
+- Vine评论的多媒体内容（照片/视频）在搜索结果中显示为"买家照片" — 增强视觉吸引力和点击率。
 
-### Timing Window and Ranking Acceleration Principle
+### 时机窗口与排名加速原则
 
-Vine plan works best during specific product lifecycle stage:
-- First 30-60 days after launch = key window when Amazon algorithm evaluates product potential.
-- If product quickly accumulates positive reviews and initial sales during this period, gets more search exposure and recommendation traffic.
-- Vine leverages this window — injecting high-quality reviews accelerates natural ranking rise.
+Vine计划在特定产品生命周期阶段效果最佳：
+- 上架后前30-60天 = 亚马逊算法评估产品潜力的关键窗口。
+- 如果产品在此期间快速积累正面评论和初始销售，将获得更多搜索曝光和推荐流量。
+- Vine利用此窗口 — 注入高质量评论加速自然排名上升。
 
-### Cost-Benefit and ROI Principle
+### 成本效益和投资回报原则
 
-Vine requires fees (brand registry sellers pay per registered product + product cost).
-- Vine review acquisition cost typically much lower than other review methods (off-site reviews, cash-back discounts).
-- Vine is compliant channel — no violation risk or account security threats.
-- ROI depends on product competitiveness — quality products get good reviews = long-term sales growth; poor products may expose problems.
+Vine需要费用（品牌备案卖家支付每个注册产品 + 产品成本）。
+- Vine评论获取成本通常远低于其他评论方法（站外评论、返现折扣）。
+- Vine是合规渠道 — 无违规风险或账号安全威胁。
+- 投资回报取决于产品竞争力 — 产品质量好获得好评 = 长期销售增长；产品质量差可能暴露问题。
 
-### Review Distribution and Star Optimization Principle
+### 评论分布和星级优化原则
 
-Vine reviews tend to be more realistic than seller-guided reviews.
-- Vine reviewers more objective/neutral (not incentivized by rebates/discounts).
-- Vine brings positive reviews (for quality products) AND may bring negative reviews (exposing product defects).
-- Long-term: realistic review distribution helps build consumer trust. Overly consistent all-5-star reviews may raise consumer suspicion.
+Vine评论往往比卖家引导的评论更真实。
+- Vine评论者更客观/中立（不受回扣/折扣激励）。
+- Vine带来正面评论（对于优质产品）也可能带来负面评论（暴露产品缺陷）。
+- 长期来看：真实的评论分布有助于建立消费者信任。过于一致的全5星评论可能引起消费者怀疑。
 
-### Data Sources
+### 数据来源
 
-- No external dependencies. Based on Amazon Seller Central Vine program documentation and brand registry seller community best practices.
-- User provides: product details (positioning, core selling points, quality status), inventory status.
+- 无外部依赖。基于亚马逊卖家中心Vine计划文档和品牌备案卖家社区最佳实践。
+- 用户提供：产品详情（定位、核心卖点、质量状态）、库存状态。
 
-### Limitations
+### 局限性
 
-- **Cost Burden:** Vine not free — fees per registered product + product cost + FBA shipping. Low-price/low-margin products may not justify the investment.
-- **Uncontrollable Reviews:** Vine reviewers provide reviews independently. If product has quality issues or mismatches listing description, negative Vine reviews may expose problems and hurt sales/ranking.
-- **Long Cycle:** Typically 4-8 weeks from registration to receiving sufficient reviews (including shipping and reviewer writing time). May not be fast enough for urgent scenarios (peak season prep).
-- **Reviewer Matching Uncertainty:** Amazon assigns reviewers — seller cannot control reviewer profile/interest matching. Reviewers may not be target users, causing reviews to miss core selling points.
-- **Review Display Weight Changes:** Vine reviews labeled "Vine Customer Review of Free Product." Some consumers may doubt objectivity. Amazon may adjust Vine review display/weight without notice.
+- **成本负担：** Vine不是免费的 — 每个注册产品收费 + 产品成本 + FBA运费。低价格/低利润产品可能不值得投资。
+- **评论不可控：** Vine评论者独立提供评论。如果产品有质量问题或与listing描述不符，负面Vine评论可能暴露问题，损害销售/排名。
+- **周期较长：** 从注册到收到足够评论通常需要4-8周（包括运输和评论者撰写时间）。可能不够快以应对紧急情况（旺季准备）。
+- **评论者匹配不确定性：** 亚马逊分配评论者 — 卖家无法控制评论者档案/兴趣匹配。评论者可能不是目标用户，导致评论错过核心卖点。
+- **评论展示权重变化：** Vine评论标记"Vine客户免费产品评论"。一些消费者可能质疑客观性。亚马逊可能不通知调整Vine评论展示/权重。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

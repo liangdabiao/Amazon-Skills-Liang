@@ -1,104 +1,103 @@
 ---
 name: amazon-search-optimization
-description: "Optimize product visibility in Amazon search results. Analyze current search ranking factors, identify optimization gaps, and provide actionable improvements for Amazon's A9/COSMO algorithm."
+description: "优化产品在亚马逊搜索结果中的可见性。分析当前搜索排名因素，识别优化差距，并为亚马逊A9/COSMO算法提供可执行的改进方案。"
 metadata:
   nexscope:
     emoji: "🔍"
     category: amazon
 ---
 
-# Amazon Search Optimization 🔍
+# Amazon 搜索优化 🔍
 
-Optimize product visibility in Amazon search results. Analyze current search ranking factors, identify optimization gaps, and provide actionable improvements for Amazon's A9/COSMO algorithm.
+优化产品在亚马逊搜索结果中的可见性。分析当前搜索排名因素，识别优化差距，并为亚马逊A9/COSMO算法提供可执行的改进方案。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-My product ranks on page 3 for my main keyword. Help me create a plan to get to page 1. Product: wireless phone charger, 150 reviews, 4.3 stars.
+我的产品在我的核心关键词上排在第3页。帮我制定一个进入第1页的计划。产品：无线手机充电器，150条评论，4.3星。
 ```
 
-## Capabilities
+## 功能
 
-- Search ranking factor analysis (relevance, performance, customer satisfaction)
-- Title optimization for A9 algorithm (keyword placement, structure)
-- Bullet point optimization for conversion and indexing
-- Index verification methodology
-- Search term harvesting from auto-campaigns
-- Ranking improvement action plan with priority scoring
+- 搜索排名因素分析（相关性、表现、客户满意度）
+- A9算法标题优化（关键词放置、结构）
+- 五点优化（转化和索引）
+- 索引验证方法论
+- 从自动广告系列挖掘搜索词
+- 带优先级评分的排名改进行动计划
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### A9 Algorithm Analysis
+### A9算法分析
 
-Amazon's A9 algorithm (now evolved into comprehensive search system with COSMO semantic understanding) is core engine determining product ranking:
+亚马逊的A9算法（现已演变为包含COSMO语义理解的综合搜索系统）是决定产品排名的核心引擎：
 
-**Relevance Priority Principle:**
-- A9 first filters products relevant to user search query.
-- Relevance based on: product info (title, bullet points, backend keywords) matching search terms.
-- **Keyword Weight by Position:** Title highest → Bullet points → Backend keywords.
-- Keywords appearing earlier in title have higher weight.
+**相关性优先原则：**
+- A9首先过滤与用户搜索查询相关的产品。
+- 相关性基于：产品信息（标题、五点、后端关键词）与搜索词的匹配。
+- **关键词按位置权重：** 标题最高 → 五点 → 后端关键词。
+- 标题中较早出现的关键词权重更高。
 
-**Sales Performance Weighting:**
-- Among relevant products, A9 ranks by historical sales performance.
-- Core metrics: Recent Sales Velocity (past 24-48 hours window), Conversion Rate, Click-Through Rate.
-- Sales momentum (growth rate of recent sales) particularly influential — why new products need advertising/promotions to accumulate initial sales.
+**销售表现权重：**
+- 在相关产品中，A9按历史销售表现排名。
+- 核心指标：近期销售速度（过去24-48小时窗口）、转化率、点击率。
+- 销售势能（近期销售增长率）影响特别大 — 这就是为什么新产品需要广告/促销来积累初始销售。
 
-**Customer Satisfaction Factors:**
-- Star Rating, Review Count, Return Rate.
-- High rating + low return = ranking bonus; low rating + high return = ranking penalty.
+**客户满意度因素：**
+- 星级评分、评论数、退换率。
+- 高评分 + 低退换 = 排名加成；低评分 + 高退换 = 排名惩罚。
 
-### COSMO Semantic Understanding System
+### COSMO语义理解系统
 
-COSMO adds deep semantic understanding to search — traditional keyword stuffing less effective:
+COSMO为搜索添加深度语义理解 — 传统关键词堆砌效果减弱：
 
-- **Intent Recognition:** COSMO understands consumer intent behind search queries, not just keyword matching. E.g., "birthday gift for 12 year old boy" = gift recommendation intent, not just products containing those exact words.
-- **Context Analysis:** COSMO analyzes consumer browsing/purchase history context — same search may show different results to different consumers.
-- **Knowledge Graph Integration:** COSMO builds product relationship knowledge graph — understands attribute relationships (e.g., "wireless earphones" same as "Bluetooth earphones").
+- **意图识别：** COSMO理解搜索查询背后的消费者意图，而不仅仅是关键词匹配。例如"12岁男孩生日礼物" = 礼物推荐意图，而不仅仅是包含这些词的产品。
+- **上下文分析：** COSMO分析消费者浏览/购买历史上下文 — 同一搜索可能向不同消费者显示不同结果。
+- **知识图谱集成：** COSMO构建产品关系知识图谱 — 理解属性关系（例如"无线耳机"等同于"蓝牙耳机"）。
 
-### Index Verification Methodology
+### 索引验证方法论
 
-Search optimization first step = confirm product is correctly indexed by Amazon:
+搜索优化第一步 = 确认产品被亚马逊正确索引：
 
-- **ASIN Index Detection:** Search "ASIN + product keyword" in Amazon search box — if product appears, it's indexed for that keyword.
-- **Long-tail Verification Priority:** Verify lower-competition long-tail keywords first (fewer results = easier confirmation). Progress from long-tail to core keywords.
-- **New Index Trigger:** Product info updates (title change, new backend keywords) require hours to days for re-indexing.
+- **ASIN索引检测：** 在亚马逊搜索框中搜索"ASIN + 产品关键词" — 如果产品出现，说明已对该关键词建索引。
+- **长尾验证优先：** 首先验证竞争较低的长尾关键词（结果较少 = 更容易确认）。从长尾到核心关键词逐步推进。
+- **新索引触发：** 产品信息更新（标题更改、新后端关键词）需要数小时到数天才能重新索引。
 
-### Ranking Improvement Action Framework
+### 排名改进行动框架
 
-- **Title Optimization:** Reposition keywords based on search volume and competition. Core principle: most important keywords first, remaining space for secondary keywords, maintain readability and brand recognition.
-- **Bullet Point Dual Optimization:** Bullets affect both search indexing and conversion. Optimization covers: index coverage (ensure key search terms in bullets) AND conversion guidance (most attractive selling points first).
-- **Search Term Expansion:** Mine high-converting search terms from auto campaign reports, add to backend or product info.
-- **Sales Signal Activation:** Through advertising, promotions, coupons — activate sales signals short-term to drive ranking improvement. Calculate estimated sales needed for first-page ranking based on target keyword competition intensity.
+- **标题优化：** 根据搜索量和竞争重新定位关键词。核心原则：最重要的关键词优先，剩余空间放次要关键词，保持可读性和品牌识别度。
+- **五点双重优化：** 五点同时影响搜索索引和转化。优化涵盖：索引覆盖（确保关键搜索词在五点中）和转化指导（最具吸引力的卖点优先）。
+- **搜索词扩展：** 从自动广告报告中挖掘高转化搜索词，添加到后端或产品信息中。
+- **销售信号激活：** 通过广告、促销、优惠券 — 短期激活销售信号以推动排名改进。根据目标关键词竞争强度计算进入首页所需的估计销量。
 
-### Data Sources
+### 数据来源
 
-- web_fetch for Amazon product pages and search results.
-- web_search for competitor listing info, keyword index verification.
-- User provides: current ranking position, target keywords, review count, rating, product price.
+- web_fetch用于亚马逊产品页面和搜索结果。
+- web_search用于竞品listing信息、关键词索引验证。
+- 用户提供：当前排名位置、目标关键词、评论数、评分、产品价格。
 
-### Limitations
+### 局限性
 
-- A9/COSMO exact ranking formulas are Amazon trade secrets — analysis based on industry research, cannot guarantee exact match with actual algorithm.
-- Ranking improvement timeline and magnitude affected by uncontrollable factors — competitor optimization actions, platform algorithm adjustments, market environment changes. No guaranteed ranking improvement commitments.
-- Budget estimates for sales activation based on industry averages — actual execution may vary significantly due to category competition and ad quality scores.
-- Index verification based on surface observation of search results — cache delays may cause misjudgment, multiple verifications needed.
-- Search optimization requires long-term sustained effort — short-term ranking fluctuations should not be over-interpreted.
+- A9/COSMO确切排名公式是亚马逊商业机密 — 分析基于行业研究，无法保证与实际算法完全匹配。
+- 排名改进时间和幅度受不可控因素影响 — 竞品优化行动、平台算法调整、市场环境变化。无法保证排名改进承诺。
+- 销售激活的预算估算基于行业平均值 — 实际执行可能因类目竞争和广告质量分而差异很大。
+- 索引验证基于搜索结果的表面观察 — 缓存延迟可能导致误判，需要多次验证。
+- 搜索优化需要长期持续努力 — 不应过度解读短期排名波动。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

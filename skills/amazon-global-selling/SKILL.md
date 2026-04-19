@@ -1,116 +1,104 @@
 ---
 name: amazon-global-selling
-description: "Evaluate and plan Amazon marketplace expansion to international sites. Market sizing, regulatory requirements, logistics planning, and localization strategy for EU, UK, Japan, Australia, and other Amazon marketplaces."
+description: "评估和规划亚马逊 marketplace 向国际站点扩张。市场规模、监管要求、物流规划、以及针对欧盟、英国、日本、澳大利亚和其他亚马逊市场的本地化策略。"
 metadata:
   nexscope:
     emoji: "🌍"
     category: amazon
 ---
 
-# Amazon Global Selling 🌍
+# Amazon 全球销售 🌍
 
-Evaluate and plan Amazon marketplace expansion to international sites. Market sizing, regulatory requirements, logistics planning, and localization strategy for EU, UK, Japan, Australia, and other Amazon marketplaces.
+评估和规划亚马逊 marketplace 向国际站点扩张。市场规模、监管要求、物流规划、以及针对欧盟、英国、日本、澳大利亚和其他亚马逊市场的本地化策略。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-I sell kitchen products on Amazon US doing $50K/month. Should I expand to Amazon UK and Germany? What do I need to prepare?
+我在亚马逊美国销售厨房产品，月销售额5万美元。我应该扩展到亚马逊英国和德国吗？我需要准备什么？
 ```
 
-## Capabilities
+## 功能
 
-- Marketplace opportunity assessment (demand, competition, fees per country)
-- Regulatory and compliance requirements by market (CE marking, WEEE, etc.)
-- Logistics and fulfillment options (FBA export, local FBA, 3PL)
-- Listing localization strategy (translation, keyword research, cultural adaptation)
-- Tax and VAT registration requirements
-- Currency and pricing strategy
-- Phased expansion roadmap (which markets first and why)
+- marketplace机会评估（需求、竞争、各国费用）
+- 各市场监管和合规要求（CE标志、WEEE等）
+- 物流和履约选项（FBA出口、本地FBA、3PL）
+- listing本地化策略（翻译、关键词研究、文化适应）
+- 税收和增值税注册要求
+- 货币和定价策略
+- 分阶段扩张路线图（首先进入哪些市场及原因）
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Market Selection and Prioritization Model
+### 市场选择和优先级模型
 
-Evaluate markets across multiple dimensions with weighted scoring:
-- **Demand Scale:** Keyword search volume, Best Seller rank, category sales data.
-- **Competition Intensity:** Seller count, review count, top brand concentration.
-- **Fee Structure:** Commission rate, FBA fees, storage fees comparison.
-- **Regulatory Complexity:** Certification requirements, label regulations, import restrictions.
-- **Logistics Cost/Timing:** Shipping rates, transit time, fulfillment options.
+通过加权评分评估多维度的市场：
+- **需求规模：** 关键词搜索量、畅销榜排名、类目销售数据。
+- **竞争强度：** 卖家数量、评论数、头部品牌集中度。
+- **费用结构：** 佣金率、FBA费用、仓储费用比较。
+- **监管复杂性：** 认证要求、标签法规、进口限制。
+- **物流成本/时效：** 运费、 transit时间、履约选项。
 
-Quantify each market's entry value using weighted scoring. Prioritize markets with highest ROI.
+使用加权评分量化每个市场的进入价值。优先选择投资回报率最高的市场。
 
-### Regulatory Compliance and Certification Framework
+### 监管合规和认证框架
 
-Each market has specific requirements:
-- **EU:** CE certification required, WEEE directive for electronics, RoHS compliance, EFSA standards for food contact materials.
-- **UK:** UKCA mark (post-Brexit replacement for CE).
-- **Japan:** PSE certification or TELEC for electronics, strict pharmaceutical affairs law for cosmetics/food.
-- **Australia:** AS/NZS standards compliance.
-- **India, Brazil, Mexico:** Local certification requirements vary.
+每个市场有特定要求：
+- **欧盟：** 需要CE认证，电子产品的WEEE指令，RoHS合规，食品接触材料的EFSA标准。
+- **英国：** UKCA标志（脱欧后替代CE）。
+- **日本：** 电子产品的PSE认证或TELEC认证，化妆品/食品的严格药事法。
+- **澳大利亚：** AS/NZS标准合规。
+- **印度、巴西、墨西哥：** 本地认证要求各异。
 
-Products without proper certification will be automatically removed or face customs detention/fines.
+没有适当认证的产品将被自动移除或面临海关扣押/罚款。
 
-### Logistics Decision Framework
+### 物流决策框架
 
-Three main international logistics models:
-- **Amazon Cross-Border Shipping (Nable Export):** Lowest startup cost, 7-15 day transit, lower conversion, buyer pays import duties.
-- **Local FBA Inventory:** Prime badge, fast delivery, highest conversion, requires large upfront sea/air shipment, significant capital tied up.
-- **Third-Party Overseas Warehouse (3PL):** Flexible replenishment for testing phase.
+三种主要国际物流模式：
+- **亚马逊跨境运输（Nable Export）：** 启动成本最低，7-15天 transit，转化率较低，买家支付进口关税。
+- **本地FBA库存：** 有Prime标志，快速配送，转化率最高，需要大量的前期海运/空运货件，大量资金占用。
+- **第三方海外仓库（3PL）：** 灵活补货，适合测试阶段。
 
-Trade-off between: capital availability, inventory risk tolerance, target conversion rate.
+权衡：资金可用性、库存风险承受能力、目标转化率。
 
-### Localization Strategy Framework
+### 本地化策略框架
 
-Localization extends beyond language translation:
-- **Keyword Localization:** Local consumer search terms may differ completely from source market.
-- **Cultural Listing Adaptation:** Product description style, measurement units, usage scenarios must match local consumer habits.
-- **Pricing Localization:** Consider exchange rate fluctuations, local competitor pricing, purchasing power, VAT rates.
-- **Customer Service Localization:** Local language support, return policy adaptation.
+本地化超越语言翻译：
+- **关键词本地化：** 本地消费者搜索词可能与原市场完全不同。
+- **文化listing适配：** 产品描述风格、计量单位、使用场景必须符合本地消费者习惯。
+- **定价本地化：** 考虑汇率波动、本地竞品定价、购买力、增值税税率。
+- **客户服务本地化：** 本地语言支持、退换政策适配。
 
-Deep localization is key differentiator for international success. Machine translation often counterproductive.
+深度本地化是国际成功的关键差异化因素。机器翻译往往适得其反。
 
-### Tax and VAT Planning Framework
+### 税收和增值税规划框架
 
-- **EU Member States:** Requires local VAT number registration and periodic filing.
-- **UK:** Independent UK VAT system post-Brexit.
-- **Japan:** Consumption Tax (JCT) system.
-- **Australia:** GST on low-value goods.
-- **Registration Thresholds:** Each market has different thresholds.
-- **Remote Sales Rules:** Different thresholds for intra-EU distance selling.
+- **欧盟成员国：** 需要本地增值税号注册和定期申报。
+- **英国：** 脱欧后独立的英国增值税体系。
+- **日本：** 消费税（JCT）体系。
+- **澳大利亚：** 低价值商品的GST。
+- **注册门槛：** 每个市场有不同的门槛。
+- **远程销售规则：** 欧盟内部距离销售有不同的门槛。
 
-Tax compliance is most overlooked but highest-risk aspect of international expansion. Violations can lead to account suspension or legal action.
+税务合规是国际扩张中最容易被忽视但风险最高的方面。违规可能导致账号暂停或法律行动。
 
-### Data Sources
+### 数据来源
 
-- Market data from web searches, Amazon marketplace reports.
-- Fee structures from Amazon seller official documentation.
-- User provides: current marketplace, product category, monthly sales, profit margin, brand registry status, supply chain capacity, available capital.
+- 市场数据来自网络搜索、亚马逊 marketplace报告。
+- 费用结构来自亚马逊卖家官方文档。
+- 用户提供：当前 marketplace、产品类目、月销售额、利润率、品牌备案状态、供应链能力、可用水资金。
 
-### Limitations
+### 局限性
 
-- Market entry requires significant investment in certification, inventory, logistics.
-- Regulatory requirements change frequently — must monitor latest rules.
-- Tax compliance complexity high across multiple jurisdictions.
-- Exchange rate fluctuations impact profitability.
-- Local competition may be more entrenched than expected.
-- Cultural differences affect marketing effectiveness — require local market knowledge.
-
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
-
-## Output Format
-
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- **市场特定要求各异：** 认证要求、标签法规、进口限制因市场而异。
+- **税务合规复杂性：** 每个市场有不同的增值税/销售税要求，需要本地注册和申报。
+- **物流成本和时效：** 国际运输显著影响利润率和客户满意度。
+- **本地化投入：** 深度本地化需要翻译、本地关键词研究、文化适配方面的投入。
+- **资金需求：** 本地库存需要大量前期资金，汇率波动可能影响利润。

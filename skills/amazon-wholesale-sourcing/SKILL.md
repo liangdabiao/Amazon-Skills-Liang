@@ -1,113 +1,112 @@
 ---
 name: amazon-wholesale-sourcing
-description: "Wholesale product sourcing — supplier discovery, negotiation, MOQ optimization, margin analysis"
+description: "批发产品采购 — 供应商发现、谈判、最小起订量优化、利润分析"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Wholesale Sourcing
+# Amazon 批发采购
 
-Wholesale product sourcing — supplier discovery, negotiation, MOQ optimization, margin analysis
+批发产品采购 — 供应商发现、谈判、最小起订量优化、利润分析
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon wholesale sourcing for my e-commerce business.
+帮我处理亚马逊批发采购。
 ```
 
-## Capabilities
+## 功能
 
-- Wholesale product sourcing
-- supplier discovery
-- negotiation
-- MOQ optimization
-- margin analysis
+- 批发产品采购
+- 供应商发现
+- 谈判
+- 最小起订量优化
+- 利润分析
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Brand Authorization Compliance Principle
+### 品牌授权合规原则
 
-Core compliance requirement for selling brand products on Amazon — must obtain formal authorization from brand owner.
-- **Direct Authorization:** Brand directly issues authorization letter.
-- **Indirect Authorization:** Secondary authorization through brand-recognized distributor.
-- Non-authorized sales may result in: Listing removal, account suspension, legal action.
-- Compliance authorization chain is foundation of wholesale operations and long-term stability.
+在亚马逊销售品牌产品的核心合规要求 — 必须从品牌所有者获得正式授权。
+- **直接授权：** 品牌直接出具授权书。
+- **间接授权：** 通过品牌认可的经销商二次授权。
+- 未授权销售可能导致：listing被移除、账号被暂停、法律行动。
+- 合规授权链是批发运营和长期稳定的基础。
 
-### Multi-Layer Profit Margin Calculation Principle
+### 多层利润计算原则
 
-Wholesale profit calculation is more complex than "selling price - purchase price = profit."
+批发利润计算比"销售价格 - 采购价格 = 利润"更复杂。
 
-**Complete cost model includes:**
-- Product purchase cost
-- Domestic/international shipping
-- Tariffs and taxes
-- FBA inbound and fulfillment fees
-- Amazon referral fees
-- Advertising costs
-- Return loss costs
-- Storage fees
-- Capital occupation cost
+**完整成本模型包括：**
+- 产品采购成本
+- 国内/国际运费
+- 关税和税费
+- FBA入仓和履约费用
+- 亚马逊推荐费
+- 广告成本
+- 退换损失成本
+- 仓储费用
+- 资金占用成本
 
-Precise profit calculation is basis for wholesale decisions — many seemingly profitable products may have thin or negative margins after all hidden costs.
+精确利润计算是批发决策的基础 — 许多看似有利可图的产品在所有隐性成本后可能利润微薄或为负。
 
-### MOQ and Cash Flow Balance Principle
+### 最小起订量和资金平衡原则
 
-MOQ (Minimum Order Quantity) is most critical negotiation element in wholesale sourcing.
-- Low MOQ = lower initial investment and inventory risk, but higher unit purchase cost.
-- High MOQ = better unit cost, but increased inventory turnover pressure and cash flow burden.
-- Optimal MOQ strategy finds balance between inventory turnover speed, capital cost, and purchase cost.
+最小起订量是批发采购中最重要的谈判要素。
+- 低最小起订量 = 较低的初始投资和库存风险，但较高的单位采购成本。
+- 高最小起订量 = 更好的单位成本，但增加库存周转压力和现金流负担。
+- 最优最小起订量策略在库存周转速度、资金成本和采购成本之间找到平衡。
 
-### Differentiation Competition and Moat Building Principle
+### 差异化竞争和护城河建设原则
 
-In wholesale model, same brand products may have multiple sellers — leading to intense price competition. Pure price war is unsustainable.
+在批发模式中，同品牌产品可能有多个卖家 — 导致激烈的价格竞争。纯粹的价格战不可持续。
 
-**Effective differentiation methods:**
-- Exclusive authorization or regional exclusive agent agreements.
-- Create unique value through bundle sales.
-- Provide faster delivery (multi-warehouse layout).
-- Gain more exposure through precise advertising.
-- Build excellent customer service reputation.
+**有效差异化方法：**
+- 独家授权或区域独家代理协议。
+- 通过捆绑销售创造独特价值。
+- 提供更快配送（多仓库布局）。
+- 通过精准广告获得更多曝光。
+- 建立卓越的客户服务声誉。
 
-These differentiation factors together build competitive moat.
+这些差异化因素共同构建竞争护城河。
 
-### Demand Forecasting and Inventory Turnover Principle
+### 需求预测和库存周转原则
 
-Risk control core in wholesale sourcing — accurate demand forecasting and efficient inventory turnover.
-- Excessive inventory → capital occupation and long-term storage fees.
-- Insufficient inventory → stockouts and ranking decline.
-- Based on: historical sales data, seasonal trends, promotional activities, competitor dynamics.
-- **Ideal:** Inventory turnover days controlled within 30-45 days — meet sales demand without excessive capital occupation.
+批发采购中的风险控制核心 — 准确的需求预测和高效的库存周转。
+- 库存过多 → 资金占用和长期仓储费用。
+- 库存不足 → 断货和排名下降。
+- 基于：历史销售数据、季节性趋势、促销活动、竞品动态。
+- **理想状态：** 库存周转天数控制在30-45天内 — 满足销售需求而不过度占用资金。
 
-### Data Sources
+### 数据来源
 
-- User provides: target brand, product category, available capital, current sales data.
-- No external data dependencies.
+- 用户提供：目标品牌、产品类目、可用水资金、当前销售数据。
+- 无外部数据依赖。
 
-### Limitations
+### 局限性
 
-- Brand authorization difficult to obtain for popular brands.
-- Profit margins thin in wholesale model — competitive pricing pressure.
-- Inventory risk high — demand forecasting errors lead to overstock.
-- Capital requirements significant — MOQ and inventory holding costs.
-- Price fluctuations (exchange rates, supplier costs) impact profitability.
-- Unauthorized sellers face account suspension risk.
+- 热门品牌难以获得品牌授权。
+- 批发模式利润微薄 — 竞争定价压力。
+- 库存风险高 — 需求预测错误导致积压。
+- 资金需求大 — 最小起订量和库存持有成本。
+- 价格波动（汇率、供应商成本）影响盈利能力。
+- 未授权卖家面临账号暂停风险。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

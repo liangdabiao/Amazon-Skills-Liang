@@ -1,416 +1,421 @@
 ---
 name: amazon-listing-optimization
-description: "Amazon listing builder and optimizer for sellers. Two modes: (A) Create — build keyword-optimized listings from scratch using keyword lists + product characteristics + AI copywriting, (B) Optimize — audit existing listings, find keyword gaps, score across 8 dimensions, and rewrite with missing keywords. Integrates with amazon-keyword-research for keyword input. Works on 12 Amazon marketplaces. No API key required. Use when: (1) creating a new Amazon listing from keywords, (2) auditing an existing listing for SEO and conversion, (3) checking keyword coverage in title/bullets/description, (4) generating listing copy with target keywords and tone, (5) comparing listings against competitors, (6) preparing a listing for launch or relaunch."
+description: "亚马逊卖家listing构建器和优化器。两种模式：(A) 创建 — 使用关键词列表 + 产品特性 + AI文案从零开始构建关键词优化的listing，(B) 优化 — 审计现有listing，发现关键词差距，从8个维度评分，并使用缺失的关键词重写。与amazon-keyword-research集成获取关键词输入。适用于12个亚马逊市场。无需API密钥。适用于：(1) 从关键词创建新的亚马逊listing，(2) 审计现有listing的SEO和转化率，(3) 检查标题/五点/描述中的关键词覆盖，(4) 生成包含目标关键词和语气的listing文案，(5) 与竞品比较listing，(6) 为上架或重新上架准备listing。"
 metadata: {"nexscope":{"emoji":"📝","category":"amazon"}}
 ---
 
-# Amazon Listing Optimization 📝
+# 亚马逊Listing优化 📝
 
-Build keyword-optimized listings from scratch, or audit and optimize existing ones. No API key — works out of the box.
+从零开始构建关键词优化的listing，或审计和优化现有listing。无需API密钥 — 开箱即用。
 
-## Two Modes
+## 两种模式
 
-| Mode | When to Use | Input | Output |
+| 模式 | 适用场景 | 输入 | 输出 |
 |------|-------------|-------|--------|
-| **A — Create** | Building a new listing | Keywords and/or competitor ASINs + product info + tone | Full listing copy + keyword coverage score |
-| **B — Optimize** | Improving an existing listing | Your ASIN or URL (+ optional keywords or competitor ASINs) | Optimized listing copy + audit report + gap analysis |
+| **A — 创建** | 构建新listing | 关键词和/或竞品ASIN + 产品信息 + 语气 | 完整listing文案 + 关键词覆盖评分 |
+| **B — 优化** | 改进现有listing | 您的ASIN或URL（+ 可选关键词或竞品ASIN） | 优化的listing文案 + 审计报告 + 差距分析 |
 
-## Mode A — Three Ways to Start
+## 模式A — 三种开始方式
 
-| Input Source | How it Works |
+| 输入来源 | 工作方式 |
 |-------------|-------------|
-| **Keywords** | User provides keyword list → skill prioritizes and generates listing |
-| **Competitor ASINs** | User provides 1-3 competitor ASINs → skill fetches their listings, extracts their keywords, then generates a listing that covers all their keywords and more |
-| **Both** | User provides keywords + competitor ASINs → skill merges both sources for maximum coverage |
+| **关键词** | 用户提供关键词列表 → 技能优先排序并生成listing |
+| **竞品ASIN** | 用户提供1-3个竞品ASIN → 技能获取他们的listing，提取关键词，然后生成覆盖所有关键词并更多的listing |
+| **两者都有** | 用户提供关键词 + 竞品ASIN → 技能合并两个来源以获得最大覆盖 |
 
-## Capabilities
+## 功能
 
-- **Keyword-driven listing generation**: Import keywords (from amazon-keyword-research, manual list, or extracted from competitor ASINs), rank by priority, generate copy that maximizes keyword coverage
-- **Competitor keyword extraction**: Fetch competitor listings and automatically extract their title/bullet keywords as your baseline
-- **8-dimension audit & scoring**: Title, bullets, description, images, A+ content, pricing, reviews, SEO coverage
-- **Keyword coverage tracking**: Visual map showing which keywords appear in title / bullets / description / missing
-- **Tone selection**: Professional, Friendly, Urgent, Luxury — affects AI copywriting style
-- **Competitive benchmarking**: Compare your listing against competitors
-- **Multi-marketplace**: US, UK, DE, FR, IT, ES, JP, CA, AU, IN, MX, BR
+- **关键词驱动的listing生成**：导入关键词（来自amazon-keyword-research、手动列表或从竞品ASIN提取），按优先级排序，生成最大化关键词覆盖的文案
+- **竞品关键词提取**：获取竞品listing并自动提取他们的标题/五点关键词作为您的基准
+- **8维度审计和评分**：标题、五点、描述、图片、A+内容、定价、评论、SEO覆盖
+- **关键词覆盖跟踪**：可视化地图显示哪些关键词出现在标题/五点/描述中/缺失
+- **语气选择**：专业、友好、紧急、奢华 — 影响AI文案风格
+- **竞争基准测试**：将您的listing与竞品比较
+- **多市场**：美国、英国、德国、法国、意大利、西班牙、日本、加拿大、澳大利亚、印度、墨西哥、巴西
 
-## Usage Examples
+## 使用示例
 
-### Mode A — Create from Keywords
-
-```
-Create a listing for a portable blender. Keywords: portable blender, smoothie maker, USB rechargeable, travel blender, personal blender. Material: BPA-free Tritan. Color: White. Capacity: 380ml. Tone: Friendly.
-```
+### 模式A — 从关键词创建
 
 ```
-I have these keywords from my research: [paste keyword list]. Product: silicone kitchen utensil set, 12 pieces, heat resistant to 480°F. Generate a full listing.
-```
-
-### Mode A — Create from Competitor ASINs
-
-```
-I want to sell a dog t-shirt on Amazon US. Here are 3 competitors I want to beat: B0D72TSM62, B0ABC12345, B0XYZ67890. My product is 100% cotton, 6 colors, XS-XL, funny print. Analyze their listings and create one that's better. Friendly tone.
+为便携式榨汁杯创建listing。关键词：portable blender, smoothie maker, USB rechargeable, travel blender, personal blender。材质：BPA-free Tritan。颜色：白色。容量：380ml。语气：友好。
 ```
 
 ```
-Create a listing for my yoga mat. Look at this competitor: B09V3KXJPB. Extract their keywords, find what they're missing, and build a listing that covers more keywords than them. Product: 6mm TPE, non-slip, carrying strap included. Tone: Professional.
+我有这些研究关键词：[粘贴关键词列表]。产品：硅胶厨房用具套装，12件，耐热至480°F。生成完整listing。
 ```
 
-### Mode A — Create from Keywords + Competitor ASINs
+### 模式A — 从竞品ASIN创建
 
 ```
-Use amazon-keyword-research to find keywords for "portable blender", also analyze these competitors: B0CPY1GFVZ, B0CXLF3Y19. Combine all keywords and create a listing. Product: 380ml, USB-C, BPA-free Tritan. Tone: Professional.
-```
-
-### Mode B — Optimize Existing
-
-```
-Audit the listing for ASIN B0D72TSM62 on Amazon US
+我想在亚马逊美国卖狗T恤。这是我的3个竞争对手：B0D72TSM62、B0ABC12345、B0XYZ67890。我的产品是100%棉，6个颜色，XS-XL，趣味印花。分析他们的listing并创建一个更好的。语气：友好。
 ```
 
 ```
-Optimize B0D72TSM62 using these keywords: dog shirt, pet clothes, puppy clothing — show me what's missing and rewrite
+为我的瑜伽垫创建listing。看这个竞争对手：B09V3KXJPB。提取他们的关键词，找出他们遗漏的内容，并构建一个覆盖更多关键词的listing。产品：6mm TPE，防滑，带携带带。语气：专业。
+```
+
+### 模式A — 从关键词 + 竞品ASIN创建
+
+```
+使用amazon-keyword-research为"portable blender"查找关键词，同时分析这些竞争对手：B0CPY1GFVZ、B0CXLF3Y19。合并所有关键词并创建listing。产品：380ml，USB-C，BPA-free Tritan。语气：专业。
+```
+
+### 模式B — 优化现有
+
+```
+审计亚马逊美国ASIN B0D72TSM62的listing
 ```
 
 ```
-Optimize my listing B0D72TSM62 by analyzing these competitors: B0ABC12345, B0XYZ67890. Find what keywords they have that I don't, and rewrite my listing to beat them.
+使用这些关键词优化B0D72TSM62：dog shirt, pet clothes, puppy clothing — 展示缺失的内容并重写
+```
+
+```
+通过分析这些竞争对手来优化我的listing B0D72TSM62：B0ABC12345、B0XYZ67890。找出他们有而我没有的关键词，并重写我的listing以击败他们。
 ```
 
 ---
 
-## Mode A Workflow — Create Listing from Keywords
+## 模式A工作流程 — 从关键词创建Listing
 
-### Step A1: Collect Keywords
+### A1步：收集关键词
 
-Keywords can come from four sources (use one or combine multiple):
+关键词可以来自四个来源（使用一个或合并多个）：
 
-1. **From [amazon-keyword-research](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-keyword-research) skill** (recommended): Run keyword research first, then feed results directly. Install: `npx skills add nexscope-ai/Amazon-Skills --skill amazon-keyword-research -g`
-2. **From competitor ASINs**: User provides 1-3 competitor ASINs → run `<skill>/scripts/fetch-listing.sh` on each → extract keywords from their titles, bullets, and descriptions → use as your keyword baseline. This is the fastest way to start — you inherit what's already working for competitors, then add more.
-3. **From user's keyword list**: User pastes their own keyword list (e.g. from Helium 10 Cerebro, Jungle Scout, or manual research)
-4. **Auto-discover**: Use `web_search` to find top keywords for the product category
+1. **来自[amazon-keyword-research](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-keyword-research)技能**（推荐）：先运行关键词研究，然后将结果直接输入。安装：`npx skills add nexscope-ai/Amazon-Skills --skill amazon-keyword-research -g`
+2. **来自竞品ASIN**：用户提供1-3个竞品ASIN → 在每个上运行`<skill>/scripts/fetch-listing.sh` → 从他们的标题、五点和描述中提取关键词 → 作为您的关键词基准。这是最快的方式 — 您继承竞争对手已经有效的方法，然后添加更多。
+3. **来自用户关键词列表**：用户粘贴自己的关键词列表（例如来自Helium 10 Cerebro、Jungle Scout或手动研究）
+4. **自动发现**：使用`web_search`查找产品类目的热门关键词
 
-When competitor ASINs are provided, always fetch and analyze them first. Extract every meaningful keyword from their titles and bullets, then merge with any user-provided keywords. The goal: cover everything competitors cover, plus keywords they missed.
+当提供竞品ASIN时，始终先获取并分析它们。从他们的标题和五点中提取每个有意义的关键词，然后与用户提供的关键词合并。目标：覆盖竞争对手覆盖的所有内容，加上他们遗漏的关键词。
 
-### Step A2: Prioritize Keywords
+### A2步：优先排序关键词
 
-Organize keywords into tiers:
+将关键词组织成层级：
 
 ```
-🔴 Primary (must appear in Title):
-  - [keyword] — [search volume if known]
-  - [keyword] — [search volume if known]
+🔴 主要（必须出现在标题中）：
+  - [关键词] — [搜索量（如果有）]
+  - [关键词] — [搜索量（如果有）]
 
-🟡 Secondary (must appear in Bullets):
-  - [keyword]
-  - [keyword]
+🟡 次要（必须出现在五点中）：
+  - [关键词]
+  - [关键词]
 
-🟢 Tertiary (should appear in Description or Backend):
-  - [keyword]
-  - [keyword]
+🟢 第三级（应出现在描述或后台中）：
+  - [关键词]
+  - [关键词]
 
-⚪ Long-tail (use where natural):
-  - [keyword phrase]
-  - [keyword phrase]
+⚪ 长尾（自然使用）：
+  - [关键词短语]
+  - [关键词短语]
 ```
 
-Priority rules:
-- Highest search volume → Title (front-loaded)
-- Medium volume + high relevance → Bullets (one primary keyword per bullet)
-- Lower volume / long-tail → Description
-- Remaining → Backend search terms (advise seller to add in Seller Central)
+优先级规则：
+- 最高搜索量 → 标题（靠前）
+- 中等搜索量 + 高相关性 → 五点（每个五点一个主要关键词）
+- 较低搜索量/长尾 → 描述
+- 剩余 → 后台搜索词（建议卖家在Seller Central中添加）
 
-### Step A3: Collect Product Characteristics
+### A3步：收集产品特性
 
-Ask or extract from user input:
-- **Product name / type**
-- **Brand name**
-- **Key attributes**: Material, color, size, weight, capacity, quantity
-- **Key features**: What makes it different (3-5 features)
-- **Target audience**: Who buys this?
-- **Use cases**: Top 3 scenarios
-- **What's in the box**: Everything included
+从用户输入中询问或提取：
+- **产品名称/类型**
+- **品牌名称**
+- **关键属性**：材质、颜色、尺寸、重量、容量、数量
+- **关键特点**：是什么让它与众不同（3-5个特点）
+- **目标受众**：谁购买这个？
+- **使用场景**：前3个场景
+- **包装内容**：包含的所有东西
 
-### Step A4: Select Tone
+### A4步：选择语气
 
-| Tone | Style | Best for |
+| 语气 | 风格 | 适用于 |
 |------|-------|----------|
-| **Professional** | Authoritative, spec-focused, trust-building | Electronics, tools, B2B |
-| **Friendly** | Conversational, benefit-focused, relatable | Kitchen, lifestyle, gifts |
-| **Urgent** | Scarcity-driven, action words, problem-solving | Health, safety, seasonal |
-| **Luxury** | Premium, sensory language, exclusivity | Beauty, fashion, premium goods |
+| **专业** | 权威、规格导向、建立信任 | 电子产品、工具、B2B |
+| **友好** | 对话式、利益导向、可共鸣 | 厨房、生活方式、礼品 |
+| **紧急** | 稀缺驱动、行动词、解决问题 | 健康、安全、季节性 |
+| **奢华** | 高级、感官语言、独家性 | 美容、时尚、高端产品 |
 
-Default: **Professional** if not specified.
+默认：如果未指定，则为**专业**。
 
-### Step A5: Generate Listing Copy
+### A5步：生成Listing文案
 
-Generate each component following these rules:
+按照以下规则生成每个组件：
 
-**Title (max 200 characters):**
-- Format: `[Brand] + [Primary Keyword] + [Key Attribute 1] + [Key Attribute 2] + [Secondary Keyword] + [Differentiator]`
-- Primary keyword as close to the front as possible (after brand)
-- No ALL CAPS except brand name
-- No promotional claims ("best", "#1", "top rated")
-- Include size/color/quantity if relevant to search
+**标题（最多200个字符）：**
+- 格式：`[品牌] + [主要关键词] + [关键属性1] + [关键属性2] + [次要关键词] + [差异化因素]`
+- 主要关键词尽可能靠近前面（品牌之后）
+- 除品牌名称外不使用全大写
+- 不使用促销声明（"best"、"#1"、"top rated"）
+- 如果与搜索相关，包括尺寸/颜色/数量
 
-**Bullet Points (5 bullets, max 500 chars each):**
-- Each bullet: `[BENEFIT HEADER IN CAPS] — [Benefit explanation with keyword naturally embedded]`
-- Bullet 1: Primary feature + primary keyword
-- Bullet 2: Key use case + secondary keyword
-- Bullet 3: Quality/material + trust signal
-- Bullet 4: What's included / compatibility
-- Bullet 5: Guarantee / differentiator / social proof hint
-- Each bullet should contain at least 1 target keyword
+**五点（5个五点，每个最多500个字符）：**
+- 每个五点：`[大写利益标题] — [自然嵌入关键词的利益说明]`
+- 五点1：主要特点 + 主要关键词
+- 五点2：关键使用场景 + 次要关键词
+- 五点3：质量/材质 + 信任信号
+- 五点4：包含内容/兼容性
+- 五点5：保证/差异化/社会证明提示
+- 每个五点应包含至少1个目标关键词
 
-**Description (max 2000 characters):**
-- Opening: Problem/pain point the product solves
-- Middle: Features → benefits (expand on bullets, don't repeat verbatim)
-- Close: Call to action + what's in the box
-- Embed remaining keywords not used in title/bullets
-- Use line breaks for readability
+**描述（最多2000个字符）：**
+- 开场：产品解决的问题/痛点
+- 中间：特点 → 利益（扩展五点内容，不要逐字重复）
+- 结尾：行动号召 + 包装内容
+- 嵌入未在标题/五点中使用的剩余关键词
+- 使用换行以提高可读性
 
-### Step A6: Keyword Coverage Score
+### A6步：关键词覆盖评分
 
-After generating, produce a coverage map:
+生成后，制作覆盖地图：
 
 ```
-## Keyword Coverage Report
+## 关键词覆盖报告
 
-| Keyword | Volume | In Title? | In Bullets? | In Description? | Status |
+| 关键词 | 搜索量 | 在标题中？ | 在五点中？ | 在描述中？ | 状态 |
 |---------|--------|-----------|-------------|-----------------|--------|
-| portable blender | 45,000 | ✅ | ✅ | ✅ | 🟢 Covered |
-| smoothie maker | 22,000 | ❌ | ✅ | ✅ | 🟡 Add to title |
-| USB rechargeable | 18,000 | ✅ | ✅ | ❌ | 🟢 Covered |
-| travel blender | 12,000 | ❌ | ❌ | ✅ | 🟡 Add to bullets |
-| mini blender | 8,000 | ❌ | ❌ | ❌ | 🔴 Missing |
+| 便携式榨汁杯 | 45,000 | ✅ | ✅ | ✅ | 🟢 已覆盖 |
+| 奶昔制作器 | 22,000 | ❌ | ✅ | ✅ | 🟡 添加到标题 |
+| USB可充电 | 18,000 | ✅ | ✅ | ❌ | 🟢 已覆盖 |
+| 旅行榨汁杯 | 12,000 | ❌ | ❌ | ✅ | 🟡 添加到五点 |
+| 迷你榨汁杯 | 8,000 | ❌ | ❌ | ❌ | 🔴 缺失 |
 
-Coverage: 18/22 keywords (82%)
-Title keywords: 6/8 slots used
-Bullet keywords: 12/15 target keywords covered
-Uncovered → recommend for Backend Search Terms
+覆盖：18/22关键词（82%）
+标题关键词：6/8个槽位已用
+五点关键词：12/15个目标关键词已覆盖
+未覆盖 → 建议添加到后台搜索词
 ```
 
-**Scoring:**
-- 🟢 90%+ coverage = Excellent
-- 🟡 70-89% = Good, minor gaps
-- 🔴 <70% = Needs work, significant keywords missing
+**评分：**
+- 🟢 90%+ 覆盖 = 优秀
+- 🟡 70-89% = 良好，有小差距
+- 🔴 <70% = 需要改进，重要关键词缺失
 
 ---
 
-## Mode B Workflow — Optimize Existing Listing
+## 模式B工作流程 — 优化现有Listing
 
-### Step B1: Fetch Listing Data
+### B1步：获取Listing数据
 
-Run the bundled script:
+运行捆绑脚本：
 
 ```bash
-<skill>/scripts/fetch-listing.sh "<ASIN>" [marketplace]
+<skill>/scripts/fetch-listing.sh "<ASIN>" [市场]
 ```
 
-**Parameters:**
-- `ASIN` (required): e.g. B09V3KXJPB
-- `marketplace` (optional): `us` (default), `uk`, `de`, `fr`, `it`, `es`, `jp`, `ca`, `au`, `in`, `mx`, `br`
+**参数：**
+- `ASIN`（必填）：例如 B09V3KXJPB
+- `市场`（可选）：`us`（默认）、`uk`、`de`、`fr`、`it`、`es`、`jp`、`ca`、`au`、`in`、`mx`、`br`
 
-**Extracts:** Title, brand, price, bullet points, description, image count, A+ content presence, rating, review count, BSR, categories, date first available.
+**提取内容：** 标题、品牌、价格、五点、描述、图片数量、A+内容存在性、评分、评论数量、BSR、类目、首次可用日期。
 
-If script returns incomplete data, fall back to `web_fetch` on the product URL.
+如果脚本返回不完整的数据，回退到产品URL的`web_fetch`。
 
-### Step B2: Discover Target Keywords
+### B2步：发现目标关键词
 
-If user provides keywords, use those. Otherwise, auto-discover:
+如果用户提供关键词，使用那些。否则，自动发现：
 
-1. Extract apparent keywords from current title and bullets
-2. Run `web_search` for `site:amazon.com "[product type]"` to find competitors
-3. Extract keywords from top 3 competitor titles and bullets
-4. (Optional) Chain with `amazon-keyword-research` skill for deeper analysis
-5. Compile a combined keyword list with estimated priority
+1. 从当前标题和五点中提取明显关键词
+2. 运行`web_search`查找`site:amazon.com "[产品类型]"`以找到竞争对手
+3. 从前3个竞争对手的标题和五点中提取关键词
+4. （可选）与`amazon-keyword-research`技能链接以进行更深入分析
+5. 编译包含估计优先级的组合关键词列表
 
-### Step B3: Keyword Gap Analysis
+### B3步：关键词差距分析
 
-Compare current listing against target keywords:
+将当前listing与目标关键词进行比较：
 
 ```
-## Keyword Gap Analysis: [ASIN]
+## 关键词差距分析：[ASIN]
 
-### ✅ Keywords Found in Listing
-| Keyword | In Title | In Bullets | In Description |
+### ✅ Listing中已找到的关键词
+| 关键词 | 在标题中 | 在五点中 | 在描述中 |
 |---------|----------|------------|----------------|
-| [kw] | ✅ | ✅ | ❌ |
+| [关键词] | ✅ | ✅ | ❌ |
 
-### ❌ Missing Keywords (Competitors Have, You Don't)
-| Keyword | Competitor 1 | Competitor 2 | Competitor 3 | Priority |
+### ❌ 缺失的关键词（竞争对手有，您没有）
+| 关键词 | 竞争对手1 | 竞争对手2 | 竞争对手3 | 优先级 |
 |---------|-------------|-------------|-------------|----------|
-| [kw] | ✅ Title | ✅ Bullet | ❌ | 🔴 High |
+| [关键词] | ✅ 标题 | ✅ 五点 | ❌ | 🔴 高 |
 
-### Coverage: X/Y keywords (Z%)
+### 覆盖：X/Y关键词（Z%）
 ```
 
-### Step B4: 8-Dimension Audit
+### B4步：8维度审计
 
-Score each on the scale shown, with keyword integration factored in:
+按所示量表对每个维度评分，并考虑关键词整合因素：
 
-| Dimension | Max Score | Key Criteria |
+| 维度 | 最高分 | 关键标准 |
 |-----------|-----------|-------------|
-| **Title** | /15 | Primary keyword near front? Brand? Attributes? Under 200 chars? Not truncated on mobile? |
-| **Bullet Points** | /15 | All 5 used? Benefit-first? Keywords embedded naturally? Under 500 chars each? |
-| **Images** | /15 | 7+ images? White bg main? Infographic? Lifestyle? Size ref? Video? |
-| **A+ Content** | /10 | Present? Brand story? Comparison chart? Lifestyle imagery? |
-| **Description** | /10 | Keywords not in title/bullets? Readable? Problem→solution flow? |
-| **Pricing** | /10 | Competitive? Coupon/deal present? |
-| **Reviews** | /15 | 4.0+ stars? 100+ reviews? Recent reviews positive? |
-| **SEO Coverage** | /10 | Primary kw in title+bullets+desc? Long-tail present? No wasted repeats? **Keyword coverage %** |
+| **标题** | /15 | 主要关键词靠近前面？品牌？属性？200字符以内？移动端不截断？ |
+| **五点** | /15 | 5个都用？利益优先？关键词自然嵌入？每个500字符以内？ |
+| **图片** | /15 | 7+张图片？主图白底？信息图？生活方式图？尺寸参考？视频？ |
+| **A+内容** | /10 | 存在？品牌故事？对比表？生活方式图片？ |
+| **描述** | /10 | 标题/五点中未使用的关键词？可读？问题→解决方案流程？ |
+| **定价** | /10 | 有竞争力？优惠券/优惠存在？ |
+| **评论** | /15 | 4.0+星？100+评论？近期评论正面？ |
+| **SEO覆盖** | /10 | 主要关键词在标题+五点+描述中？长尾存在？没有浪费重复？**关键词覆盖百分比** |
 
-### Step B5: Generate Optimized Copy
+### B5步：生成优化后的文案
 
-Rewrite the listing incorporating missing keywords:
-- Show **before vs after** for each component
-- Highlight which keywords were added and where
-- Maintain the brand's existing tone unless a different tone is requested
+重写listing，整合缺失的关键词：
+- 显示每个组件的**优化前 vs 优化后**
+- 突出显示添加了哪些关键词以及在哪里
+- 除非请求不同的语气，否则保持品牌现有语气
 
 ---
 
-## Output Formats
+## 输出格式
 
-The primary deliverable is always a **ready-to-use listing** that the seller can copy-paste directly into Seller Central. Diagnostic data (scores, keyword analysis) comes after as supporting evidence.
+主要交付成果始终是**可直接使用的listing**，卖家可以直接复制粘贴到Seller Central。诊断数据（评分、关键词分析）作为支持证据放在后面。
 
-### Mode A Output — New Listing
+### 模式A输出 — 新Listing
 
 ```
-# ✅ Your Listing — Ready to Use
+# ✅ 您的Listing — 可直接使用
 
-## Title
-[title text — copy this directly into Seller Central]
+## 标题
+[标题文本 — 直接复制到Seller Central]
 
-## Bullet Points
-1. [BENEFIT HEADER] — [text with keyword]
-2. [BENEFIT HEADER] — [text with keyword]
-3. [BENEFIT HEADER] — [text with keyword]
-4. [BENEFIT HEADER] — [text with keyword]
-5. [BENEFIT HEADER] — [text with keyword]
+## 五点
+1. [利益标题] — [带关键词的文本]
+2. [利益标题] — [带关键词的文本]
+3. [利益标题] — [带关键词的文本]
+4. [利益标题] — [带关键词的文本]
+5. [利益标题] — [带关键词的文本]
 
-## Description
-[description text — copy this directly into Seller Central]
+## 描述
+[描述文本 — 直接复制到Seller Central]
 
-## Backend Search Terms
-[comma-separated keywords to paste into Seller Central → Keywords → Search Terms]
+## 后台搜索词
+[逗号分隔的关键词，粘贴到Seller Central → 关键词 → 搜索词]
 
 ---
 
-# 📊 How We Built This Listing (Diagnostic)
+# 📊 我们如何构建此Listing（诊断）
 
-**Marketplace:** Amazon [XX] | **Tone:** [tone] | **Keywords imported:** [count]
-**Title characters:** [X]/200 | **Description characters:** [X]/2000
+**市场：** 亚马逊 [XX] | **语气：** [语气] | **导入关键词数量：** [数量]
+**标题字符数：** [X]/200 | **描述字符数：** [X]/2000
 
-## Keyword Coverage: [X]%
+## 关键词覆盖：[X]%
 
-| Keyword | Volume | In Title | In Bullets | In Description | Status |
+| 关键词 | 搜索量 | 在标题中 | 在五点中 | 在描述中 | 状态 |
 |---------|--------|----------|------------|----------------|--------|
-| [kw] | [vol] | ✅/❌ | ✅/❌ | ✅/❌ | 🟢🟡🔴 |
+| [关键词] | [搜索量] | ✅/❌ | ✅/❌ | ✅/❌ | 🟢🟡🔴 |
 
-## Keyword Priority Breakdown
-🔴 Primary (Title): [list]
-🟡 Secondary (Bullets): [list]
-🟢 Tertiary (Description): [list]
-⚪ Backend: [list]
+## 关键词优先级细分
+🔴 主要（标题）：[列表]
+🟡 次要（五点）：[列表]
+🟢 第三级（描述）：[列表]
+⚪ 后台：[列表]
 ```
 
-### Mode B Output — Audit + Optimized Listing
+### 模式B输出 — 审计 + 优化后的Listing
 
 ```
-# ✅ Optimized Listing — Ready to Use
+# ✅ 优化后的Listing — 可直接使用
 
-## Title
-[optimized title — copy this directly into Seller Central]
+## 标题
+[优化后的标题 — 直接复制到Seller Central]
 
-## Bullet Points
-1. [BENEFIT HEADER] — [optimized text]
-2. [BENEFIT HEADER] — [optimized text]
-3. [BENEFIT HEADER] — [optimized text]
-4. [BENEFIT HEADER] — [optimized text]
-5. [BENEFIT HEADER] — [optimized text]
+## 五点
+1. [利益标题] — [优化后的文本]
+2. [利益标题] — [优化后的文本]
+3. [利益标题] — [优化后的文本]
+4. [利益标题] — [优化后的文本]
+5. [利益标题] — [优化后的文本]
 
-## Description
-[optimized description — copy this directly into Seller Central]
+## 描述
+[优化后的描述 — 直接复制到Seller Central]
 
-## Backend Search Terms
-[comma-separated keywords to paste into Seller Central → Keywords → Search Terms]
+## 后台搜索词
+[逗号分隔的关键词，粘贴到Seller Central → 关键词 → 搜索词]
 
 ---
 
-# 📊 Audit Report: [ASIN]
+# 📊 审计报告：[ASIN]
 
-**Product:** [title] | **Brand:** [brand]
-**Price:** [price] | **Rating:** [stars] ([count] reviews)
+**产品：** [标题] | **品牌：** [品牌]
+**价格：** [价格] | **评分：** [星级]（[数量]条评论）
 
-## Score: [X/100] → [Y/100] (after optimization)
+## 评分：[X/100] → [Y/100]（优化后）
 
-| Dimension | Before | After | Key Change |
+| 维度 | 优化前 | 优化后 | 主要变化 |
 |-----------|--------|-------|-----------|
-| Title | /15 | /15 | [what changed] |
-| Bullet Points | /15 | /15 | [what changed] |
-| Images | /15 | — | [recommendation only] |
-| A+ Content | /10 | — | [recommendation only] |
-| Description | /10 | /10 | [what changed] |
-| Pricing | /10 | — | [observation] |
-| Reviews | /15 | — | [observation] |
-| SEO Coverage | /10 | /10 | [what changed] |
+| 标题 | /15 | /15 | [变化内容] |
+| 五点 | /15 | /15 | [变化内容] |
+| 图片 | /15 | — | [仅建议] |
+| A+内容 | /10 | — | [仅建议] |
+| 描述 | /10 | /10 | [变化内容] |
+| 定价 | /10 | — | [观察] |
+| 评论 | /15 | — | [观察] |
+| SEO覆盖 | /10 | /10 | [变化内容] |
 
-## Keyword Coverage: [X]% → [Y]%
+## 关键词覆盖：[X]% → [Y]%
 
-| Keyword | Before | After | Where Added |
+| 关键词 | 优化前 | 优化后 | 添加位置 |
 |---------|--------|-------|-------------|
-| [kw] | ❌ | ✅ | Title + Bullet 2 |
-| [kw] | ✅ Title only | ✅ Title + Bullets | Bullet 4 |
+| [关键词] | ❌ | ✅ | 标题 + 五点2 |
+| [关键词] | ✅ 仅标题 | ✅ 标题 + 五点 | 五点4 |
 
-## What Changed (Before → After)
+## 优化内容（优化前 → 优化后）
 
-**Title:**
-> ❌ [original]
-> ✅ [optimized]
+**标题：**
+> ❌ [原始]
+> ✅ [优化后]
 
-**Bullets:**
-> ❌ 1. [original]
-> ✅ 1. [optimized — added: +[kw1], +[kw2]]
+**五点：**
+> ❌ 1. [原始]
+> ✅ 1. [优化后 — 添加了：+[关键词1]，+[关键词2]]
 
-## 🔴 Issues Fixed
-1. [what was wrong → how we fixed it]
+## 🔴 已修复的问题
+1. [问题 → 修复方法]
 
-## 🟡 Recommendations (requires seller action)
-1. [image improvements, A+ content, pricing — things the skill can't rewrite]
+## 🟡 建议（需要卖家操作）
+1. [图片改进、A+内容、定价 — 技能无法重写的内容]
 
-## 🟢 What Was Already Working
-1. [positive aspects preserved]
+## 🟢 已生效的内容
+1. [保留的正面方面]
 ```
 
-### Competitive Comparison (if requested)
+### 竞争比较（如请求）
 
 ```
-| Dimension | Your Listing | Competitor 1 | Competitor 2 | Competitor 3 |
+| 维度 | 您的Listing | 竞争对手1 | 竞争对手2 | 竞争对手3 |
 |-----------|-------------|-------------|-------------|-------------|
-| Title score | /15 | /15 | /15 | /15 |
-| Bullets score | /15 | /15 | /15 | /15 |
-| Images | [count] | [count] | [count] | [count] |
-| A+ Content | Yes/No | Yes/No | Yes/No | Yes/No |
-| Keyword coverage | X% | X% | X% | X% |
-| Price | — | — | — | — |
-| Rating | — | — | — | — |
-| **Total** | **/100** | **/100** | **/100** | **/100** |
+| 标题评分 | /15 | /15 | /15 | /15 |
+| 五点评分 | /15 | /15 | /15 | /15 |
+| 图片 | [数量] | [数量] | [数量] | [数量] |
+| A+内容 | 有/无 | 有/无 | 有/无 | 有/无 |
+| 关键词覆盖 | X% | X% | X% | X% |
+| 价格 | — | — | — | — |
+| 评分 | — | — | — | — |
+| **总分** | **/100** | **/100** | **/100** | **/100** |
 ```
 
-### Key principles
+### 关键原则
 
-1. The seller's workflow is: **copy the listing → paste into Seller Central → done.** The diagnostic section explains WHY those specific words were chosen, but the listing itself must stand alone as a complete, ready-to-use deliverable. Never output only a report without the actual listing copy.
+1. 卖家的工作流程是：**复制listing → 粘贴到Seller Central → 完成。** 诊断部分解释为什么选择这些特定词，但listing本身必须作为完整的、可直接使用的交付成果独立存在。永远不要只输出报告而不输出实际的listing文案。
 
-2. **Output language must match the target marketplace.** Amazon US/UK/AU/CA/IN → English. Amazon DE → German. Amazon FR → French. Amazon JP → Japanese. Amazon ES/MX → Spanish. Amazon IT → Italian. Amazon BR → Portuguese. The entire output (listing copy AND diagnostic section) must be in the marketplace language, regardless of what language the user is speaking in the conversation.
+2. **输出语言必须与目标市场匹配。** 亚马逊美国/英国/澳大利亚/加拿大/印度 → 英语。亚马逊德国 → 德语。亚马逊法国 → 法语。亚马逊日本 → 日语。亚马逊西班牙/墨西哥 → 西班牙语。亚马逊意大利 → 意大利语。亚马逊巴西 → 葡萄牙语。整个输出（listing文案和诊断部分）必须使用市场语言，无论用户在对话中使用什么语言。
 
-## Integration with amazon-keyword-research
+## 与amazon-keyword-research的集成
 
-This skill works best when chained with [amazon-keyword-research](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-keyword-research):
+此技能与[amazon-keyword-research](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-keyword-research)链接时效果最佳：
 
 ```
-Step 1: "Research keywords for portable blender on Amazon US"
-   → amazon-keyword-research returns keyword list with volumes
+第一步："研究亚马逊美国便携式榨汁杯的关键词"
+   → amazon-keyword-research返回带搜索量的关键词列表
 
-Step 2: "Now create a listing using those keywords. Product: 380ml BPA-free blender, USB-C rechargeable. Tone: Friendly."
-   → amazon-listing-optimization Mode A uses the keywords to generate optimized copy
+第二步："现在使用这些关键词创建listing。产品：380ml BPA-free榨汁杯，USB-C充电。语气：友好。"
+   → amazon-listing-optimization 模式A使用关键词生成优化后的文案
 ```
 
-## Limitations
+## 局限性
+
+- 此技能生成listing文案和优化建议，但无法直接修改Seller Central中的listing
+- 评分和建议基于标准最佳实践 — 可能需要根据您的特定类目和品牌指南进行调整
+- 关键词覆盖建议假设标准亚马逊SEO规则 — 某些类目可能有不同的要求
+- 无法访问您的实际销售数据 — 建议基于公开信息和通用最佳实践

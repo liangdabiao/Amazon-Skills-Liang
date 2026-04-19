@@ -1,120 +1,119 @@
 ---
 name: amazon-private-label
-description: "Private label launch playbook — product selection, branding, supplier management, differentiation strategy"
+description: "自有品牌启动手册 — 选品、品牌建设、供应商管理、差异化策略"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Private Label
+# Amazon 自有品牌
 
-Private label launch playbook — product selection, branding, supplier management, differentiation strategy
+自有品牌启动手册 — 选品、品牌建设、供应商管理、差异化策略
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon private label for my e-commerce business.
+帮我处理亚马逊自有品牌。
 ```
 
-## Capabilities
+## 功能
 
-- Private label launch playbook
-- product selection
-- branding
-- supplier management
-- differentiation strategy
+- 自有品牌启动手册
+- 选品
+- 品牌建设
+- 供应商管理
+- 差异化策略
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Product Selection — Blue Ocean Strategy and Differentiation Positioning
+### 选品 — 蓝海策略与差异化定位
 
-**Ideal Product Criteria:**
-- Stable demand with growth trend
-- Relatively mild competition (low top-brand concentration, fewer competitors with 1000+ reviews)
-- Product improvement opportunities (clear consumer pain points, concentrated negative reviews on specific issues)
-- Profit margin sufficient to cover costs (minimum 30-40% gross margin recommended)
+**理想产品标准：**
+- 需求稳定且有增长趋势
+- 竞争相对温和（头部品牌集中度低，1000+评论的竞品较少）
+- 产品改进机会（清晰的消费者痛点，集中于特定问题的负面评论）
+- 利润空间足以覆盖成本（建议最低毛利率30-40%）
 
-**Selection Methods:**
-- **Keyword Mining:** Discover high-demand, low-supply product categories through search keywords.
-- **Negative Review Analysis:** Identify product improvement opportunities by analyzing competitor reviews.
-- **Trend Tracking:** Monitor emerging consumer trends and niche demands.
+**选品方法：**
+- **关键词挖掘：** 通过搜索关键词发现高需求、低供给的产品类目。
+- **负面评论分析：** 通过分析竞品评论识别产品改进机会。
+- **趋势追踪：** 监控新兴消费趋势和细分需求。
 
-**Key:** Avoid categories with high brand concentration (e.g., electronics dominated by known brands). Focus on functional products where consumers have low brand loyalty.
+**关键：** 避免高品牌集中度的类目（例如由知名品牌主导的电子产品）。专注于消费者品牌忠诚度低的实用型产品。
 
-### Brand Building — From Logo to Brand Asset Construction
+### 品牌建设 — 从标志到品牌资产构建
 
-**Core Elements:**
-- **Brand Name:** Simple, memorable, related to product category, easy to register and promote.
-- **Visual Identity:** Consistent Logo, brand colors, fonts, packaging design style.
-- **Brand Story:** Communicate brand philosophy, product value, emotional connection with consumers.
-- **Trust Building:** Accumulate brand reputation through product quality, customer service, consistent quality reviews.
+**核心要素：**
+- **品牌名称：** 简单易记、与产品类目相关、易于注册和推广。
+- **视觉识别：** 一致的标志、品牌色彩、字体、包装设计风格。
+- **品牌故事：** 传达品牌理念、产品价值、与消费者的情感连接。
+- **信任建立：** 通过产品质量、客户服务、一致的品质评论积累品牌声誉。
 
-**Amazon Brand Registry** is the foundation — unlocks A+ pages, Brand Storefront, Brand Analytics.
+**亚马逊品牌备案**是基础 — 解锁A+页面、品牌旗舰店、品牌分析。
 
-### Supplier Management — Quality vs Cost Balance
+### 供应商管理 — 质量与成本平衡
 
-**Selection Criteria:**
-- Production capacity match
-- Quality control system (ISO certification, complete QC process)
-- Price competitiveness (within target cost, supports small-batch trial)
-- Communication efficiency
-- Cooperation willingness (OEM/ODM)
+**选择标准：**
+- 产能匹配
+- 质量控制体系（ISO认证、完善的QC流程）
+- 价格竞争力（在目标成本内，支持小批量试单）
+- 沟通效率
+- 合作意愿（OEM/ODM）
 
-**Strategy:** "Small batch trial production → Quality inspection → Gradual scale-up" — verify supplier capabilities before expanding orders.
+**策略：**"小批量试产 → 质量检验 → 逐步放量" — 在扩大订单前验证供应商能力。
 
-### Differentiation Competition Strategy
+### 差异化竞争策略
 
-**Differentiation Dimensions:**
-- **Product Function:** Add practical features competitors lack, improve features that receive concentrated negative feedback.
-- **Design Aesthetics:** Unique industrial design, attractive colors, material selection.
-- **Packaging Experience:** Premium packaging, eco-friendly materials, unboxing experience.
-- **Bundle Value:** Include complementary accessories or guides, provide unexpected extra value.
-- **Brand Emotional Connection:** Build emotional connection through brand story and values.
+**差异化维度：**
+- **产品功能：** 添加竞品缺乏的实用功能，改进收到集中负面反馈的功能。
+- **设计美学：** 独特的工业设计、吸引人的色彩、材质选择。
+- **包装体验：** 高端包装、环保材料、开箱体验。
+- **捆绑价值：** 包含配套配件或指南，提供意想不到的额外价值。
+- **品牌情感连接：** 通过品牌故事和价值观建立情感连接。
 
-**Goal:** Not just make product look different — make consumers feel substantive value improvement.
+**目标：** 不仅仅是让产品看起来不同 — 而是让消费者感受到实质性的价值提升。
 
-### Financial Model and ROI Analysis
+### 财务模型和投资回报分析
 
-**Startup Costs:**
-- Product development and sampling
-- Initial inventory purchase
-- Brand registration and IP protection
-- Listing creation and optimization
-- Initial advertising budget
-- Logistics and FBA fees
+**启动成本：**
+- 产品开发和打样
+- 初始库存采购
+- 品牌注册和知识产权保护
+- listing创建和优化
+- 初始广告预算
+- 物流和FBA费用
 
-**Scenario Planning:** Build three scenarios (optimistic, neutral, pessimistic). Ensure even pessimistic scenario achieves break-even within 6-12 months.
+**情景规划：** 构建三种情景（乐观、中性、悲观）。确保即使悲观情景也能在6-12个月内实现盈亏平衡。
 
-**Note:** First inventory requires significant capital. Product may need 3-6 months to generate stable sales — reserve sufficient working capital.
+**注意：** 首批库存需要大量资金。产品可能需要3-6个月才能产生稳定销售 — 预留充足的流动资金。
 
-### Data Sources
+### 数据来源
 
-- web_search for market research and supplier discovery.
-- User provides: budget range, category preferences, resource situation, target market info.
+- web_search用于市场调研和供应商发现。
+- 用户提供：预算范围、类目偏好、资源情况、目标市场信息。
 
-### Limitations
+### 局限性
 
-- High upfront capital requirement — inventory, brand registration, sampling, advertising.
-- Long product development cycle (2-4 months from selection to shelf).
-- High supply chain management complexity.
-- IP risks — both protecting your own IP and avoiding infringing others.
-- Market validation uncertainty — 3-6 months before clear results.
+- 前期资金需求高 — 库存、品牌注册、打样、广告。
+- 产品开发周期长（从选品到上架2-4个月）。
+- 供应链管理复杂程度高。
+- 知识产权风险 — 保护自身知识产权和避免侵犯他人知识产权。
+- 市场验证不确定性 — 需要3-6个月才能看到明确结果。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

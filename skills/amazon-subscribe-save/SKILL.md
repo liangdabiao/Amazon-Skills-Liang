@@ -1,95 +1,94 @@
 ---
 name: amazon-subscribe-save
-description: "Subscribe & Save optimization — enrollment, discount tiers, frequency optimization, retention analysis"
+description: "订阅省优化 — 注册、折扣层级、频率优化、留存分析"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Subscribe & Save
+# Amazon 订阅省
 
-Subscribe & Save optimization — enrollment, discount tiers, frequency optimization, retention analysis
+订阅省优化 — 注册、折扣层级、频率优化、留存分析
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon subscribe & save for my e-commerce business.
+帮我处理亚马逊订阅省。
 ```
 
-## Capabilities
+## 功能
 
-- Subscribe & Save optimization
-- enrollment
-- discount tiers
-- frequency optimization
-- retention analysis
+- 订阅省优化
+- 注册
+- 折扣层级
+- 频率优化
+- 留存分析
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Discount Tier Incentive Mechanism
+### 折扣层级激励机制
 
-Amazon S&S uses tiered discount structure:
-- 0-4 items subscribed: 5% discount.
-- 5+ items: unlock up to 15% discount.
+亚马逊S&S使用分层折扣结构：
+- 订阅0-4件商品：5%折扣。
+- 订阅5件以上：解锁至高15%折扣。
 
-Core principle: "Subscription bundling" — increasing items per subscription increases customer stickiness.
-- When consumers add multiple brand products to same S&S plan to get higher discount, each product's churn cost increases.
-- Canceling one item may lose high-discount eligibility for entire order.
+核心原则："订阅捆绑" — 增加每次订阅的商品数量会增加客户粘性。
+- 当消费者将多个品牌产品添加到同一S&S计划以获得更高折扣时，每个产品的流失成本会增加。
+- 取消一件商品可能导致整个订单失去高折扣资格。
 
-### Customer Lifetime Value (CLV) Amplification Principle
+### 客户终身价值（CLV）放大原则
 
-S&S transforms one-time purchases into continuous consumption relationships.
-- Customers subscribed 6+ months: cumulative profit contribution far exceeds one-time purchase.
-- S&S subscribers have significantly higher cross-purchase rates in non-subscription categories — "subscription entry, whole store benefits" spillover effect.
+S&S将一次性购买转化为持续消费关系。
+- 订阅6个月以上的客户：累计利润贡献远超一次性购买。
+- S&S订阅者在非订阅类目有显著更高的交叉购买率 — "订阅入口、全店受益"的溢出效应。
 
-### Default Effect and Behavioral Inertia Principle
+### 默认效应和行为惯性原则
 
-"Default effect" in behavioral economics plays important role in S&S.
-- Once auto-delivery is started, cancellation requires active operation — most consumers prefer status quo.
-- Amazon's "skip delivery" option provides flexible exit — actually reduces psychological threshold for subscribing.
+行为经济学中的"默认效应"在S&S中发挥重要作用。
+- 一旦启动自动配送，取消需要主动操作 — 大多数消费者偏好维持现状。
+- 亚马逊的"跳过配送"选项提供了灵活的退出方式 — 实际上降低了订阅的心理门槛。
 
-### Frequency Matching and Inventory Synergy Principle
+### 频率匹配与库存协同原则
 
-Subscription delivery frequency should match actual consumption cycle.
-- Too frequent → inventory accumulates at consumer home → cancellation.
-- Too infrequent → stockout period → consumer may switch to competitors during gap.
-- Optimal: deliver 3-7 days before consumer runs out — seamless connection.
+订阅配送频率应与实际消费周期匹配。
+- 太频繁 → 消费者家中库存堆积 → 取消订阅。
+- 太稀疏 → 缺货期 → 消费者可能在空档期转向竞品。
+- 最优：在消费者用完前3-7天配送 — 无缝连接。
 
-### Predictive Demand and Supply Chain Optimization Principle
+### 预测需求与供应链优化原则
 
-S&S provides relatively predictable demand signals for sellers.
-- Analyze subscription customer growth trends, retention rates, delivery frequency distribution.
-- More accurate sales forecasting → optimized procurement and inventory management.
-- Reduces "bullwhip effect" (demand signal amplification along supply chain) → more efficient supply chain.
+S&S为卖家提供相对可预测的需求信号。
+- 分析订阅客户增长趋势、留存率、配送频率分布。
+- 更准确的销售预测 → 优化的采购和库存管理。
+- 减少"牛鞭效应"（沿供应链的需求信号放大）→ 更高效的供应链。
 
-### Data Sources
+### 数据来源
 
-- No external dependencies. Based on Amazon Seller Central S&S program documentation and behavioral economics principles.
-- User provides: product repurchase cycle data, unit profit structure, current S&S subscription volume.
+- 无外部依赖。基于亚马逊卖家中心S&S项目文档和行为经济学原理。
+- 用户提供：产品复购周期数据、单位利润结构、当前S&S订阅量。
 
-### Limitations
+### 局限性
 
-- **Profit Margin Compression:** S&S 5-15% discount directly erodes per-unit profit. Some low-margin products may have near-zero or negative profit on S&S orders.
-- **Limited Control:** Subscription rules (discount tiers, delivery frequency options, cancellation process) set by Amazon — sellers cannot customize. Amazon may change S&S policy without notice.
-- **Customer Attribution Risk:** S&S subscription relationship bound at Amazon platform level, not seller level. If consumer selects competitor alternative through S&S page, seller loses subscription customer with no effective retention means.
-- **Limited New Product Effect:** S&S better suited for mature products with established reputation. New products lacking reviews/trust typically don't attract long-term subscription commitments.
-- **Delayed Payment and Cash Flow Pressure:** S&S revenue recognized at each delivery, not subscription creation. Sellers must bear cash flow pressure from procurement to delivery, especially during rapid subscription growth.
+- **利润率压缩：** S&S 5-15%折扣直接侵蚀每单利润。某些低利润产品S&S订单可能接近零利润或负利润。
+- **控制有限：** 订阅规则（折扣层级、配送频率选项、取消流程）由亚马逊设定 — 卖家无法定制。亚马逊可能在不通知情况下更改S&S政策。
+- **客户归属风险：** S&S订阅关系绑定在亚马逊平台层面，而非卖家层面。如果消费者通过S&S页面选择竞品替代品，卖家会失去订阅客户且没有有效的留存手段。
+- **新产品效果有限：** S&S更适合有成熟口碑的产品。缺乏评论/信任的新产品通常不会吸引长期订阅承诺。
+- **延迟付款和现金流压力：** S&S收入在每次配送时确认，而非订阅创建时。卖家必须承担从采购到配送的现金流压力，特别是在订阅快速增长期。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

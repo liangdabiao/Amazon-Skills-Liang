@@ -1,95 +1,94 @@
 ---
 name: amazon-coupon-strategy
-description: "Coupon and promotion planning — coupon types, stacking rules, deal timing, redemption optimization"
+description: "优惠券和促销规划 — 优惠券类型、叠加规则、促销时机、兑换优化"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Coupon Strategy
+# Amazon 优惠券策略
 
-Coupon and promotion planning — coupon types, stacking rules, deal timing, redemption optimization
+优惠券和促销规划 — 优惠券类型、叠加规则、促销时机、兑换优化
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon coupon strategy for my e-commerce business.
+帮我处理亚马逊优惠券策略。
 ```
 
-## Capabilities
+## 功能
 
-- Coupon and promotion planning
-- coupon types
-- stacking rules
-- deal timing
-- redemption optimization
+- 优惠券和促销规划
+- 优惠券类型
+- 叠加规则
+- 促销时机
+- 兑换优化
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Coupon Display and Conversion Mechanics
+### 优惠券展示和转化机制
 
-- **Visual Badge Effect:** Green "Coupon" tag appears in search results and product pages — significantly increases click-through rate and consumer attention.
-- **Types:** Percentage off (e.g., 5% Off) or fixed amount off (e.g., $5 Off).
-- **Cost Structure:** $0.60 per redemption + discount amount. Only charged when consumers actually use coupon.
-- **Minimum Budget:** Can set as low as 100 redemptions. "Pay-per-performance" model makes it ideal for new product launches and daily promotions.
+- **视觉徽章效果：** 搜索结果和产品页面显示绿色"优惠券"标签 — 显著提高点击率和消费者关注度。
+- **类型：** 百分比折扣（例如5% Off）或固定金额折扣（例如$5 Off）。
+- **成本结构：** 每次兑换$0.60 + 折扣金额。仅在消费者实际使用优惠券时收取。
+- **最低预算：** 可低至100次兑换。"按效果付费"模式使其非常适合新产品上架和日常促销。
 
-### Promotion Stacking Mechanism
+### 促销叠加机制
 
-- **Risk of Stacking:** Multiple promotions on same product = discounts stack, potentially resulting in far lower price than expected.
-- **Common Stacking Scenarios:** Coupon + Prime Exclusive Discount, Coupon + Lightning Deal, Coupon + Z-Price.
-- **Calculation Logic:** Typically "base price applies percentage discount first, then fixed amount discount." Example: $100 original price with 20% member discount + $10 coupon = $100 × 0.8 - $10 = $70 (not 20% + $10).
-- **Prevention:** Always verify final price using Amazon promotion simulator or third-party tools before launching any promotion.
+- **叠加风险：** 同一产品的多个促销 = 折扣叠加，可能导致价格远低于预期。
+- **常见叠加场景：** 优惠券 + Prime独家折扣、优惠券 + 秒杀、优惠券 + Z价格。
+- **计算逻辑：** 通常"原价先按百分比折扣，再按固定金额折扣"。示例：原价$100，20%会员折扣 + $10优惠券 = $100 × 0.8 - $10 = $70（不是20% + $10）。
+- **预防：** 启动任何促销前，始终使用亚马逊促销模拟器或第三方工具验证最终价格。
 
-### Promotion Cost Structure Framework
+### 促销成本结构框架
 
-- **Coupons:** $0.60/redemption + discount amount.
-- **Prime Exclusive Discounts:** No extra fee, but requires 20-week lowest price (Featured Offer rules).
-- **Lightning Deals:** Fixed activity fee (~$150-$500 depending on marketplace) + sales commission.
-- **7-Day Deals:** Similar structure to Lightning Deals.
-- **Profit Calculation:** Calculate post-promotion profit margin. Ensure positive margin after deducting discount and fees, or explicitly accept planned loss for strategic purposes (reviews, ranking).
+- **优惠券：** 每次兑换$0.60 + 折扣金额。
+- **Prime独家折扣：** 无额外费用，但需要20周最低价格（特惠报价规则）。
+- **秒杀：** 固定活动费用（因 marketplace而异约$150-$500）+ 销售佣金。
+- **7天促销：** 与秒杀类似结构。
+- **利润计算：** 计算促销后利润。确保扣除折扣和费用后利润为正，或明确接受战略性计划的亏损（评论、排名）。
 
-### Promotion Timing and Seasonality Framework
+### 促销时机和季节性框架
 
-- **Peak Seasons:** Prime Day (July), Black Friday/Cyber Monday (November), Christmas (December), local marketplace events.
-- **Consumer Behavior:** Higher discount sensitivity during peaks = higher coupon redemption rates.
-- **New Product Window:** First 30 days after launch = prime promotion window. Amazon algorithm prioritizes new products. Combine with promotions for rapid initial sales and review accumulation.
-- **Year-Round Calendar:** Schedule major promotions around peaks. Use daily low-discount coupons to maintain ranking and traffic.
+- **旺季：** Prime Day（7月）、黑五/网一（11月）、圣诞（12月）、本地 marketplace活动。
+- **消费者行为：** 旺季折扣敏感度更高 = 更高的优惠券兑换率。
+- **新产品窗口：** 上架后前30天 = 最佳促销窗口。亚马逊算法优先推荐新产品。结合促销以快速积累初始销售和评论。
+- **全年日历：** 在旺季周围安排主要促销。使用日常低折扣优惠券维持排名和流量。
 
-### Promotion Impact on Search Ranking
+### 促销对搜索排名的影响
 
-- **Ranking Signals:** Promotions increase sales velocity and conversion rate — both are important Amazon A9 algorithm signals.
-- **Ranking Effect:** Rapid sales increase signals "popular product" to algorithm → improves search ranking.
-- **Post-Promotion:** If sales drop sharply after promotion ends, ranking also declines.
-- **Strategy:** Focus on maintaining stable sales rhythm. Tiered promotions (gradually decreasing discount) and continuous small discounts more effective than intermittent large promotions.
+- **排名信号：** 促销增加销售速度和转化率 — 两者都是重要的亚马逊A9算法信号。
+- **排名效果：** 快速销售增长向算法发出"热门产品"信号 → 改善搜索排名。
+- **促销后：** 如果促销结束后销售急剧下降，排名也会下降。
+- **策略：** 专注于维持稳定的销售节奏。分层促销（逐步降低折扣）和持续小折扣比间歇性大促更有效。
 
-### Data Sources
+### 数据来源
 
-- User provides: product info, current pricing, profit margin, daily sales, search ranking, review count, competitor pricing.
-- Promotion reports and business reports from Seller Central for monitoring.
+- 用户提供：产品信息、当前定价、利润率、日均销售、搜索排名、评论数、竞品定价。
+- 卖家中心的促销报告和业务报告用于监控。
 
-### Limitations
+### 局限性
 
-- Promotion effectiveness highly dependent on timing and season.
-- Stacking can cause unintended deep discounts — always verify.
-- High-discount promotions may train buyers to wait for sales, weakening full-price sales.
-- Some promotions require advance application (Lightning Deals, 7-Day Deals) with deadlines.
-- New products need time to accumulate review history before major promotions.
+- 促销效果高度依赖于时机和季节。
+- 叠加可能导致意外深度折扣 — 务必验证。
+- 高折扣促销可能训练买家等待销售，削弱正价销售。
+- 某些促销需要提前申请（秒杀、7天促销）有截止日期。
+- 新产品需要时间积累评论历史才能进行大型促销。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

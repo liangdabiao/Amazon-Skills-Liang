@@ -1,85 +1,84 @@
 ---
 name: amazon-trending-products
-description: "Discover trending products and rising categories on Amazon. Analyzes Best Seller Rank (BSR) patterns, new release momentum, seasonal trends, and emerging niches. Helps identify product opportunities before they peak."
+description: "发现亚马逊热门产品和上升类目。分析BSR趋势、新品爆发力、季节性规律和新兴细分市场。帮助在市场峰值前识别产品机会。"
 metadata:
   nexscope:
     emoji: "📈"
     category: amazon
 ---
 
-# Amazon Trending Products 📈
+# Amazon 热门产品 📈
 
-Discover trending products and rising categories on Amazon. Analyzes Best Seller Rank (BSR) patterns, new release momentum, seasonal trends, and emerging niches. Helps identify product opportunities before they peak.
+发现亚马逊热门产品和上升类目。分析BSR趋势、新品爆发力、季节性规律和新兴细分市场。帮助在市场峰值前识别产品机会。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-What products are trending on Amazon US right now in the kitchen category? I want to find opportunities under $30.
+美国亚马逊厨房类目现在有哪些热门产品？我想找30美元以下的机会。
 ```
 
-## Capabilities
+## 功能
 
-- BSR trend analysis and momentum scoring
-- Seasonal trend identification with timing recommendations
-- New release tracking and early-mover opportunity detection
-- Category growth rate assessment
-- Demand forecasting based on search trend patterns
-- Competition density evaluation per trending niche
+- BSR趋势分析和势能评分
+- 季节性趋势识别与时机建议
+- 新品追踪与先发机会 detection
+- 类目增长率评估
+- 基于搜索趋势模式的需求预测
+- 各热门细分市场的竞争密度评估
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### BSR Trend Analysis Engine
+### BSR趋势分析引擎
 
-- **BSR Decline Velocity:** Calculate slope and acceleration of BSR drops. Sharp BSR decline = rapid sales growth. Quantify momentum strength.
-- **BSR Stability Assessment:** Stable low BSR indicates established demand; volatile BSR suggests short-term hype or seasonal factors.
-- **Cross-Category BSR Comparison:** Compare product BSR across different categories to identify cross-category growth potential.
+- **BSR下降速度：** 计算BSR下降的斜率和加速度。BSR急剧下降 = 销量快速增长。量化势能强度。
+- **BSR稳定性评估：** 稳定在低位BSR表示需求稳定；BSR剧烈波动暗示短期炒作或季节性因素。
+- **跨类目BSR对比：** 比较不同类目产品的BSR，识别跨类目增长潜力。
 
-### New Release Momentum Tracking Model
+### 新品势能追踪模型
 
-- **Launch Speed:** How quickly a product enters New Releases top rankings after launch. Fast entry = precisely hitting unmet demand.
-- **Retention Duration:** Track how long products stay on New Releases list. Long retention = long-term potential.
-- **Review Accumulation Rate:** New product review velocity signals real purchase intent.
+- **上市速度：** 产品上架后多快进入New Releases排行榜。快速上榜 = 精准击中未满足需求。
+- **留存时长：** 追踪产品停留在New Releases榜单的时间。留存久 = 长期潜力大。
+- **评论积累速率：** 新品评论增速反映真实购买意愿。
 
-### Seasonal Trend Identification System
+### 季节性趋势识别系统
 
-- **Seasonal Factor Calculation:** Extract seasonal multipliers from multi-year sales data to quantify monthly demand volatility.
-- **Lead Time Estimation:** Calculate how early procurement and inventory planning needs to start for seasonal products.
-- **Anti-Seasonal Opportunity Mining:** Identify year-round products不受季节波动影响 for stable revenue.
+- **季节因子计算：** 从多年销售数据中提取季节乘数，量化月度需求波动。
+- **提前量估算：** 计算季节性产品需要多早开始采购和库存规划。
+- **反季节机会挖掘：** 识别不受季节波动影响的全季产品，以获得稳定营收。
 
-### Emerging Niche Detection
+### 新兴细分市场识别
 
-- **New Listing Density Scan:** Sudden increase in new listings within a sub-category signals growing market attention.
-- **Search Volume Growth Tracking:** Verify if a niche is truly growing by monitoring keyword search volume trends.
-- **Competition Gap Identification:** Find under-served areas within growing niches for blue ocean entry points.
+- **新 listing 密度扫描：** 子类目中新 listing 突然增加表明市场关注度在上升。
+- **搜索量增长追踪：** 通过监控关键词搜索量趋势验证细分市场是否真正增长。
+- **竞争缺口识别：** 在增长细分市场中寻找服务不足的区域，作为蓝海切入点。
 
-### Data Sources
+### 数据来源
 
-- **Google Trends:** Get search trends and seasonal patterns for target categories.
-- **Amazon Best Sellers:** Scrape BSR rankings and category structure via web_fetch.
-- **Web Search:** General search for market context and industry dynamics.
+- **Google Trends：** 获取目标类目的搜索趋势和季节性模式。
+- **Amazon Best Sellers：** 通过web_fetch抓取BSR排名和类目结构。
+- **网页搜索：** 获取市场背景和行业动态的通用搜索。
 
-### Limitations
+### 局限性
 
-- BSR reflects relative ranking, not absolute sales. Cross-category comparisons require calibration.
-- Amazon doesn't provide real-time BSR data. Analysis is based on snapshots with time delays.
-- Seasonal predictions based on historical patterns cannot predict black swan events.
-- New release analysis depends on early limited data points. Confidence decreases with insufficient data.
+- BSR反映的是相对排名而非绝对销量。跨类目对比需要校准。
+- 亚马逊不提供实时BSR数据。分析基于有时间延迟的快照。
+- 基于历史模式的季节性预测无法预测黑天鹅事件。
+- 新品分析依赖早期有限数据点。数据不足时置信度降低。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

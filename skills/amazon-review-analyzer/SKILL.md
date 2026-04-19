@@ -1,85 +1,84 @@
 ---
 name: amazon-review-analyzer
-description: "Deep-dive Amazon review analysis. Extract sentiment patterns, recurring complaints, feature requests, and competitive insights from product reviews. Turn customer feedback into product improvement and marketing opportunities."
+description: "深度亚马逊评论分析。从产品评论中提取情感模式、重复投诉、功能需求和竞争洞察。将客户反馈转化为产品改进和营销机会。"
 metadata:
   nexscope:
     emoji: "💬"
     category: amazon
 ---
 
-# Amazon Review Analyzer 💬
+# Amazon 评论分析 💬
 
-Deep-dive Amazon review analysis. Extract sentiment patterns, recurring complaints, feature requests, and competitive insights from product reviews. Turn customer feedback into product improvement and marketing opportunities.
+深度亚马逊评论分析。从产品评论中提取情感模式、重复投诉、功能需求和竞争洞察。将客户反馈转化为产品改进和营销机会。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Analyze the reviews for my competitor's yoga mat (has 2,500 reviews, 4.2 stars). What are customers complaining about that I can fix in my product?
+分析我竞争对手瑜伽垫的评论（有2500条评论，4.2星）。客户抱怨什么？我能在我的产品中改进什么？
 ```
 
-## Capabilities
+## 功能
 
-- Sentiment analysis across star ratings (positive/negative/neutral themes)
-- Recurring complaint identification and severity ranking
-- Feature request extraction from customer language
-- Competitor review comparison (what customers like about alternatives)
-- UGC (user-generated content) mining for marketing copy
-- Review-based product improvement priority matrix
+- 各星级评分情感分析（正面/负面/中性主题）
+- 重复投诉识别与严重程度排序
+- 从客户语言中提取功能需求
+- 竞品评论对比（客户喜欢竞品的什么）
+- 用户生成内容（UGC）挖掘用于营销文案
+- 基于评论的产品改进优先级矩阵
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Multi-Dimensional Sentiment Analysis Model
+### 多维度情感分析模型
 
-- **Star-Rating Stratification:** Analyze reviews by star tier (1-2 star negative, 3 star neutral, 4-5 star positive). Within each tier, identify specific sentiment themes (e.g., 5-star reviews may praise "quality", "packaging", or "customer service" for different reasons).
-- **Complaint Severity Ranking:** Rank complaints by frequency, severity (returns, A-to-Z claims), and distribution pattern (isolated vs systemic). High-frequency systemic complaints = top priority.
-- **Implicit Feature Request Mining:** Extract implicit desires from review language: "wish it came with a storage bag", "if only it were slightly bigger" — these reveal product improvement directions.
+- **星级分层：** 按星级层级分析评论（1-2星负面、3星中性、4-5星正面）。在各层级中识别具体情感主题（如5星评论可能因"质量"、"包装"或"客服"等不同原因而赞扬）。
+- **投诉严重程度排序：** 按频率、严重程度（退货、A-to-Z索赔）和分布模式（个别vs系统性问题）对投诉排序。高频系统性投诉 = 最高优先级。
+- **隐性功能需求挖掘：** 从评论语言中提取隐性需求："希望能有个收纳袋"、"要是再大一点就好了" — 这些揭示了产品改进方向。
 
-### Competitor Review Comparison Framework
+### 竞品评论对比框架
 
-- Identify what competitors' customers praise repeatedly = benchmark for your product.
-- Find where competitors' customers complain = your differentiation opportunities.
-- Map competitive positioning based on review themes.
+- 识别竞品客户反复赞扬的点 = 你产品的基准线。
+- 找出竞品客户抱怨的点 = 你的差异化机会。
+- 基于评论主题绘制竞争定位图。
 
-### UGC (User-Generated Content) Extraction
+### 用户生成内容（UGC）提取
 
-- Extract compelling customer phrases from positive reviews for marketing copy.
-- Identify viral review patterns for listing optimization.
-- Find emotional trigger words that resonate with buyers.
+- 从正面评论中提取有说服力的客户用语用于营销文案。
+- 识别用于listing优化的病毒式评论模式。
+- 找到能引起买家共鸣的情感触发词。
 
-### Improvement Priority Matrix
+### 改进优先级矩阵
 
-- Plot identified issues/opportunities on Impact vs Implementation Difficulty matrix.
-- High impact + low difficulty = quick wins.
-- High impact + high difficulty = strategic priorities.
+- 将发现的问题/机会绘制在"影响力 vs 实施难度"矩阵上。
+- 高影响力 + 低难度 = 快速见效。
+- 高影响力 + 高难度 = 战略优先级。
 
-### Data Sources
+### 数据来源
 
-- **Amazon Review Pages:** Scrape review content, titles, dates, and reviewer info via web_fetch.
-- **Note:** Amazon pages load limited reviews per page. Large sample analysis may require multiple paginated fetches.
+- **亚马逊评论页面：** 通过web_fetch抓取评论内容、标题、日期和评论者信息。
+- **注意：** 亚马逊页面每次加载的评论数量有限。大样本分析可能需要多次分页抓取。
 
-### Limitations
+### 局限性
 
-- Analysis quality depends on review quantity. Products with <50 reviews have low statistical significance.
-- Some fake/suspicious reviews may exist despite Amazon filtering.
-- Consumers tend to leave extreme reviews (very satisfied or very dissatisfied). Middle ground voices may be under-represented.
-- Implicit feature requests are often vague and fragmented. Requires product domain knowledge to translate into actionable improvements.
-- Review data reflects post-purchase experience only. No insight into pre-purchase drop-off reasons (price, images, titles).
+- 分析质量依赖评论数量。少于50条评论的产品统计显著性低。
+- 尽管亚马逊有过滤，但仍可能存在虚假/可疑评论。
+- 消费者倾向于留下极端评论（非常满意或非常不满意）。中性声音可能代表性不足。
+- 隐性功能需求通常模糊且碎片化。需要产品领域知识才能转化为可执行的改进。
+- 评论数据仅反映购买后体验。无法洞察购买前的流失原因（价格、图片、标题）。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

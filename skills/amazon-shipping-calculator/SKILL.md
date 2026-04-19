@@ -1,115 +1,114 @@
 ---
 name: amazon-shipping-calculator
-description: "Calculate Amazon shipping and fulfillment costs for FBA and FBM. Dimensional weight, storage fees, removal fees, and long-term storage cost estimation."
+description: "计算亚马逊FBA和FBM的配送和履约成本。体积重、仓储费、移除费和长期仓储成本估算。"
 metadata:
   nexscope:
     emoji: "📐"
     category: amazon
 ---
 
-# Amazon Shipping Calculator 📐
+# Amazon 运费计算器 📐
 
-Calculate Amazon shipping and fulfillment costs for FBA and FBM. Dimensional weight, storage fees, removal fees, and long-term storage cost estimation.
+计算亚马逊FBA和FBM的配送和履约成本。体积重、仓储费、移除费和长期仓储成本估算。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Calculate all FBA costs for my product: 14 x 10 x 3 inches, weighs 1.8 lbs, selling price $34.99. I expect to sell 300 units/month.
+计算我产品的所有FBA成本：14 x 10 x 3英寸，重1.8磅，售价34.99美元。预计月销300件。
 ```
 
-## Capabilities
+## 功能
 
-- FBA fee calculation (fulfillment, monthly storage, long-term storage)
-- Dimensional weight calculation for FBA size tier assignment
-- FBM shipping cost estimation by carrier and method
-- Storage cost forecasting (monthly and peak season)
-- Removal and disposal fee calculation
-- FBA vs FBM cost comparison per product
-- Inbound shipping cost estimation (partnered carrier vs own)
+- FBA费用计算（履约、月度仓储、长期仓储）
+- FBA尺寸层级分配的体积重计算
+- 按承运商和方式估算FBM运费
+- 仓储成本预测（月度和旺季）
+- 移除和处置费用计算
+- FBA vs FBM每产品成本对比
+- 入仓运费估算（合作承运商vs自有）
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Dimensional Weight and Size Tiering System
+### 体积重和尺寸层级系统
 
-Amazon FBA fee structure based on product size and weight:
+亚马逊FBA费用结构基于产品尺寸和重量：
 
-**Actual vs Dimensional Weight:**
-- Dimensional weight = L × W × H / 139 (inches) or L × W × H / 5000 (cm).
-- Amazon charges greater of actual weight vs dimensional weight.
-- Light but bulky items (e.g., pillows) may be charged at higher dimensional weight.
+**实际重量 vs 体积重：**
+- 体积重 = 长 × 宽 × 高 / 139（英寸）或 长 × 宽 × 高 / 5000（厘米）。
+- 亚马逊按实际重量和体积重中较大者收费。
+- 轻但占空间的产品（如枕头）可能按较高的体积重收费。
 
-**Size Tiers:**
-- **Standard Small:** Max 15" longest side, max 12 oz.
-- **Standard Large:** Max 18" longest side, max 20 lbs.
-- **Large 1:** Max 60" longest side.
-- **Large 2:** Max 120" longest side.
-- **Special Oversize:** Above 120".
+**尺寸层级：**
+- **标准小号：** 最长边最大15"，最大12盎司。
+- **标准大号：** 最长边最大18"，最大20磅。
+- **大件1：** 最长边最大60"。
+- **大件2：** 最长边最大120"。
+- **特殊超大件：** 120"以上。
 
-**Tier Threshold Effect:** When product dimensions/weight near tier boundaries, small changes cause large fee jumps. E.g., 18.1" item enters Large 1 tier — fees may be dollars higher than 18" Standard item. This skill identifies threshold risks and provides optimization suggestions.
+**层级门槛效应：** 当产品尺寸/重量接近层级边界时，小变化会导致大费用跳跃。例如18.1"产品进入大件1层级 — 费用可能比18"标准产品高几美元。此skill识别门槛风险并提供优化建议。
 
-### Complete FBA Fee Structure
+### 完整FBA费用结构
 
-**Monthly Storage Fees:**
-- Standard size: $0.87/cubic foot (Jan-Sep), $2.40/cubic foot (Oct-Dec peak).
-- Large size: higher rates.
-- Longer storage = more fees accumulate.
+**月度仓储费：**
+- 标准尺寸：$0.87/立方英尺（1-9月），$2.40/立方英尺（10-12月旺季）。
+- 大件：更高费率。
+- 存储时间越长 = 费用积累越多。
 
-**Long-Term Storage Fees:**
-- After 271 days: $6.90/unit or $0.15/cubic foot (whichever is greater).
-- After 365 days: doubled rates.
-- Long-term storage is "invisible killer" of slow-moving inventory.
+**长期仓储费：**
+- 271天后：$6.90/件或$0.15/立方英尺（取较大者）。
+- 365天后：双倍费率。
+- 长期仓储是慢动销库存的"隐形杀手"。
 
-**Removal/Disposal Fees:**
-- Removal: starts at $0.99/unit (standard).
-- Disposal: starts at $0.97/unit.
-- Calculate economic comparison between removal fees vs long-term storage.
+**移除/处置费：**
+- 移除：从$0.99/件起（标准）。
+- 处置：从$0.97/件起。
+- 计算移除费vs长期仓储的经济性对比。
 
-### FBA vs FBM Cost Comparison Model
+### FBA vs FBM成本对比模型
 
-**FBA Advantages:**
-- Higher Buy Box acquisition rate.
-- Faster delivery (Prime badge).
-- Lower order processing labor cost.
-- Amazon handles returns/refunds.
+**FBA优势：**
+- 更高的购物车获取率。
+- 更快的配送（Prime标志）。
+- 更低的订单处理人工成本。
+- 亚马逊处理退换/退款。
 
-**FBM Advantages:**
-- No monthly/long-term storage fee risk.
-- Higher per-unit profit (no FBA fulfillment fees).
-- Complete inventory turnover control.
-- Better for large/heavy items or slow-moving inventory.
+**FBM优势：**
+- 无月度/长期仓储费风险。
+- 每件利润更高（无FBA履约费）。
+- 完全的库存周转控制。
+- 更适合大件/重型产品或慢动销库存。
 
-**Decision Key:**
-- Fast-moving items (high monthly sales): FBA usually more cost-effective. High turnover avoids long-term storage fees + FBA Buy Box advantage significantly boosts sales.
-- Slow-moving items or large/heavy products: FBM may be more economical.
+**决策关键：**
+- 快动销产品（月销量高）：FBA通常更具成本效益。高周转避免长期仓储费 + FBA购物车优势显著提升销量。
+- 慢动销产品或大件/重型产品：FBM可能更经济。
 
-### Data Sources
+### 数据来源
 
-- FBA fee calculation parameters based on Amazon's official size tier standards and rate tables.
-- Dimensional weight formula using Amazon official standard.
-- Monthly storage, long-term storage, removal/disposal fees from Amazon FBA fee help pages.
-- User provides: product physical specs (including packaging), expected monthly sales, target delivery region.
+- FBA费用计算参数基于亚马逊官方尺寸层级标准和费率表。
+- 体积重公式使用亚马逊官方标准。
+- 月度仓储、长期仓储、移除/处置费来自亚马逊FBA费用帮助页面。
+- 用户提供：产品物理规格（包括包装）、预期月销量、目标配送地区。
 
-### Limitations
+### 局限性
 
-- Fee calculations depend on user-provided product dimensions/weight. If packaging not included, actual billed dimensions may differ.
-- Amazon FBA fees adjusted periodically (usually January). This skill uses last published rates — verify current rates in Seller Central.
-- Inbound shipping estimates based on partnered carrier standard rates — actual costs may vary due to fuel surcharges, remote area fees, seasonal fluctuations.
+- 费用计算取决于用户提供的产品尺寸/重量。如果未包含包装，实际计费尺寸可能不同。
+- 亚马逊FBA费用定期调整（通常在1月）。此skill使用最新发布的费率 — 在卖家中心核实当前费率。
+- 入仓运费估算基于合作承运商标准费率 — 实际成本可能因燃油附加费、偏远地区费、季节性波动而不同。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

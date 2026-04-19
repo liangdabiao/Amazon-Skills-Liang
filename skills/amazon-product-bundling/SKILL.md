@@ -1,93 +1,92 @@
 ---
 name: amazon-product-bundling
-description: "Product bundling strategy — virtual bundles, multi-pack pricing, cross-sell bundles, bundle listing optimization"
+description: "产品捆绑策略 — 虚拟捆绑、多件装定价、交叉销售捆绑、捆绑listing优化"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Product Bundling
+# Amazon 产品捆绑
 
-Product bundling strategy — virtual bundles, multi-pack pricing, cross-sell bundles, bundle listing optimization
+产品捆绑策略 — 虚拟捆绑、多件装定价、交叉销售捆绑、捆绑listing优化
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon product bundling for my e-commerce business.
+帮我处理亚马逊产品捆绑。
 ```
 
-## Capabilities
+## 功能
 
-- Product bundling strategy
-- virtual bundles
-- multi-pack pricing
-- cross-sell bundles
-- bundle listing optimization
+- 产品捆绑策略
+- 虚拟捆绑
+- 多件装定价
+- 交叉销售捆绑
+- 捆绑listing优化
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Virtual Bundles Mechanism
+### 虚拟捆绑机制
 
-Amazon Brand Registry feature allowing multiple ASINs combined into one bundle without physical repackaging.
-- **Core Advantage:** High flexibility, no additional inventory needs. Components stored independently in warehouse.
-- **Requirements:** All component ASINs must be same brand and active. Logical relationship between components required (e.g., coffee machine + coffee filters).
-- **Pricing:** Bundle price lower than sum of individual prices (typically 10-25% discount), but higher than total cost — creating margin through the difference.
+亚马逊品牌备案功能，允许将多个ASIN组合成一个捆绑产品，无需物理重新包装。
+- **核心优势：** 灵活性高，无需额外库存。组件独立存储在仓库中。
+- **要求：** 所有组件ASIN必须是同一品牌且活跃状态。组件之间需要逻辑关联（例如咖啡机 + 咖啡滤纸）。
+- **定价：** 捆绑价格低于各产品价格之和（通常折扣10-25%），但高于总成本 — 通过差价创造利润。
 
-### Multi-Pack Pricing Principle
+### 多件装定价原则
 
-Economic logic based on scale effect — bulk sales reduce per-unit purchase and logistics costs.
-- **Pricing Tiers:** 2-pack saves 5-10%, 3-4 pack saves 10-15%, 6+ pack saves 15-25% vs single unit.
-- **Best For:** Consumables (daily necessities, food, office supplies) where consumers have stockpiling needs.
+基于规模效应的经济逻辑 — 批量销售降低单位采购和物流成本。
+- **定价层级：** 2件装节省5-10%，3-4件装节省10-15%，6件及以上节省15-25%相比单件。
+- **最适合：** 消耗品（日用品、食品、办公用品）消费者有囤货需求。
 
-### Cross-Sell Bundle Value Creation
+### 交叉销售捆绑价值创造
 
-Combining complementary products from different categories (e.g., yoga mat + yoga block + yoga strap).
-- **Core Value:** "One-stop shopping" convenience — consumers get all complementary products in one order.
-- **Seller Benefit:** Cross-selling, driving low-traffic accessories by leveraging main product traffic.
-- **Key:** Products must have clear usage relationship and scene complementarity.
+将不同类目的互补产品组合（例如瑜伽垫 + 瑜伽砖 + 瑜伽带）。
+- **核心价值：**"一站式购物"便利 — 消费者在一个订单中获得所有互补产品。
+- **卖家收益：** 交叉销售，通过主产品流量带动低流量配件。
+- **关键：** 产品必须有清晰的使用关系和场景互补性。
 
-### Bundle Listing Search Weight Mechanism
+### 捆绑listing搜索权重机制
 
-- Virtual bundle creates independent ASIN with own search ranking.
-- Search weight influenced by component ASIN performance — higher component sales/reviews = higher bundle weight.
-- Algorithm shows bundles when search terms include multiple product keywords (e.g., "coffee machine accessories set").
-- **Optimization:** Include all component core keywords in bundle title.
+- 虚拟捆绑创建独立ASIN，有自己的搜索排名。
+- 搜索权重受组件ASIN表现影响 — 组件销售/评论越高，捆绑权重越高。
+- 当搜索词包含多个产品关键词时，算法展示捆绑（例如"咖啡机配件套装"）。
+- **优化：** 在捆绑标题中包含所有组件的核心关键词。
 
-### Competitive Barrier Building
+### 竞争壁垒构建
 
-Bundle strategy creates competitive barriers:
-- Competitors cannot directly copy same bundle (don't own those ASINs).
-- Bundles with proprietary brand products create strongest barriers.
-- Building diverse bundle combinations creates "product ecosystem" competitors can't replicate.
+捆绑策略创建竞争壁垒：
+- 竞品无法直接复制相同捆绑（不拥有那些ASIN）。
+- 带有自有品牌产品的捆绑创建最强壁垒。
+- 构建多样化的捆绑组合创建"产品生态系统"，竞品无法复制。
 
-### Data Sources
+### 数据来源
 
-- No external dependencies. Based on Amazon Seller Central documentation and e-commerce best practices.
-- User provides: product portfolio info (ASIN sales data, profit margins, inventory status), pricing data.
+- 无外部依赖。基于亚马逊卖家中心文档和电商最佳实践。
+- 用户提供：产品组合信息（ASIN销售数据、利润、库存状态）、定价数据。
 
-### Limitations
+### 局限性
 
-- Virtual Bundles require Amazon Brand Registry enrollment.
-- Returns processing more complex — components returned separately, potential damage issues.
-- Component stock out-of-sync risk: if any component runs out, entire bundle becomes unvailable.
-- Consumer acceptance uncertain — some consumers only want specific items, unwilling to pay for bundle.
-- Multi-pack may accelerate consumption speed or shorten repurchase cycle.
+- 虚拟捆绑需要亚马逊品牌备案注册。
+- 退换处理更复杂 — 组件独立退回，可能有损坏问题。
+- 组件库存同步风险：如果任何一个组件断货，整个捆绑将不可用。
+- 消费者接受度不确定 — 一些消费者只想要特定商品，不愿为捆绑付费。
+- 多件装可能加速消费速度或缩短复购周期。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

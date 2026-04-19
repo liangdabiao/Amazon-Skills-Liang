@@ -1,100 +1,99 @@
 ---
 name: amazon-negative-keywords
-description: "Optimize Amazon PPC campaigns by identifying and managing negative keywords. Reduce wasted ad spend by eliminating irrelevant search terms while protecting valuable converting terms."
+description: "通过识别和管理负关键词优化亚马逊PPC广告系列。通过消除不相关的搜索词减少广告浪费，同时保护有价值的转化词。"
 metadata:
   nexscope:
     emoji: "🚫"
     category: amazon
 ---
 
-# Amazon Negative Keywords 🚫
+# Amazon 负关键词 🚫
 
-Optimize Amazon PPC campaigns by identifying and managing negative keywords. Reduce wasted ad spend by eliminating irrelevant search terms while protecting valuable converting terms.
+通过识别和管理负关键词优化亚马逊PPC广告系列。通过消除不相关的搜索词减少广告浪费，同时保护有价值的转化词。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Analyze my Amazon search term report. I'm spending $2,000/month on PPC with 40% ACoS. Help me find negative keywords to cut waste.
+分析我的亚马逊搜索词报告。我每月在PPC上花费2000美元，ACoS为40%。帮我找到可以削减浪费的负关键词。
 ```
 
-## Capabilities
+## 功能
 
-- Search term report analysis for negative keyword candidates
-- Negative keyword categorization (irrelevant, low-converting, competitor)
-- Campaign-level vs ad-group-level negative targeting strategy
-- Negative phrase vs negative exact match decision framework
-- Estimated savings calculation from negative keyword implementation
-- Ongoing negative keyword management workflow
+- 搜索词报告分析，识别负关键词候选
+- 负关键词分类（不相关、低转化、竞品）
+- 广告系列级别 vs 广告组级别负定向策略
+- 负精确匹配 vs 负短语匹配决策框架
+- 负关键词实施后的预估节省计算
+- 持续的负关键词管理工作流程
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Search Term Efficiency Stratification
+### 搜索词效率分层
 
-Four tiers based on conversion efficiency:
-1. **High-Conversion Core Keywords:** Directly drive sales. Protect and increase bid.
-2. **Low-Frequency Precision Keywords:** Some conversion, low click volume. Continue observing.
-3. **Weak-Relevance Occasional Converters:** Low conversion but occasional sales. Evaluate based on CPC vs conversion value.
-4. **Completely Irrelevant Waste Keywords:** Must immediately add as negatives.
+基于转化效率的四个层级：
+1. **高转化核心关键词：** 直接推动销售。保护并增加竞价。
+2. **低频精准关键词：** 有一定转化，点击量低。继续观察。
+3. **弱相关偶发转化词：** 转化低但偶有销售。根据CPC与转化价值评估。
+4. **完全不相关的浪费关键词：** 必须立即添加为负。
 
-Framework: classify each search term from the search term report into appropriate tier.
+框架：将搜索词报告中的每个搜索词分类到相应层级。
 
-### Negative Exact vs Negative Phrase Matching Logic
+### 负精确匹配 vs 负短语匹配逻辑
 
-- **Negative Exact:** Only blocks exact matching search term from triggering ads.
-- **Negative Phrase:** Blocks all search variations containing the term.
-- **Decision Rule:** Use negative exact for single waste terms. Use negative phrase for categories of irrelevant searches.
-- **Example:** "free" as phrase negative blocks "free shipping", "buy free", "totally free" — captures all "free" related waste.
+- **负精确匹配：** 仅阻止精确匹配的搜索词触发广告。
+- **负短语匹配：** 阻止包含该词的所有搜索变体。
+- **决策规则：** 对单个浪费词使用负精确。对一类不相关搜索使用负短语。
+- **示例：**"free"作为短语负词会阻止"free shipping"、"buy free"、"totally free" — 捕获所有与"free"相关的浪费。
 
-### Campaign-Level vs Ad Group-Level Negative Strategy
+### 广告系列级别 vs 广告组级别负策略
 
-- **Campaign-Level Negatives:** Apply to all ad groups under campaign. Use for terms irrelevant to entire product line.
-- **Ad Group-Level Negatives:** Only affect specific ad group. Use for fine-tuning across different match types.
-- **Strategy Example:**
-  - Exact match ad group: negative phrase for core keywords already separately targeted
-  - Broad match ad group: stay open to continuously discover new search terms
+- **广告系列级别负词：** 应用于该广告系列下的所有广告组。用于与整个产品线无关的词。
+- **广告组级别负词：** 仅影响特定广告组。用于在不同匹配类型间进行微调。
+- **策略示例：**
+  - 精确匹配广告组：对已单独定位的核心关键词使用负短语
+  - 广泛匹配广告组：保持开放以持续发现新搜索词
 
-### Savings Estimation Model
+### 节省估算模型
 
-**Estimated Savings = Irrelevant Search Spend - Potential Lost Conversion Value**
+**预估节省 = 不相关搜索支出 - 潜在损失的转化价值**
 
-Before implementing each negative, evaluate net savings effect. Ensure negative action's benefit exceeds potential loss.
+在实施每个负词前，评估净节省效果。确保负词操作的收益超过潜在损失。
 
-### Ongoing Management Framework
+### 持续管理框架
 
-- **Review Frequency:** Weekly search term report review recommended.
-- **Seasonal/Temporary Negatives:** Negatives added for seasonal promotions should be removed after promotion ends.
-- **Keyword Harvesting Workflow:** Continuously "harvest" high-converting terms from broad/auto campaigns and graduate to exact match.
+- **审查频率：** 建议每周审查搜索词报告。
+- **季节性/临时负词：** 为季节性促销添加的负词应在促销结束后移除。
+- **关键词收获工作流程：** 持续从广泛/自动广告系列"收获"高转化词并升级到精确匹配。
 
-### Data Sources
+### 数据来源
 
-- User exports Search Term Report from Amazon Seller Central (recommended: 14-30 days minimum).
-- Report contains: search terms, clicks, spend, conversions, ACoS.
-- No direct API connection to Seller Central.
+- 用户从亚马逊卖家中心导出搜索词报告（建议：至少14-30天）。
+- 报告包含：搜索词、点击、花费、转化、ACoS。
+- 无直接的卖家中心API连接。
 
-### Limitations
+### 局限性
 
-- Report data completeness and accuracy directly impacts analysis reliability.
-- Search term report has ~72 hour data delay.
-- Amazon hides some low-frequency search terms — not all waste spend visible.
-- Effects take time to manifest — short-term ACoS improvement may not be noticeable.
-- Search term intent is dynamic — terms irrelevant now may become high converters later (seasonal, trends). Regular review needed.
-- Cannot directly connect to Amazon Ad dashboard — relies on user-provided data.
+- 报告数据的完整性和准确性直接影响分析可靠性。
+- 搜索词报告有约72小时数据延迟。
+- 亚马逊隐藏一些低频搜索词 — 并非所有浪费支出都可见。
+- 效果需要时间显现 — 短期ACoS改善可能不明显。
+- 搜索词意图是动态的 — 现在不相关的词以后可能成为高转化词（季节性、趋势）。需要定期审查。
+- 无法直接连接亚马逊广告仪表板 — 依赖用户提供的数据。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

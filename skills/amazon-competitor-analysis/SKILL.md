@@ -1,83 +1,82 @@
 ---
 name: amazon-competitor-analysis
-description: "Full-spectrum Amazon competitor analysis. Compare listings, pricing, reviews, advertising strategy, and market positioning against direct competitors. Identify weaknesses to exploit and strengths to counter."
+description: "全维度亚马逊竞品分析。与直接竞品对比 listing、价格、评论、广告策略和市场定位。识别可利用的弱点和需应对的优势。"
 metadata:
   nexscope:
     emoji: "🏆"
     category: amazon
 ---
 
-# Amazon Competitor Analysis 🏆
+# Amazon 竞品分析 🏆
 
-Full-spectrum Amazon competitor analysis. Compare listings, pricing, reviews, advertising strategy, and market positioning against direct competitors. Identify weaknesses to exploit and strengths to counter.
+全维度亚马逊竞品分析。与直接竞品对比 listing、价格、评论、广告策略和市场定位。识别可利用的弱点和需应对的优势。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Compare my product (ASIN B0EXAMPLE1) against these competitors: B0EXAMPLE2, B0EXAMPLE3. I sell dog beds on Amazon.
+将我的产品（ASIN B0EXAMPLE1）与这些竞品对比：B0EXAMPLE2、B0EXAMPLE3。我在亚马逊上卖狗床。
 ```
 
-## Capabilities
+## 功能
 
-- Listing quality comparison (title, bullets, images, A+ content)
-- Review sentiment comparison and pain point extraction
-- Pricing strategy analysis and positioning map
-- Advertising visibility assessment (sponsored placement frequency)
-- Inventory and fulfillment strategy comparison (FBA vs FBM)
-- Actionable competitive counter-strategy generation
+- Listing质量对比（标题、五点、图片、A+内容）
+- 评论情感对比与痛点提取
+- 定价策略分析和定位图
+- 广告可见度评估（赞助广告出现频率）
+- 库存与配送策略对比（FBA vs FBM）
+- 可执行的竞争反击策略生成
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Listing Quality Comparison Framework
+### Listing质量对比框架
 
-- **A9/A10 SEO Scoring:** Rate each listing on title keyword coverage, bullet point information density, image quality (CTR and scene richness), and A+ content completeness.
-- **Keyword Gap Analysis:** Identify which high-volume search terms competitors rank for that you don't.
-- **Content Depth Evaluation:** Compare bullet points — do they address consumer pain points and selling points comprehensively?
+- **A9/A10 SEO评分：** 从标题关键词覆盖、五点描述信息密度、图片质量（点击率和场景丰富度）、A+内容完整性对各listing评分。
+- **关键词差距分析：** 识别竞品排名但你没有的高搜索量搜索词。
+- **内容深度评估：** 对比五点 — 是否全面回应了消费者痛点和卖点？
 
-### Review Sentiment Analysis Model
+### 评论情感分析模型
 
-- **Complaint Theme Extraction:** Identify recurring negative themes (quality issues, sizing deviations, shipping complaints). These are your differentiation opportunities.
-- **Praise Keyword Mining:** Extract high-frequency positive keywords revealing what customers value most. Use for listing copy and ad messaging.
-- **Sentiment Distribution:** Compare star rating distribution across competitors. 4.5+ avg = baseline expectation you must meet.
+- **投诉主题提取：** 识别重复出现的负面主题（质量问题、尺寸偏差、物流投诉）。这些是你的差异化机会。
+- **赞扬关键词挖掘：** 提取高频正面关键词，揭示客户最看重什么。用于listing文案和广告话术。
+- **情感分布：** 对比各竞品的星级分布。平均4.5+ = 你必须达到的基准期望。
 
-### Pricing Positioning Map
+### 定价定位图
 
-- **Price-Review-Quality Matrix:** Plot competitors on 2D map with price and review count/rating as axes. Identify price band gaps and underserved segments.
-- **Price War Detection:** Identify if market is in destructive price competition (prices near cost).
+- **价格-评论-质量矩阵：** 以价格和评论数/评分为双轴绘制竞品位置图。识别价格带空白和服务不足的细分市场。
+- **价格战识别：** 判断市场是否处于破坏性价格竞争（价格接近成本）。
 
-### Advertising Visibility Assessment
+### 广告可见度评估
 
-- **Ad Placement Frequency:** Monitor competitor sponsored ad frequency on target keywords.
-- **Budget Inference:** Top ad positions on high-traffic keywords = substantial ad budget and mature strategy.
-- **Low-Hanging Fruit Keywords:** Keywords with few advertisers = opportunity for cost-effective traffic.
+- **广告出现频率：** 监控竞品在目标关键词上的赞助广告出现频率。
+- **预算推断：** 高流量关键词保持广告首位 = 可观广告预算和成熟策略。
+- **低竞争关键词机会：** 广告主少的关键词 = 成本效益高的流量机会。
 
-### Data Sources
+### 数据来源
 
-- **Amazon Product Pages:** Scrape titles, prices, bullets, images, ratings, reviews, BSR via web_fetch.
-- **Web Search (site:amazon.com):** Assess competitor search visibility and ad distribution.
+- **亚马逊产品页面：** 通过web_fetch抓取标题、价格、五点、图片、评分、评论、BSR。
+- **网页搜索（site:amazon.com）：** 评估竞品搜索可见度和广告分布。
 
-### Limitations
+### 局限性
 
-- Cannot access internal data (real ad budget, conversion rates, inventory levels).
-- Ad visibility is snapshot-based. Frequent changes mean single analysis may be outdated.
-- Market conditions change constantly. Regular updates needed for时效性.
-- New competitors with few reviews lack statistically significant sentiment data.
+- 无法获取内部数据（实际广告预算、转化率、库存水平）。
+- 广告可见度基于快照。频繁变化意味着单次分析可能已过时。
+- 市场条件不断变化。需要定期更新以保持时效性。
+- 新竞品评论少，缺乏统计显著性的情感数据。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

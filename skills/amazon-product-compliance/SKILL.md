@@ -1,46 +1,55 @@
 ---
 name: amazon-product-compliance
-description: "Product compliance and safety — certifications, labeling requirements, restricted substances, documentation"
+description: "产品合规与安全 — 认证、标签要求、限制物质、文档"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Product Compliance
+# 亚马逊产品合规
 
-Product compliance and safety — certifications, labeling requirements, restricted substances, documentation
+产品合规与安全 — 认证、标签要求、限制物质、文档
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** 亚马逊（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon product compliance for my e-commerce business.
+帮助我了解我的电商业务的产品合规要求。
 ```
 
-## Capabilities
+## 功能
 
-- Product compliance and safety
-- certifications
-- labeling requirements
-- restricted substances
-- documentation
+- 产品合规与安全
+- 认证
+- 标签要求
+- 限制物质
+- 文档
 
-## How This Skill Works
+## 工作流程
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前情况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 使用多项选择题格式提出一个后续问题。允许简写回答（例如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用以下框架和方法论进行研究分析。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**产品认证体系与市场准入：** 各国市场对特定品类设定了强制性认证要求。美国核心认证：FDA注册（食品、药品、化妆品、医疗器械）、FCC认证（电子产品）、UL/ETL认证（电气安全）、CPC认证（儿童产品）、DOT认证（车辆配件）。欧盟市场要求CE认证，并通过欧盟授权代表（EC Representative）进行合规管理。日本市场要求PSE认证（电气产品）、PSC认证（消费生活产品）。认证核心逻辑是通过独立第三方检测机构验证产品是否符合目标市场技术法规和标准要求。
 
-## Output Format
+**Amazon平台合规审核机制：** Amazon在各国法规基础上建立更严格的审核体系。上架特定类目需通过分类审核（Category Approval或Gating）流程，提交相关合规文件和检测报告。危险品（Hazmat）审核要求提供SDS或产品成分信息。Amazon定期对在售商品进行合规抽查，一旦发现不合规产品立即下架，并要求在限定时间内提交合规证明。
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+**标签合规要求：** 美国市场：CPSC标签规范（警告标签和追踪标签）、FDA标签规范（食品营养标签、药品标签、化妆品成分标签）、FTC标签规范（纺织品成分标签）、UL/ETL认证标签。欧盟市场：CE标识（必须清晰可见且附有制造商信息）、欧盟能效标签、Reach法规标签（化学物质含量声明）、多语言标签要求。标签核心原则是确保消费者获取充分产品信息，同时监管机构能追溯产品制造商和供应链信息。
+
+**受限物质管控原理：** 欧盟REACH法规限制或禁止在产品中使用特定有害化学物质，对高度关注物质（SVHC）实行通报制度。RoHS指令限制电子电气产品中铅、汞、镉、六价铬、多溴联苯和多溴二苯醚等有害物质含量。美国CPSIA对儿童产品中铅含量和邻苯二甲酸酯含量设定严格限制。加州65号提案要求含有已知致癌物质或生殖毒性物质的产品提供清晰警告标签。
+
+**合规文档管理与追溯体系：** 应包括：产品合规档案（每个产品对应的全部认证证书、检测报告、合规声明等文件集中管理）、文档有效期跟踪（认证和检测报告通常有有效期）、法规更新监控（持续关注各目标市场法规变化）、供应链合规追溯（从原材料采购到成品交付的全程合规记录）。
+
+**第四步：** 提供结构化的、可操作的输出，包含具体建议，而非泛泛的建议。
+
+## 输出格式
+
+- 从发现总结开始
+- 在可用时包含具体数据点和基准
+- 提供优先级行动项目
+- 当基于不完整数据时用⚠️标记估计值
+- 以具体的后续步骤结束

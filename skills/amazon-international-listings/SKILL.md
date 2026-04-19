@@ -1,90 +1,89 @@
 ---
 name: amazon-international-listings
-description: "Multi-marketplace listing management — translation, pricing localization, BIL (Build International Listings)"
+description: "多市场listing管理 — 翻译、定价本地化、BIL（建立国际listing）"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon International Listings
+# Amazon 国际listing
 
-Multi-marketplace listing management — translation, pricing localization, BIL (Build International Listings)
+多市场listing管理 — 翻译、定价本地化、BIL（建立国际listing）
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon international listings for my e-commerce business.
+帮我处理亚马逊国际listing。
 ```
 
-## Capabilities
+## 功能
 
-- Multi-marketplace listing management
-- translation
-- pricing localization
-- BIL (Build International Listings)
+- 多市场listing管理
+- 翻译
+- 定价本地化
+- BIL（建立国际listing）
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Cross-Market Product Information Sync Mechanism
+### 跨市场产品信息同步机制
 
-Amazon's Build International Listings (BIL) tool connects source and target marketplaces:
-- Create/maintain main Listing in "Source Marketplace" → BIL auto-syncs to target marketplaces.
-- System auto-converts currency and basic translation during sync.
-- Price rules can be set per target marketplace (premium/discount percentage).
+亚马逊的建立国际listing（BIL）工具连接源市场和目标市场：
+- 在"源市场"创建/维护主listing → BIL自动同步到目标市场。
+- 系统在同步期间自动转换货币和基本翻译。
+- 可以为每个目标市场设置价格规则（溢价/折扣百分比）。
 
-### Localization Translation Principle
+### 本地化翻译原则
 
-High-quality translation requires three layers:
-1. **Terminology Accuracy:** Correct translation of technical parameters, material descriptions, industry terms.
-2. **Cultural Adaptation:** Ensure product descriptions match target market language habits and cultural background.
-3. **SEO Keyword Localization:** Different markets use different search terms. Direct translation often ineffective. E.g., US consumers search "water bottle" more than "drinking vessel."
+高质量翻译需要三个层次：
+1. **术语准确性：** 正确翻译技术参数、材料描述、行业术语。
+2. **文化适应性：** 确保产品描述符合目标市场的语言习惯和文化背景。
+3. **SEO关键词本地化：** 不同市场使用不同的搜索词。直接翻译通常效果不佳。例如，美国消费者搜索"water bottle"多于"饮水容器"。
 
-### Pricing Localization Mechanism
+### 定价本地化机制
 
-Cross-market pricing considers:
-- Consumer purchasing power in target market.
-- Competitor price ranges.
-- Import duties and VAT differences.
-- Logistics costs.
-- Exchange rate fluctuations.
+跨市场定价考虑：
+- 目标市场消费者的购买力。
+- 竞品价格范围。
+- 进口关税和增值税差异。
+- 物流成本。
+- 汇率波动。
 
-BIL allows price rules based on source price, but sophisticated strategy requires independent pricing per market based on local competitive environment. Fee structures (commissions, FBA fees) vary by marketplace.
+BIL允许基于源价格设置价格规则，但复杂策略需要基于本地竞争环境独立定价。每个市场的费用结构（佣金、FBA费用）各不相同。
 
-### Multi-Market Compliance and Category Matching
+### 多市场合规与类目匹配
 
-Different marketplaces may classify same product differently, some may have category restrictions.
-- E.g., certain electronics accessories regular in US, but require CE certification in EU.
-- BIL tries to auto-match categories, but seller must verify accuracy.
-- Wrong categories → Listing removed or traffic loss.
+不同市场可能对同一产品分类不同，某些可能有类目限制。
+- 例如，某些在美国普通的电子产品配件在欧盟需要CE认证。
+- BIL尝试自动匹配类目，但卖家必须验证准确性。
+- 错误的类目 → listing被移除或流量损失。
 
-### Data Sources
+### 数据来源
 
-- No external dependencies. Based on Amazon Seller Central BIL documentation.
-- User provides: original Listing content (title, bullets, images), target market info.
+- 无外部依赖。基于亚马逊卖家中心BIL文档。
+- 用户提供：原始listing内容（标题、五点、图片）、目标市场信息。
 
-### Limitations
+### 局限性
 
-- **Auto-translation quality limited:** BIL auto-translation varies widely — technical terms, brand expressions, culturally sensitive content often poorly handled.
-- **Category/compliance differences handled imperfectly:** BIL auto-matching not 100% accurate. Different marketplace classifications and compliance requirements (CE, PSE, etc.) may be missed.
-- **Exchange rate pricing risk:** BIL uses fixed exchange rates — actual rates fluctuate. Unadjusted rates may cause overpriced (uncompetitive) or underpriced (low margin) situations.
-- **Limited differentiation capability:** BIL philosophy is "one source Listing across markets" — limits differentiated operations. Different markets need different approaches.
-- **Data silo problem:** Marketplace sales/ad data independent — no unified cross-marketplace analytics. Managing 5+ marketplaces requires significant time/effort.
+- **自动翻译质量有限：** BIL自动翻译质量差异很大 — 技术术语、品牌表达、文化敏感内容通常处理不佳。
+- **类目/合规差异处理不完美：** BIL自动匹配并非100%准确。不同市场分类和合规要求（CE、PSE等）可能被遗漏。
+- **汇率定价风险：** BIL使用固定汇率 — 实际汇率波动。未经调整的汇率可能导致价格过高（缺乏竞争力）或价格过低（低利润）。
+- **差异化能力有限：** BIL理念是"一个源listing覆盖所有市场" — 限制了差异化运营。不同市场需要不同方法。
+- **数据孤岛问题：** 市场销售/数据独立 — 无统一的跨市场分析。管理5个以上市场需要大量时间精力。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

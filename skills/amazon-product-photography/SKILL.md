@@ -1,49 +1,58 @@
 ---
 name: amazon-product-photography
-description: "Plan Amazon product photography for maximum conversion. Shot lists, lighting setups, infographic briefs, lifestyle scene planning, and image optimization following Amazon's requirements."
+description: "为最大转化率规划亚马逊产品摄影。拍摄清单、灯光设置、信息图简介、生活场景规划，以及符合亚马逊要求的图片优化。"
 metadata:
   nexscope:
     emoji: "📷"
     category: amazon
 ---
 
-# Amazon Product Photography 📷
+# 亚马逊产品摄影 📷
 
-Plan Amazon product photography for maximum conversion. Shot lists, lighting setups, infographic briefs, lifestyle scene planning, and image optimization following Amazon's requirements.
+为最大转化率规划亚马逊产品摄影。拍摄清单、灯光设置、信息图简介、生活场景规划，以及符合亚马逊要求的图片优化。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** 亚马逊、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Plan a product photography shoot for my line of 5 organic spice blends. Budget: $500. I need images for Amazon and my Shopify store.
+为我的5种有机香料系列规划产品摄影。预算：500美元。我需要用于亚马逊和我的Shopify店铺的图片。
 ```
 
-## Capabilities
+## 功能
 
-- Complete shot list creation (7+ images per listing)
-- Amazon image requirements compliance (main image: white background, 85% fill)
-- Infographic planning with feature callouts and dimensions
-- Lifestyle photography scene briefs (model, setting, props)
-- Size comparison and scale reference image planning
-- Image optimization for mobile viewing
-- Photography budget planning (DIY vs professional)
+- 完整拍摄清单创建（每个listing 7+张图片）
+- 亚马逊图片要求合规（主图：白底，85%填充）
+- 带有特点标注和尺寸的信息图规划
+- 生活摄影场景简介（模特、场景、道具）
+- 尺寸对比和参考图片规划
+- 移动端查看的图片优化
+- 摄影预算规划（DIY vs 专业）
 
-## How This Skill Works
+## 工作流程
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前情况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 使用多项选择题格式提出一个后续问题。允许简写回答（例如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用以下框架和方法论进行研究分析。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**视觉层级与注意力引导：** 买家在浏览搜索结果时平均停留时间仅2-3秒。图片必须迅速传达核心价值主张。建立清晰视觉优先级：最重要的产品特征占据最大面积和最突出位置，次要信息通过辅助图形和文字标注补充。视线引导路径：产品主体 → 核心卖点 → 使用场景 → 信任元素。
 
-## Output Format
+**亚马逊图片规范合规框架：** 主图必须纯白背景（RGB 255,255,255）、产品占据画面至少85%、图片至少1000x1000像素（推荐2000x2000）、不允许文字水印和促销标识、辅助视图最多8张。将合规性检查融入图片规划每个环节。
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+**信息图认知负荷管理：** 每张信息图聚焦一个核心卖点而非堆砌，使用图标和简洁文字替代大段描述，采用一致视觉风格和配色方案建立品牌识别。目标：2秒内让买家理解一个关键卖点。
+
+**生活场景图情感共鸣机制：** 展示产品在真实使用环境中的状态，帮助买家建立情感连接和使用场景想象。规划要素包括：场景选择（与产品使用环境高度相关的真实场景）、模特选角（与目标受众画像匹配）、道具搭配（强化产品使用效果）、光线和色调把控（营造与产品调性一致的氛围感）。
+
+**移动端优先优化策略：** 超过70%购物流量来自移动端。关键信息和产品主体在缩小到手机屏幕尺寸后仍然清晰可辨；文字标注字号确保移动端可读性；竖版构图比横版更适配移动端浏览习惯；图片序列整体叙事在快速滑动时依然连贯流畅。
+
+**第四步：** 提供结构化的、可操作的输出，包含具体建议，而非泛泛的建议。
+
+## 输出格式
+
+- 从发现总结开始
+- 在可用时包含具体数据点和基准
+- 提供优先级行动项目
+- 当基于不完整数据时用⚠️标记估计值
+- 以具体的后续步骤结束

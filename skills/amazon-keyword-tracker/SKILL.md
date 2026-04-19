@@ -1,51 +1,51 @@
 ---
 nexscope:
-  name: "Amazon Keyword Tracker"
-  category: "Search & SEO"
+  name: "亚马逊关键词追踪器"
+  category: "搜索与SEO"
   version: "1.0.0"
   author: "Nexscope AI"
   tags:
     - "amazon"
-    - "keyword-tracking"
-    - "ranking"
+    - "关键词追踪"
+    - "排名"
     - "seo"
-    - "monitoring"
+    - "监控"
   model: "any"
   tokens: "~2000"
   keywords:
     - "amazon keyword tracker"
 ---
 
-# Amazon Keyword Tracker
+# 亚马逊关键词追踪器
 
-AI-powered Amazon keyword ranking tracker skill. Monitors organic and sponsored keyword positions, analyzes ranking fluctuations, and prioritizes optimization efforts for Amazon sellers.
+AI驱动的亚马逊关键词排名追踪技能。监控自然和赞助关键词位置，分析排名波动，并为亚马逊卖家确定优化优先级。
 
-## Capabilities
+## 功能
 
-- Generates actionable search & seo frameworks based on your specific business context
-- Works across major e-commerce platforms (Amazon, Shopify, Walmart, WooCommerce, Etsy, TikTok Shop)
-- Provides data-driven recommendations with industry benchmarks
-- Outputs ready-to-implement plans, not just generic advice
+- 根据您的特定业务背景生成可操作的搜索和SEO框架
+- 适用于主要电商平台（亚马逊、Shopify、Walmart、WooCommerce、Etsy、TikTok Shop）
+- 提供数据驱动的建议和行业基准
+- 输出可立即实施的计划，而非泛泛的建议
 
-## Usage
+## 使用方法
 
-**Input:**
-ASIN(s), target keywords, competitor ASINs
+**输入：**
+ASIN、目标关键词、竞品ASIN
 
-**Output:**
-Keyword rank tracking plan, ranking fluctuation analysis, optimization priority list, competitor rank comparison
+**输出：**
+关键词排名追踪计划、排名波动分析、优化优先级列表、竞品排名比较
 
-### Example Prompt
+### 示例提示
 
-> "I run a [your business type] on [platform]. Help me set up amazon keyword tracker for my business. Here's my current situation: [describe context]."
+> "我在[您的业务类型]上运营[平台]。帮我为我的业务设置亚马逊关键词追踪器。这是我的现状：[描述背景]。"
 
-## Limitations
+## 局限性
 
-- Requires your specific business data for accurate recommendations
-- Market benchmarks are based on US/EU data — adjust for other regions
-- Recommendations should be validated against your platform's current policies
-- Does not replace dedicated monitoring SaaS tools — designs the strategy and framework
+- 需要您的特定业务数据以提供准确建议
+- 市场基准基于美国/欧盟数据 — 其他地区需调整
+- 建议应根据您平台的当前政策进行验证
+- 不能替代专用监控SaaS工具 — 设计策略和框架
 
 ---
 
-## License
+## 许可证

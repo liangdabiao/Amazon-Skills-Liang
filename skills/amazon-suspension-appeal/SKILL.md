@@ -1,51 +1,44 @@
 ---
 name: amazon-suspension-appeal
-description: "Account suspension prevention and appeal — policy violations, Plan of Action writing, reinstatement process"
+description: "账号停用预防与申诉 — 政策违规、行动计划撰写、恢复流程"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Suspension Appeal
+# Amazon 账号申诉
 
-Account suspension prevention and appeal — policy violations, Plan of Action writing, reinstatement process
+账号停用预防与申诉 — 政策违规、行动计划撰写、恢复流程
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Install
-
-```bash
-npx skills add nexscope/amazon-suspension-appeal
-```
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon suspension appeal for my e-commerce business.
+帮我处理亚马逊账号申诉问题。
 ```
 
-## Capabilities
+## 功能
 
-- Account suspension prevention and appeal
-- policy violations
-- Plan of Action writing
-- reinstatement process
+- 账号停用预防与申诉
+- 政策违规处理
+- 行动计划（Plan of Action）撰写
+- 账号恢复流程
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

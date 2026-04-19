@@ -1,108 +1,107 @@
 ---
 name: amazon-review-strategy
-description: "Review generation strategy — Request a Review, follow-up emails, insert cards, Vine, early reviewer programs"
+description: "评论生成策略 — 请求评论、跟进邮件、插页卡、Vine、早期评论者计划"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Review Strategy
+# Amazon 评论策略
 
-Review generation strategy — Request a Review, follow-up emails, insert cards, Vine, early reviewer programs
+评论生成策略 — 请求评论、跟进邮件、插页卡、Vine、早期评论者计划
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon review strategy for my e-commerce business.
+帮我处理亚马逊评论策略。
 ```
 
-## Capabilities
+## 功能
 
-- Review generation strategy
-- Request a Review
-- follow-up emails
-- insert cards
+- 评论生成策略
+- 请求评论
+- 跟进邮件
+- 插页卡
 - Vine
-- early reviewer programs
+- 早期评论者计划
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Review Impact on Amazon Search Ranking Mechanism
+### 评论对亚马逊搜索排名的影响机制
 
-Amazon's A9 algorithm uses reviews as key quality signal:
-- More reviews = product validated by more consumers = higher ranking weight.
-- Rating drop of 0.1 stars may cause 5-10% conversion rate decline.
-- Review content participates in keyword indexing — words in reviews become search keywords.
+亚马逊A9算法使用评论作为关键质量信号：
+- 更多评论 = 产品被更多消费者验证 = 更高排名权重。
+- 评分下降0.1星可能导致转化率下降5-10%。
+- 评论内容参与关键词索引 — 评论中的词成为搜索关键词。
 
-### Request a Review Function Mechanism
+### 请求评论功能机制
 
-Amazon-official review request feature (Order Dashboard or API):
-- Amazon auto-generates and sends email — seller cannot customize.
-- One request per order, window: 5-30 days after delivery.
-- **Pros:** Fully compliant, scalable (API automation).
-- **Cons:** Low conversion rate (2-5%), no customization.
-- Still foundation of review strategy due to compliance and scalability.
+亚马逊官方评论请求功能（订单仪表板或API）：
+- 亚马逊自动生成并发送邮件 — 卖家无法定制。
+- 每个订单一次请求窗口：发货后5-30天。
+- **优点：** 完全合规、可扩展（API自动化）。
+- **缺点：** 转化率低（2-5%）、无法定制。
+- 由于合规性和可扩展性，仍然是评论策略的基础。
 
-### Buyer Follow-up Email Strategy Principle
+### 买家跟进邮件策略原则
 
-Seller can send service-related emails via Buyer-Seller Messaging (within Amazon policy).
-- **Compliant approach:** Order fulfillment updates, product usage guides, satisfaction confirmations, post-delivery check-ins.
-- **Prohibited:** Any direct/indirect inducement for positive reviews, compensation in exchange for reviews.
+卖家可通过买家-卖家消息发送与服务相关的邮件（遵守亚马逊政策）：
+- **合规方式：** 订单发货更新、产品使用指南、满意度确认、发货后跟进。
+- **禁止：** 任何直接或间接诱导好评、以报酬换取评论。
 
-**Effective timing sequence:**
-- After shipping: tracking info.
-- After delivery: product usage tips.
-- 3-5 days after delivery: satisfaction check.
-- On negative feedback: proactively reach out to resolve issues.
+**有效时间序列：**
+- 发货后：物流信息。
+- 到达后：产品使用提示。
+- 到达后3-5天：满意度检查。
+- 收到负面反馈时：主动联系解决问题。
 
-### Product Insert Card Design Principles
+### 产品插页卡设计原则
 
-Amazon policy allows service cards in packaging:
-- **Compliant content:** Thank you, product usage instructions, customer service contact, neutral review invitation ("If satisfied, feel free to share your experience").
-- **Prohibited:** Discounts/rewards for reviews, only directing to positive reviews, asking buyers to contact for rewards after review.
+亚马逊政策允许在包装中放置服务卡：
+- **合规内容：** 感谢信、产品使用说明、客户服务联系方式、中立评论邀请（"如果满意，欢迎分享您的体验"）。
+- **禁止：** 折扣/奖励换取评论、仅引导到好评、要求买家评论后联系获取报酬。
 
-### Vine Program Mechanism
+### Vine计划机制
 
-Amazon official product review program for Brand Registry sellers:
-- Products sent to certified "Vine Voices" for detailed reviews.
-- Reviews marked "Vine Customer Review of Free Product."
-- **Pros:** High quality (detailed reviews), fast (2-4 weeks), fully compliant.
-- **Cons:** Fee per ASIN, no guarantee of positive reviews — Vine Voices must honestly evaluate.
+亚马逊品牌备案卖家的官方产品评论计划：
+- 产品发送给认证"Vine Voices"进行详细评论。
+- 评论标记"Vine客户免费产品评论"。
+- **优点：** 高质量（详细评论）、快速（2-4周）、完全合规。
+- **缺点：** 每个ASIN收费，不保证好评 — Vine Voices必须诚实评估。
 
-### Early Reviewer Program (ERP) Legacy Principles
+### 早期评论者计划（ERP）遗留原则
 
-Amazon encouraged real review acquisition through reasonable incentives:
-- Amazon firmly opposes: fake reviews, paid reviews, review manipulation.
-- **Core principle:** "Obtain authentic, unbiased consumer feedback" — avoid anything that could be seen as review manipulation.
+亚马逊通过合理激励鼓励真实评论获取：
+- 亚马逊坚决反对：虚假评论、有偿评论、评论操纵。
+- **核心原则：**"获取真实、无偏的消费者反馈" — 避免任何可能被视为评论操纵的行为。
 
-### Data Sources
+### 数据来源
 
-- No external dependencies. Based on Amazon official documentation (Request a Review, Vine, insert card policies, buyer messaging guidelines).
-- User provides: current review count, rating distribution, product info.
+- 无外部依赖。基于亚马逊官方文档（请求评论、Vine、插页卡政策、买家消息指南）。
+- 用户提供：当前评论数、评分分布、产品信息。
 
-### Limitations
+### 局限性
 
-- **Strict Amazon review policy:** Any manipulation attempts may result in severe penalties. Seller options limited compared to independent sites.
-- **Vine cost and uncertainty:** Fixed registration fee regardless of actual review count. Negative Vine reviews possible if product has quality issues.
-- **Natural growth limits:** Review growth limited by actual purchase volume — cannot exceed certain ratio of purchases.
-- **Fake review risks in competitive environment:** Non-compliant sellers may gain unfair advantage temporarily.
-- **Uncontrollable review modification:** Once negative review posted, seller influence extremely limited. Prevention (quality control, accurate listings) more effective than post-hoc handling.
+- **严格的亚马逊评论政策：** 任何操纵尝试都可能导致严重处罚。卖家选项比独立网站有限。
+- **Vine成本和不确定性：** 无论实际评论数如何都有固定注册费。如果产品质量有问题，Vine评论可能是负面的。
+- **自然增长限制：** 评论增长受实际购买量限制 — 不能超过购买的某个比例。
+- **竞争环境中的虚假评论风险：** 不合规的卖家可能暂时获得不公平优势。
+- **无法控制的评论修改：** 一旦发布负面评论，卖家影响力极为有限。预防（质量控制、准确的listing）比事后处理更有效。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

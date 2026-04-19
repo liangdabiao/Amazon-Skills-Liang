@@ -1,254 +1,254 @@
 ---
 name: amazon-sales-estimator
-description: "Amazon sales volume estimator for sellers and product researchers. Estimate monthly sales and revenue from BSR (Best Seller Rank), ASIN, or keyword. Three modes: (A) BSR Calculator — input BSR + marketplace + price + category to get instant sales estimate, (B) ASIN Lookup — input ASIN to auto-fetch data and estimate sales, (C) Keyword Market Analysis — input keyword to analyze total market size and competition. Works on 12 Amazon marketplaces. No API key required. Use when: (1) estimating how many units a product sells per month, (2) sizing a market or niche opportunity, (3) analyzing competitor sales performance, (4) comparing sales across price points, (5) identifying top sellers vs long-tail distribution."
+description: "亚马逊销售量估算器，面向卖家和产品研究人员。通过BSR（畅销榜排名）、ASIN或关键词估算月销量和收入。三种模式：(A) BSR计算器 — 输入BSR + 市场 + 价格 + 类目获取即时销售估算，(B) ASIN查询 — 输入ASIN自动获取数据并估算销售，(C) 关键词市场分析 — 输入关键词分析总市场大小和竞争。适用于12个亚马逊市场。无需API密钥。适用于：(1) 估算产品月销量，(2) 评估市场或细分机会，(3) 分析竞品销售表现，(4) 比较不同价格段的销售，(5) 识别顶级卖家与长尾分布。"
 metadata: {"nexscope":{"emoji":"📊","category":"amazon"}}
 ---
 
-# Amazon Sales Estimator 📊
+# 亚马逊销售估算器 📊
 
-Estimate monthly sales from BSR, analyze market size, and benchmark competitor performance. No API key — works out of the box.
+通过BSR估算月销量，分析市场大小，基准测试竞品表现。无需API密钥 — 开箱即用。
 
-## Three Modes
+## 三种模式
 
-| Mode | When to Use | Input | Output |
+| 模式 | 适用场景 | 输入 | 输出 |
 |------|-------------|-------|--------|
-| **A — BSR Calculator** | Quick estimate from known BSR | BSR + Marketplace + Price + Category | Monthly units, monthly revenue |
-| **B — ASIN Lookup** | Estimate sales for a specific product | ASIN or product URL | Auto-fetch data + sales estimate |
-| **C — Keyword Market Analysis** | Size a niche opportunity | Keyword (+ optional marketplace) | Total market sales, top sellers, price distribution |
+| **A — BSR计算器** | 从已知BSR快速估算 | BSR + 市场 + 价格 + 类目 | 月销量、月收入 |
+| **B — ASIN查询** | 估算特定产品销售 | ASIN或产品URL | 自动获取数据 + 销售估算 |
+| **C — 关键词市场分析** | 评估细分机会 | 关键词（+ 可选市场） | 总市场销量、顶级卖家、价格分布 |
 
-## Capabilities
+## 功能
 
-- **BSR-to-sales conversion**: Estimate monthly unit sales from Best Seller Rank using category-specific formulas
-- **Revenue calculation**: Monthly sales × price = estimated monthly revenue
-- **Market sizing**: Aggregate sales across products in a keyword search
-- **Price band analysis**: Distribution of sales across price ranges
-- **Competition breakdown**: Top sellers vs long-tail distribution
-- **Multi-marketplace**: US, UK, DE, FR, IT, ES, JP, CA, AU, IN, MX, BR
+- **BSR转销售转换**：使用类目特定公式从畅销榜排名估算月销量
+- **收入计算**：月销量 × 价格 = 估算月收入
+- **市场评估**：汇总关键词搜索中产品的销售
+- **价格段分析**：销量在不同价格范围的分布
+- **竞争细分**：顶级卖家 vs 长尾分布
+- **多市场支持**：美国、英国、德国、法国、意大利、西班牙、日本、加拿大、澳大利亚、印度、墨西哥、巴西
 
-## Handling Incomplete Input
+## 处理不完整输入
 
-If the user's intent is unclear or information is missing, guide them with all options and required inputs upfront:
+如果用户意图不明确或信息缺失，提前引导他们了解所有选项和所需输入：
 
-**User says:** `"Help me estimate Amazon sales"` or `"I want to check sales"`
+**用户说：** "帮我估算亚马逊销售" 或 "我想查看销售"
 
-**Agent should respond:**
+**代理应回复：**
 
-> I can help you estimate Amazon sales in 3 ways. Pick one and provide the required info:
+> 我可以通过3种方式帮您估算亚马逊销售。选择一种并提供所需信息：
 >
-> **A. BSR Calculator** — Quick estimate from BSR number
-> - BSR (required): e.g., 1500
-> - Category (required): e.g., Home & Kitchen
-> - Price (required): e.g., $24.99
-> - Marketplace (optional, default US)
+> **A. BSR计算器** — 从BSR编号快速估算
+> - BSR（必填）：例如 1500
+> - 类目（必填）：例如 家居厨房
+> - 价格（必填）：例如 $24.99
+> - 市场（可选，默认美国）
 >
-> **B. ASIN Lookup** — Check sales for a specific product
-> - ASIN or URL (required): e.g., B09V3KXJPB
-> - Marketplace (optional, default US)
+> **B. ASIN查询** — 查看特定产品销售
+> - ASIN或URL（必填）：例如 B09V3KXJPB
+> - 市场（可选，默认美国）
 >
-> **C. Market Analysis** — Size a keyword/niche opportunity
-> - Keyword (required): e.g., "yoga mat"
-> - Marketplace (optional, default US)
-> - Filters (optional): price range, min reviews
+> **C. 市场分析** — 评估关键词/细分机会
+> - 关键词（必填）：例如 "瑜伽垫"
+> - 市场（可选，默认美国）
+> - 筛选条件（可选）：价格范围、最低评论数
 >
-> Example: "Mode A: BSR 1500, Home & Kitchen, $24.99" or "Mode B: B09V3KXJPB"
+> 示例："模式A：BSR 1500，家居厨房，$24.99" 或 "模式B：B09V3KXJPB"
 
 ---
 
-## Mode A — BSR Calculator
+## 模式A — BSR计算器
 
-### Input
+### 输入
 
-| Field | Required | Description | Example |
+| 字段 | 必填 | 描述 | 示例 |
 |-------|----------|-------------|---------|
-| **BSR** | ✅ | Best Seller Rank number | 1500 |
-| **Marketplace** | ✅ | Amazon site | US, UK, DE, JP... |
-| **List Price** | ✅ | Product price | $24.99 |
-| **Category** | ✅ | Product category | Home & Kitchen |
+| **BSR** | ✅ | 畅销榜排名编号 | 1500 |
+| **市场** | ✅ | 亚马逊站点 | US, UK, DE, JP... |
+| **标价** | ✅ | 产品价格 | $24.99 |
+| **类目** | ✅ | 产品类目 | Home & Kitchen |
 
-### Usage Examples
-
-```
-Estimate sales for BSR 1500 in Home & Kitchen on Amazon US, price $24.99
-```
+### 使用示例
 
 ```
-BSR 500, category Electronics, marketplace DE, price €39.99
+估算亚马逊美国家居厨房类BSR 1500的销售，价格$24.99
 ```
 
 ```
-What's the monthly sales for a product ranked #10,000 in Sports & Outdoors at $15.99?
+BSR 500，电子产品，德国市场，价格€39.99
 ```
 
-### Workflow
+```
+BSR排名10,000的体育户外产品，月销量是多少？价格$15.99
+```
 
-1. **Receive input**: BSR, Category, Price, Marketplace
-2. **Look up base sales**: Use BSR-to-sales reference table for the marketplace
-3. **Apply category multiplier**: Adjust based on category (Electronics 1.2x, Clothing 0.8x, etc.)
-4. **Calculate monthly units**: Base sales × category multiplier
-5. **Calculate revenue**: Monthly units × price
-6. **Output results**: Monthly units, daily units, monthly revenue
+### 工作流程
 
-### Output
+1. **接收输入**：BSR、类目、价格、市场
+2. **查找基础销售**：使用市场的BSR转销售参考表
+3. **应用类目乘数**：根据类目调整（电子产品1.2倍，服装0.8倍等）
+4. **计算月销量**：基础销售 × 类目乘数
+5. **计算收入**：月销量 × 价格
+6. **输出结果**：月销量、日销量、月收入
+
+### 输出
 
 ```
-# 📊 Sales Estimate
+# 📊 销售估算
 
-**Input:**
-- BSR: #1,500 in Home & Kitchen
-- Marketplace: Amazon US
-- Price: $24.99
+**输入：**
+- BSR：家居厨房 #1,500
+- 市场：亚马逊美国
+- 价格：$24.99
 
-**Results:**
+**结果：**
 
-| Metric | Estimate |
+| 指标 | 估算 |
 |--------|----------|
-| **Est. Monthly Units** | ~450 units |
-| **Est. Monthly Revenue** | ~$11,246 |
-| **Est. Daily Units** | ~15 units |
+| **估算月销量** | ~450件 |
+| **估算月收入** | ~$11,246 |
+| **估算日销量** | ~15件 |
 
-*Estimate based on BSR-to-sales conversion formula for the selected category and marketplace.*
+*基于所选类目和市场的BSR转销售公式估算。*
 ```
 
 ---
 
-## Mode B — ASIN Lookup
+## 模式B — ASIN查询
 
-### Input
+### 输入
 
-| Field | Required | Description | Example |
+| 字段 | 必填 | 描述 | 示例 |
 |-------|----------|-------------|---------|
-| **ASIN** | ✅ | Amazon product ID or URL | B09V3KXJPB |
-| **Marketplace** | Optional | Defaults to US | UK, DE, JP... |
+| **ASIN** | ✅ | 亚马逊产品ID或URL | B09V3KXJPB |
+| **市场** | 可选 | 默认为美国 | UK, DE, JP... |
 
-### Usage Examples
-
-```
-Estimate monthly sales for ASIN B09V3KXJPB
-```
+### 使用示例
 
 ```
-How many units does this sell? https://www.amazon.com/dp/B0D72TSM62
+估算ASIN B09V3KXJPB的月销量
 ```
 
 ```
-Get sales estimate for B0CPY1GFVZ on Amazon DE
+这个产品月销量是多少？https://www.amazon.com/dp/B0D72TSM62
 ```
 
-### Workflow
+```
+获取亚马逊德国B0CPY1GFVZ的销售估算
+```
 
-1. **Fetch product data** using `web_fetch` on Amazon product page
-2. **Extract**: Title, Price, BSR, Category, Rating, Reviews
-3. **Apply BSR-to-sales formula** for the category and marketplace
-4. **Calculate revenue**: Monthly units × Price
+### 工作流程
 
-### Output
+1. 使用 `web_fetch` 获取亚马逊产品页面**产品数据**
+2. **提取**：标题、价格、BSR、类目、评分、评论
+3. 对该类目和市场**应用BSR转销售公式**
+4. **计算收入**：月销量 × 价格
+
+### 输出
 
 ```
-# 📊 Sales Estimate: B09V3KXJPB
+# 📊 销售估算：B09V3KXJPB
 
-## Product Info
-- **Title:** [Product Title]
-- **Price:** $24.99
-- **BSR:** #1,500 in Home & Kitchen
-- **Rating:** 4.5★ (1,234 reviews)
+## 产品信息
+- **标题：** [产品标题]
+- **价格：** $24.99
+- **BSR：** 家居厨房 #1,500
+- **评分：** 4.5★（1,234条评论）
 
-## Sales Estimate
+## 销售估算
 
-| Metric | Estimate |
+| 指标 | 估算 |
 |--------|----------|
-| **Est. Monthly Units** | ~450 units |
-| **Est. Monthly Revenue** | ~$11,246 |
-| **Est. Daily Units** | ~15 units |
+| **估算月销量** | ~450件 |
+| **估算月收入** | ~$11,246 |
+| **估算日销量** | ~15件 |
 
-## Competitive Context
-- Ranks in **top 0.5%** of Home & Kitchen category
-- Above average for $20-30 price range
+## 竞争背景
+- 排名家居厨房类目前 **0.5%** 以内
+- 高于$20-30价格段的平均水平
 ```
 
 ---
 
-## Mode C — Keyword Market Analysis
+## 模式C — 关键词市场分析
 
-### Input
+### 输入
 
-| Field | Required | Description | Example |
+| 字段 | 必填 | 描述 | 示例 |
 |-------|----------|-------------|---------|
-| **Keyword** | ✅ | Search term | yoga mat |
-| **Marketplace** | Optional | Amazon site (default: US) | UK, DE, JP... |
-| **Filters** | Optional | Price range, min reviews | $15-$40, 100+ reviews |
+| **关键词** | ✅ | 搜索词 | yoga mat |
+| **市场** | 可选 | 亚马逊站点（默认：美国） | UK, DE, JP... |
+| **筛选条件** | 可选 | 价格范围、最低评论数 | $15-$40, 100+评论 |
 
-### Usage Examples
-
-```
-Analyze the market size for "yoga mat" on Amazon US
-```
+### 使用示例
 
 ```
-What's the total monthly sales for "portable blender" keyword?
+分析亚马逊美国"yoga mat"的市场大小
 ```
 
 ```
-Size the "dog shirt" market on Amazon US. Show top sellers and price distribution.
+"portable blender"关键词的月总销量是多少？
 ```
 
-### Workflow
+```
+评估亚马逊美国"dog shirt"市场。显示顶级卖家和价格分布。
+```
 
-1. **Search products** using `web_search` for `site:amazon.com "{keyword}"`
-2. **Fetch top 10-20 product pages** to get BSR data
-3. **Estimate sales for each product** using Mode A formula
-4. **Aggregate** total market size
-5. **Analyze** price distribution and competition
+### 工作流程
 
-### Output
+1. 使用 `web_search` 搜索产品 `site:amazon.com "{关键词}"`
+2. 获取前10-20个产品页面的 **BSR数据**
+3. 使用模式A公式**估算每个产品销售**
+4. **汇总**总市场大小
+5. **分析**价格分布和竞争
+
+### 输出
 
 ```
-# 📊 Market Analysis: "yoga mat"
+# 📊 市场分析："yoga mat"
 
-**Marketplace:** Amazon US | **Products Analyzed:** 25
+**市场：** 亚马逊美国 | **分析产品数：** 25
 
-## Market Size
+## 市场大小
 
-| Metric | Value |
+| 指标 | 值 |
 |--------|-------|
-| **Est. Total Monthly Units** | ~85,000 units |
-| **Est. Total Monthly Revenue** | ~$2.1M |
-| **Average Price** | $24.50 |
+| **估算月总销量** | ~85,000件 |
+| **估算月总收入** | ~$210万 |
+| **平均价格** | $24.50 |
 
-## Top 5 Sellers
+## 顶级卖家
 
-| # | ASIN | Price | BSR | Est. Units/Mo |
+| # | ASIN | 价格 | BSR | 估算月销量 |
 |---|------|-------|-----|---------------|
 | 1 | B0XX... | $22.99 | #45 | ~8,500 |
 | 2 | B0YY... | $29.99 | #78 | ~6,200 |
 | 3 | B0ZZ... | $18.99 | #120 | ~4,800 |
 | ... | ... | ... | ... | ... |
 
-## Market Concentration
+## 市场集中度
 
-- **Top 3:** 23% of total sales
-- **Top 10:** 52% of total sales
-- **Long tail:** 48% of total sales
+- **前3名：** 总销量的23%
+- **前10名：** 总销量的52%
+- **长尾：** 总销量的48%
 
-→ **Fragmented market** — opportunity for new entrants
+→ **分散型市场** — 新进入者有机会
 
-## Price Distribution
+## 价格分布
 
-| Price Band | % of Sales |
+| 价格段 | 销量占比 |
 |------------|------------|
 | $0 - $20 | 25% |
 | $20 - $35 | 55% |
 | $35+ | 20% |
 
-**Sweet spot:** $20-$35
+**最佳区间：** $20-$35
 ```
 
 ---
 
-## BSR-to-Sales Reference
+## BSR转销售参考
 
-### Amazon US — Baseline (Home & Kitchen)
+### 亚马逊美国 — 基准（家居厨房）
 
-| BSR Range | Est. Monthly Sales |
+| BSR范围 | 估算月销量 |
 |-----------|-------------------|
 | 1-100 | 3,000 - 10,000+ |
 | 100-500 | 1,000 - 3,000 |
@@ -258,74 +258,42 @@ Size the "dog shirt" market on Amazon US. Show top sellers and price distributio
 | 50,000-100,000 | 10 - 30 |
 | 100,000+ | < 10 |
 
-### Category Multipliers
+### 类目乘数
 
-| Category | Multiplier |
+| 类目 | 乘数 |
 |----------|------------|
-| Electronics | 1.2x |
-| Home & Kitchen | 1.0x |
-| Toys | 1.1x |
-| Sports & Outdoors | 0.9x |
-| Clothing | 0.8x |
-| Books | 0.7x |
+| 电子产品 | 1.2倍 |
+| 家居厨房 | 1.0倍 |
+| 玩具 | 1.1倍 |
+| 运动户外 | 0.9倍 |
+| 服装 | 0.8倍 |
+| 图书 | 0.7倍 |
 
-### Marketplace Adjustments
+### 市场调整
 
-| Marketplace | Factor |
+| 市场 | 系数 |
 |-------------|--------|
-| US | 1.0x |
-| JP | 0.6x |
-| DE | 0.5x |
-| UK | 0.4x |
-| CA | 0.3x |
-| Others | 0.2x |
+| 美国 | 1.0倍 |
+| 日本 | 0.6倍 |
+| 德国 | 0.5倍 |
+| 英国 | 0.4倍 |
+| 加拿大 | 0.3倍 |
+| 其他 | 0.2倍 |
 
 ---
 
-## Integration with Other Skills
+## 与其他技能的集成
 
-### With amazon-keyword-research
+### 与amazon-keyword-research
 
 ```bash
 npx skills add nexscope-ai/Amazon-Skills --skill amazon-keyword-research -g
 ```
 
 ```
-Step 1: "Research keywords for yoga mat"
-   → amazon-keyword-research returns keyword list with search volumes
+第一步："研究瑜伽垫的关键词"
+   → amazon-keyword-research返回带搜索量的关键词列表
 
-Step 2: "Now analyze the market size for the top keyword"
-   → amazon-sales-estimator Mode C sizes the opportunity
+第二步："现在分析顶级关键词的市场大小"
+   → amazon-sales-estimator 模式C评估机会
 ```
-
-### With amazon-listing-optimization
-
-```bash
-npx skills add nexscope-ai/Amazon-Skills --skill amazon-listing-optimization -g
-```
-
-```
-Step 1: "Estimate sales for competitors: B0ABC, B0XYZ"
-   → amazon-sales-estimator Mode B provides benchmark data
-
-Step 2: "Create a listing to beat those competitors"
-   → amazon-listing-optimization generates optimized copy
-```
-
-### With amazon-ppc-campaign
-
-```bash
-npx skills add nexscope-ai/Amazon-Skills --skill amazon-ppc-campaign -g
-```
-
-```
-Step 1: "Estimate my product's monthly sales"
-   → amazon-sales-estimator provides revenue baseline
-
-Step 2: "Build PPC campaigns with 30% ACoS target"
-   → amazon-ppc-campaign calculates bids based on your revenue data
-```
-
-### More Skills
-
-## Limitations

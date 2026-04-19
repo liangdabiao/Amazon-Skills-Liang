@@ -1,113 +1,99 @@
 ---
 name: amazon-inventory-management
-description: "FBA inventory planning — restock timing, safety stock, IPI score optimization, stranded inventory recovery"
+description: "FBA库存规划 — 补货时机、安全库存、IPI分数优化、滞留库存回收"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Inventory Management
+# Amazon 库存管理
 
-FBA inventory planning — restock timing, safety stock, IPI score optimization, stranded inventory recovery
+FBA库存规划 — 补货时机、安全库存、IPI分数优化、滞留库存回收
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon inventory management for my e-commerce business.
+帮我处理亚马逊库存管理。
 ```
 
-## Capabilities
+## 功能
 
-- FBA inventory planning
-- restock timing
-- safety stock
-- IPI score optimization
-- stranded inventory recovery
+- FBA库存规划
+- 补货时机
+- 安全库存
+- IPI分数优化
+- 滞留库存回收
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Replenishment Timing Model
+### 补货时机模型
 
-**Reorder Point = Average Daily Sales × (Procurement Lead Time + Shipping Time + Amazon Receiving Time + Safety Buffer Days)**
+**补货点 = 日均销售 × （采购交期 + 运输时间 + 亚马逊入仓时间 + 安全缓冲天数）**
 
-- **Daily Sales:** Based on 30-60 day rolling average to avoid short-term volatility.
-- **Procurement Lead Time:** Confirm with supplier (varies by supplier).
-- **Shipping Time:** Sea freight 30-45 days, air freight 5-10 days.
-- **Amazon Receiving Time:** Typically 5-10 business days, may extend to 2-3 weeks in Q4 peak season.
-- **Safety Buffer:** 20-30% of total replenishment cycle to handle uncertainties.
+- **日均销售：** 基于30-60天滚动平均以避免短期波动。
+- **采购交期：** 与供应商确认（因供应商而异）。
+- **运输时间：** 海运30-45天，空运5-10天。
+- **亚马逊入仓时间：** 通常5-10个工作日，Q4旺季可能延长至2-3周。
+- **安全缓冲：** 总补货周期的20-30%以应对不确定性。
 
-### Safety Stock Calculation Method
+### 安全库存计算方法
 
-**Safety Stock = Service Level Factor × Demand Standard Deviation × √Replenishment Cycle**
+**安全库存 = 服务水平因子 × 需求标准差 × √补货周期**
 
-Key factors:
-- **Demand Standard Deviation:** Reflects sales volatility.
-- **Replenishment Cycle:** Reflects supply chain responsiveness.
-- **Service Level Target:** 95-98% recommended.
-- Stable products = lower safety stock. Seasonal/volatile products = higher safety stock.
-- Also consider supplier delivery reliability, logistics uncertainties, Amazon receiving delays.
+关键因素：
+- **需求标准差：** 反映销售波动性。
+- **补货周期：** 反映供应链响应速度。
+- **服务水平目标：** 建议95-98%。
+- 稳定产品 = 较低安全库存。季节性/波动产品 = 较高安全库存。
+- 还要考虑供应商交货可靠性、物流不确定性、亚马逊入仓延迟。
 
-### IPI Score Optimization Mechanism
+### IPI分数优化机制
 
-IPI (Inventory Performance Index) ranges 0-1000, based on four dimensions:
-- **Excess Inventory Score:** Surplus inventory ratio.
-- **Sell-through Rate:** Sales volume relative to inventory.
-- **Stranded Inventory Percentage:** Inventory without active offer.
-- **Inventory Defect Rate:** Inventory without salable information.
+IPI（库存绩效指数）范围0-1000，基于四个维度：
+- **积压库存分数：** 剩余库存比例。
+- **销售周转率：** 相对于库存的销售量。
+- **滞留库存百分比：** 没有活跃offer的库存。
+- **库存缺陷率：** 缺少可销售信息的库存。
 
-**Impact:** Score below 500 threshold = FBA storage limits imposed, cannot restore until next quarterly evaluation.
+**影响：** 分数低于500阈值 = 施加FBA仓储限制，在下次季度评估前无法恢复。
 
-**Optimization Actions:**
-- Reduce excess inventory through promotions or clearance deals.
-- Improve sell-through by increasing sales or reducing inventory.
-- Fix stranded inventory by resolving listing issues.
-- Complete missing product information to reduce inventory defects.
+**优化操作：**
+- 通过促销或清仓交易减少积压库存。
+- 通过增加销售或减少库存提高周转率。
+- 通过解决listing问题修复滞留库存。
+- 完善缺失的产品信息以减少库存缺陷。
 
-### Stranded Inventory Identification and Recovery
+### 滞留库存识别与回收
 
-Common stranded inventory causes:
-- Listing suppressed or deactivated.
-- Incomplete/inaccurate product information.
-- Policy violations.
-- ASIN merged under wrong parent listing.
+常见滞留库存原因：
+- listing被屏蔽或停用。
+- 产品信息不完整/不准确。
+- 政策违规。
+- ASIN被合并到错误的父listing下。
 
-**Recovery:** Use Amazon's "Fix Stranded Inventory" tool to identify causes and take targeted corrective action. Stranded inventory continues incurring storage fees while generating no sales.
+**回收：** 使用亚马逊的"修复滞留库存"工具识别原因并采取针对性纠正措施。滞留库存继续产生仓储费用但不产生销售。
 
-### Seasonal Inventory Planning
+### 季节性库存规划
 
-- **Q1-Q2:** Storage capacity relatively ample, IPI pressure lower. Good time to optimize inventory efficiency.
-- **Q3-Q4 (Peak Season):** Amazon tightens storage limits, IPI becomes critical. Clear excess inventory and raise IPI before Q4.
-- **Q4 Planning:** Inventory for Oct-Dec needs to arrive by Aug-Sep via sea freight to account for potential delays.
-- **Q1 (Off-Peak):** Control replenishment pace, clear excess inventory from previous year.
+- **Q1-Q2：** 仓储容量相对充足，IPI压力较低。是优化库存效率的好时机。
+- **Q3-Q4（旺季）：** 亚马逊收紧仓储限制，IPI变得关键。在Q4前清理积压库存并提高IPI。
+- **Q4规划：** 10-12月的库存需要通过海运在8-9月到达，以应对可能的延迟。
+- **Q1（淡季）：** 控制补货节奏，清理前一年的积压库存。
 
-### Data Sources
+### 数据来源
 
-- No external data dependencies. Based on supply chain management theory (EOQ model, service level theory) and Amazon FBA policy documentation.
-- User provides: sales velocity data, shipping times, supplier lead times, current inventory status.
+- 无外部数据依赖。基于供应链管理理论（EOQ模型、服务水平理论）和亚马逊FBA政策文档。
+- 用户提供：销售速度数据、运输时间、供应商交期、当前库存状态。
 
-### Limitations
+### 局限性
 
-- **Sales Forecasting Uncertainty:** Multiple uncontrollable factors affect Amazon sales — competitor actions, algorithm changes, seasonal demand, disruptions. New products especially hard to forecast.
-- **Supply Chain Delay Risk:** Actual delays may exceed calculations. Port congestion, customs inspection, peak season receiving slowdowns can all cause stockouts despite careful planning.
-- **IPI Lag:** IPI is a lagging indicator based on historical performance. By the time you see score drop, problems may have existed for weeks. Algorithm weights not fully transparent.
-- **Storage Capacity Hard Limits:** Below-threshold IPI = strict FBA capacity limits during peak selling seasons. Appeal process is difficult.
-- **Multi-Channel Coordination Complexity:** Sellers across Amazon + other channels need to balance inventory allocation. Lack of coordination may cause stockouts in some channels while others have excess.
-
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
-
-## Output Format
-
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- **销售预测不确定性：** 多种不可控因素影响亚马逊销售 — 竞品行动、算法变化、季节性需求、中断。新产品尤其难以预测。
+- **供应链延迟风险：** 实际延迟可能超过计算。港口拥堵、海关检查、旺季入仓缓慢都可能导致断货，尽管计划周密。

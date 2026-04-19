@@ -1,52 +1,45 @@
 ---
 name: amazon-store-research
 description: >
-  Perform comprehensive deep-dive research on any Amazon seller store. Use this skill whenever the user
-  wants to research an Amazon store, analyze a seller's storefront, investigate a brand on Amazon,
-  study a competitor's store, or provides an Amazon stores URL (amazon.com/stores/...). Also triggers on
-  requests like "调研这个亚马逊店铺", "分析这个Amazon卖家", "深度调研Amazon店铺", "分析亚马逊品牌店铺",
-  "Amazon店铺调研", "调研这个卖家", "分析竞争对手店铺", or any request to study/analyze/research an Amazon
-  seller store or brand storefront.
+  对任何亚马逊卖家店铺进行全面的深度研究。当用户提供店铺URL时使用此skill，包括研究亚马逊店铺、分析卖家 storefront、
+  调查亚马逊品牌、研究竞品店铺，或提供亚马逊店铺URL（amazon.com/stores/...）。也可在以下请求时触发：
+  "调研这个亚马逊店铺"、"分析这个Amazon卖家"、"深度调研Amazon店铺"、"分析亚马逊品牌店铺"、
+  "Amazon店铺调研"、"调研这个卖家"、"分析竞争对手店铺"，或任何研究/分析/调查亚马逊卖家店铺或品牌 storefront 的请求。
 ---
 
-# Amazon Store Deep Research
+# Amazon 店铺深度研究
 
-Autonomous end-to-end research workflow for any Amazon seller store. The user provides a store URL;
-the skill collects data from the storefront, runs parallel analyses, and produces a comprehensive
-Chinese-language report package.
+任何亚马逊卖家店铺的端到端自主研究工作流。用户提供店铺URL；skill从 storefront 收集数据、运行并行分析，并生成全面的中文报告包。
 
-## Prerequisites
+## 前置条件
 
-- **Playwright MCP server** must be available (browser_navigate, browser_evaluate, browser_snapshot, browser_close)
-- **Agent tool** for launching parallel analysis subagents
-- Reports are saved to `{project_root}/reports/{store-slug}/` (e.g., `reports/jmbricklayer/`).
-  Create the subdirectory at the start of each run.
+- **Playwright MCP服务器** 必须可用（browser_navigate、browser_evaluate、browser_snapshot、browser_close）
+- **Agent工具** 用于启动并行分析子代理
+- 报告保存到 `{project_root}/reports/{store-slug}/`（例如 `reports/jmbricklayer/`）。
+  在每次运行开始时创建子目录。
 
-## Workflow Overview
+## 工作流程概览
 
-The skill runs in three phases: Data Collection, Parallel Analysis, and Report Synthesis. Track progress with
-TaskCreate/TaskUpdate throughout.
+skill分三个阶段运行：数据收集、并行分析、报告综合。使用TaskCreate/TaskUpdate追踪进度。
 
-**Important**: All file outputs (JSON data, analysis reports, comprehensive report) must go into the store-specific
-subfolder under `reports/`. Extract a human-readable slug from the store name (e.g., "JMBricklayer" → `jmbricklayer`).
-Create the directory before saving any files.
+**重要**：所有文件输出（JSON数据、分析报告、综合报告）必须进入 `reports/` 下的店铺特定子文件夹。从店铺名称中提取人类可读的slug（例如 "JMBricklayer" → `jmbricklayer`）。在保存任何文件之前创建目录。
 
 ---
 
-## Phase 1: Data Collection
+## 第一阶段：数据收集
 
-### Step 1.1 — Parse User Input
+### 步骤1.1 — 解析用户输入
 
-Extract from the user's message:
-- **Store URL** (required) — the Amazon stores URL, e.g. `https://www.amazon.com/stores/JMBricklayer/page/3CACFA02-74C5-4F9D-81DB-0BF560B7BA47`
-- **Store name** — extract from the URL or page title
-- **Report language** (optional, default: 简体中文)
+从用户消息中提取：
+- **店铺URL**（必填）— 亚马逊店铺URL，例如 `https://www.amazon.com/stores/JMBricklayer/page/3CACFA02-74C5-4F9D-81DB-0BF560B7BA47`
+- **店铺名称** — 从URL或页面标题提取
+- **报告语言**（可选，默认：简体中文）
 
-### Step 1.2 — Scrape Store Home Page
+### 步骤1.2 — 抓取店铺首页
 
-Navigate to the store URL using `mcp__playwright__browser_navigate`. Wait for the page to fully load.
+使用 `mcp__playwright__browser_navigate` 导航到店铺URL。等待页面完全加载。
 
-First, extract the store navigation structure using `mcp__playwright__browser_evaluate`:
+首先，使用 `mcp__playwright__browser_evaluate` 提取店铺导航结构：
 
 ```javascript
 () => {
@@ -75,14 +68,14 @@ First, extract the store navigation structure using `mcp__playwright__browser_ev
 }
 ```
 
-This reveals:
-- Store navigation items (Home, Best Sellers, New Releases, collections, dropdowns)
-- All collection/category page URLs
-- Product links visible on the home page
+这揭示了：
+- 店铺导航项（首页、畅销品、新品、合集、下拉菜单）
+- 所有合集/类别页面URL
+- 首页可见的产品链接
 
-### Step 1.3 — Extract Products from Home Page
+### 步骤1.3 — 从首页提取产品
 
-Use `mcp__playwright__browser_evaluate` with this product extraction script:
+使用 `mcp__playwright__browser_evaluate` 运行此产品提取脚本：
 
 ```javascript
 () => {
@@ -120,35 +113,34 @@ Use `mcp__playwright__browser_evaluate` with this product extraction script:
 }
 ```
 
-### Step 1.4 — Scrape Key Store Pages
+### 步骤1.4 — 抓取关键店铺页面
 
-Navigate to each key page using the collection URLs discovered in Step 1.2. The standard store pages are:
+使用步骤1.2发现的合集URL导航到每个关键页面。标准店铺页面包括：
 
-1. **Best Sellers** — Look for navigation item with text "Best Sellers"
-2. **New Releases** — Look for navigation item with text "New Releases"
-3. **About us** — Look for navigation item with text "About us"
+1. **畅销品** — 查找文本为"Best Sellers"的导航项
+2. **新品** — 查找文本为"New Releases"的导航项
+3. **关于我们** — 查找文本为"About us"的导航项
 
-For each page, use the same product extraction script from Step 1.3.
+对于每个页面，使用步骤1.3中的相同产品提取脚本。
 
-### Step 1.5 — Scrape Collection/Category Pages
+### 步骤1.5 — 抓取合集/类别页面
 
-Navigate to each theme collection page discovered from the navigation. Use the same product extraction script.
+导航到从导航中发现的每个主题合集页面。使用相同的产品提取脚本。
 
-Common collection patterns:
-- "Shop By Theme" dropdown → contains theme categories
-- "By Difficulty" dropdown → contains difficulty levels
-- Standalone collection links (Occasion, etc.)
+常见合集模式：
+- "按主题购物"下拉菜单 → 包含主题类别
+- "按难度"下拉菜单 → 包含难度级别
+- 独立合集链接（场合等）
 
-**Important**: Identify dropdown menus in the navigation. The dropdown items (indicated by `type: 'dropdown'` or nested links) contain
-the actual collection sub-pages. Scrape each sub-collection page.
+**重要**：识别导航中的下拉菜单。下拉项（由 `type: 'dropdown'` 或嵌套链接指示）包含实际的合集子页面。抓取每个子合集页面。
 
-### Step 1.6 — Close Browser
+### 步骤1.6 — 关闭浏览器
 
-Run `mcp__playwright__browser_close` when all scraping is complete.
+所有抓取完成后运行 `mcp__playwright__browser_close`。
 
-### Step 1.7 — Save Raw Data
+### 步骤1.7 — 保存原始数据
 
-Consolidate all scraped data into a single JSON file at `reports/{store-slug}/{store-slug}_store_data.json` with this structure:
+将所有抓取的数据整合到 `reports/{store-slug}/{store-slug}_store_data.json` 的单个JSON文件中，结构如下：
 
 ```json
 {
@@ -170,88 +162,87 @@ Consolidate all scraped data into a single JSON file at `reports/{store-slug}/{s
 }
 ```
 
-Deduplicate ASINs across all pages and count unique products.
+跨所有页面去重ASIN并计算唯一产品数。
 
 ---
 
-## Phase 2: Parallel Analysis
+## 第二阶段：并行分析
 
-Launch **4 analysis agents simultaneously** using the Agent tool with `run_in_background: true` and `subagent_type: "general-purpose"`.
-Each agent receives the full raw data and writes its report to `reports/{store-slug}/`.
+使用 `run_in_background: true` 和 `subagent_type: "general-purpose"` 同时启动 **4个分析代理**。
+每个代理接收完整的原始数据并将报告写入 `reports/{store-slug}/`。
 
-### Agent 1 — Product Portfolio Analysis
+### 代理1 — 产品组合分析
 
-File: `reports/{store-slug}/{store-slug}_portfolio_analysis.md`
+文件：`reports/{store-slug}/{store-slug}_portfolio_analysis.md`
 
-Prompt the agent to analyze:
-1. **Store overview** — brand positioning, category coverage, total ASIN count, price range
-2. **Product matrix** — distribution across collections/categories, cross-category overlaps
-3. **Product numbering system** — identify any patterns in product codes/numbers
-4. **Price strategy** — price bands, average price per collection, pricing tiers
-5. **Rating & review analysis** — average rating per collection, review distribution, review thresholds
-6. **Top product profiles** — Top 10 products by review count with characteristics
-7. **New release cadence** — product launch speed, innovation direction, recent themes
-8. **SKU strategy** — product line expansion, series development, size/piece-count gradients
+提示代理分析：
+1. **店铺概览** — 品牌定位、类目覆盖、ASIN总数、价格范围
+2. **产品矩阵** — 跨合集/类目分布、跨类目重叠
+3. **产品编号系统** — 识别产品代码/编号中的任何模式
+4. **定价策略** — 价格带、每个合集的平均价格、定价层级
+5. **评分与评论分析** — 每个合集的平均评分、评论分布、评论壁垒
+6. **Top产品档案** — 按评论数排名的Top 10产品及特征
+7. **新品发布节奏** — 产品推出速度、创新方向、近期主题
+8. **SKU策略** — 产品线扩展、系列开发、尺寸/片数梯度
 
-### Agent 2 — Competitive Positioning Analysis
+### 代理2 — 竞争定位分析
 
-File: `reports/{store-slug}/{store-slug}_competitive_analysis.md`
+文件：`reports/{store-slug}/{store-slug}_competitive_analysis.md`
 
-Prompt the agent to analyze:
-1. **Competitive landscape** — brand positioning (e.g., LEGO alternative, niche player, Chinese export brand)
-2. **SWOT analysis** — strengths, weaknesses, opportunities, threats with specific evidence
-3. **Direct competitor comparison** — vs major brands (LEGO, and any notable alternative brands relevant to the category)
-4. **Differentiation strategy** — unique features (LED lights, licensing, themes, price advantage)
-5. **Target customer segments** — who buys these products (collectors, gift buyers, hobbyists, etc.)
-6. **Listing strategy** — title keyword patterns, common phrases, optimization observations
-7. **Review quality analysis** — cross-collection rating comparison, identifying weak/strong collections
+提示代理分析：
+1. **竞争格局** — 品牌定位（例如LEGO替代品、细分玩家、中国出口品牌）
+2. **SWOT分析** — 优势、劣势、机会、威胁及具体证据
+3. **直接竞品对比** — vs主要品牌（LEGO及与类目相关的任何知名替代品牌）
+4. **差异化策略** — 独特功能（LED灯、授权、主题、价格优势）
+5. **目标客户细分** — 谁购买这些产品（收藏者、礼品买家、爱好者等）
+6. **Listing策略** — 标题关键词模式、常见短语、优化观察
+7. **评论质量分析** — 跨合集评分对比，识别弱/强合集
 
-### Agent 3 — Revenue Estimation Analysis
+### 代理3 — 收入估算分析
 
-File: `reports/{store-slug}/{store-slug}_revenue_analysis.md`
+文件：`reports/{store-slug}/{store-slug}_revenue_analysis.md`
 
-Prompt the agent to analyze:
-1. **Sales estimation methodology** — review-to-sales ratio, comment acceleration, daily review rate
-2. **Top 10 product monthly estimates** — monthly unit sales and revenue (conservative/neutral/optimistic)
-3. **Store monthly revenue** — tiered model (Top 10 + Tier 2 + Tier 3 long-tail), three scenarios
-4. **Collection revenue contribution** — which collections drive the most revenue
-5. **Price elasticity analysis** — which price bands accumulate reviews fastest
-6. **Product lifecycle analysis** — classify products by lifecycle stage based on review count
-7. **New product performance** — assess early-stage products (low review count)
-8. **Annual revenue projection** — monthly × 12 with Q4 seasonal weighting
+提示代理分析：
+1. **销售估算方法论** — 评论与销售比率、评论增速、日评论率
+2. **Top 10产品月估算** — 月单位销量和收入（保守/中性/乐观）
+3. **店铺月收入** — 分层模型（Top 10 + 第二层 + 第三层长尾），三种场景
+4. **合集收入贡献** — 哪些合集驱动最多收入
+5. **价格弹性分析** — 哪些价格带积累评论最快
+6. **产品生命周期分析** — 按评论数将产品分类为生命周期阶段
+7. **新产品表现** — 评估早期产品（低评论数）
+8. **年度收入预测** — 月度 × 12 并考虑Q4季节性权重
 
-### Agent 4 — Growth Strategy Analysis
+### 代理4 — 增长策略分析
 
-File: `reports/{store-slug}/{store-slug}_growth_strategy.md`
+文件：`reports/{store-slug}/{store-slug}_growth_strategy.md`
 
-Prompt the agent to analyze:
-1. **Brand development assessment** — maturity level, market validation, price coverage
-2. **Growth opportunities** — which collections to expand, underserved niches, new themes
-3. **Product optimization** — fix low-rated products, fill price gaps, bundle opportunities
-4. **Operational strategy** — PPC keywords, review building, promotional calendar, inventory
-5. **Competitive response** — how to position against big brands and similar alternatives
-6. **Market expansion** — international marketplaces, brand website, social media
-7. **Risk assessment** — IP risks, quality issues, logistics challenges, seasonal dependency
-8. **Action roadmap** — 30/60/90-day plan with specific milestones
+提示代理分析：
+1. **品牌发展评估** — 成熟度、市场验证、价格覆盖
+2. **增长机会** — 哪些合集可扩展、服务不足的细分市场、新主题
+3. **产品优化** — 修复低评分产品、填补价格空白、捆绑机会
+4. **运营策略** — PPC关键词、评论建立、促销日历、库存
+5. **竞争应对** — 如何针对大品牌和类似替代品定位
+6. **市场扩展** — 国际市场、品牌网站、社交媒体
+7. **风险评估** — 知识产权风险、质量问题、物流挑战、季节依赖
+8. **行动路线图** — 30/60/90天计划及具体里程碑
 
-**Important**: Pass the actual scraped data (not summaries) to each agent. Include all product ASINs, titles, prices,
-ratings, and review counts from the JSON file. The agents need real data to produce meaningful analysis.
+**重要**：将实际抓取的数据（不是摘要）传递给每个代理。从JSON文件包含所有产品ASIN、标题、价格、评分和评论数。代理需要真实数据才能产生有意义的分析。
 
 ---
 
-## Phase 3: Report Synthesis
+## 第三阶段：报告综合
 
-Wait for all 4 agents to complete (you'll receive task notifications). Then launch one final synthesis agent
-(`subagent_type: "general-purpose"`, foreground this time since we need the result) to generate the comprehensive report.
+等待所有4个代理完成（你将收到任务通知）。然后启动一个最终综合代理
+（`subagent_type: "general-purpose"`，这次是前台运行，因为我们需要结果）来生成综合报告。
 
-### Final Report
+### 最终报告
 
-File: `reports/{store-slug}/{store-slug}_comprehensive_report.md`
+文件：`reports/{store-slug}/{store-slug}_comprehensive_report.md`
 
-The synthesis agent should:
-1. Read all 4 analysis reports from `reports/`
-2. Combine with the raw product data
-3. Produce a comprehensive report with this exact structure:
+综合代理应：
+1. 从 `reports/` 读取所有4份分析报告
+2. 结合原始产品数据
+3. 生成具有以下确切结构的综合报告：
 
 ```markdown
 # {Store Name} 亚马逊店铺深度调研报告
@@ -267,39 +258,32 @@ The synthesis agent should:
 8. 关键发现与行动建议
 ```
 
-**Key sections must include:**
+**必须包含的关键部分：**
 
-- **Executive Summary**: 1-page overview with top 5 opportunities table (niche, score, margin, entry difficulty)
-  and key metrics dashboard (ASIN count, price range, avg rating, est. monthly revenue)
-- **Store Overview**: Brand positioning, navigation structure, product numbering system,
-  collection table with product counts
-- **Product Portfolio**: Price band distribution, rating by collection, Top 10 products,
-  new product pipeline, lifecycle distribution
-- **Competitive Positioning**: SWOT matrix, major brand price comparison, differentiation,
-  target customer segments with %
-- **Revenue & Sales**: Top 10 monthly estimates (3 scenarios), collection revenue %,
-  store monthly/annual revenue with seasonality
-- **Growth & Risk**: 5 opportunities ranked by potential, 5 risks with mitigation,
-  low-score product diagnosis
-- **Operations**: PPC strategy, listing optimization, review building, promotional calendar
-- **Key Findings**: Top 5 findings, Top 5 action items, 30/60/90-day roadmap
+- **执行摘要**：1页概览，包含Top 5机会表（细分市场、评分、利润、入场难度）和关键指标仪表板（ASIN数、价格范围、平均评分、预估月收入）
+- **店铺概览**：品牌定位、导航结构、产品编号系统、产品数量合集表
+- **产品组合**：价格带分布、按合集评分、Top 10产品、新产品线、生命周期分布
+- **竞争定位**：SWOT矩阵、主要品牌价格对比、差异化、目标客户细分及百分比
+- **收入与销售**：Top 10月估算（3种场景）、合集收入%、店铺月/年收入及季节性
+- **增长与风险**：按潜力排序的5个机会、带缓解措施的5个风险、低评分产品诊断
+- **运营**：PPC策略、listing优化、评论建立、促销日历
+- **关键发现**：Top 5发现、Top 5行动项、30/60/90天路线图
 
 ---
 
-## Output Summary
+## 输出总结
 
-After all phases complete, present the user with:
+所有阶段完成后，向用户呈现：
 
-1. A summary table of all generated reports with file paths
-2. The top 5 key findings from the research
-3. The top 3 recommended action items
+1. 所有生成报告的汇总表及文件路径
+2. 研究的Top 5关键发现
+3. Top 3推荐行动项
 
-## Error Handling
+## 错误处理
 
-- If Playwright navigation fails, retry once, then try `mcp__web_reader__webReader` as fallback
-- If the extraction script returns empty results, use `browser_snapshot` to inspect the page structure and adapt
-- If collection discovery fails, look for alternative URL patterns in the navigation
-- If a collection page has no products, skip it and note the empty result
-- If any analysis agent fails, regenerate just that one report
-- **Data anomaly watch**: Review counts that match product model numbers (e.g., "40102" reviews) are likely
-  scraping artifacts — flag these in the analysis
+- 如果Playwright导航失败，重试一次，然后尝试 `mcp__web_reader__webReader` 作为备选
+- 如果提取脚本返回空结果，使用 `browser_snapshot` 检查页面结构并调整
+- 如果合集发现失败，在导航中查找替代URL模式
+- 如果合集页面没有产品，跳过并注明空结果
+- 如果任何分析代理失败，重新生成该报告
+- **数据异常观察**：与产品型号匹配的评论数（例如"40102"条评论）可能是抓取伪影 — 在分析中标记这些

@@ -1,194 +1,193 @@
 ---
 name: amazon-keyword-research
-description: "Amazon keyword research and market opportunity analysis for sellers. Retrieve autocomplete suggestions (long-tail keywords), analyze competitor landscape, and assess market opportunity for any keyword on 12 Amazon marketplaces (US/UK/DE/FR/IT/ES/JP/CA/AU/IN/MX/BR). No API key required. Make sure to use this skill whenever the user mentions Amazon product research, finding products to sell on Amazon, Amazon keyword ideas, niche analysis, competition analysis for Amazon, market opportunity on Amazon, comparing Amazon keywords, evaluating whether a product is worth selling, Amazon autocomplete data, seasonal demand for Amazon products, or anything related to researching what to sell on Amazon — even if they don't explicitly say 'keyword research'. Also trigger when the user asks vague questions like 'is this a good product to sell?', 'what's the competition like for X on Amazon?', 'should I sell X or Y?', or 'what are people searching for on Amazon?'."
+description: "亚马逊卖家关键词研究和市场机会分析。获取自动完成建议（长尾关键词），分析竞争格局，并评估12个亚马逊市场（美国/英国/德国/法国/意大利/西班牙/日本/加拿大/澳大利亚/印度/墨西哥/巴西）的任何关键词的市场机会。无需API密钥。当用户提到亚马逊产品研究、寻找在亚马逊上销售的产品、亚马逊关键词创意、利基分析、亚马逊竞争分析、亚马逊市场机会、比较亚马逊关键词、评估产品是否值得销售、亚马逊自动完成数据、亚马逊产品的季节性需求，或任何与研究在亚马逊上销售什么相关的内容时，确保使用此技能 — 即使他们没有明确说'关键词研究'。当用户问模糊问题时也触发，如'这是一个好的销售产品吗？'、'X在亚马逊上的竞争如何？'、'我应该卖X还是Y？'，或'人们在亚马逊上搜索什么？'。"
 metadata: {"nexscope":{"emoji":"🔍","category":"amazon"}}
 ---
 
-# Amazon Keyword Research 🔍
+# 亚马逊关键词研究 🔍
 
-Free keyword research for Amazon sellers. No API key — works out of the box.
+亚马逊卖家免费关键词研究工具。无需API密钥 — 开箱即用。
 
-## Installation
+## 功能
+
+- **长尾关键词挖掘**：从亚马逊自动完成引擎提取100-200个真实搜索词
+- **竞争格局分析**：产品数量、价格范围、平均评分、评论分布、顶级品牌
+- **季节性趋势检测**：12个月谷歌趋势数据，识别旺季和需求变化
+- **市场机会评分**：1-10分，结合竞争密度、价格空间和需求信号
+- **多市场支持**：美国、英国、德国、法国、意大利、西班牙、日本、加拿大、澳大利亚、印度、墨西哥、巴西
+- **关键词比较**：多个关键词的并排分析
+
+## 使用示例
+
+用户可以自然提问。例如：
+
+```
+研究亚马逊美国的关键词"portable blender"
+```
+
+```
+为"yoga mat"查找亚马逊长尾关键词
+```
+
+```
+我想卖阻力带。亚马逊关键词格局如何？
+```
+
+```
+比较亚马逊美国的"laptop stand"和"monitor stand" — 哪个机会更大？
+```
+
+```
+分析亚马逊德国的"Küchenmesser"
+```
+
+```
+研究亚马逊美国、英国和德国的"water bottle"
+```
+
+## 工作流程
+
+### 第一步：收集自动完成数据
+
+运行捆绑脚本收集亚马逊自动完成建议：
 
 ```bash
-npx skills add nexscope-ai/Amazon-Skills --skill amazon-keyword-research -g
+<skill>/scripts/research.sh "<关键词>" [市场]
 ```
 
-## Capabilities
+**参数：**
+- `关键词`（必填）：要研究的种子关键词
+- `市场`（可选）：`us`（默认）、`uk`、`de`、`fr`、`it`、`es`、`jp`、`ca`、`au`、`in`、`mx`、`br`
 
-- **Long-tail keyword mining**: Extract 100-200 real search terms from Amazon's autocomplete engine
-- **Competitor landscape analysis**: Product count, price range, average rating, review distribution, top brands
-- **Seasonal trend detection**: 12-month Google Trends data to identify peak seasons and demand shifts
-- **Market opportunity scoring**: 1-10 score combining competition density, price room, and demand signals
-- **Multi-marketplace support**: US, UK, DE, FR, IT, ES, JP, CA, AU, IN, MX, BR
-- **Keyword comparison**: Side-by-side analysis of multiple keywords
+**脚本功能：**
+- 使用种子关键词查询亚马逊自动完成API
+- 使用前缀扩展："best [关键词]"、"cheap [关键词]"、"top [关键词]"
+- 使用a-z后缀扩展："[关键词] a"、"[关键词] b"、... "[关键词] z"
+- 返回去重、排序的真实搜索建议列表 — 每行一个
 
-## Usage Examples
+**为什么重要：** 亚马逊自动完成反映了真实购物者实际输入的内容。这些不是猜测 — 它们是来自亚马逊搜索引擎的直接需求信号。前缀和字母扩展捕获了基本自动完成遗漏的长尾词，这些词通常竞争较低且意图较高。
 
-Users can ask naturally. Examples:
-
-```
-Research the keyword "portable blender" on Amazon US
-```
-
-```
-Find long-tail keywords for "yoga mat" on Amazon
-```
-
-```
-I want to sell resistance bands. What does the Amazon keyword landscape look like?
-```
-
-```
-Compare "laptop stand" vs "monitor stand" on Amazon US — which has more opportunity?
-```
-
-```
-Analyze "Küchenmesser" on Amazon Germany
-```
-
-```
-Research "water bottle" across Amazon US, UK, and DE
-```
-
-## Workflow
-
-### Step 1: Gather Autocomplete Data
-
-Run the bundled script to collect Amazon autocomplete suggestions:
-
-```bash
-<skill>/scripts/research.sh "<keyword>" [marketplace]
-```
-
-**Parameters:**
-- `keyword` (required): The seed keyword to research
-- `marketplace` (optional): `us` (default), `uk`, `de`, `fr`, `it`, `es`, `jp`, `ca`, `au`, `in`, `mx`, `br`
-
-**What the script does:**
-- Queries Amazon's autocomplete API with the seed keyword
-- Expands with prefixes: "best [keyword]", "cheap [keyword]", "top [keyword]"
-- Expands with a-z suffixes: "[keyword] a", "[keyword] b", ... "[keyword] z"
-- Returns deduplicated, sorted list of real search suggestions — one per line
-
-**Why this matters:** Amazon autocomplete reflects what real shoppers are actually typing. These aren't guesses — they're demand signals directly from Amazon's search engine. The prefix and alphabet expansion catches long-tail terms that basic autocomplete misses, which are often lower competition and higher intent.
-
-Example:
+示例：
 ```bash
 <skill>/scripts/research.sh "portable blender" us
-# Returns 100-200 long-tail keywords
+# 返回100-200个长尾关键词
 ```
 
-For multi-marketplace research, run the script once per marketplace.
+对于多市场研究，请每个市场运行一次脚本。
 
-### Step 2: Analyze Competition
+### 第二步：分析竞争
 
-Use `web_search` to gather competitor intelligence:
+使用 `web_search` 收集竞争对手情报：
 
-1. Search `"<keyword>" site:amazon.com` — note approximate result count for competition density
-2. Search `"<keyword>" amazon best sellers price review` — extract price patterns, rating averages, dominant brands
-3. Summarize: total competitors, price range (min/avg/max), average star rating, top 5 brands by visibility
+1. 搜索 `"<关键词>" site:amazon.com` — 记下约结果数量以了解竞争密度
+2. 搜索 `"<关键词>" amazon best sellers price review` — 提取价格模式、评分平均值、主导品牌
+3. 总结：总竞争对手数量、价格范围（最低/平均/最高）、平均星级、可见度最高的Top 5品牌
 
-**Why this matters:** Raw keyword volume means nothing without competition context. A keyword with 10,000 searches but dominated by 3 entrenched brands with 10,000+ reviews each is a very different opportunity than one with the same volume but fragmented sellers. The price range reveals margin potential — if everything is under $10, margins will be razor-thin after FBA fees.
+**为什么重要：** 没有竞争背景的原始关键词量毫无意义。一个有10,000次搜索但被3个拥有10,000+评论的老牌品牌主导的关键词，与具有相同搜索量但卖家分散的关键词相比，是完全不同的机会。价格范围揭示了利润潜力 — 如果所有产品都在10美元以下，FBA费用后将非常微薄。
 
-### Step 3: Check Seasonality
+### 第三步：检查季节性
 
-Use `web_fetch` on Google Trends:
-
-```
-https://trends.google.com/trends/explore?q=<keyword>&geo=US
-```
-
-If Google Trends returns a 429 error, fall back to `web_search` for seasonal data:
-```
-"<keyword>" seasonal trends demand peak months
-```
-
-Identify: trend direction (rising/declining/stable), seasonal peaks (which months), year-over-year change.
-
-**Why this matters:** Seasonality determines cash flow risk. A product that sells 80% of its volume in Q4 means you need capital for inventory months in advance and may sit on dead stock the rest of the year. Rising trends mean growing demand and more room for new entrants; declining trends mean you're fighting over a shrinking pie. This context turns a keyword from a number into a business decision.
-
-### Step 4: Synthesize Report
-
-Combine all data into the output format below.
-
-**Why structure matters:** Grouping keywords by intent (commercial vs informational vs niche) helps the seller understand not just what people search, but why they search it. The opportunity score condenses multiple signals into a single actionable number, but the breakdown behind it is what actually informs the decision — so always show the reasoning.
-
-## Output Format
-
-Present the final report in this structure:
+在谷歌趋势上使用 `web_fetch`：
 
 ```
-## Keyword Research Report: [keyword]
-**Marketplace:** Amazon [US/UK/DE/...]
-**Date:** [current date]
+https://trends.google.com/trends/explore?q=<关键词>&geo=US
+```
 
-### 1. Long-tail Keywords ([count] found)
+如果谷歌趋势返回429错误，回退到 `web_search` 获取季节性数据：
+```
+"<关键词>" seasonal trends demand peak months
+```
 
-**High Commercial Intent:**
-- [keyword with "buy", "best", "vs", "for" etc.]
+识别：趋势方向（上升/下降/稳定）、季节性高峰（哪些月份）、同比变化。
+
+**为什么重要：** 季节性决定了现金流风险。一个80%销量集中在第四季度的产品意味着你需要提前数月准备好库存资金，其余时间可能面临滞销库存。上升趋势意味着需求增长和新进入者的空间；下降趋势意味着你在争夺不断缩小的市场份额。这种背景将关键词从数字变成商业决策。
+
+### 第四步：综合报告
+
+将所有数据组合成下面的输出格式。
+
+**为什么结构重要：** 按意图（商业意图vs信息意图vs利基意图）对关键词分组帮助卖家不仅了解人们搜索什么，还了解为什么搜索。机会评分将多个信号浓缩成一个可操作的数字，但其背后的细分才是真正为决策提供依据 — 所以始终展示推理过程。
+
+## 输出格式
+
+使用以下结构呈现最终报告：
+
+```
+## 关键词研究报告：[关键词]
+**市场：** 亚马逊 [美国/英国/德国/...]
+**日期：** [当前日期]
+
+### 1. 长尾关键词（找到[数量]个）
+
+**高商业意图：**
+- [包含"buy"、"best"、"vs"、"for"等的关键词]
 - ...
 
-**Informational / Research:**
-- [keyword with "how to", "what is", "review" etc.]
+**信息性/研究性：**
+- [包含"how to"、"what is"、"review"等的关键词]
 - ...
 
-**Niche / Specific:**
-- [long, specific keywords indicating clear purchase intent]
+**利基/特定：**
+- [表明明确购买意图的长而具体的关键词]
 - ...
 
-### 2. Competition Landscape
+### 2. 竞争格局
 
-| Metric | Value |
+| 指标 | 值 |
 |--------|-------|
-| Estimated competitors | [number] |
-| Price range | $[min] - $[max] |
-| Average price | $[avg] |
-| Average rating | [stars] |
-| Top brands | [brand1, brand2, brand3...] |
+| 估计竞争对手数 | [数量] |
+| 价格范围 | $[最低] - $[最高] |
+| 平均价格 | $[平均] |
+| 平均评分 | [星级] |
+| 顶级品牌 | [品牌1、品牌2、品牌3...] |
 
-### 3. Seasonal Trends
+### 3. 季节性趋势
 
-[Describe 12-month trend: peaks, valleys, stable periods]
-[Note any upcoming peak seasons relevant to the keyword]
+[描述12个月趋势：高峰、低谷、稳定期]
+[注意与关键词相关的即将到来的高峰季节]
 
-### 4. Market Opportunity Score: [X/10]
+### 4. 市场机会评分：[X/10]
 
-**Score breakdown:**
-- Competition density: [low/medium/high] — [why]
-- Price room: [low/medium/high] — [why]
-- Demand trend: [growing/stable/declining] — [why]
-- Niche potential: [low/medium/high] — [why]
+**评分细分：**
+- 竞争密度：[低/中/高] — [原因]
+- 价格空间：[低/中/高] — [原因]
+- 需求趋势：[增长/稳定/下降] — [原因]
+- 利基潜力：[低/中/高] — [原因]
 
-**Recommendation:** [1-2 sentence actionable recommendation]
+**建议：** [1-2句可操作的建议]
 ```
 
-## Multi-Keyword Comparison
+## 多关键词比较
 
-When the user asks to compare two or more keywords, run the full workflow (Steps 1-4) for each keyword separately, then present results in a side-by-side comparison table.
+当用户要求比较两个或更多关键词时，分别对每个关键词运行完整工作流程（第一步至第四步），然后以并排比较表呈现结果。
 
-**Example user input:**
+**示例用户输入：**
 ```
-Compare "laptop stand" vs "monitor stand" vs "tablet stand" on Amazon US — which one should I sell?
+比较亚马逊美国的"laptop stand"、"monitor stand"和"tablet stand" — 我应该卖哪个？
 ```
 
-**How to execute:** Run the script 3 times:
+**如何执行：** 运行脚本3次：
 ```bash
 <skill>/scripts/research.sh "laptop stand" us
 <skill>/scripts/research.sh "monitor stand" us
 <skill>/scripts/research.sh "tablet stand" us
 ```
 
-Then complete Steps 2-3 for each keyword, and output a comparison table:
+然后对每个关键词完成第二步和第三步，并输出比较表：
 
-| Metric | laptop stand | monitor stand | tablet stand |
+| 指标 | laptop stand | monitor stand | tablet stand |
 |--------|-------------|---------------|-------------|
-| Long-tail count | — | — | — |
-| Avg price | — | — | — |
-| Top brand dominance | — | — | — |
-| Trend direction | — | — | — |
-| Opportunity score | — | — | — |
+| 长尾关键词数量 | — | — | — |
+| 平均价格 | — | — | — |
+| 顶级品牌主导度 | — | — | — |
+| 趋势方向 | — | — | — |
+| 机会评分 | — | — | — |
 
-End with a **Recommendation** stating which keyword has the best opportunity and why.
+以**建议**结束，说明哪个关键词机会最大及其原因。
 
-## Limitations
+## 局限性
+
+- 关键词数量基于自动完成返回，可能不完整
+- 竞争数据来自网络搜索，估计值
+- 趋势数据来自谷歌趋势，可能有延迟
+- 建议仅供参考 — 做出商业决策前进行自己的研究

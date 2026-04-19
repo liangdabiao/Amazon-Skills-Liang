@@ -1,87 +1,86 @@
 ---
 name: amazon-backend-keywords
-description: "Optimize Amazon backend search terms for maximum discoverability. Generate the optimal 250-byte backend keyword set by deduplicating, prioritizing, and formatting keywords that aren't already in your listing."
+description: "优化亚马逊后台搜索词以最大化可发现性。通过去重、排序和格式化不在 listing 中的关键词，生成最优的250字节后台关键词集。"
 metadata:
   nexscope:
     emoji: "🏷️"
     category: amazon
 ---
 
-# Amazon Backend Keywords 🏷️
+# Amazon 后台关键词 🏷️
 
-Optimize Amazon backend search terms for maximum discoverability. Generate the optimal 250-byte backend keyword set by deduplicating, prioritizing, and formatting keywords that aren't already in your listing.
+优化亚马逊后台搜索词以最大化可发现性。通过去重、排序和格式化不在 listing 中的关键词，生成最优的250字节后台关键词集。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Optimize my backend keywords. My product is a bamboo laptop stand. Here are my current title and bullets: [paste listing]. Here are 50 keyword candidates: [paste keywords].
+优化我的后台关键词。我的产品是竹制笔记本支架。以下是我当前的标题和五点：[粘贴 listing]。以下是50个候选关键词：[粘贴关键词]。
 ```
 
-## Capabilities
+## 功能
 
-- 250-byte limit optimization (maximum keyword coverage in minimum space)
-- Deduplication against title, bullets, and description
-- Keyword prioritization by relevance and search volume signals
-- Spanish/multilingual keyword inclusion strategy
-- Misspelling and synonym coverage
-- Prohibited term filtering (competitor brands, restricted claims)
-- Before/after coverage comparison
+- 250字节限制优化（最小空间最大化关键词覆盖）
+- 与标题、五点和描述的去重核对
+- 按相关性和搜索量信号排序关键词
+- 多语言关键词纳入策略
+- 拼写错误和同义词覆盖
+- 禁用词过滤（竞品品牌、受限声明）
+- 优化前后覆盖对比
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### 250-Byte Limit Optimization System
+### 250字节限制优化系统
 
-- **Byte Calculation:** English letters/numbers = 1 byte each. Chinese/Japanese = 2-3 bytes each. Special characters may also consume multiple bytes. Use space-separated format (no commas/semicolons) to save delimiter bytes.
-- **Exact Deduplication:** Remove keywords already in title or bullets — they won't add extra index weight. Only include keywords not already visible in listing content.
-- **Stemming Deduplication:** Amazon's algorithm recognizes word roots. "Running" covers "runner" and "run". Merge variants into one optimal form to avoid redundancy.
-- **Semantic Deduplication:** Identify highly similar phrases. Keep the expression with higher search volume or broader coverage.
+- **字节计算：** 英文字母/数字 = 每个1字节。中文/日文 = 每个2-3字节。特殊字符也可能占用多字节。使用空格分隔格式（不用逗号/分号）以节省分隔符字节。
+- **精确去重：** 移除已在标题或五点中的关键词 — 它们不会增加额外索引权重。只包含不在 listing 内容中已可见的关键词。
+- **词干去重：** 亚马逊算法识别词根。"Running"覆盖"runner"和"run"。合并变体为一个最优形式以避免冗余。
+- **语义去重：** 识别高度相似的短语。保留搜索量更高或覆盖更广的表达。
 
-### Keyword Prioritization Algorithm
+### 关键词排序算法
 
-- **Search Volume Weighting:** Base score on monthly search volume — higher volume = higher priority.
-- **Competition Correction Factor:** High-volume keywords often have intense competition. Apply correction for new products or thin review profiles. Boost medium-competition, decent-volume long-tail keywords.
-- **Relevance Strength Assessment:** Only high-relevance keywords drive valuable traffic. Deselect low-relevance high-volume terms (e.g., selling yoga mats but targeting "sneakers").
-- **Independent Coverage Value:** Evaluate if each keyword covers search demand no other keyword covers. Low independent value = replaceable when space is tight.
+- **搜索量加权：** 基于月搜索量计算基础分 — 搜索量越高 = 优先级越高。
+- **竞争修正因子：** 高搜索量关键词通常竞争激烈。对新品或评论少的产品应用修正。提升中等竞争、搜索量尚可的长尾关键词。
+- **相关性强度评估：** 只有高相关性关键词才能带来有价值的流量。剔除低相关性高搜索量词（如卖瑜伽垫但 targeted "运动鞋"）。
+- **独立覆盖价值：** 评估每个关键词是否覆盖了其他关键词无法覆盖的搜索需求。独立价值低 = 空间紧张时可替换。
 
-### Misspelling and Synonym Coverage
+### 拼写错误和同义词覆盖
 
-- **Common Misspellings:** Include high-frequency errors (e.g., "bluetooth" common errors "blutooth" or "bluetooth"). Don't exhaust all variants — only truly frequent misspellings.
-- **Synonym Expansion:** Cover regional variations and different consumer terminology (e.g., "portable charger" vs "power bank" for US marketplace).
-- **Spanish Keywords:** For US marketplace, allocate ~30-50 bytes for core benefit Spanish translations to capture Spanish-speaking consumers.
+- **常见拼写错误：** 包含高频错误（如"bluetooth"常见错误"blutooth"）。不要穷尽所有变体 — 只选真正高频的错误。
+- **同义词扩展：** 覆盖地区变体和不同消费者用语（如美国市场"portable charger" vs "power bank"）。
+- **西班牙语关键词：** 美国市场分配约30-50字节用于核心卖点的西班牙语翻译，以触达西班牙语消费者。
 
-### Prohibited Term Filtering
+### 禁用词过滤
 
-- **Competitor Brand Filter:** Never include other brands' trademarks — may cause ASIN suppression.
-- **Restricted Claims Filter:** Prohibit "best", "#1", "free shipping" — violates Amazon policy.
-- **Subjective Claims Filter:** Avoid "amazing", "greatest" — unverifiable claims.
-- **Punctuation Cleanup:** Remove extra spaces, duplicate delimiters, special characters.
+- **竞品品牌过滤器：** 绝不包含其他品牌的商标 — 可能导致 ASIN 被抑制。
+- **受限声明过滤器：** 禁止"最佳"、"第一"、"免运费" — 违反亚马逊政策。
+- **主观声明过滤器：** 避免"惊人"、"最棒" — 无法验证的声明。
+- **标点清理：** 移除多余空格、重复分隔符、特殊字符。
 
-### Data Sources
+### 数据来源
 
-- User provides title, bullets, and 50-100 keyword candidates.
-- No external APIs. Deduplication and prioritization based on built-in logic.
+- 用户提供标题、五点和50-100个候选关键词。
+- 无外部 API。去重和排序基于内置逻辑。
 
-### Limitations
+### 局限性
 
-- 250-byte limit is a hard constraint — cannot exceed.
-- Duplicate keywords in title/bullets waste bytes without adding index weight.
-- Spelling variants consume bytes but capture missed traffic.
+- 250字节是硬性限制 — 不可超出。
+- 标题/五点中已有的重复关键词浪费字节而不增加索引权重。
+- 拼写变体占用字节但能捕获错失的流量。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

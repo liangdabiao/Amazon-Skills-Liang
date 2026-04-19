@@ -1,485 +1,336 @@
 ---
 name: amazon-ppc-campaign
-description: "Amazon PPC campaign builder and optimizer for sellers. Two modes: (A) Build — design a complete campaign structure from scratch with keyword groupings, bid calculations, and negative keyword lists, (B) Optimize — audit existing campaigns using search term reports, identify keyword funnel opportunities, calculate bid adjustments, and generate a week-by-week action plan. Integrates with amazon-keyword-research for keyword input. No API key required. Use when: (1) setting up Amazon PPC campaigns for a new product, (2) auditing existing campaign performance and ACoS, (3) optimizing keyword bids and negative keywords, (4) building Auto/Manual/Exact campaign structures, (5) analyzing search term reports for opportunities, (6) calculating break-even ACoS and target ACoS, (7) scaling profitable campaigns to Sponsored Brands or Display."
+description: "亚马逊PPC广告系列构建器和优化器。两种模式：(A) 构建 — 从零开始设计完整广告系列结构，包含关键词分组、竞价计算和负关键词列表，(B) 优化 — 使用搜索词报告审计现有广告系列，识别关键词漏斗机会，计算竞价调整，并生成逐周行动计划。无需API密钥。适用于：(1) 为新产品设置亚马逊PPC广告系列，(2) 审计现有广告系列表现和ACoS，(3) 优化关键词竞价和负关键词，(4) 构建自动/手动/精确广告系列结构，(5) 分析搜索词报告寻找机会，(6) 计算盈亏平衡ACoS和目标ACoS，(7) 将盈利广告系列扩展到 Sponsored Brands 或 Display。"
 metadata: {"nexscope":{"emoji":"📢","category":"amazon"}}
 ---
 
-# Amazon PPC Campaign Optimization 📢
+# Amazon PPC 广告系列优化 📢
 
-Build profitable PPC campaign structures from scratch, or audit and optimize existing campaigns with data-driven bid adjustments. No API key — works out of the box.
+从零开始构建盈利的PPC广告系列结构，或使用数据驱动的竞价调整审计和优化现有广告系列。无需API密钥 — 开箱即用。
 
-## Two Modes
+## 两种模式
 
-| Mode | When to Use | Input | Output |
+| 模式 | 适用场景 | 输入 | 输出 |
 |------|-------------|-------|--------|
-| **A — Build** | Launching PPC for a new product | Product info + keywords + margins | Complete campaign blueprint + keyword groupings + initial bids |
-| **B — Optimize** | Improving existing campaigns | Campaign data + search term reports + current ACoS | Optimization plan + bid adjustments + negative keyword list |
+| **A — 构建** | 为新产品启动PPC | 产品信息 + 关键词 + 利润率 | 完整广告系列蓝图 + 关键词分组 + 初始竞价 |
+| **B — 优化** | 改进现有广告系列 | 广告系列数据 + 搜索词报告 + 当前ACoS | 优化计划 + 竞价调整 + 负关键词列表 |
 
-## Capabilities
+## 功能
 
-- **ACoS financial framework**: Calculate break-even ACoS, target ACoS, and Max CPC from product margins — the foundation for every bid decision
-- **Campaign architecture design**: Build a structured Auto → Broad → Exact funnel with proper negative keyword isolation between campaigns
-- **Keyword grouping**: Organize keywords into campaign buckets with match types and initial bids based on confidence level
-- **Bid optimization**: Apply ACoS-based bid adjustment rules using industry-standard formulas (cut/increase by percentage based on ACoS range)
-- **Keyword funnel analysis**: Identify migration opportunities (Auto→Broad→Exact) and wasted spend (high-click zero-sale terms)
-- **Negative keyword management**: Generate seed lists (cross-campaign, irrelevant terms, generic waste modifiers) and ongoing additions from search term data
-- **Search term report analysis**: Parse user-provided campaign data to find profitable terms, wasteful terms, and optimization gaps
-- **Competitor ASIN targeting**: Build product targeting campaigns aimed at competitor product pages
-- **Integration chain**: Works with [amazon-keyword-research](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-keyword-research) for keyword input and [amazon-listing-optimization](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-listing-optimization) for pre-launch listing quality checks
+- **ACoS财务框架**：从产品利润率计算盈亏平衡ACoS、目标ACoS和最高CPC — 这是每个竞价决策的基础
+- **广告系列架构设计**：构建结构化的自动 → 广泛 → 精确漏斗，各广告系列之间有适当的负关键词隔离
+- **关键词分组**：将关键词组织到广告系列分组中，基于置信度级别分配匹配类型和初始竞价
+- **竞价优化**：应用基于ACoS的竞价调整规则（根据ACoS范围按百分比削减/增加）
+- **关键词漏斗分析**：识别迁移机会（自动→广泛→精确）和浪费支出（高点击零销售词）
+- **负关键词管理**：生成种子列表（跨广告系列、不相关词、通用浪费修饰词）并从搜索词数据持续添加
+- **搜索词报告分析**：解析用户提供的广告系列数据以发现盈利词、浪费词和优化差距
+- **竞品ASIN定向**：构建针对竞品产品页面的产品定向广告系列
+- **集成链**：与 amazon-keyword-research 配合获取关键词输入，与 amazon-listing-optimization 配合进行上架前listing质量检查
 
-## Usage Examples
+## 使用示例
 
-### Mode A — Build New Campaigns
-
-```
-I'm launching a portable blender on Amazon US. Price: $39.99. Product cost: $8, shipping: $3, Amazon fees: $7.50. Here are my keywords: portable blender, personal blender, smoothie maker. Build me a PPC campaign structure.
-```
+### 模式A — 构建新广告系列
 
 ```
-Use amazon-keyword-research to find keywords for "bamboo cutting board", then build a PPC campaign structure. Product costs $6, sells for $29.99. Brand new product launch.
+我正在亚马逊美国推出便携式榨汁杯。价格：$39.99。产品成本：$8，运费：$3，亚马逊费用：$7.50。这是我的关键词：portable blender, personal blender, smoothie maker。帮我构建PPC广告系列结构。
 ```
 
 ```
-I want to advertise my dog t-shirt (ASIN B0D72TSM62, price $5.99, cost $2). Look at competitors B0CMD17929 and B0B76519ZG, extract their keywords, and build my PPC campaigns.
-```
-
-### Mode B — Optimize Existing Campaigns
-
-```
-My PPC ACoS is 58% and my target is 30%. I have 3 campaigns: Auto ($800/month, ACoS 67%), Manual Broad ($1,100, ACoS 48%), Manual Exact ($500, ACoS 33%). Product margin is 54%. Help me optimize.
+使用 amazon-keyword-research 为"bamboo cutting board"找关键词，然后构建PPC广告系列结构。产品成本$6，售价$29.99。全新产品上架。
 ```
 
 ```
-Here's my search term report [paste CSV data]. Break-even ACoS is 40%. Find wasted spend, tell me what to negate and what to migrate.
+我想为我的狗T恤做广告（ASIN B0D72TSM62，价格$5.99，成本$2）。看看竞品 B0CMD17929 和 B0B76519ZG，提取他们的关键词，然后帮我构建PPC广告系列。
+```
+
+### 模式B — 优化现有广告系列
+
+```
+我的PPC ACoS是58%，目标ACoS是30%。我有3个广告系列：自动（$800/月，ACoS 67%）、手动广泛（$1,100，ACoS 48%）、手动精确（$500，ACoS 33%）。产品利润率是54%。帮我优化。
 ```
 
 ```
-Weekly PPC check: here are this week's search terms with clicks and sales [data]. Add negatives for 10+ clicks with no sales, move 2+ orders to Exact.
+这是我的搜索词报告 [粘贴CSV数据]。盈亏平衡ACoS是40%。找出浪费的支出，告诉我哪些要加负、哪些要迁移。
 ```
 
-### Short Prompts Work Too
-
 ```
-Help me set up PPC for my product B0D72TSM62
-```
-```
-My ACoS is too high, help me fix it
-```
-```
-I want to start advertising on Amazon
+每周PPC检查：这是本周的搜索词及点击和销售 [数据]。为10+点击无销售的添加负词，为2+订单的迁移到精确。
 ```
 
----
-
-## How This Skill Collects Information
-
-Users rarely provide everything upfront — and they don't need to. This skill follows a **progressive information gathering** approach:
-
-**Step 1: Extract from the prompt.** Parse whatever the user already provided — ASIN, price, ACoS numbers, campaign names, keywords, etc.
-
-**Step 2: Auto-discover.** If an ASIN is given, run the bundled `scripts/fetch-competitor.sh <ASIN>` to get price, category, BSR, and competitor context. This script handles Amazon's anti-bot protections. If the user mentions a product type without an ASIN, use `web_search` to understand the market.
-
-**Step 3: Identify gaps.** Compare what you have against what's needed (see the Required Information tables in Mode A Step A1 and Mode B Step B1 below). Focus on what's **critical** to proceed:
-- Mode A critical: **product costs** (to calculate ACoS) + **monthly ad budget** (to size campaigns) + **keywords or competitor ASINs** (to build campaigns)
-- Mode B critical: **current ACoS** + **profit margin** (to know the gap and set targets)
-
-**Step 4: One consolidated follow-up.** Ask only for missing critical items — in one conversational message, not a questionnaire:
+### 简短提示也可以
 
 ```
-Mode A example:
-"I found your product — Paiaite Dog T-Shirt, $5.99 on Amazon. To build your
-campaigns, I need three things:
-  1. Your product cost per unit (so I can calculate your break-even ACoS)
-  2. Your monthly ad budget (so I can size the campaigns right)
-  3. Any target keywords or competitor ASINs? (Or I can research for you)"
-
-Mode B example:
-"Got it — ACoS is too high. To give you specific actions, can you share:
-  1. Your profit margin (or product cost, I'll calculate it)
-  2. Which campaigns are running and their rough ACoS?
-Search term report data is a bonus but not required to start."
+帮我为我的产品B0D72TSM62设置PPC
 ```
-
-**Step 5: Use estimates when stuck.** If the user can't provide something (e.g., doesn't know exact fees), use reasonable category-based estimates and clearly note the assumption. Never block progress waiting for perfect data.
-
----
-
-## Key Concepts
-
-Three formulas drive every recommendation in this skill. They're introduced here and applied in Step A2 (for Mode A) and Step B2 (for Mode B).
-
-**Break-even ACoS** = Profit margin before ad spend. If your product sells for $40 with $15 in costs after Amazon fees, your margin is $25/$40 = 62.5%. At 62.5% ACoS you spend all profit on ads — break even.
-
-**Target ACoS** = Break-even ACoS − Desired profit margin. Want 25% profit after ads? Target ACoS = 62.5% − 25% = 37.5%.
-
-**Keyword Funnel** = The core PPC optimization loop, applied in Steps A4/A6 (building) and B3 (optimizing):
 ```
-Auto Campaign (discover new terms)
-    ↓ terms with 2+ orders
-Manual Broad (test at broader match)
-    ↓ terms with 2+ sales
-Manual Exact (scale winners with precision)
-
-At each step: add the migrated term as NEGATIVE in the source campaign to prevent duplicate spend.
+我的ACoS太高了，帮我解决
+```
+```
+我想开始在亚马逊上做广告
 ```
 
 ---
 
-## Mode A Workflow — Build Campaign Structure
+## 此技能如何收集信息
 
-### Step A1: Collect Product Info
+用户很少一开始就提供所有信息 — 他们也不需要。此技能遵循**渐进式信息收集**方法：
 
-The following details are needed. Many can be extracted automatically (see "How This Skill Collects Information" above) — only ask for what's truly missing.
+**第一步：从提示中提取。** 解析用户已提供的任何内容 — ASIN、价格、ACoS数字、广告系列名称、关键词等。
 
-| Detail | How to Get It | Critical? |
-|--------|--------------|:---------:|
-| ASIN | From user's prompt | Helpful |
-| Product name and category | Fetch from ASIN or ask | Helpful |
-| Selling price | Fetch from ASIN or ask | ✅ Yes |
-| Product cost (landed) | Must ask user | ✅ Yes |
-| Monthly ad budget | Must ask user | ✅ Yes |
-| Amazon fees (referral + FBA) | Estimate ~15% referral + FBA by size | Can estimate |
-| Launch vs mature product | Ask or infer from context | Helpful |
+**第二步：自动发现。** 如果给出ASIN，运行捆绑的 `scripts/fetch-competitor.sh <ASIN>` 获取价格、类目、BSR和竞品上下文。此脚本处理亚马逊的反爬虫保护。如果用户提到产品类型但没有ASIN，使用 `web_search` 了解市场。
 
-### Step A2: Calculate ACoS Targets
+**第三步：识别差距。** 将您拥有的与所需内容进行比较（参见下方模式A第一步和模式B第一步的要求信息表）。专注于对进行**关键**的内容：
+- 模式A关键：**产品成本**（计算ACoS）+ **每月广告预算**（确定广告系列规模）+ **关键词或竞品ASIN**（构建广告系列）
+- 模式B关键：**当前ACoS** + **利润率**（了解差距并设定目标）
 
-Using the formulas from Key Concepts, compute the financial framework that governs all bid decisions:
+**第四步：一次综合跟进。** 仅询问缺失的关键项 — 在一条对话消息中，而非问卷：
 
 ```
-📊 PPC FINANCIAL FRAMEWORK
+模式A示例：
+"我找到了您的产品 — Paiaite Dog T-Shirt，亚马逊上$5.99。为了构建您的广告系列，我需要三样东西：
+  1. 您的单位产品成本（以便计算盈亏平衡ACoS）
+  2. 您的每月广告预算（以便正确确定广告系列规模）
+  3. 任何目标关键词或竞品ASIN？（或者我可以为您研究）"
 
-Selling Price:           $39.99
-Total Costs:             $18.50 (product $8 + shipping $3 + Amazon fees $7.50)
-Profit Before Ads:       $21.49
-Profit Margin:           53.7%
-
-Break-even ACoS:         53.7% (spending ALL profit on ads)
-Target ACoS (Mature):    30.0% (keeps ~24% profit margin)
-Target ACoS (Launch):    50.0% (aggressive — acceptable for first 4-8 weeks)
-
-Max CPC at Target ACoS:  $1.20 (at 10% conversion rate)
-Formula: Max CPC = Selling Price × Target ACoS × Conversion Rate
+模式B示例：
+"好的 — ACoS太高了。为了给您具体操作，您可以分享：
+  1. 您的利润率（或产品成本，我会计算）
+  2. 您正在运行哪些广告系列及其大致ACoS？
+搜索词报告数据是加分项但非必需开始。"
 ```
 
-If user doesn't know their conversion rate, use category benchmarks: 10-15% is average.
+**第五步：受阻时使用估算。** 如果用户无法提供某些内容（例如不知道确切费用），使用合理的类目估算并明确注明假设。永远不要为了等待完美数据而阻止进度。
 
-### Step A3: Collect Keywords
+---
 
-Keywords can come from three sources (use one or combine):
+## 关键概念
 
-1. **From [amazon-keyword-research](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-keyword-research) skill** (recommended): Run keyword research first, then feed the ranked keyword list into this skill.
-2. **From competitor ASINs**: User provides 1-3 competitor ASINs → run `scripts/fetch-competitor.sh <ASIN>` for each → extract keywords from their titles and bullet points. The script returns title, brand, bullets, price, category, BSR, and review count.
-3. **From user's list**: User provides their own keywords (e.g., from Helium 10, search term reports, or manual research).
+三个公式驱动此技能中的每个建议。它们在此介绍并在模式A第二步（构建）和模式B第二步（优化）中应用。
 
-Additionally, expand keywords using Amazon autocomplete: `curl -s "https://completion.amazon.com/api/2017/suggestions?mid=ATVPDKIKX0DER&alias=aps&prefix=<URL-ENCODED-KEYWORD>" | python3 -c "import sys,json; [print(s['value']) for s in json.load(sys.stdin).get('suggestions',[])]"`
+**盈亏平衡ACoS** = 广告支出前的利润率。如果您的产品售价$40，亚马逊费用后成本为$15，您的利润率为$25/$40 = 62.5%。在62.5% ACoS时，您将所有利润用于广告 — 盈亏平衡。
 
-### Step A4: Build Campaign Structure and Group Keywords
+**目标ACoS** = 盈亏平衡ACoS − 期望利润率。广告后想要25%利润？目标ACoS = 62.5% − 25% = 37.5%。
 
-**Default: 4 campaigns.** This is the standard structure for a new product launch:
+**关键词漏斗** = 核心PPC优化循环，在第一步A4/A6（构建）和第一步B3（优化）中应用：
+```
+自动广告系列（发现新词）
+    ↓ 2+订单的词
+手动广泛（以更广泛匹配测试）
+    ↓ 2+销售的词
+手动精确（精确扩展赢家）
 
-| Priority | Campaign | What It Does | Always Include? |
+每步：将迁移的词作为负词添加到源广告系列以防止重复支出。
+```
+
+---
+
+## 模式A工作流 — 构建广告系列结构
+
+### 第一步A1：收集产品信息
+
+需要以下详情。许多可以自动提取（参见上方"此技能如何收集信息"）— 仅询问真正缺失的内容。
+
+| 详情 | 如何获取 | 关键？ |
+|------|--------------|:---------:|
+| ASIN | 从用户提示中 | 有帮助 |
+| 产品名称和类目 | 从ASIN获取或询问 | 有帮助 |
+| 售价 | 从ASIN获取或询问 | ✅ 是 |
+| 产品成本（到岸价） | 必须询问用户 | ✅ 是 |
+| 每月广告预算 | 必须询问用户 | ✅ 是 |
+| 亚马逊费用（推荐费 + FBA） | 按尺寸估算约15%推荐费 + FBA | 可以估算 |
+| 上架 vs 成熟产品 | 询问或从上下文推断 | 有帮助 |
+
+### 第一步A2：计算ACoS目标
+
+使用关键概念中的公式，计算管理所有竞价决策的财务框架：
+
+```
+📊 PPC 财务框架
+
+售价：                   $39.99
+总成本：                 $18.50（产品$8 + 运费$3 + 亚马逊费用$7.50）
+广告前利润：             $21.49
+利润率：                 53.7%
+
+盈亏平衡ACoS：         53.7%（将所有利润用于广告）
+目标ACoS（成熟）：      30.0%（保留约24%利润率）
+目标ACoS（启动）：      50.0%（激进 — 前4-8周可接受）
+
+目标ACoS下最高CPC：    $1.20（按10%转化率）
+公式：最高CPC = 售价 × 目标ACoS × 转化率
+```
+
+如果用户不知道转化率，使用类目基准：10-15%为平均值。
+
+### 第一步A3：收集关键词
+
+关键词可以来自三个来源（使用一个或组合）：
+
+1. **来自 amazon-keyword-research**：先运行关键词研究，然后将排名后的关键词列表输入此技能。
+2. **来自竞品ASIN**：用户提供1-3个竞品ASIN → 对每个运行 `scripts/fetch-competitor.sh <ASIN>` → 从他们的标题和五点中提取关键词。脚本返回标题、品牌、五点、价格、类目、BSR和评论数。
+3. **来自用户列表**：用户提供自己的关键词（例如来自Helium 10、搜索词报告或手动研究）。
+
+另外，使用亚马逊自动完成扩展关键词：`curl -s "https://completion.amazon.com/api/2017/suggestions?mid=ATVPDKIKX0DER&alias=aps&prefix=<URL-ENCODED-KEYWORD>" | python3 -c "import sys,json; [print(s['value']) for s in json.load(sys.stdin).get('suggestions',[])]"`
+
+### 第一步A4：构建广告系列结构并分组关键词
+
+**默认：4个广告系列。** 这是新产品上架的标准结构：
+
+| 优先级 | 广告系列 | 作用 | 必须包含？ |
 |:--------:|----------|--------------|:---------------:|
-| 1 | **Auto Discovery** | Amazon auto-matches your ad to search terms — collects data on what shoppers actually search | ✅ Yes |
-| 2 | **Manual Exact** | Your top 10-15 proven keywords with exact match — highest control, lowest ACoS | ✅ Yes |
-| 3 | **Manual Broad** | All research keywords with broad match — discovers variations and long-tail terms | ✅ Yes |
-| 4 | **Product Targeting** | Shows your ad on competitor product pages — steals their traffic | ✅ If competitor ASINs available |
+| 1 | **自动发现** | 亚马逊自动将您的广告与搜索词匹配 — 收集有关购物者实际搜索什么的数据 | ✅ 是 |
+| 2 | **手动精确** | 您排名前10-15的经过验证的关键词，精确匹配 — 最高控制力，最低ACoS | ✅ 是 |
+| 3 | **手动广泛** | 所有研究关键词，广泛匹配 — 发现变体和长尾词 | ✅ 是 |
+| 4 | **产品定向** | 在竞品产品页面展示您的广告 — 抢夺他们的流量 | ✅ 有竞品ASIN时 |
 
-**If budget is tight:** Launch Priority 1+2 first (Auto + Exact). Add Priority 3 after one week of data. Add Priority 4 when you have competitor ASINs identified.
+**如果预算紧张：** 先启动优先级1+2（自动 + 精确）。一周数据后添加优先级3。有竞品ASIN时添加优先级4。
 
-Organize keywords into these campaign buckets:
+将关键词组织到这些广告系列分组中：
 
-See the **Mode A Output** template below for the exact format of keyword groupings per campaign.
+参见下方输出格式部分的**模式A输出**模板，了解每个广告系列关键词分组的确切格式。
 
-### Step A5: Set Initial Bids
+### 第一步A5：设置初始竞价
 
-**Max CPC (from Step A2) is your profitability ceiling** — not your actual bid. Actual competitive bids depend on the category and keyword competition.
+**最高CPC（从第一步A2）是您的盈利上限** — 不是您的实际竞价。实际竞争竞价取决于类目和关键词竞争。
 
-**How to recommend bids:**
-1. Calculate Max CPC as the financial guardrail (what you can afford)
-2. For actual starting bids, tell the user to check Amazon's **suggested bid range** when creating the campaign in Seller Central — this reflects real auction data
-3. If Amazon's suggested bid > Max CPC, flag the gap and explain: either accept a loss (ranking launch), raise product price, or skip that keyword
+**如何推荐竞价：**
+1. 计算最高CPC作为财务 guardrail（您能承受的）
+2. 对于实际起始竞价，告诉用户在Seller Central创建广告系列时检查亚马逊的**建议竞价范围** — 这反映真实竞价数据
+3. 如果亚马逊建议竞价 > 最高CPC，标记差距并解释：要么接受亏损（排名上架）、提高产品价格，或跳过该关键词
 
-**When you don't have suggested bid data**, use these category-relative starting points:
-| Campaign Type | Starting Bid | Adjust After |
+**当您没有建议竞价数据时**，使用这些类目相对起始点：
+| 广告系列类型 | 起始竞价 | 调整时机 |
 |--------------|-------------|-------------|
-| Manual Exact | Amazon suggested bid or Max CPC (whichever is lower) | 7 days with 20+ clicks |
-| Manual Broad | 70-80% of Exact bid | 7 days |
-| Auto | 50-70% of Exact bid | 7 days |
-| Product Targeting | 50-70% of Exact bid | 7 days |
+| 手动精确 | 亚马逊建议竞价或最高CPC（取较低者） | 7天20+点击后 |
+| 手动广泛 | 精确竞价的70-80% | 7天后 |
+| 自动 | 精确竞价的50-70% | 7天后 |
+| 产品定向 | 精确竞价的50-70% | 7天后 |
 
-**Important:** These are starting points. The real optimization happens after 1-2 weeks of data — adjust based on actual ACoS per keyword.
+**重要：** 这些是起始点。真正的优化在1-2周数据后进行 — 根据每个关键词的实际ACoS进行调整。
 
-### Step A6: Build Negative Keyword Seed List
+### 第一步A6：构建负关键词种子列表
 
-Generate an initial negative keyword list before launch. Three types:
+上线前生成初始负关键词列表。三种类型：
 
-1. **Cross-campaign negatives**: Add all Exact campaign keywords as negatives in Broad and Auto campaigns (prevents internal competition — this is the Keyword Funnel isolation from Key Concepts).
-2. **Irrelevant term negatives**: Terms that share words with your product but are wrong category/intent. Example for "bamboo cutting board":
-   - Wrong material: "plastic cutting board", "glass cutting board"
-   - Wrong product: "cutting board oil", "cutting board stand"
-   - Wrong intent: "how to clean cutting board", "cutting board DIY"
-3. **Generic waste negatives**: Common low-intent modifiers: "free", "cheap", "used", "DIY", "review", "reddit", "how to"
+1. **跨广告系列负词**：将所有精确广告系列关键词添加为广泛和自动广告系列中的负词（防止内部竞争 — 这是关键概念中的关键词漏斗隔离）。
+2. **不相关词负词**：与您的产品共享词汇但类别/意图错误的词。例如"bamboo cutting board"：
+   - 错误材质："plastic cutting board"、"glass cutting board"
+   - 错误产品："cutting board oil"、"cutting board stand"
+   - 错误意图："how to clean cutting board"、"cutting board DIY"
+3. **通用浪费负词**：常见的低意图修饰词："free"、"cheap"、"used"、"DIY"、"review"、"reddit"、"how to"
 
-### Step A7: Generate Campaign Blueprint
+### 第一步A7：生成广告系列蓝图
 
-Compile everything from Steps A1-A6 into the final deliverable. Follow the **Mode A Output** template in the Output Formats section below.
+将第一步A1到第一步A6的所有内容编译成最终交付物。遵循下方输出格式部分的**模式A输出**模板。
 
 ---
 
-## Mode B Workflow — Optimize Existing Campaigns
+## 模式B工作流 — 优化现有广告系列
 
-### Step B1: Collect Campaign Data
+### 第一步B1：收集广告系列数据
 
-The following details are needed. Follow the same progressive gathering approach — extract from the user's prompt first, then ask for missing critical items in one follow-up (see "How This Skill Collects Information" above).
+需要以下详情。遵循相同的渐进式收集方法 — 首先从用户提示中提取，然后在一次跟进中询问缺失的关键项（参见上方"此技能如何收集信息"）。
 
-| Detail | Critical? | Notes |
+| 详情 | 关键？ | 备注 |
 |--------|:---------:|-------|
-| Campaign names and types | ✅ Yes | Auto/Manual/Broad/Exact |
-| Overall ACoS | ✅ Yes | And per-campaign if available |
-| Monthly ad spend and ad sales | ✅ Yes | For budget efficiency analysis |
-| Product profit margin | ✅ Yes | To calculate break-even ACoS |
-| Top spending keywords + their ACoS | Helpful | Enables specific bid adjustments |
-| Search term report (CSV) | Bonus | Enables keyword funnel analysis |
-| CTR and conversion rates | Bonus | Deeper performance insights |
+| 广告系列名称和类型 | ✅ 是 | 自动/手动/广泛/精确 |
+| 整体ACoS | ✅ 是 | 如果可以，按广告系列 |
+| 每月广告支出和广告销售 | ✅ 是 | 用于预算效率分析 |
+| 产品利润率 | ✅ 是 | 计算盈亏平衡ACoS |
+| 最高支出关键词及其ACoS | 有帮助 | 启用特定竞价调整 |
+| 搜索词报告（CSV） | 加分项 | 启用关键词漏斗分析 |
+| 点击率和转化率 | 加分项 | 更深入的效果洞察 |
 
-### Step B2: Performance Audit
+### 第一步B2：效果审计
 
-Using the ACoS formulas from Key Concepts, analyze across five dimensions: (1) Financial Health — break-even vs current ACoS, monthly profit/loss; (2) Campaign Efficiency — per-campaign ACoS with 🔴🟡🟢 status; (3) Keyword Performance — group keywords by profitable/marginal/unprofitable/zero-sales; (4) Budget Allocation — is spend proportional to revenue? recommend shifts; (5) Missed Opportunities — converting terms not in Manual, high-spend zero-sale terms without negatives, underfunded winners.
+使用关键概念中的ACoS公式，从五个维度分析：(1) 财务健康 — 盈亏平衡vs当前ACoS、每月盈亏；(2) 广告系列效率 — 各广告系列ACoS，带🔴🟡🟢状态；(3) 关键词效果 — 按盈利/边缘/无利可图/零销售将关键词分组；(4) 预算分配 — 支出与收入成比例吗？建议调整；(5) 错失机会 — 未在手动中的转化词、高支出零销售词无负词、资金不足的赢家。
 
-### Step B3: Keyword Funnel Analysis
+### 第一步B3：关键词漏斗分析
 
-Apply the Keyword Funnel from Key Concepts to the user's actual data. Three actions:
-- **Migrate up** (2+ orders): Auto → Exact or Broad → Exact. Add as negative in source campaign.
-- **Add negatives** (10+ clicks, 0 sales): Add as negative exact or phrase in the source campaign.
-- **Watch list** (<20 clicks): Not enough data yet — flag for next review cycle.
+将关键概念中的关键词漏斗应用于用户的实际数据。三个操作：
+- **向上迁移**（2+订单）：自动 → 精确或广泛 → 精确。作为负词添加到源广告系列。
+- **添加负词**（10+点击，0销售）：在源广告系列中添加为负精确或负短语。
+- **观察列表**（<20点击）：数据不足 — 标记供下次审查周期。
 
-### Step B4: Bid Adjustments
+### 第一步B4：竞价调整
 
-Apply ACoS-based bid adjustments to keywords with 20+ clicks (minimum for statistical significance):
-- ACoS > 200%: cut bid 30-50%
-- ACoS 100-199%: cut bid 20%
-- ACoS target+10% to 99%: cut bid 10-15%
-- ACoS at target (±10%): no change
-- ACoS below target: increase bid 10-20%
-- 10+ clicks with 0 sales: pause keyword
+对20+点击的关键词应用基于ACoS的竞价调整（统计显著性最低要求）：
+- ACoS > 200%：削减竞价30-50%
+- ACoS 100-199%：削减竞价20%
+- ACoS 目标+10%到99%：削减竞价10-15%
+- ACoS在目标附近（±10%）：不变
+- ACoS低于目标：增加竞价10-20%
+- 10+点击0销售：暂停关键词
 
-Output a table: Keyword | Current Bid | Current ACoS | New Bid | Reason
+输出表格：关键词 | 当前竞价 | 当前ACoS | 新竞价 | 原因
 
-### Step B5: Generate Optimization Action Plan
+### 第一步B5：生成优化行动计划
 
-Compile everything from Steps B1-B4 into a prioritized action plan. Follow the **Mode B Output** template in the Output Formats section below.
-
----
-
-## Output Formats
-
-The primary deliverable is always an **actionable campaign plan** the seller can implement directly in Seller Central.
-
-### Mode A Output — New Campaign Blueprint
-
-```
-# ✅ PPC Campaign Blueprint — Ready to Implement
-
-## Financial Framework
-Selling Price: $XX.XX | Profit Before Ads: $XX.XX | Break-even ACoS: XX%
-Target ACoS (Launch): XX% | Target ACoS (Mature): XX%
-Max CPC: $X.XX (at XX% conversion rate)
-
-## How These Campaigns Work Together
-
-Standard: 4 campaigns. If budget is tight, start P1+P2, add the rest later.
-
-  Auto (P1) → finds new search terms        ↓ terms with 2+ orders
-  Broad (P3) → tests keywords at wider match ↓ terms with 2+ sales
-  Exact (P2) → best keywords, lowest ACoS
-  Product Targeting (P4) → ads on competitor pages
-
-Separate campaigns prevent internal competition (bidding against yourself).
-
-## Campaign Setup — Follow This in Seller Central
-
-For each campaign below, create it in Seller Central with these exact settings.
-Bids marked "use suggested" mean: use Amazon's suggested bid shown during setup.
-If suggested bid > your Max CPC, that keyword may not be profitable — see the
-⚠️ flag in the Financial Framework for guidance.
-
-### Campaign 1: [Product] - Auto Discovery (Priority 1)
-CAMPAIGN SETTINGS:
-  Campaign Name:    [Product] - Auto
-  Daily Budget:     $XX
-  Start Date:       [today]
-  End Date:         No end date
-  Bid Strategy:     Dynamic Bids - Down Only
-
-AD GROUP:
-  Ad Group Name:    Auto - Discovery
-  Default Bid:      $X.XX (use suggested bid × 0.5-0.7)
-  ASIN:             [your ASIN]
-
-KEYWORDS:           None — Amazon auto-selects based on your listing
-
-NEGATIVE KEYWORDS:
-  [keyword] | Negative Exact
-  [keyword] | Negative Exact
-  (add all Exact campaign keywords here — prevents Auto from
-   competing with Exact on the same terms)
-
-### Campaign 2: [Product] - Manual Exact (Priority 2)
-CAMPAIGN SETTINGS:
-  Campaign Name:    [Product] - Exact
-  Daily Budget:     $XX
-  Start Date:       [today]
-  End Date:         No end date
-  Bid Strategy:     Fixed Bids
-
-AD GROUP:
-  Ad Group Name:    Exact - Primary
-  Default Bid:      $X.XX (use suggested bid, or Max CPC if lower)
-  ASIN:             [your ASIN]
-
-KEYWORDS:
-  [keyword] | Exact | $X.XX (use suggested bid)
-  [keyword] | Exact | $X.XX
-  [10-15 keywords, each with match type and bid]
-
-NEGATIVE KEYWORDS:  None needed (exact match is already precise)
-
-### Campaign 3: [Product] - Manual Broad (Priority 3)
-CAMPAIGN SETTINGS:
-  Campaign Name:    [Product] - Broad
-  Daily Budget:     $XX
-  Start Date:       [today or Week 2]
-  End Date:         No end date
-  Bid Strategy:     Dynamic Bids - Down Only
-
-AD GROUP:
-  Ad Group Name:    Broad - Discovery
-  Default Bid:      $X.XX (use suggested bid × 0.7-0.8)
-  ASIN:             [your ASIN]
-
-KEYWORDS:
-  [keyword] | Broad | $X.XX
-  [keyword] | Broad | $X.XX
-  [15-20 keywords]
-
-NEGATIVE KEYWORDS:
-  [keyword] | Negative Exact
-  (add all Exact campaign keywords — prevents Broad from competing)
-
-### Campaign 4: [Product] - Product Targeting (Priority 4)
-CAMPAIGN SETTINGS:
-  Campaign Name:    [Product] - ASIN Targeting
-  Daily Budget:     $XX
-  Start Date:       [today or Week 2]
-  End Date:         No end date
-  Bid Strategy:     Fixed Bids
-
-AD GROUP:
-  Ad Group Name:    Competitor ASINs
-  Default Bid:      $X.XX (use suggested bid × 0.5-0.7)
-  ASIN:             [your ASIN]
-
-TARGETS:
-  B0XXXXXXXX | [competitor name, price, reviews] | $X.XX
-  B0XXXXXXXX | [competitor name, price, reviews] | $X.XX
-
-NEGATIVE KEYWORDS:
-  [your own ASIN] | Negative Exact (prevent ads on your own page)
-
-## Negative Keyword Master List (apply to Auto + Broad + Product Targeting)
-  [term] | Negative Exact     (irrelevant terms)
-  [term] | Negative Phrase     (waste modifiers: free, cheap, used, DIY, etc.)
-
-## Budget Summary
-| Campaign | Priority | Daily | Monthly | Role |
-|----------|:--------:|-------|---------|------|
-| Auto     | P1 | $XX | $XXX | Discover search terms |
-| Exact    | P2 | $XX | $XXX | Scale best keywords |
-| Broad    | P3 | $XX | $XXX | Test variations |
-| Product  | P4 | $XX | $XXX | Competitor pages |
-| TOTAL    |    | $XX | $XXX | |
-
-## Launch Schedule
-Day 1:  Create P1 (Auto) + P2 (Exact). Check that ads are active.
-Day 3:  Check impressions. If very low, your bids are below competitive
-        range — increase toward Amazon's suggested bid.
-Day 7:  Add P3 (Broad) + P4 (Product Targeting). Review Auto search
-        terms — add obvious negatives.
-Day 14: Full analysis — migrate winners (2+ orders) from Auto/Broad → Exact.
-Day 21: Bid optimization — adjust bids for keywords with 20+ clicks.
+将第一步B1到第一步B4的所有内容编译成优先排序的行动计划。遵循下方输出格式部分的**模式B输出**模板。
 
 ---
 
-# 📊 Campaign Design Rationale
+## 输出格式
 
-## Keyword Sources
-[How keywords were discovered — fetch-competitor.sh, autocomplete, etc.]
+主要交付物始终是**可操作的广告系列计划**，卖家可以直接在Seller Central实施。
 
-## Bid Notes
-Max CPC (profitability ceiling): $X.XX
-Amazon suggested bids for this category typically range $X.XX - $X.XX.
-[Flag any keywords where suggested bid > Max CPC and explain the tradeoff]
-```
-
-### Mode B Output — Optimization Report
+### 模式A输出 — 新广告系列蓝图
 
 ```
-# ✅ PPC Optimization Actions — Ready to Implement
+# ✅ PPC 广告系列蓝图 — 准备实施
 
-## Priority 1: Immediate Negative Keywords (Do Today)
-Add these as Negative Exact in their respective campaigns:
-  Campaign "[name]": "term1", "term2", "term3"
-  Campaign "[name]": "term4", "term5"
-Expected savings: $XXX/month
+## 财务框架
+售价：$XX.XX | 广告前利润：$XX.XX | 盈亏平衡ACoS：XX%
+目标ACoS（启动）：XX% | 目标ACoS（成熟）：XX%
+最高CPC：$X.XX（按XX%转化率）
 
-## Priority 2: Keyword Migrations (This Week)
-Move to Manual Exact (and add as negative in source):
-  "[keyword]" from Auto → Exact, bid: $X.XX
-  "[keyword]" from Broad → Exact, bid: $X.XX
+## 这些广告系列如何协同工作
 
-## Priority 3: Bid Adjustments (This Week)
-  "[keyword]": $X.XX → $X.XX (ACoS XX% → target XX%)
-  "[keyword]": $X.XX → $X.XX (increase — profitable at XX%)
-  "[keyword]": PAUSE (XX clicks, 0 sales)
+标准：4个广告系列。如果预算紧张，先启动P1+P2，之后添加其余。
 
-## Priority 4: Budget Reallocation (Next Week)
-  Auto: $XX/day → $XX/day (reduce — low efficiency)
-  Exact: $XX/day → $XX/day (increase — best ACoS)
+  自动 (P1) → 发现新的搜索词        ↓ 2+订单的词
+  广泛 (P3) → 以更广泛匹配测试关键词 ↓ 2+销售的词
+  精确 (P2) → 最佳关键词，最低ACoS
+  产品定向 (P4) → 在竞品页面做广告
 
----
+独立广告系列防止内部竞争（避免自我竞价）。
+```
 
-# 📊 Full Audit Report
+### 模式B输出 — 优化报告
 
-## Performance Summary
-| Metric | Current | Target | Status |
-|--------|---------|--------|--------|
-| Overall ACoS | XX% | XX% | 🔴🟡🟢 |
-| TACoS | XX% | <XX% | 🔴🟡🟢 |
-| Monthly Ad Profit | $XXX | $XXX | 🔴🟡🟢 |
-| Budget Utilization | XX% | >90% | 🔴🟡🟢 |
+```
+# ✅ PPC 优化操作 — 准备实施
 
-## Keyword Funnel Analysis
-[Full table from Step B3]
+## 优先级1：立即执行负关键词（今天做）
+在各自广告系列中添加为负精确：
+  广告系列"[名称]"："词1"、"词2"、"词3"
+  广告系列"[名称]"："词4"、"词5"
+预计节省：$XXX/月
 
-## Bid Adjustment Details  
-[Full table from Step B4]
+## 优先级2：关键词迁移（本周）
+迁移到手动精确（并在源中添加为负）：
+  "[关键词]" 从自动 → 精确，竞价：$X.XX
+  "[关键词]" 从广泛 → 精确，竞价：$X.XX
 
-## Week-by-Week Action Plan
-Week 1: [specific tasks with expected outcomes]
-Week 2: [specific tasks]
-Week 3: [specific tasks]
-Week 4: [review and next cycle planning]
+## 优先级3：竞价调整（本周）
+  "[关键词]"：$X.XX → $X.XX（ACoS XX% → 目标XX%）
+  "[关键词]"：$X.XX → $X.XX（增加 — 在XX%盈利）
+  "[关键词]"：暂停（XX点击，0销售）
 
-## Expected Results After 4 Weeks
-ACoS: XX% → XX%
-Monthly savings: $XXX
-Sales increase: +XX% (from better targeting)
+## 优先级4：预算重新分配（下周）
+  自动：$XX/天 → $XX/天（减少 — 效率低）
+  精确：$XX/天 → $XX/天（增加 — 最佳ACoS）
 ```
 
 ---
 
-## Ongoing Management & Integration
+## 持续管理和集成
 
-After setup, offer weekly reminders (cron/heartbeat): search term analysis + bid adjustments + monthly full audit. Recommended skill chain: [amazon-keyword-research](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-keyword-research) → [amazon-listing-optimization](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-listing-optimization) → amazon-ppc. Always check listing quality before spending on ads. More skills: [Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills) | [eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills)
+设置后，提供每周提醒（cron/心跳）：搜索词分析 + 竞价调整 + 每月全面审计。建议技能链：amazon-keyword-research → amazon-listing-optimization → amazon-ppc。广告投放前始终检查listing质量。更多技能：Amazon-Skills | eCommerce-Skills
 
-## Limitations
+## 局限性
+
+- 关键词研究和竞品分析依赖外部工具和数据源
+- 实际效果受市场变化、竞争行为和算法调整影响
+- 建议基于行业最佳实践，具体情况可能需要调整
+- 需要用户持续监控和优化以获得最佳结果

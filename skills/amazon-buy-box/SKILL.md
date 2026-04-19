@@ -1,96 +1,95 @@
 ---
 name: amazon-buy-box
-description: "Win and maintain the Amazon Buy Box. Analyze Buy Box eligibility factors, competitor pricing dynamics, and develop pricing and fulfillment strategies to maximize your Buy Box percentage."
+description: "赢得并保持亚马逊购物车。分析购物车资格因素、竞品定价动态，制定定价和配送策略以最大化购物车占比。"
 metadata:
   nexscope:
     emoji: "🏅"
     category: amazon
 ---
 
-# Amazon Buy Box Strategy 🏅
+# Amazon 购物车策略 🏅
 
-Win and maintain the Amazon Buy Box. Analyze Buy Box eligibility factors, competitor pricing dynamics, and develop pricing and fulfillment strategies to maximize your Buy Box percentage.
+赢得并保持亚马逊购物车。分析购物车资格因素、竞品定价动态，制定定价和配送策略以最大化购物车占比。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-I'm losing the Buy Box on my top product to 3 other sellers. I use FBA, my price is $24.99, competitors are at $23.99-$25.49. How do I win it back?
+我在爆款产品上输给了另外3个卖家购物车。我用FBA，我的价格是24.99美元，竞品在23.99-25.49美元。我怎么才能赢回来？
 ```
 
-## Capabilities
+## 功能
 
-- Buy Box eligibility factor analysis
-- Competitive pricing strategy for Buy Box capture
-- FBA vs FBM impact on Buy Box share
-- Account health metrics optimization
-- Repricing strategy recommendations (manual vs automated)
-- Buy Box share tracking and improvement plan
+- 购物车资格因素分析
+- 赢得购物车的竞争定价策略
+- FBA vs FBM对购物车占比的影响
+- 账号健康指标优化
+- 调价策略建议（手动 vs 自动）
+- 购物车占比追踪与改进计划
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Buy Box Eligibility Requirements
+### 购物车资格要求
 
-- **Professional Seller Account:** Must have professional selling plan.
-- **Inventory Availability:** Must be in stock, no stockouts.
-- **Condition:** Must be "New" condition.
-- **Order Defect Rate (ODR):** Must be below 1%.
-- **Late Shipment Rate:** Must be below 4%.
-- **Valid Tracking Rate:** Must be above 95%.
-- **Sales History:** New accounts need time to accumulate history before algorithm gives fair assessment.
-- **Failure in any above = complete loss of Buy Box eligibility**, regardless of pricing.
+- **专业卖家账号：** 必须有专业销售计划。
+- **库存可用性：** 必须有货，不能缺货。
+- **商品状况：** 必须是"全新"状况。
+- **订单缺陷率（ODR）：** 必须低于1%。
+- **延迟发货率：** 必须低于4%。
+- **有效追踪率：** 必须高于95%。
+- **销售历史：** 新账号需要时间积累历史，算法才能给出公平评估。
+- **以上任何一项失败 = 完全失去购物车资格**，无论定价如何。
 
-### Buy Box Algorithm Multi-Dimensional Scoring
+### 购物车算法多维评分
 
-Amazon's Buy Box is NOT simply lowest price. It's a comprehensive scoring system:
+亚马逊购物车并非简单的最低价。这是一个综合评分系统：
 
-- **Price Competitiveness (Highest Weight):** Includes listing price, shipping cost, and total landed price. Algorithm favors lowest total cost seller.
-- **Fulfillment Method:** FBA sellers have structural advantage. FBA can win Buy Box even priced 2-5% higher than FBM — because Amazon trusts its own fulfillment.
-- **Seller Performance Metrics:** Feedback rating, ODR, late shipment rate, delivery experience. Better performance = higher Buy Box probability.
-- **Inventory and Shipping Speed:** Adequate inventory with fast shipping earns algorithm favor.
-- **Sales History and Rank:** Historical sales volume and ranking give sellers higher "trust weight."
+- **价格竞争力（权重最高）：** 包括挂牌价、运费和到岸总价格。算法偏好总成本最低的卖家。
+- **配送方式：** FBA卖家有结构性优势。FBA即使比FBM贵2-5%也能赢得购物车 — 因为消费者信任亚马逊的配送。
+- **卖家表现指标：** 反馈评分、ODR、延迟发货率、配送体验。表现越好 = 赢得购物车概率越高。
+- **库存与配送速度：** 库存充足且配送快会赢得算法青睐。
+- **销售历史与排名：** 历史销量和排名给予卖家更高的"信任权重"。
 
-### FBA vs FBM Impact Analysis
+### FBA vs FBM影响分析
 
-- **FBA Structural Advantage:** FBA sellers can win Buy Box even at 2-5% price premium. Consumer trust in Amazon fulfillment outweighs price difference.
-- **FBM Price Requirement:** FBM sellers typically need to be 3-10% cheaper to compete for Buy Box.
-- **Hybrid Strategy:** Consider FBA for core products, FBM for oversized or slow-moving items.
+- **FBA结构性优势：** FBA卖家即使比FBM贵2-5%也能赢得购物车。消费者对亚马逊配送的信任超过价格差异。
+- **FBM价格要求：** FBM卖家通常需要便宜3-10%才能竞争购物车。
+- **混合策略：** 核心产品用FBA，大件或慢动销产品用FBM。
 
-### Multi-Seller Buy Box Rotation Mechanism
+### 多卖家购物车轮换机制
 
-- When multiple qualified sellers compete, Amazon typically rotates Buy Box among similar-performing sellers.
-- Cannot achieve 100% Buy Box share even with perfect metrics — rotation is inherent.
-- **Key to maximize share:** Build advantages across multiple algorithm dimensions simultaneously to earn higher rotation proportion.
+当多个合格卖家竞争时，亚马逊通常在表现相近的卖家间轮换购物车。
+即使指标完美也无法实现100%购物车占比 — 轮换是内在机制。
+**最大化占比的关键：** 同时在多个算法维度上建立优势，以获得更高的轮换比例。
 
-### Data Sources
+### 数据来源
 
-- web_fetch tool scrapes current Buy Box holder, Buy Box price, fulfillment method, competitor pricing from Amazon product pages.
-- User provides: ASIN list, current price, fulfillment method, seller metrics (ODR, late shipment rate, feedback score), inventory status, historical Buy Box win rate.
-- No direct access to Seller Central or Amazon's internal algorithm parameters.
+- web_fetch工具从亚马逊产品页面抓取当前购物车持有者、购物车价格、配送方式和竞品定价。
+- 用户提供：ASIN列表、当前价格、配送方式、卖家指标（ODR、延迟发货率、反馈评分）、库存状态、历史购物车赢取率。
+- 无直接访问卖家中心或亚马逊内部算法参数的权限。
 
-### Limitations
+### 局限性
 
-- Buy Box algorithm weights are Amazon trade secrets. Analysis based on industry experience and observation — may not reflect actual algorithm exactly.
-- New products/accounts need weeks to months before algorithm gives fair assessment. Buy Box win rate may be low initially.
-- When too many sellers (>10) with similar prices compete, Buy Box rotates rapidly. Single seller ceiling typically 60-70%.
-- Special categories (used goods, heavy/bulky items) have different Buy Box rules.
-- Performance metric improvements (ODR reduction) take time to reflect in algorithm. Short-term fixes may not show immediate results.
-- Prime Day and peak seasons significantly intensify Buy Box competition. Strategies may need major adjustment during promotions.
+- 购物车算法权重是亚马逊商业机密。分析基于行业经验和观察 — 可能与实际算法不完全一致。
+- 新产品/账号需要数周至数月才能获得算法公平评估。购物车赢取率初期可能较低。
+- 当太多卖家（>10个）价格相近竞争时，购物车快速轮换。单卖家天花板通常60-70%。
+- 特殊类目（二手商品、大件/重型商品）有不同购物车规则。
+- 表现指标改进（降低ODR）需要时间才能反映在算法中。短期修复可能不会立即见效。
+- Prime Day和旺季显著加剧购物车竞争。促销期间策略可能需要大幅调整。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

@@ -1,113 +1,112 @@
 ---
 name: amazon-return-reduction
-description: "Return rate reduction — root cause analysis, listing accuracy, packaging improvements, size guides"
+description: "降低退换率 — 根因分析、listing准确性、包装改进、尺码指南"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Return Reduction
+# Amazon 降低退换率
 
-Return rate reduction — root cause analysis, listing accuracy, packaging improvements, size guides
+降低退换率 — 根因分析、listing准确性、包装改进、尺码指南
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon return reduction for my e-commerce business.
+帮我处理亚马逊退换率降低。
 ```
 
-## Capabilities
+## 功能
 
-- Return rate reduction
-- root cause analysis
-- listing accuracy
-- packaging improvements
-- size guides
+- 退换率降低
+- 根因分析
+- listing准确性
+- 包装改进
+- 尺码指南
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Return Root Cause Analysis Principle
+### 退换根因分析原则
 
-First step in reducing returns = accurately identify root causes.
-- Amazon's "Return Analysis Report" provides return reason categories: Buyer Changed Mind, Item Not as Described, Damaged/Defective, Arrived Damaged, Wrong Size, etc.
-- **Deep analysis needed:** Amazon categories are broad. Combine return review analysis, buyer messages, quality inspection data.
-- Example: "Item Not as Described"背后 may hide: color deviation from photos, functional description mismatch, insufficient size info, etc.
+降低退换率的第一步 = 准确识别根本原因。
+- 亚马逊的"退换分析报告"提供退换原因类别：买家改变主意、商品与描述不符、损坏/缺陷、到达时损坏、尺码错误等。
+- **需要深度分析：** 亚马逊的类别较为宽泛。结合退换评论分析、买家消息、质量检验数据。
+- 示例："商品与描述不符"背后可能隐藏：颜色与照片偏差、功能描述不匹配、尺码信息不足等。
 
-### Listing Information Accuracy and Return Relationship
+### Listing信息准确性与退换关系
 
-Many returns stem from inaccurate or insufficient Listing information:
-- **Photo over-retouching:** Product photos too polished → consumer finds actual product significantly different.
-- **Intuitive size info lacking:** Only numeric dimensions, no everyday object comparisons.
-- **Exaggerated/ inaccurate function descriptions:** Features described don't actually work as described.
-- **Vague material descriptions:** Consumer misjudges texture/feel.
-- **Missing/inaccurate compatibility info:** Accessories not clearly stating compatible device models.
+许多退换源于不准确或不足的listing信息：
+- **照片过度美化：** 产品照片过于精致 → 消费者发现实际产品差异很大。
+- **缺乏直观的尺寸信息：** 只有数字尺寸，没有日常物品对比。
+- **夸大/不准确的功能描述：** 描述的功能不能如描述那样工作。
+- **模糊的材料描述：** 消费者误判质感/手感。
+- **缺失/不准确的兼容性信息：** 配件未清楚说明兼容的设备型号。
 
-**Core principle:** "Describe truthfully, appropriately lower expectations" — better consumer感到 "exceeded expectations" than returning due to expectation gap.
+**核心原则：**"如实描述、适当降低预期" — 让消费者"超出预期"比因预期差距而退换更好。
 
-### Packaging Quality and Shipping Damage Relationship
+### 包装质量与运输损坏关系
 
-"Arrived Damaged" is common FBA return cause. Root: packaging failed to protect during logistics.
+"到达时损坏"是常见的FBA退换原因。根源：包装在物流过程中未能保护产品。
 
-**Packaging quality factors:**
-- Outer box compressive strength and cushioning (sufficient fill material to absorb shock/vibration).
-- Internal product fixation (product secured to avoid shaking/collision during transport).
-- Fragile/precision products need dedicated packaging (foam-molded, air column bags).
-- Product packaging properly sealed (avoid moisture/contamination).
+**包装质量因素：**
+- 外箱抗压强度和缓冲（足够的填充材料吸收冲击/振动）。
+- 产品内部固定（产品固定以避免运输过程中晃动/碰撞）。
+- 易碎/精密产品需要专用包装（泡沫模塑、气柱袋）。
+- 产品包装正确密封（避免潮湿/污染）。
 
-**ROI note:** Packaging improvement costs per unit, but returns reduction收益 far exceeds investment.
+**投资回报注意：** 包装改进每件成本，但退换减少的收益远超过投资。
 
-### Size Guide and Apparel Return Correlation
+### 尺码指南与服装退换相关性
 
-High apparel/footwear returns largely due to wrong size. Different brands/countries/styles have size standard variations.
+服装/鞋类高退换率主要由尺码错误导致。不同品牌/国家/风格的尺码标准不同。
 
-**Effective size guide includes:**
-- Specific body measurement data for each size (chest, waist, hip, shoulder width).
-- Height/weight reference ranges per size.
-- Fit descriptions (slim/regular/loose).
-- Size runs large/small notes.
+**有效的尺码指南包括：**
+- 每个尺码的具体身体测量数据（胸围、腰围、臀围、肩宽）。
+- 每个尺码的身高/体重参考范围。
+- 版型描述（修身/标准/宽松）。
+- 尺码偏大/偏小说明。
 
-Also: show models wearing different sizes in product images to help consumers choose accurately.
+另外：在产品图片中展示穿不同尺码的模特，帮助消费者准确选择。
 
-### Return Rate and Amazon Algorithm Penalty Mechanism
+### 退换率与亚马逊算法惩罚机制
 
-Amazon penalizes high return rate products:
-- Search ranking weight reduced.
-- Promotion eligibility restricted (Lightning Deal, Prime Day).
-- Extreme cases: sales suspension.
-- Affects Account Health metrics — return rate exceeding threshold triggers performance warnings.
+亚马逊对高退换率产品进行惩罚：
+- 搜索排名权重降低。
+- 促销资格受限（秒杀、Prime Day）。
+- 极端情况：暂停销售。
+- 影响账号健康指标 — 退换率超过阈值会触发绩效警告。
 
-**Return rate thresholds vary by category:** typically 3-10%. Apparel/footwear higher.
+**退换率阈值因类目而异：** 通常3-10%。服装/鞋类更高。
 
-**Goal:** Keep return rate below category threshold — not just to reduce direct losses, but maintain long-term platform competitiveness and account safety.
+**目标：** 保持退换率低于类目阈值 — 不仅为了减少直接损失，更是为了保持长期平台竞争力和账号安全。
 
-### Data Sources
+### 数据来源
 
-- No external dependencies. Based on e-commerce industry return statistics and Amazon Seller Central Return Analysis Report.
-- User provides: current return rate data, return reason distribution, return-related buyer reviews.
+- 无外部依赖。基于电商行业退换统计和亚马逊卖家中心退换分析报告。
+- 用户提供：当前退换率数据、退换原因分布、退换相关买家评论。
 
-### Limitations
+### 局限性
 
-- Amazon return reason data is generic — some categories (e.g., "buyer changed mind") don't reflect product issues.
-- Return rate improvement has lag — listing changes only affect new purchases, 2-4 weeks for effects to show; quality improvements may take 2-3 months.
-- Packaging improvement constrained by FBA logistics complexity — may increase dimensional weight fees.
-- Consumer expectation management challenging — competitive pressure vs accurate representation.
-- Some categories have inherently higher return floors (apparel 15-30%, cosmetics) — hard to reduce to electronics levels.
+- 亚马逊退换原因数据较为笼统 — 某些类别（例如"买家改变主意"）不能反映产品问题。
+- 退换率改进有延迟 — listing更改只影响新购买，需要2-4周才能看到效果；质量改进可能需要2-3个月。
+- 包装改进受FBA物流复杂性限制 — 可能增加体积重费。
+- 消费者预期管理具有挑战性 — 竞争压力vs准确表述。
+- 某些类目固有退换率较高（服装15-30%、化妆品）— 难以降到电子产品水平。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

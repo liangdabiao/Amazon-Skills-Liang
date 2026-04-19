@@ -1,92 +1,91 @@
 ---
 name: amazon-rank-tracker
-description: "Track and analyze Amazon keyword rankings. Set up rank monitoring workflows, interpret ranking changes, and develop strategies to improve organic search position."
+description: "追踪和分析亚马逊关键词排名。设置排名监控流程，解读排名变化，制定提升自然搜索排名的策略。"
 metadata:
   nexscope:
     emoji: "📍"
     category: amazon
 ---
 
-# Amazon Rank Tracker 📍
+# Amazon 排名追踪 📍
 
-Track and analyze Amazon keyword rankings. Set up rank monitoring workflows, interpret ranking changes, and develop strategies to improve organic search position.
+追踪和分析亚马逊关键词排名。设置排名监控流程，解读排名变化，制定提升自然搜索排名的策略。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Track my rankings for these 10 keywords. My product is a stainless steel water bottle, currently on page 2 for my main keyword. Help me get to page 1.
+追踪我这10个关键词的排名。我的产品是不锈钢水瓶，主要关键词目前排在第2页。帮我冲到第1页。
 ```
 
-## Capabilities
+## 功能
 
-- Keyword rank tracking methodology and setup
-- Ranking factor analysis (relevance, velocity, conversion, reviews)
-- Rank change diagnosis (why did ranking go up or down?)
-- Keyword rank improvement strategy by priority
-- Rank tracking tool recommendations and comparison
-- Organic vs sponsored rank monitoring
-- BSR tracking and correlation with keyword rankings
+- 关键词排名追踪方法论和设置
+- 排名因素分析（相关性、势能、转化、评论）
+- 排名变化诊断（排名为什么上升或下降？）
+- 按优先级排列的关键词排名提升策略
+- 排名追踪工具推荐和对比
+- 自然排名与付费广告排名监控
+- BSR追踪及其与关键词排名的关联
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### A10/A11 Algorithm Ranking Factor System
+### A10/A11算法排名因素系统
 
-Core ranking factors analyzed by Amazon's search algorithm:
-- **Sales Velocity:** Recent sales weight is highest, especially within 24-72 hours.
-- **Conversion Rate:** Search-to-purchase conversion efficiency is the core ranking signal.
-- **Text Relevance:** Keyword matching in title, bullet points, and Search Terms.
-- **Review Count & Rating:** Social proof signals affect CTR and conversion.
-- **Inventory & Fulfillment:** FBA and Prime eligibility receive ranking boost.
-- **Click-Through Rate:** Ad and organic position CTR reflects product attractiveness.
+亚马逊搜索算法分析的核心排名因素：
+- **销量增速：** 近期销量权重最高，尤其是24-72小时内。
+- **转化率：** 搜索到购买的转化效率是核心排名信号。
+- **文本相关性：** 关键词在标题、五点描述和搜索词中的匹配度。
+- **评论数量与评分：** 社会证明信号影响点击率和转化。
+- **库存与配送：** FBA和Prime资格获得排名提升。
+- **点击率：** 广告和自然位置的点击率反映产品吸引力。
 
-### Rank Change Attribution Diagnosis Framework
+### 排名变化归因诊断框架
 
-For each keyword ranking fluctuation, systematically identify:
-- **Internal Fluctuations (Self-Caused):** Sales velocity changes, conversion rate fluctuations, Listing content modifications, inventory status changes, promotional activity impacts.
-- **External Fluctuations (Competition-Caused):** Competitor sales surge, new competitor entries, seasonal demand shifts.
+针对每个关键词排名波动，系统识别：
+- **内部波动（自身导致）：** 销量增速变化、转化率波动、listing内容修改、库存状态变化、活动影响。
+- **外部波动（竞争导致）：** 竞争对手销量暴涨、新竞争者进入、季节性需求变化。
 
-### Keyword Priority Matrix
+### 关键词优先级矩阵
 
-Keyword prioritization using "Search Volume x Relevance x Ranking Upside" 3D evaluation:
-- **Critical Breakthrough Point:** High search volume + high relevance + currently ranking on page 2-3. Highest ROI for optimization effort. Small push can break to page 1.
-- **Defense Mode:** Already in top 3 of page 1. Focus on maintaining ranking.
-- **Long-Term Build Mode:** Ranking beyond page 5. Requires sustained foundational optimization.
+使用"搜索量 x 相关性 x 排名上升空间"三维评估的关键词优先级：
+- **关键突破点：** 高搜索量 + 高相关性 + 目前排第2-3页。优化工作最高ROI。稍加推力即可冲上第1页。
+- **防守模式：** 已处于第1页前3名。重心在维持排名。
+- **长期建设模式：** 排名在第5页之后。需要持续的基础优化工作。
 
-### Organic vs Sponsored Rank Interaction
+### 自然排名与付费排名的相互作用
 
-- High-quality ad campaigns boost sales velocity and conversion rate, indirectly improving organic ranking.
-- Higher organic ranking reduces ad dependency, lowering TACoS.
-- Strategy: Coordinate advertising and SEO for synergistic ranking improvement.
+- 高质量广告活动提升销量增速和转化率，间接改善自然排名。
+- 更高的自然排名减少广告依赖，降低TACoS。
+- 策略：协调广告和SEO以实现协同排名提升。
 
-### Data Sources
+### 数据来源
 
-- **Amazon Search Results Pages:** Manual web_fetch for ranking snapshots.
-- **Google Search (site:amazon.com):** Verify product index status.
-- **Note:** This skill provides strategy framework, not automated tracking. For continuous monitoring, integrate with tools like Helium 10, Jungle Scout, or Merchant Words.
+- **亚马逊搜索结果页面：** 手动web_fetch获取排名快照。
+- **Google搜索（site:amazon.com）：** 验证产品索引状态。
+- **注意：** 本技能提供策略框架，非自动化追踪。要持续监控请集成Helium 10、Jungle Scout或Merchant Words等工具。
 
-### Limitations
+### 局限性
 
-- Amazon doesn't publish algorithm details. Analysis based on industry research and seller community experience.
-- Ranking data has latency and deviation across third-party tools.
-- Different times, regions, and devices show different results.
-- Strategy effectiveness is dynamically affected by competitor optimization.
-- New vs mature product ranking strategies differ significantly.
+- 亚马逊不公开算法细节。分析基于行业研究和卖家社区经验。
+- 各第三方工具的排名数据存在延迟和偏差。
+- 不同时间、地区和设备显示不同结果。
+- 策略效果受竞争对手优化动态影响。
+- 新品与成熟产品的排名策略差异显著。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

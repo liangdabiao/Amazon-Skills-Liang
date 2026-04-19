@@ -2,79 +2,99 @@
 name: tariff-calculator-amazon
 version: 1.0.0
 author: Nexscope AI
-description: "Universal tariff calculator for Amazon sellers. Calculate import duties, landed costs, and VAT/GST for any trade route. Supports CN→US, CN→EU, US→EU, EU→US, US→CN and custom origin/destination pairs. Includes Section 301 tariffs, trade agreement rates (USMCA, EVFTA), and HS code lookup. No API key required."
+description: "面向亚马逊卖家的通用关税计算器。计算任何贸易路线的进口关税到岸成本和增值税/消费税。支持中国→美国、中国→欧盟、美国→欧盟、欧盟→美国、美国→中国及自定义原产国/目的国组合。包括301条款关税、贸易协定税率（USMCA、EVFTA）和HS编码查询。无需API密钥。"
 metadata: {"nexscope":{"emoji":"💰","category":"ecommerce"}}
 ---
 
-# Tariff Calculator — Amazon 💰
+# 关税计算器 — 亚马逊 💰
 
-Universal tariff and landed cost calculator for international Amazon sellers.
+面向国际亚马逊卖家的通用关税和到岸成本计算器。
 
-## Installation
+## 安装
 
 ```bash
 npx skills add nexscope-ai/eCommerce-Skills --skill tariff-calculator-amazon -g
 ```
 
-## Features
+## 功能
 
-- **Universal Trade Routes** — Any origin to any destination
-- **Tariff Rate Lookup** — HS code → duty rate
-- **Section 301 Tariffs** — US additional duties on China imports
-- **VAT/GST Calculation** — EU, UK, CA, AU, CN rates
-- **Landed Cost** — Complete cost breakdown
-- **HS Code Matcher** — Product description → HS code suggestions
-- **Trade Agreements** — USMCA, EVFTA, RCEP preferential rates
+- **通用贸易路线** — 任意原产国到任意目的国
+- **关税税率查询** — HS编码 → 税率
+- **301条款关税** — 中国进口商品的美国附加关税
+- **增值税/消费税计算** — 欧盟、英国、加拿大、澳大利亚、中国税率
+- **到岸成本** — 完整成本细分
+- **HS编码匹配** — 产品描述 → HS编码建议
+- **贸易协定** — USMCA、EVFTA、RCEP优惠税率
 
-## Supported Trade Routes
+## 支持的贸易路线
 
-| Route | Key Tariffs | VAT/GST |
+| 路线 | 主要关税 | 增值税/消费税 |
 |-------|-------------|---------|
-| 🇨🇳 → 🇺🇸 China → USA | Section 301 (7.5-25%) | N/A |
-| 🇨🇳 → 🇪🇺 China → EU | Standard duties | 19-22% |
-| 🇨🇳 → 🇬🇧 China → UK | Standard duties | 20% |
-| 🇺🇸 → 🇪🇺 USA → EU | Standard duties | 19-22% |
-| 🇪🇺 → 🇺🇸 EU → USA | Standard duties | N/A |
-| 🇺🇸 → 🇨🇳 USA → China | Retaliatory tariffs | 13% VAT |
-| 🇨🇳 → 🇨🇦 China → Canada | Standard duties | 5% GST |
-| 🇨🇳 → 🇦🇺 China → Australia | Standard duties | 10% GST |
-| **Custom** | User-defined | User-defined |
+| 🇨🇳 → 🇺🇸 中国 → 美国 | 301条款（7.5-25%） | 不适用 |
+| 🇨🇳 → 🇪🇺 中国 → 欧盟 | 标准关税 | 19-22% |
+| 🇨🇳 → 🇬🇧 中国 → 英国 | 标准关税 | 20% |
+| 🇺🇸 → 🇪🇺 美国 → 欧盟 | 标准关税 | 19-22% |
+| 🇪🇺 → 🇺🇸 欧盟 → 美国 | 标准关税 | 不适用 |
+| 🇺🇸 → 🇨🇳 美国 → 中国 | 报复性关税 | 13%增值税 |
+| 🇨🇳 → 🇨🇦 中国 → 加拿大 | 标准关税 | 5%消费税 |
+| 🇨🇳 → 🇦🇺 中国 → 澳大利亚 | 标准关税 | 10%消费税 |
+| **自定义** | 用户定义 | 用户定义 |
 
-## Section 301 Tariffs (China → USA)
+## 301条款关税（中国 → 美国）
 
-| HS Chapter | Products | Additional Rate |
+| HS章节 | 产品 | 附加税率 |
 |------------|----------|-----------------|
-| 84xx | Computers, machinery | 25% |
-| 85xx | Electronics (some) | 0-25% |
-| 94xx | Furniture, lighting | 25% |
-| 95xx | Toys | 25% |
-| 61/62 | Apparel | 7.5% |
-| 64xx | Footwear | 7.5% |
-| 42xx | Bags, accessories | 7.5% |
+| 84xx | 电脑、机械 | 25% |
+| 85xx | 电子产品（部分） | 0-25% |
+| 94xx | 家具、照明 | 25% |
+| 95xx | 玩具 | 25% |
+| 61/62 | 服装 | 7.5% |
+| 64xx | 鞋类 | 7.5% |
+| 42xx | 箱包、配饰 | 7.5% |
 
-## Landed Cost Formula
+## 到岸成本公式
 
 ```
-Landed Cost = 
-    FOB Value
-  + International Freight
-  + Insurance
-  + Import Duty
-  + VAT/GST (if applicable)
-  + Customs Clearance
-  + Port Fees
-  + Inland Freight
+到岸成本 =
+    FOB价
+  + 国际运费
+  + 保险
+  + 进口关税
+  + 增值税/消费税（如适用）
+  + 清关费用
+  + 港口费用
+  + 内陆运费
 ```
 
-## Usage
+## 工作流程
 
-### Basic Calculation
+**第一步：** 收集关税计算需求 — 产品类型、HS编码、原产国、目的国、FOB货值、数量、运费等基本信息。
+
+**第二步：** 通过多选题补充信息 — 产品材质、是否涉及301条款关税、是否需要贸易协定优惠、是否涉及多个SKU计算。
+
+**第三步：** 使用以下框架和方法论进行研究分析。
+
+**到岸成本计算公式：** 到岸成本=FOB货值+国际运费+保险费+进口关税+VAT/GST+清关费+港口费+内陆运输费。逐步计算：CIF价值=FOB货值+国际运费+保险费；关税总额=CIF价值×基础关税率+CIF×301税率（中国→美国）；增值税=VAT基数×VAT税率，其中VAT基数=CIF+关税总额；税费总额=关税+VAT+清关费($150)+港口费($50)；到岸总成本=CIF+税费总额+内陆运输费。
+
+**HS编码体系：** HS编码是国际贸易通用商品分类编码，前2位代表章（Chapter），前4位代表税号（Heading）。章和税号国际统一，子目（6-10位）各国自定义。HS查询优先级：直接输入HS编码精确匹配（置信度100%）；关键词匹配内置映射表（置信度60-80%）；描述模糊匹配遍历数据库（置信度70%）。
+
+**基础关税率：** 基础关税率按HS章节和目的国确定，数据来源为各国最惠国待遇（MFN）税率。例如：塑料制品（39章）美国6.5%、欧盟6.5%；机械设备（84章）美国0%、欧盟2%；电子电气（85章）美国0%、欧盟2%；家具（94章）美国0%、欧盟0%；玩具（95章）美国0%、欧盟4.5%。
+
+**301条款关税计算：** 美国对从中国进口部分商品征收额外附加关税，按HS4位税号判定。关税与基础关税叠加计算，非替代关系。例如：电脑（8471）25%；电源/变压器（8504）25%；通讯设备（8517）25%；家具（9403）25%；玩具（9503）25%；服装（6110/6203/6204）7.5%；鞋类（6402）7.5%。
+
+**VAT/GST计算方法：** VAT基数=CIF价值+关税总额；VAT=VAT基数×VAT税率。例如：中国→欧盟：CIF=$5215+关税=$1304；VAT基数=$6519；VAT=$6519×19%=$1239。
+
+**第四步：** 提供完整的关税计算报告，包含成本细分、税费明细、到岸总成本和单价分析。
+
+## 使用方法
+
+### 基本计算
 
 ```bash
 python3 scripts/calculator.py
 ```
 
-### With Parameters
+### 带参数
 
 ```bash
 python3 scripts/calculator.py '{
@@ -87,14 +107,14 @@ python3 scripts/calculator.py '{
 }'
 ```
 
-### HS Code Lookup
+### HS编码查询
 
 ```bash
 python3 scripts/hs_lookup.py "wireless earbuds"
 python3 scripts/hs_lookup.py "bluetooth speaker"
 ```
 
-### Custom Trade Route
+### 自定义贸易路线
 
 ```bash
 python3 scripts/calculator.py '{
@@ -109,54 +129,54 @@ python3 scripts/calculator.py '{
 }'
 ```
 
-## Output Example
+## 输出示例
 
 ```
-💰 Tariff & Landed Cost Report
+💰 关税与到岸成本报告
 
-Product: Wireless Bluetooth Earbuds
-HS Code: 8518300000
-Route: China 🇨🇳 → USA 🇺🇸
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-📦 Cost Breakdown
-
-FOB Value               $  5,000.00
-International Freight   $    200.00
-Insurance               $     15.00
-CIF Value               $  5,215.00
+产品：无线蓝牙耳机
+HS编码：8518300000
+路线：中国 🇨🇳 → 美国 🇺🇸
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🏛️ Duties & Taxes
+📦 成本细分
 
-Base Duty (0.0%)        $      0.00
-Section 301 (0.0%)      $      0.00
-Total Duty              $      0.00
-Customs Clearance       $    150.00
-Port Fees               $     50.00
+FOB价               $  5,000.00
+国际运费             $    200.00
+保险                 $     15.00
+CIF价               $  5,215.00
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-💵 Landed Cost Summary
+🏛️ 关税与税费
 
-Total Landed Cost       $  5,515.00
-Per Unit Cost           $     11.03
+基础关税（0.0%）      $      0.00
+301条款（0.0%）      $      0.00
+总关税               $      0.00
+清关费用             $    150.00
+港口费用             $     50.00
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💵 到岸成本总结
+
+总到岸成本           $  5,515.00
+单价                 $     11.03
 ```
 
-## Trade Agreement Support
+## 贸易协定支持
 
-| Agreement | Countries | Benefit |
+| 协定 | 国家 | 优惠 |
 |-----------|-----------|---------|
-| USMCA | US, Mexico, Canada | Reduced/zero duties |
-| EVFTA | EU, Vietnam | Reduced duties |
-| RCEP | Asia-Pacific | Reduced duties |
-| UK-Japan | UK, Japan | Reduced duties |
+| USMCA | 美国、墨西哥、加拿大 | 减税/零关税 |
+| EVFTA | 欧盟、越南 | 减税 |
+| RCEP | 亚太地区 | 减税 |
+| UK-Japan | 英国、日本 | 减税 |
 
-## Custom Configuration
+## 自定义配置
 
-Create a custom config for your routes:
+为您的路线创建自定义配置：
 
 ```json
 {
@@ -171,4 +191,4 @@ Create a custom config for your routes:
 
 ---
 
-**Part of [Nexscope AI](https://www.nexscope.ai/?co-from=skill) — AI tools for e-commerce sellers.**
+**属于 [Nexscope AI](https://www.nexscope.ai/?co-from=skill) — 面向电商卖家的AI工具。**

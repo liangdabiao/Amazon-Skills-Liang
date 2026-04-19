@@ -1,37 +1,37 @@
 ---
 name: amazon-fba-calculator
 version: 1.0.0
-description: Amazon FBA Calculator - Complete fee breakdown and profit analysis
+description: "亚马逊FBA计算器 - 完整费用明细和利润分析"
 platform: amazon
-lang: en
+lang: zh
 ---
 
-# Amazon FBA Calculator (Lite)
+# 亚马逊FBA计算器（精简版）
 
-Precise FBA fee calculation based on product dimensions and weight.
+基于产品尺寸和重量的精确FBA费用计算。
 
-## Features
+## 功能
 
-- **Size Tier Detection** - Automatic classification
-- **FBA Fulfillment Fee** - 2024 rates
-- **Monthly Storage Fee** - Standard & Peak season
-- **Long-term Storage Fee** - 271+ days aging
-- **Referral Fee** - By category
-- **Profit Analysis** - Gross/Net margin, ROI
-- **Optimization Tips** - Size, weight, inventory
+- **尺寸层级检测** - 自动分类
+- **FBA履约费用** - 2024年费率
+- **月度仓储费** - 标准和旺季
+- **长期仓储费** - 271天以上库存
+- **推荐费** - 按类目
+- **利润分析** - 毛/净利润率，投资回报率
+- **优化建议** - 尺寸、重量、库存
 
-## Size Tiers (2024)
+## 尺寸层级（2024）
 
-| Tier | Max Weight | Max Dimensions |
+| 层级 | 最大重量 | 最大尺寸 |
 |------|------------|----------------|
-| Small Standard | 1 lb | 15"×12"×0.75" |
-| Large Standard | 20 lb | 18"×14"×8" |
-| Small Oversize | 70 lb | 60"×30" |
-| Medium Oversize | 150 lb | L+Girth ≤108" |
-| Large Oversize | 150 lb | L+Girth ≤165" |
-| Special Oversize | >150 lb | >165" |
+| 小型标准 | 1磅 | 15"×12"×0.75" |
+| 大型标准 | 20磅 | 18"×14"×8" |
+| 小型大件 | 70磅 | 60"×30" |
+| 中型大件 | 150磅 | 长度+周长 ≤108" |
+| 大型大件 | 150磅 | 长度+周长 ≤165" |
+| 特殊大件 | >150磅 | >165" |
 
-## Input
+## 输入
 
 ```json
 {
@@ -46,14 +46,14 @@ Precise FBA fee calculation based on product dimensions and weight.
 }
 ```
 
-## Output
+## 输出
 
-- Size tier classification
-- Fee breakdown table
-- Profit metrics (margin, ROI)
-- Optimization suggestions
+- 尺寸层级分类
+- 费用明细表格
+- 利润指标（利润率，投资回报率）
+- 优化建议
 
-## Usage
+## 使用方法
 
 ```bash
 python3 scripts/calculator.py
@@ -62,8 +62,4 @@ python3 scripts/calculator.py '{"length": 10, "width": 6, ...}' --zh
 
 ---
 
-_Version 1.0.0 | Platform: Amazon | Variant: Lite_
-
----
-
-**Part of [Nexscope AI](https://www.nexscope.ai/?co-from=skill) — AI tools for e-commerce sellers.**
+_版本 1.0.0 | 平台：亚马逊 | 变体：精简版_

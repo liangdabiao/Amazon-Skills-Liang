@@ -1,92 +1,91 @@
 ---
 name: amazon-storefront-design
-description: "Amazon Store builder — page layouts, brand story, shoppable images, traffic driving, conversion optimization"
+description: "亚马逊Store建设 — 页面布局、品牌故事、可购物图片、引流、转化优化"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Storefront Design
+# Amazon Store设计
 
-Amazon Store builder — page layouts, brand story, shoppable images, traffic driving, conversion optimization
+亚马逊Store建设 — 页面布局、品牌故事、可购物图片、引流、转化优化
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon storefront design for my e-commerce business.
+帮我处理亚马逊Store设计。
 ```
 
-## Capabilities
+## 功能
 
-- Amazon Store builder
-- page layouts
-- brand story
-- shoppable images
-- traffic driving
-- conversion optimization
+- Amazon Store建设
+- 页面布局
+- 品牌故事
+- 可购物图片
+- 引流
+- 转化优化
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Visual Hierarchy and Information Architecture Principle
+### 视觉层次和信息架构原则
 
-Store design core = establishing clear visual hierarchy.
-- Consumers follow "F-pattern browsing" — first horizontal scan top, then vertical scan down left side.
-- Place core brand info and popular products in visual hotspots.
-- Information hierarchy: Brand logo → Core product lines → Secondary product lines → Supporting content.
+Store设计的核心 = 建立清晰的视觉层次。
+- 消费者遵循"F型浏览" — 首先水平扫描顶部，然后垂直扫描左侧。
+- 将核心品牌信息和热门产品放在视觉热点区域。
+- 信息层次：品牌logo → 核心产品线 → 次要产品线 → 支持内容。
 
-### Brand Consistency Principle
+### 品牌一致性原则
 
-Every page element (color scheme, typography, image style, copy tone) must maintain high consistency with overall brand positioning.
-- Consistency reinforces brand recognition, builds consumer brand memory anchor.
-- Amazon Store templates provide various layout options — successful stores integrate unique brand DNA within template framework.
+每个页面元素（配色方案、排版、图片风格、文案语气）必须与整体品牌定位保持高度一致。
+- 一致性强化品牌识别，建立消费者品牌记忆锚点。
+- 亚马逊Store模板提供多种布局选项 — 成功的Store在模板框架内整合独特的品牌DNA。
 
-### Shoppable Images Principle
+### 可购物图片原则
 
-Shoppable Images is a distinctive feature of Amazon Stores — directly connects visual content with purchase behavior.
-- Consumers browsing brand story or product scene images can click specific areas to jump directly to corresponding product detail pages.
-- "See it, buy it" experience significantly shortens purchase path, reduces cart abandonment rate.
+可购物图片是Amazon Stores的独特功能 — 将视觉内容直接连接到购买行为。
+- 消费者浏览品牌故事或产品场景图片时，可以点击特定区域直接跳转到相应的产品详情页。
+- "看到即买"体验显著缩短购买路径，减少购物车放弃率。
 
-### Traffic Funnel Conversion Principle
+### 流量漏斗转化原则
 
-Store design is essentially a traffic funnel:
-External traffic entry (ads, social media links) → Brand homepage → Series pages → Product detail pages → Add to cart/Purchase.
+Store设计本质上是一个流量漏斗：
+外部流量入口（广告、社交媒体链接）→ 品牌首页 → 系列页面 → 产品详情页 → 加入购物车/购买。
 
-Each level has traffic loss — store design goal: minimize loss by optimizing navigation experience and content appeal at each level.
-- Data shows well-designed stores can have 20-30% higher conversion rate than average Listings.
+每个层级都有流量损失 — Store设计目标：通过优化每个层级的导航体验和内容吸引力来最小化损失。
+- 数据表明，设计良好的Store比普通Listing的转化率高出20-30%。
 
-### SEO and Navigation Synergy Principle
+### SEO与导航协同原则
 
-Amazon Store pages are indexed by Amazon search engine (A9/A10).
-- Page titles, navigation labels, text content need target keywords integrated.
-- Reasonable navigation structure helps consumers quickly find target products AND sends clear content theme signals to search engines.
+Amazon Store页面被亚马逊搜索引擎（A9/A10）索引。
+- 页面标题、导航标签、文本内容需要整合目标关键词。
+- 合理的导航结构帮助消费者快速找到目标产品，同时向搜索引擎发送清晰的内容主题信号。
 
-### Data Sources
+### 数据来源
 
-- No external dependencies. Based on Amazon Store Builder module specifications, template documentation, and e-commerce CRO best practices.
-- User provides: brand materials (logo, colors, story, positioning), product info (product line structure, core selling points, image assets).
+- 无外部依赖。基于Amazon Store Builder模块规格、模板文档和电商CRO最佳实践。
+- 用户提供：品牌材料（logo、颜色、故事、定位）、产品信息（产品线结构、核心卖点、图片资源）。
 
-### Limitations
+### 局限性
 
-- **Platform Limitations:** Storefront requires Amazon Brand Registry enrollment. Non-registered brands cannot use this feature. Design limited by Amazon templates/components.
-- **Data Delay:** Brand Analytics Store Insights data typically has 48-72 hour delay. Cannot use third-party tools like Google Analytics for real-time tracking.
-- **External Traffic Dependent:** Store itself doesn't automatically get significant organic traffic — effectiveness highly dependent on external traffic driving (brand ads, off-site promotion).
-- **Mobile Experience Limited:** Complex interactive elements may not perform as well on mobile screens.
+- **平台限制：** Storefront需要亚马逊品牌备案注册。未备案品牌无法使用此功能。设计受限于亚马逊模板/组件。
+- **数据延迟：** Brand Analytics Store Insights数据通常有48-72小时延迟。无法使用Google Analytics等第三方工具进行实时追踪。
+- **依赖外部流量：** Store本身不会自动获得大量自然流量 — 效果高度依赖外部引流（品牌广告、站外推广）。
+- **移动体验有限：** 复杂的交互元素在手机屏幕上可能表现不佳。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

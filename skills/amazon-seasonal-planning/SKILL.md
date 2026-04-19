@@ -1,119 +1,118 @@
 ---
 name: amazon-seasonal-planning
-description: "Seasonal sales calendar — Prime Day, Black Friday, Q4 prep, inventory planning, promotion scheduling"
+description: "季节性销售日历 — Prime Day、黑五、Q4准备、库存规划、促销安排"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Seasonal Planning
+# Amazon 季节性规划
 
-Seasonal sales calendar — Prime Day, Black Friday, Q4 prep, inventory planning, promotion scheduling
+季节性销售日历 — Prime Day、黑五、Q4准备、库存规划、促销安排
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon seasonal planning for my e-commerce business.
+帮我处理亚马逊季节性规划。
 ```
 
-## Capabilities
+## 功能
 
-- Seasonal sales calendar
+- 季节性销售日历
 - Prime Day
-- Black Friday
-- Q4 prep
-- inventory planning
-- promotion scheduling
+- 黑五
+- Q4准备
+- 库存规划
+- 促销安排
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Amazon Annual Sales Calendar and Node Characteristics
+### 亚马逊年度销售日历和节点特征
 
-**Key Seasonal Events:**
-- **Prime Day (July):** Amazon-created platform-wide event, Prime members only, typically 48 hours, deep discounts across all categories.
-- **Black Friday + Cyber Monday (November):** Largest shopping season, strongest consumer purchasing intent.
-- **Q4 Holiday Season (Oct-Dec):** Halloween, Thanksgiving, Christmas — golden period for gift, decoration, holiday-theme products.
-- **Other events:** Valentine's (February), Mother's Day (May), Back-to-School (July-August).
+**关键季节性事件：**
+- **Prime Day（7月）：** 亚马逊创造的平台范围活动，仅限Prime会员，通常48小时，全类目深度折扣。
+- **黑五 + 网一（11月）：** 最大购物季，消费者购买意图最强。
+- **Q4假日季（10-12月）：** 万圣节、感恩节、圣诞节 — 礼品、装饰、假日主题产品的黄金时期。
+- **其他事件：** 情人节（2月）、母亲节（5月）、返校季（7-8月）。
 
-### Inventory Lead-Time Planning Principle
+### 库存交期规划原则
 
-**Q4 Peak Season Example (from China via sea freight):**
-- Production cycle: 2-4 weeks
-- Sea freight transit: 4-6 weeks
-- Amazon receiving (peak season): 1-3+ weeks
-- **Order must be placed by late August/early September** to arrive before November peak.
-- Air freight reduces lead time by 2-3 weeks but significantly increases cost.
+**Q4旺季示例（从中国海运）：**
+- 生产周期：2-4周
+- 海运运输：4-6周
+- 亚马逊入仓（旺季）：1-3周以上
+- **必须在8月底/9月初之前下单** 才能在11月旺季前到达。
+- 空运可减少2-3周交期但显著增加成本。
 
-**Core principle:** "Better overstock than stockout" — peak season stockout means missing biggest sales opportunity + ranking decline that takes long recovery time.
+**核心原则：**"宁可积压不要断货" — 旺季断货意味着错过最大销售机会 + 排名下降需要很长时间恢复。
 
-Also consider: Amazon peak season storage capacity limits. Allocate inventory ratio across SKUs, prioritize high-sales high-margin products.
+还要考虑：亚马逊旺季仓储容量限制。跨SKU分配库存比例，优先高销量高利润产品。
 
-### Promotion Strategy and Application Mechanism
+### 促销策略和申请机制
 
-**Promotion Types:**
-- **Lightning Deal:** 4-12 hours, typically 20%+ discount required.
-- **Deal of the Day:** 24 hours, higher discount, greater exposure.
-- **Prime Exclusive Discount:** Lower barrier, long-term setup available.
-- **Coupon:** Flexible discount amount/percentage.
+**促销类型：**
+- **秒杀：** 4-12小时，通常需要20%以上折扣。
+- **当日特惠：** 24小时，更高折扣，更大曝光。
+- **Prime独家折扣：** 门槛较低，可长期设置。
+- **优惠券：** 灵活的折扣金额/百分比。
 
-Applications typically open weeks or months in advance. Amazon screens based on: historical sales, rating, price competitiveness. Submit applications immediately when opened. For products not recommended, set own Prime Exclusive Discount or Coupon.
+促销申请通常提前数周或数月开放。亚马逊基于以下进行筛选：历史销售、评分、价格竞争力。开放时立即提交申请。对于未推荐的产品，设置自己的Prime独家折扣或优惠券。
 
-### Advertising Strategy Seasonal Adjustment Principle
+### 广告策略季节性调整原则
 
-**Peak season changes:**
-- More sellers increase ad spend → keyword bids rise, ACoS may temporarily increase.
-- Consumer purchasing intent stronger, conversion rate improves.
+**旺季变化：**
+- 更多卖家增加广告投入 → 关键词竞价上涨，ACoS可能暂时增加。
+- 消费者购买意图更强，转化率提高。
 
-**Effective seasonal ad strategy:**
-- 1-2 weeks before promotion: gradually increase ad budget, accumulate ad history and keyword quality scores.
-- During peak: increase budget to 2-3x daily level, focus on high-conversion keywords and ASIN ads.
-- Set dynamic bidding ("up and down" or "down only only") to maintain exposure during competitive periods.
-- After promotion: gradually reduce budget to avoid ACoS spike from declining conversion rates.
+**有效的季节性广告策略：**
+- 促销前1-2周：逐步增加广告预算，积累广告历史和关键词质量分。
+- 旺季期间：将预算增加到日常的2-3倍，专注于高转化关键词和ASIN广告。
+- 设置动态竞价（"只上升"或"只下降"）以在竞争期间保持曝光。
+- 促销结束后：逐步降低预算，避免因转化率下降导致的ACoS飙升。
 
-Also关注 seasonal keywords ("Prime Day deals", "Black Friday electronics") with significantly higher search volume during specific periods.
+还要关注季节性关键词（"Prime Day优惠"、"黑五电子产品"）在特定时期搜索量显著提高。
 
-### Competitive Seasonal Strategy Analysis
+### 竞争性季节策略分析
 
-**Analysis dimensions:**
-- Competitor discount depth and promotion type from last similar promotion.
-- Competitor inventory preparation (monitor competitor available inventory changes).
-- Competitor ad strategy (observe competitor ad positions by searching core keywords).
-- Competitor new product launches (will competitor launch new products to capture traffic during promotion).
+**分析维度：**
+- 竞品在上次类似促销中的折扣深度和促销类型。
+- 竞品库存准备（监控竞品可用库存变化）。
+- 竞品广告策略（通过搜索核心关键词观察竞品广告位置）。
+- 竞品新产品发布（竞品是否会在促销期间推出新产品来捕获流量）。
 
-**Differentiation strategies:**
-- If competitor discount is small → appropriately increase discount for more market share.
-- If competitor inventory is low → seize out-of-stock window to increase promotion intensity.
-- If competitor launches new products → use old product promotions and ad defense to maintain market share.
+**差异化策略：**
+- 如果竞品折扣较小 → 适当增加折扣以获得更多市场份额。
+- 如果竞品库存较低 → 抓住缺货窗口期增加促销力度。
+- 如果竞品推出新产品 → 使用老产品促销和广告防御以保持市场份额。
 
-### Data Sources
+### 数据来源
 
-- Google Trends for seasonal trend analysis — identify demand peaks and valleys through keyword search volume trends.
-- web_search for Prime Day, Black Friday, Cyber Monday dates and rules.
-- User provides: product category info, historical sales data (same period last year).
+- Google Trends用于季节性趋势分析 — 通过关键词搜索量趋势识别需求高峰和低谷。
+- web_search用于Prime Day、黑五、网一日期和规则。
+- 用户提供：产品类目信息、历史销售数据（去年同期）。
 
-### Limitations
+### 局限性
 
-- **Promotion application uncertainty:** Amazon screening criteria not fully transparent — may be rejected even with timely application.
-- **Inventory vs actual demand deviation risk:** Economic changes, competitor actions, weather factors may cause actual sales to differ significantly from forecasts.
-- **Profit margin compression during promotions:** Deep discounts required for competitiveness significantly compress margins. Need balance between sales growth and profit maintenance.
-- **Peak season logistics and storage limits:** FBA capacity restrictions during Q4, inbound processing slower. May not be able to warehouse all prepared inventory.
-- **Post-promotion "cliff effect":** Sales typically drop significantly after promotion ends, causing ranking decline. May need weeks or months to recover.
+- **促销申请不确定性：** 亚马逊筛选标准不完全透明 — 可能即使及时申请也被拒绝。
+- **库存与实际需求偏差风险：** 经济变化、竞品行动、天气因素可能导致实际销售与预测显著不同。
+- **促销期间利润率压缩：** 竞争力所需的深度折扣显著压缩利润。需要在销售增长和保持利润之间平衡。
+- **旺季物流和仓储限制：** Q4期间FBA容量限制，入仓处理较慢。可能无法仓储所有准备好的库存。
+- **促销后"悬崖效应"：** 促销结束后销售通常大幅下降，导致排名下降。可能需要数周或数月恢复。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

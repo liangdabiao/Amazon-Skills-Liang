@@ -1,86 +1,85 @@
 ---
 name: amazon-seller-analytics
-description: "Analyze Amazon seller storefronts and product portfolios. Estimate revenue, identify top products, assess growth trajectory, and uncover strategy patterns. Useful for competitive intelligence and market research."
+description: "分析亚马逊卖家店铺和产品组合。预估营收、识别爆款、评估增长轨迹、揭示策略模式。适用于竞争情报和市场研究。"
 metadata:
   nexscope:
     emoji: "📊"
     category: amazon
 ---
 
-# Amazon Seller Analytics 📊
+# Amazon 卖家分析 📊
 
-Analyze Amazon seller storefronts and product portfolios. Estimate revenue, identify top products, assess growth trajectory, and uncover strategy patterns. Useful for competitive intelligence and market research.
+分析亚马逊卖家店铺和产品组合。预估营收、识别爆款、评估增长轨迹、揭示策略模式。适用于竞争情报和市场研究。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Analyze this Amazon seller's strategy: they sell kitchen gadgets and have about 50 products. Help me understand their approach.
+分析这个亚马逊卖家的策略：他们卖厨房小工具，大约有50个产品。帮我理解他们的打法。
 ```
 
-## Capabilities
+## 功能
 
-- Seller storefront analysis (product count, categories, pricing strategy)
-- Revenue estimation from BSR and category benchmarks
-- Product portfolio assessment (hero products, long-tail, new launches)
-- Review velocity and quality scoring
-- Growth trajectory estimation
-- Competitive positioning analysis
+- 卖家店铺分析（产品数量、类目、定价策略）
+- 基于BSR和类目基准的营收估算
+- 产品组合评估（爆款、长尾、新上架）
+- 评论增速和质量评分
+- 增长轨迹估算
+- 竞争定位分析
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Seller Storefront Structure Analysis Model
+### 卖家店铺结构分析模型
 
-- **Product Portfolio Stratification:** Classify seller's products by sales contribution (BSR as proxy). Head products (core bestsellers), middle products (stable contributors), tail products (strategic experiments). Distribution reveals if strategy is "bestseller-driven" vs "long-tail coverage".
-- **Category Span Assessment:** Analyze category coverage and inter-category relationships. Cross-category sellers have stronger supply chain integration but higher operational complexity.
-- **Variation Strategy Identification:** Determine if variations are "horizontal expansion" (many variants for different preferences) or "vertical depth" (maximum quality in each variant).
+- **产品组合分层：** 按销售贡献（以BSR为代理指标）对卖家产品进行分类。头部产品（核心爆款）、中部产品（稳定贡献者）、尾部产品（战略试验品）。分布揭示策略是"爆款驱动"还是"长尾覆盖"。
+- **类目跨度评估：** 分析类目覆盖和跨类目关系。跨类目卖家有更强的供应链整合但运营复杂度更高。
+- **变体策略识别：** 判断变体是"横向扩展"（多种变体满足不同偏好）还是"纵向深度"（每种变体追求最高质量）。
 
-### Revenue Estimation Engine
+### 营收估算引擎
 
-- **BSR-to-Sales Mapping Model:** Map BSR ranking to estimated monthly sales using category-specific conversion rate benchmarks. Different categories have very different BSR-to-sales relationships.
-- **Category Benchmark Calibration:** Calibrate model using known reference products from industry reports or public data.
-- **Price-Weighted Revenue Calculation:** Multiply estimated sales volume by current price for each product, aggregate to seller monthly revenue range (output as range to reflect uncertainty).
-- **Seasonal Adjustment:** Apply seasonal factors if analysis period is off-peak season.
+- **BSR转销量映射模型：** 使用类目特定转化率基准将BSR排名映射到预估月销量。不同类目BSR与销量的关系差异很大。
+- **类目基准校准：** 使用行业报告或公开数据中的已知参考产品校准模型。
+- **价格加权营收计算：** 将每产品预估销量乘以当前价格，汇总得卖家月度营收区间（输出为区间以反映不确定性）。
+- **季节性调整：** 若分析时段为淡季，应用季节因子。
 
-### Product Lifecycle Positioning
+### 产品生命周期定位
 
-- **New Product Detection:** Identify recent launches by listing age, review count, and BSR trajectory.
-- **Mature Product Identification:** Products with stable BSR, sufficient reviews, and slowing growth = profit pillars but at risk of being overtaken.
-- **Declining Product Detection:** Products with continuously falling BSR, stagnant review growth = candidates for clearance or discontinuation.
+- **新品识别：** 通过上架时间、评论数量和BSR趋势识别近期上架产品。
+- **成熟产品识别：** BSR稳定、评论充足、增长放缓的产品 = 利润支柱但有被超越风险。
+- **衰退产品识别：** BSR持续下降、评论增长停滞的产品 = 清仓或停产候选。
 
-### Strategy Pattern Recognition
+### 策略模式识别
 
-- **Pricing Pattern:** Frequent price adjustments = automated repricing tool usage. Stable prices = brand premium positioning.
-- **Advertising Intensity Inference:** Correlate BSR changes with ranking changes to infer ad dependency. Stable ranking + volatile BSR = organic traffic driven. Synchronized changes = ad-driven.
-- **Launch Rhythm Analysis:** Detect if launches are burst-style or continuous, seasonal patterns.
-- **Review Acquisition Strategy:** Analyze review velocity patterns to identify Vine program usage, request review features, or other legitimate review tactics.
+- **定价模式：** 频繁价格调整 = 使用自动调价工具。价格稳定 = 品牌溢价定位。
+- **广告强度推断：** 将BSR变化与排名变化关联，推断广告依赖度。排名稳定 + BSR波动大 = 自然流量驱动。同步变化 = 广告驱动。
+- **上架节奏分析：** 检测是爆发式还是持续式上架，识别季节性模式。
+- **评论获取策略：** 分析评论增速模式，识别Vine计划使用、请求评论功能或其他合规评论策略。
 
-### Data Sources
+### 数据来源
 
-- **Amazon Seller Storefront Pages:** Scrape product listings via web_fetch — titles, prices, review counts, ratings, listing dates.
-- **Product Detail Pages:** Individual BSR data requires separate web_fetch per product.
-- **Built-in BSR Models:** Industry statistics and experience-based parameters for BSR-to-sales mapping.
+- **亚马逊卖家店铺页面：** 通过web_fetch抓取产品 listing — 标题、价格、评论数、评分、上架日期。
+- **产品详情页面：** 各产品独立BSR数据需要单独web_fetch。
+- **内置BSR模型：** BSR转销量映射的行业统计数据和经验参数。
 
-### Limitations
+### 局限性
 
-- All analysis based on publicly visible information. Cannot access private operational data.
-- BSR-to-sales estimates have inherent error margins (typically ±30% to ±50%).
-- Large storefronts require significant data collection time (one BSR fetch per product).
+- 所有分析基于公开可见信息。无法获取私下运营数据。
+- BSR转销量估算有固有误差范围（通常±30%至±50%）。
+- 大型店铺需要大量数据收集时间（每个产品一次BSR抓取）。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

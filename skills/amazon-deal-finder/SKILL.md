@@ -1,107 +1,98 @@
 ---
 name: amazon-deal-finder
-description: "Plan and optimize Amazon promotional deals — Lightning Deals, Best Deals, Coupons, and Prime Exclusive Discounts. Evaluate deal ROI, timing, and strategy for maximum sales impact."
+description: "规划和优化亚马逊促销优惠 — 秒杀、优惠价、优惠券和Prime独家折扣。评估优惠投资回报、时机和策略以实现最大销售影响。"
 metadata:
   nexscope:
     emoji: "🎫"
     category: amazon
 ---
 
-# Amazon Deal Finder 🎫
+# Amazon 优惠发现器 🎫
 
-Plan and optimize Amazon promotional deals — Lightning Deals, Best Deals, Coupons, and Prime Exclusive Discounts. Evaluate deal ROI, timing, and strategy for maximum sales impact.
+规划和优化亚马逊促销优惠 — 秒杀、优惠价、优惠券和Prime独家折扣。评估优惠投资回报、时机和策略以实现最大销售影响。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Should I run a Lightning Deal for my product? It costs $150 fee, my product is $29.99 with 40% margin. I sell about 10 units/day normally.
+我应该为我的产品运行秒杀吗？费用$150，我的产品$29.99，利润率40%。平时每天约销售10件。
 ```
 
-## Capabilities
+## 功能
 
-- Deal type selection (Lightning Deal, Best Deal, Coupon, Prime Exclusive)
-- Deal ROI calculator (fee vs incremental sales)
-- Optimal timing and seasonality planning
-- Inventory preparation for deal volume
-- Deal stacking strategy (coupon + deal + PPC)
-- Post-deal momentum capture plan
+- 优惠类型选择（秒杀、优惠价、优惠券、Prime独家折扣）
+- 优惠投资回报计算器（费用 vs 增量销售）
+- 最佳时机和季节性规划
+- 优惠量库存准备
+- 优惠叠加策略（优惠券 + 优惠 + PPC）
+- 优惠后势能捕获计划
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Deal Type Comparison and Selection Framework
+### 优惠类型比较和选择框架
 
-- **Lightning Deals:** Highest visibility on Deal page and product detail. Runs 4-12 hours, requires application weeks in advance, fixed fee (~$150-$500). Best for: new product ranking boost, inventory clearance, peak season traffic competition. Short duration, high cost, strict eligibility requirements.
-- **7-Day Deals (Best Deals):** Similar to Lightning Deals but runs 7 days. Lower cost. Best for: sustained ranking push, large inventory clearance.
-- **Coupons:** Self-service discount with green "Coupon" badge. Per-redemption fee ($0.60) + discount amount. High flexibility, can be set anytime. Best for: daily promotions, A/B testing.
-- **Prime Exclusive Discounts:** Prime members only, requires at least 20% off. Strong "struck-through" price psychological effect.
+- **秒杀：** 在优惠页面和产品详情页最高可见度。运行4-12小时，需要提前数周申请，固定费用（约$150-$500）。最适合：新产品排名提升、库存清理、旺季流量竞争。持续时间短、成本高、资格要求严格。
+- **7天促销（优惠价）：** 与秒杀类似但运行7天。成本较低。最适合：持续排名推动、大量库存清理。
+- **优惠券：** 自助折扣，带绿色"优惠券"徽章。每次兑换费用（$0.60）+ 折扣金额。高灵活性，可随时设置。最适合：日常促销、A/B测试。
+- **Prime独家折扣：** 仅限Prime会员，需要至少20%折扣。强大的"划线价"心理效应。
 
-### Deal ROI Calculation Model
+### 优惠投资回报计算模型
 
-**ROI = (Incremental profit from extra sales + Long-term ranking benefit) / Total deal cost**
+**投资回报 = （额外销售带来的增量利润 + 长期排名收益） / 总优惠成本**
 
-**Cost Components:**
-- Discount given (difference between original and deal price)
-- Deal application fee
-- Coupon redemption fees
-- Potential ad spend increase during deal
+**成本组成部分：**
+- 给出的折扣（原价与优惠价之间的差额）
+- 优惠申请费
+- 优惠券兑换费
+- 优惠期间可能增加的广告支出
 
-**Incremental Sales Calculation:**
-- Not all deal-period sales are "incremental" — some would have happened anyway
-- Only sales ABOVE normal baseline = true deal contribution
-- Key input: historical daily sales data for accurate baseline
+**增量销售计算：**
+- 并非所有优惠期间销售都是"增量" — 有些无论如何都会发生
+- 仅超过正常基准线的销售 = 真正的优惠贡献
+- 关键输入：准确基准线的历史日均销售数据
 
-### Stacking Strategy Framework
+### 叠加策略框架
 
-- **Definition:** Using multiple promotion types simultaneously for deeper discount effect.
-- **Example:** Coupon + Prime Exclusive Discount + Ads → final price far below original.
-- **Risk:** Over-stacking can lead to unprofitable deals.
-- **Prevention:** Calculate final "floor price" before launch — ensure above break-even point.
-- **Sequential Stacking:** Set member discount first, then add coupon after Deal ends for phased effect.
+- **定义：** 同时使用多种促销类型以获得更深折扣效果。
+- **示例：** 优惠券 + Prime独家折扣 + 广告 → 最终价格远低于原价。
+- **风险：** 过度叠加可能导致无利可图的优惠。
+- **预防：** 上线前计算最终"地板价" — 确保高于盈亏平衡点。
+- **顺序叠加：** 先设置会员折扣，然后在优惠结束后添加优惠券以实现阶段性效果。
 
-### Post-Deal Momentum Strategy
+### 优惠后势能策略
 
-- **Ranking Benefit:** After deal ends, product typically gets ranking boost from increased sales velocity.
-- **Conversion to Sustained Growth Depends On:**
-  - Deal sales volume large enough to meaningfully improve BSR ranking
-  - Post-deal inventory, ad spend, and review accumulation maintained to capture new traffic
-- **Risk:** Stockout or ad budget cut after deal = rapid ranking decline.
+- **排名收益：** 优惠结束后，产品通常因销售速度提升而获得排名提升。
+- **转化为持续增长取决于：**
+  - 优惠销售量足够大以有意义地改善BSR排名
+  - 优惠后维持库存、广告支出和评论积累以捕获新流量
+- **风险：** 优惠后断货或削减广告预算 = 快速排名下降。
 
-### Timing and Seasonality Framework
+### 时机和季节性框架
 
-- **Peak Seasons:** Prime Day (July), Black Friday/Cyber Monday (November), Christmas (December).
-- **Competitive Calendar:** Avoid overlapping with major competitor promotions when possible.
-- **Inventory Planning:** Align deal timing with inventory turnover cycle.
+- **旺季：** Prime Day（7月）、黑五/网一（11月）、圣诞（12月）。
+- **竞争日历：** 尽可能避免与主要竞品促销重叠。
+- **库存规划：** 将优惠时机与库存周转周期对齐。
 
-### Data Sources
+### 数据来源
 
-- web_fetch scrapes Lightning Deals, Best Deals, Coupon activities from Amazon.
-- Fee structure from Amazon Seller official policies (public information).
-- User provides: current price, cost structure, normal daily sales, inventory, deal budget, specific goals (ranking boost, clearance, new product launch).
+- web_fetch从亚马逊抓取秒杀、优惠价、优惠券活动。
+- 费用结构来自亚马逊卖家官方政策（公开信息）。
+- 用户提供：当前价格、成本结构、正常日均销售、库存、优惠预算、具体目标（排名提升、清理库存、新产品上架）。
 
-### Limitations
+### 局限性
 
-- Deal approval not guaranteed even with complete eligibility. Amazon reviews based on category saturation, deal calendar, competition.
-- Incremental sales estimates inherently uncertain — affected by market competition, consumer demand fluctuations.
-- Deal price cannot be modified once live — cannot adapt if competitors launch promotions.
-- Frequent deep discounts may train consumers to wait for sales, damaging full-price sales.
-- Deal-period new buyers may leave negative reviews if disappointed, harming long-term competitiveness.
-- Cross-marketplace deals need separate planning — each marketplace has different Prime Day timing.
+- 即使完全符合资格也不能保证优惠批准。亚马逊基于类目饱和度、优惠日历、竞争进行审核。
+- 增量销售估算固有不确定性 — 受市场竞争、消费者需求波动影响。
+- 优惠上线后价格无法修改 — 如果竞品推出促销无法调整。
+- 频繁深度折扣可能训练消费者等待销售，损害正价销售。
+- 优惠期间的新买家如果失望可能留下负面评论，损害长期竞争力。
+- 跨 marketplace优惠需要单独规划 — 每个 marketplace的Prime Day时间不同。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
-
-## Output Format
-
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。

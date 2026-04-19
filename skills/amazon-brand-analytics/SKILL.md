@@ -1,87 +1,86 @@
 ---
 name: amazon-brand-analytics
-description: "Interpret and act on Amazon Brand Analytics data. Analyze Search Frequency Rank (SFR), click share, conversion share, market basket analysis, and repeat purchase behavior to optimize your Amazon strategy."
+description: "解读亚马逊品牌分析数据并采取行动。分析搜索频率排名（SFR）、点击份额、转化份额、市场购物篮分析和复购行为模式，以优化你的亚马逊策略。"
 metadata:
   nexscope:
     emoji: "📋"
     category: amazon
 ---
 
-# Amazon Brand Analytics 📋
+# Amazon 品牌分析 📋
 
-Interpret and act on Amazon Brand Analytics data. Analyze Search Frequency Rank (SFR), click share, conversion share, market basket analysis, and repeat purchase behavior to optimize your Amazon strategy.
+解读亚马逊品牌分析数据并采取行动。分析搜索频率排名（SFR）、点击份额、转化份额、市场购物篮分析和复购行为模式，以优化你的亚马逊策略。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me analyze my Amazon Brand Analytics data. My top search term has SFR #5,200 with 15% click share but only 8% conversion share. What should I do?
+帮我分析我的亚马逊品牌分析数据。我的热门搜索词 SFR #5,200，点击份额15%但转化份额只有8%。我该怎么做？
 ```
 
-## Capabilities
+## 功能
 
-- Search Frequency Rank (SFR) trend interpretation
-- Click share and conversion share analysis
-- Market basket analysis (frequently bought together insights)
-- Repeat purchase behavior patterns
-- Demographics data interpretation
-- Search term performance optimization recommendations
+- 搜索频率排名（SFR）趋势解读
+- 点击份额与转化份额分析
+- 市场购物篮分析（经常一起购买 insights）
+- 复购行为模式
+- 人口统计数据解读
+- 搜索词表现优化建议
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Search Frequency Rank (SFR) Analysis Framework
+### 搜索频率排名（SFR）分析框架
 
-- **SFR Interpretation:** Lower number = higher search frequency. SFR #1 = most searched term on marketplace. Core value is detecting trend changes — when SFR moves from 5,000 to 2,000, demand is rapidly heating up.
-- **Trend Detection:** Compare SFR across time periods. Rising SFR trend = growing demand or seasonal shift. Falling SFR = declining interest.
-- **Relative vs Absolute:** SFR is a relative ranking, not absolute volume. When overall search volume spikes (e.g., Prime Day), SFR changes may not reflect true search interest changes.
+- **SFR解读：** 数字越小 = 搜索频率越高。SFR #1 = 市场上搜索最多的词。核心价值在于检测趋势变化 — 当SFR从5,000移动到2,000，需求正在快速升温。
+- **趋势检测：** 对比不同时期的SFR。SFR上升趋势 = 需求增长或季节性变化。SFR下降 = 兴趣衰减。
+- **相对 vs 绝对：** SFR是相对排名，非绝对量。当整体搜索量激增时（如Prime Day），SFR变化可能不反映真实搜索兴趣变化。
 
-### Click Share vs Conversion Share Diagnostic Model
+### 点击份额 vs 转化份额诊断模型
 
-- **Click Share > Conversion Share:** Consumers show initial interest but drop off at detail page. Root causes: listing quality, pricing, weak reviews, or delivery options.
-- **Conversion Share > Click Share:** High conversion efficiency. Consider increasing ad spend to capture more clicks.
-- **Gap Analysis:** Calculate difference (e.g., 15% click share with 8% conversion share = 7% leak). Larger gap = more urgent listing optimization needed.
+- **点击份额 > 转化份额：** 消费者显示初步兴趣但在详情页流失。根本原因：listing质量、价格、评论薄弱或配送选项。
+- **转化份额 > 点击份额：** 高转化效率。考虑增加广告支出以捕获更多点击。
+- **差距分析：** 计算差值（如点击份额15%转化份额8% = 7%泄漏）。差距越大 = listing优化越迫切。
 
-### Market Basket Analysis Framework
+### 市场购物篮分析框架
 
-- **Cross-Sell Opportunities:** Identify products frequently purchased together. Consider bundle strategies or targeted ads on complementary products.
-- **Competitor Intelligence:** Analyze which competitor products appear in same basket = understand substitution patterns.
-- **Association Strength:** Higher co-purchase frequency = stronger consumer behavior link. Prioritize high-frequency associations.
+- **交叉销售机会：** 识别经常一起购买的产品。考虑捆绑策略或在互补产品上投放定向广告。
+- **竞品情报：** 分析哪些竞品出现在同一购物篮 = 理解替代模式。
+- **关联强度：** 共同购买频率越高 = 消费者行为链接越强。优先处理高频关联。
 
-### Repeat Purchase Behavior Model
+### 复购行为模型
 
-- **High Repeat Rate:** Products with good user experience and consumable demand (skincare, food). Suitable for Subscribe & Save to lock long-term revenue.
-- **Low Repeat Rate:** May indicate quality issues or product category is one-time purchase. Compensate by expanding product line for higher customer lifetime value.
+- **高复购率：** 用户体验好且有消耗品需求的产品（护肤品、食品）。适合订阅与Save以锁定长期营收。
+- **低复购率：** 可能表示质量问题或产品类目为一次性购买。通过扩展产品线以获得更高客户终身价值来补偿。
 
-### Data Sources
+### 数据来源
 
-- User exports CSV from Seller Central Brand Analytics dashboard.
-- Requires: SFR data, click share, conversion share (minimum).
-- Optional: market basket data, repeat purchase data, multiple time periods for trend analysis.
-- No direct API connection to Seller Central.
+- 用户从卖家中心品牌分析仪表板导出 CSV。
+- 需要：SFR数据、点击份额、转化份额（最低要求）。
+- 可选：市场购物篮数据、复购数据、多个时期数据用于趋势分析。
+- 无直接API连接到卖家中心。
 
-### Limitations
+### 局限性
 
-- Brand Analytics available only to brand registry members. Data has ~72 hour delay.
-- SFR is relative ranking — cannot compare directly across different overall search volume periods.
-- Click/conversion share only shows top 3 brands. Lower-ranked brands need estimation.
-- Market basket only shows highest frequency items — may miss low-frequency high-margin opportunities.
-- Cannot distinguish why consumers drop off (price, reviews, product issues) — requires additional data inference.
-- Cross-marketplace data may have different formats. Analyze each marketplace independently.
+- 品牌分析仅对品牌备案成员开放。数据有约72小时延迟。
+- SFR是相对排名 — 无法跨不同整体搜索量时期直接比较。
+- 点击/转化份额仅显示前3名品牌。排名靠后的品牌需要估算。
+- 市场购物篮仅显示最高频率商品 — 可能遗漏低频高利润机会。
+- 无法区分消费者流失原因（价格、评论、产品问题）— 需要额外数据推断。
+- 跨市场数据格式可能不同。需要独立分析每个市场。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

@@ -1,87 +1,86 @@
 ---
 name: amazon-niche-finder
-description: "Discover profitable Amazon niches with low competition and high demand. Evaluates niche viability using demand indicators, competition metrics, profit margins, and growth potential."
+description: "发现亚马逊上低竞争高需求的盈利细分市场。从需求指标、竞争指标、利润率和增长潜力评估细分市场可行性。"
 metadata:
   nexscope:
     emoji: "💎"
     category: amazon
 ---
 
-# Amazon Niche Finder 💎
+# Amazon 细分市场finder 💎
 
-Discover profitable Amazon niches with low competition and high demand. Evaluates niche viability using demand indicators, competition metrics, profit margins, and growth potential.
+发现亚马逊上低竞争高需求的盈利细分市场。从需求指标、竞争指标、利润率和增长潜力评估细分市场可行性。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me find a profitable niche on Amazon US. I have $5000 to invest and want at least 30% margins. No electronics or supplements.
+帮我找一个盈利的亚马逊美国细分市场。我有5000美元预算，想要至少30%的利润率。不做电子产品和保健品。
 ```
 
-## Capabilities
+## 功能
 
-- Niche viability scoring (demand, competition, margins, barriers)
-- Sub-niche discovery from broad categories
-- Competition density assessment (reviews, ratings, brand presence)
-- Average revenue estimation per niche
-- Seasonal vs evergreen niche classification
-- Entry strategy recommendation per niche
+- 细分市场可行性评分（需求、竞争、利润率、壁垒）
+- 从宽泛类目中发现子细分市场
+- 竞争密度评估（评论数、评分、品牌存在度）
+- 各细分市场平均营收估算
+- 季节性 vs 常青细分市场分类
+- 各细分市场的进入策略推荐
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Demand Signal Detection System
+### 需求信号检测系统
 
-- **Search Demand Verification:** Analyze keyword search volume, trends, and click distribution. Stable search demand = healthy niche. Focus on long-tail keyword distribution — broad demand across many terms = less fragile than single-keyword dependence.
-- **Purchase Intent Signals:** Assess purchase intent by analyzing semantic features (presence of "best", "review", "buy" terms). High purchase intent = better conversion with less ad spend.
-- **Review Activity Indicators:** Track monthly new reviews on existing products. Stagnant or declining reviews signal shrinking demand.
-- **Cross-Platform Validation:** Cross-reference with other e-commerce platforms to validate demand beyond Amazon.
+- **搜索需求验证：** 分析关键词搜索量、趋势和点击分布。稳定搜索需求 = 健康细分市场。关注长尾关键词分布 — 需求分布在多个词 = 比依赖单一关键词更稳健。
+- **购买意图信号：** 通过分析语义特征（"最佳"、"评测"、"购买"等词的存在）评估购买意图。高购买意图 = 更好转化配合更少广告支出。
+- **评论活动指标：** 追踪现有产品的月度新增评论。评论停滞或下降 = 需求萎缩信号。
+- **跨平台验证：** 与其他电商平台交叉验证，确认需求不局限于亚马逊。
 
-### Competition Density Assessment Model
+### 竞争密度评估模型
 
-- **Seller Count & Concentration:** Count active sellers and analyze market share distribution. Lower concentration = easier entry for new sellers.
-- **Review Barrier Height:** Analyze review count distribution. If most products have <500 reviews, barrier is low and new entrants can build trust quickly. If dominated by 10K+ review products, barrier is high.
-- **Brand Penetration:** Evaluate presence of strong brands with registry and trademarks. Strong brand presence = traffic advantage for incumbents.
-- **Price Competition Intensity:** Analyze price distribution and margins. Price-warred niches near cost = avoid.
+- **卖家数量与集中度：** 统计活跃卖家数量并分析市场份额分布。低集中度 = 新卖家更容易进入。
+- **评论壁垒高度：** 分析评论数分布。若大多数产品评论少于500条，壁垒低，新进入者可以快速建立信任。若被1万+评论产品主导，壁垒高。
+- **品牌渗透：** 评估强势品牌（品牌备案和商标）的存在。强势品牌存在 = 在位者的流量优势。
+- **价格竞争强度：** 分析价格分布和利润率。接近成本的价格战细分市场 = 避开。
 
-### Profit Margin Calculation Framework
+### 利润率计算框架
 
-- **Price Elasticity Analysis:** Compare sales volume and review distribution across price points. Premium niche = customers willing to pay for differentiation, not just lowest price.
-- **Full Cost Breakdown:** Calculate complete cost chain: COGS, shipping, FBA fees, advertising costs.
-- **Premium Opportunity Assessment:** Evaluate potential for price premium through better design, quality materials, or superior packaging.
+- **价格弹性分析：** 对比各价格点的销量和评论分布。高利润细分市场 = 客户愿意为差异化付更高价格，而非只选最低价。
+- **全成本拆解：** 计算完整成本链：商品成本、运费、FBA费用、广告成本。
+- **溢价机会评估：** 评估通过更好的设计、优质材料或更优包装实现溢价的空间。
 
-### Growth Potential Scoring System
+### 增长潜力评分系统
 
-- **Demand Growth Trend:** Analyze historical trends in search volume, BSR, and reviews to identify if niche is growing, plateauing, or declining.
-- **Scalability Assessment:** Evaluate if niche can expand through variation additions, sub-niche extensions, or adjacent market entry.
-- **Evergreen vs Seasonal Classification:** Classify as "evergreen" (year-round stable demand) or "seasonal" (peaks at specific times). Match to your capital and operational capacity.
+- **需求增长趋势：** 分析搜索量、BSR和评论的历史趋势，识别细分市场是增长、持平还是衰退。
+- **可扩展性评估：** 评估细分市场是否可以通过增加变体、子细分扩展或进入相邻市场来扩大。
+- **常青 vs 季节性分类：** 分类为"常青"（全年稳定需求）或"季节性"（特定时间峰值）。与你的资金和运营能力匹配。
 
-### Data Sources
+### 数据来源
 
-- **Web Search (site:amazon.com):** Get product counts, price distribution, seller counts for macro competition data.
-- **Amazon Product Pages:** Scrape BSR, reviews, ratings, monthly review velocity via web_fetch.
-- **Google Trends:** Verify demand growth direction and filter false signals.
+- **网页搜索（site:amazon.com）：** 获取产品数量、价格分布、卖家数量的宏观竞争数据。
+- **亚马逊产品页面：** 通过web_fetch抓取BSR、评论、评分、月度评论增速。
+- **Google Trends：** 验证需求增长方向，过滤虚假信号。
 
-### Limitations
+### 局限性
 
-- Small niches lose low-competition advantage quickly when multiple sellers discover them simultaneously.
-- Small niche search volumes have lower statistical confidence than broad categories.
-- Profit estimates based on category averages. Actual results vary by supplier bargaining power, differentiation, and operational efficiency.
-- Growth predictions based on historical trends cannot predict disruptive innovations or market changes.
+- 小细分市场被多个卖家同时发现时，低竞争优势会迅速消失。
+- 小细分市场搜索量比宽泛类目统计置信度低。
+- 利润估算基于类目平均值。实际结果因供应商议价能力、差异化和运营效率而异。
+- 基于历史趋势的增长预测无法预测颠覆性创新或市场变化。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

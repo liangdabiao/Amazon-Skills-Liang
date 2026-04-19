@@ -1,103 +1,102 @@
 ---
 name: amazon-fba-prep
-description: "Complete FBA preparation guide. Product labeling, packaging requirements, shipment planning, and compliance with Amazon's fulfillment center requirements. Avoid common rejection reasons."
+description: "完整FBA准备指南。产品标签、包装要求、发货计划，以及遵守亚马逊履约中心要求。避免常见的拒收原因。"
 metadata:
   nexscope:
     emoji: "📋"
     category: amazon
 ---
 
-# Amazon FBA Prep 📋
+# Amazon FBA准备 📋
 
-Complete FBA preparation guide. Product labeling, packaging requirements, shipment planning, and compliance with Amazon's fulfillment center requirements. Avoid common rejection reasons.
+完整FBA准备指南。产品标签、包装要求、发货计划，以及遵守亚马逊履约中心要求。避免常见的拒收原因。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-I'm sending my first FBA shipment — 500 units of a glass water bottle. Walk me through the entire prep process so nothing gets rejected.
+我要发送我的第一批FBA货件 — 500个玻璃水瓶。带我过一遍整个准备流程，确保不会被拒收。
 ```
 
-## Capabilities
+## 功能
 
-- FBA prep requirements checklist by product type
-- FNSKU labeling guide and best practices
-- Packaging requirements (poly bags, bubble wrap, overboxing)
-- Shipment plan creation methodology
-- Carton packing optimization for minimum fees
-- Common FBA rejection reasons and how to avoid them
-- Prep service vs self-prep cost comparison
+- 按产品类型的FBA准备要求清单
+- FNSKU标签指南和最佳实践
+- 包装要求（塑料袋、气泡膜、外箱）
+- 发货计划创建方法论
+- 纸箱优化以最小化费用
+- 常见FBA拒收原因及如何避免
+- 准备服务 vs 自助准备成本比较
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### FNSKU Labeling System
+### FNSKU标签系统
 
-- **FNSKU Definition:** Unique identifier Amazon assigns to each seller SKU for inventory tracking in fulfillment centers.
-- **Label Requirements:** Must cover original product barcode.贴在平整表面, not curved or wrinkled areas.
-- **Specifications:** 1"x2" size, 300+ DPI print quality for successful scanning. Adequate white space around barcode required.
-- **Barcode Override:** If product already has UPC/EAN, FNSKU can directly cover it. If no barcode, must attach FNSKU label.
+- **FNSKU定义：** 亚马逊为每个卖家SKU分配的唯一标识符，用于履约中心的库存跟踪。
+- **标签要求：** 必须覆盖原有产品条码。贴在平整表面，不要贴在弯曲或皱褶区域。
+- **规格：** 1"x2"尺寸，300+ DPI打印质量以确保成功扫描。条码周围需要足够的空白区域。
+- **条码覆盖：** 如果产品已有UPC/EAN，FNSKU可直接覆盖。如果没有条码，必须附加FNSKU标签。
 
-### Packaging Compliance Framework
+### 包装合规框架
 
-Amazon packaging requirements based on two core principles: product protection (prevent damage during transit) and worker safety.
+亚马逊包装要求基于两个核心原则：产品保护（防止运输过程中损坏）和工人安全。
 
-- **General:** All items must have scannable outer packaging barcode.
-- **裸装 Products (e.g., hardware items):** Must use clear polyethylene bag with suffocation warning label and barcode.
-- **Fragile Items:** Bubble wrap or foam packaging required, mark "Fragile" clearly.
-- **Sharp Edge Products:** Must add protective covers.
-- **Liquid Products:** Leak-proof sealed packaging required.
-- **Multi-Pack:** Must use manufacturer tape or specific labels to prevent separation.
-- **Weight Limit:** Standard carton max 50 lbs / 23 kg. Exceeding = additional fees or rejection.
+- **通用要求：** 所有物品必须有可扫描的外包装条码。
+- **裸装产品（例如五金件）：** 必须使用带有窒息警告标签和条码的透明聚乙烯袋。
+- **易碎物品：** 需要气泡膜或泡沫包装，清晰标注"易碎"。
+- **尖锐边缘产品：** 必须添加保护盖。
+- **液体产品：** 需要防漏密封包装。
+- **多件装：** 必须使用制造商胶带或特定标签防止分离。
+- **重量限制：** 标准纸箱最大50磅/23千克。超过 = 额外费用或拒收。
 
-### Shipment Planning and Carton Optimization
+### 发货计划和纸箱优化
 
-- **Shipment Plan:** Amazon assigns fulfillment center based on inventory capacity and demand. System may split shipments to multiple centers.
-- **Carton Packing Optimization:** Maximize carton utilization within weight/dimension limits to minimize per-unit shipping cost.
-- **Fee Structure:** Different rates for standard-size vs oversize items. Precise calculation critical for large items.
+- **发货计划：** 亚马逊根据库存容量和需求分配履约中心。系统可能将货件拆分到多个中心。
+- **纸箱包装优化：** 在重量/尺寸限制内最大化纸箱利用率，以降低单位运输成本。
+- **费用结构：** 标准尺寸和超大尺寸物品费率不同。大型物品需要精确计算。
 
-### Prep Fee Avoidance Strategy
+### 准备费避免策略
 
-- **Prep Service Fee:** $0.30-$1.50 per unit depending on prep type (labeling, bagging, bubble wrapping).
-- **Self-Prep vs Outsourcing:** Compare labor cost, equipment investment, time efficiency, quality consistency.
-- **Rejection Risk:** If prep too complex or item condition poor, Amazon may reject entire shipment or dispose inventory.
+- **准备服务费：** 根据准备类型（标签、袋装、气泡包装）每件0.30-1.50美元。
+- **自助准备 vs 外包：** 比较人工成本、设备投资、时间效率、质量一致性。
+- **拒收风险：** 如果准备太复杂或产品状况不佳，亚马逊可能拒收整个货件或处置库存。
 
-### Common Rejection Root Cause Analysis
+### 常见拒收根本原因分析
 
-- **Unscannable FNSKU:** Poor print quality, damaged label, wrong placement.
-- **Damaged/Missing Packaging:** Packaging damaged or missing during handling.
-- **Oversize/Overweight Cartons:** Exceeds standard limits.
-- **Missing Safety Labels:** Suffocation warnings, sharp edge warnings not attached.
-- **Multi-Pack Separation:** Not properly sealed causing items to separate.
-- **Mismatch:** Product doesn't match shipment plan declaration (dimension classification errors).
-- **Missing Carton Labels:** Cannot identify shipment destination.
+- **FNSKU无法扫描：** 打印质量差、标签损坏、放置位置错误。
+- **包装损坏/缺失：** 包装在处理过程中损坏或缺失。
+- **尺寸/重量超标纸箱：** 超过标准限制。
+- **缺少安全标签：** 未附加窒息警告、尖锐边缘警告。
+- **多件装分离：** 未正确密封导致物品分离。
+- **不匹配：** 产品与发货计划声明不符（尺寸分类错误）。
+- **缺少纸箱标签：** 无法识别货件目的地。
 
-### Data Sources
+### 数据来源
 
-- Amazon Seller Central FBA prep requirements page for product-specific specs.
-- User provides product type, size classification, target marketplace, barcode status.
+- 亚马逊卖家中心FBA准备要求页面获取产品特定规格。
+- 用户提供：产品类型、尺寸分类、目标市场、条码状态。
 
-### Limitations
+### 局限性
 
-- FBA requirements vary by product type and change frequently — always check latest guidelines.
-- Special categories (hazmat, lithium batteries, liquids, food) have additional compliance requirements.
-- Prep fees add significant cost for complex prep items.
-- Rejection can result in inventory disposal — substantial financial loss.
-- Shipping costs vary by carton utilization efficiency.
+- FBA要求因产品类型而异且频繁变化 — 始终检查最新指南。
+- 特殊类目（危险品、锂电池、液体、食品）有额外的合规要求。
+- 准备费为复杂准备物品增加显著成本。
+- 拒收可能导致库存处置 — 重大财务损失。
+- 运输成本因纸箱利用率效率而异。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

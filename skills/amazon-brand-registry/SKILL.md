@@ -1,88 +1,87 @@
 ---
 name: amazon-brand-registry
-description: "Brand Registry enrollment guide — eligibility, application, benefits, A+ Content access, brand protection tools"
+description: "品牌备案注册指南 — 资格要求、申请流程、权益、A+内容访问、品牌保护工具"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Brand Registry
+# Amazon 品牌备案
 
-Brand Registry enrollment guide — eligibility, application, benefits, A+ Content access, brand protection tools
+品牌备案注册指南 — 资格要求、申请流程、权益、A+内容访问、品牌保护工具
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon brand registry for my e-commerce business.
+帮我处理亚马逊品牌备案。
 ```
 
-## Capabilities
+## 功能
 
-- Brand Registry enrollment guide
-- eligibility
-- application
-- benefits
-- A+ Content access
-- brand protection tools
+- 品牌备案注册指南
+- 资格要求
+- 申请流程
+- 权益说明
+- A+内容访问
+- 品牌保护工具
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Brand Eligibility Verification Framework
+### 品牌资格验证框架
 
-- **Trademark Requirements:** Must have valid registered trademark in target country/region. Word marks have higher success rate than design marks. TM status (published/allowed) or R status (registered) both qualify.
-- **Nice Classification:** Trademark must cover product categories sold on Amazon. Verify registration classes match your product category.
-- **Name Consistency:** Brand name on application must exactly match trademark registration. Any mismatch = rejection.
+- **商标要求：** 必须在目标国家/地区拥有有效注册商标。文字商标比图形商标成功率更高。TM状态（已公告/核准）或R状态（已注册）均符合资格。
+- **尼斯分类：** 商标必须覆盖在亚马逊销售的产品类目。验证注册类别与你的产品类目匹配。
+- **名称一致性：** 申请中的品牌名称必须与商标注册完全一致。任何不匹配 = 驳回。
 
-### Application Review Process
+### 申请审核流程
 
-- **Auto-Validation:** System checks trademark registration number against trademark office databases (USPTO, EUIPO, etc.) — holder name, status, classes.
-- **Document Requirements:** Trademark registration certificate, product photos showing brand logo, packaging photos, brand website screenshots.
-- **Review Timeline:** 5-10 business days typically. Complex cases take longer.
-- **Common Rejection Reasons:** Name mismatch, expired trademarks, insufficient documentation.
+- **自动验证：** 系统对照商标局数据库（USPTO、EUIPO等）检查商标注册号 — 持有人名称、状态、类别。
+- **文件要求：** 商标注册证书、显示品牌标志的产品照片、包装照片、品牌网站截图。
+- **审核时间：** 通常5-10个工作日。复杂情况需要更长时间。
+- **常见驳回原因：** 名称不匹配、商标过期、文件不足。
 
-### Brand Protection Mechanisms
+### 品牌保护机制
 
-- **Layer 1 — Active Protection:** Submit infringement reports for counterfeit, hijacking, unauthorized images/text. Zero Tolerance team prioritizes brand registry reports.
-- **Layer 2 — Automatic Protection:** Amazon systems auto-detect and block suspicious listings using brand keywords or copying product images.
-- **Layer 3 — Transparency Program:** Unique verifiable anti-counterfeit labels scanned at fulfillment. Stops counterfeit before reaching consumers.
-- **Layer 4 — Project Zero:** Brand owners can directly remove suspected counterfeit listings without Amazon review.
+- **第一层 — 主动保护：** 提交假冒、跟卖、未授权图片/文字的侵权报告。零容忍团队优先处理品牌备案报告。
+- **第二层 — 自动保护：** 亚马逊系统使用品牌关键词或复制产品图片自动检测和拦截可疑 listing。
+- **第三层 — Transparency计划：** 可验证的唯一防伪标签在配送中心扫描。在假货到达消费者之前拦截。
+- **第四层 — Project Zero：** 品牌所有者可直接移除疑似假冒 listing，无需亚马逊审核。
 
-### A+ Content and Brand Content Control
+### A+内容和品牌内容控制
 
-- **A+ Page Access:** Unlock enhanced brand content with rich visual/text modules. Premium A+ offers interactive content, video modules, advanced comparison charts.
-- **Content Control:** Registered brands control all product information in brand catalog. Prevents unauthorized sellers from modifying titles, images, descriptions.
-- **Brand Story Module:** Showcase unified brand visual identity and story at top of all brand product pages.
+- **A+页面访问：** 解锁带有丰富视觉/文字模块的增强品牌内容。高级A+提供互动内容、视频模块、高级对比图表。
+- **内容控制：** 注册品牌控制品牌目录中的所有产品信息。防止未授权卖家修改标题、图片、描述。
+- **品牌故事模块：** 在所有品牌产品页面顶部展示统一的品牌视觉识别和故事。
 
-### Data Sources
+### 数据来源
 
-- No external data sources. Based on Amazon Brand Registry official documentation.
-- User provides trademark registration details, product categories, brand assets.
+- 无外部数据源。基于亚马逊品牌备案官方文档。
+- 用户提供商标注册详情、产品类目、品牌资产。
 
-### Limitations
+### 局限性
 
-- Requires registered trademark (6-18 months to obtain, costs involved).
-- Amazon review standards change. Past approvals don't guarantee future approvals.
-- Brand protection tools not foolproof. Continuous monitoring and active reporting needed.
-- A+ content requires professional design/copywriting to be effective.
-- Brand Analytics data has delay (~72 hours) and limited keyword coverage.
-- Transparency/Project Zero are paid services — per-unit costs increase operational expenses.
-- Each marketplace requires separate application and review.
+- 需要注册商标（获取需要6-18个月，涉及费用）。
+- 亚马逊审核标准会变化。过去的批准不保证未来批准。
+- 品牌保护工具并非万无一失。需要持续监控和主动报告。
+- A+内容需要专业设计/文案才能有效。
+- 品牌分析数据有延迟（约72小时）且关键词覆盖有限。
+- Transparency/Project Zero是付费服务 — 按件计费增加运营成本。
+- 每个市场需要单独申请和审核。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

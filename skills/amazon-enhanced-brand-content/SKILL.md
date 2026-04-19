@@ -1,99 +1,98 @@
 ---
 name: amazon-enhanced-brand-content
-description: "Premium A+ and Brand Story — module design, lifestyle imagery, comparison charts, mobile optimization"
+description: "高级A+和品牌故事 — 模块设计、生活方式图像、比较图表、移动端优化"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Enhanced Brand Content
+# Amazon 高级品牌内容
 
-Premium A+ and Brand Story — module design, lifestyle imagery, comparison charts, mobile optimization
+高级A+和品牌故事 — 模块设计、生活方式图像、比较图表、移动端优化
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon enhanced brand content for my e-commerce business.
+帮我处理亚马逊高级品牌内容。
 ```
 
-## Capabilities
+## 功能
 
-- Premium A+ and Brand Story
-- module design
-- lifestyle imagery
-- comparison charts
-- mobile optimization
+- 高级A+和品牌故事
+- 模块设计
+- 生活方式图像
+- 比较图表
+- 移动端优化
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Visual Hierarchy and Information Architecture
+### 视觉层次和信息架构
 
-- **Visual Hierarchy:** Determines eye movement path — use module size, color contrast, image position, typography to guide consumers through information in priority order.
-- **Information Architecture:** Content organization logic — brand positioning → core product benefits → technical details → usage scenarios. Build complete information chain from macro to micro.
-- **Dual-Mode Design:** Effective for both quick scanning (images and headlines only) and deep reading (full text).
+- **视觉层次：** 决定眼睛移动路径 — 使用模块大小、颜色对比、图片位置、排版来引导消费者按优先级浏览信息。
+- **信息架构：** 内容组织逻辑 — 品牌定位 → 核心产品好处 → 技术细节 → 使用场景。从宏观到微观构建完整信息链。
+- **双模式设计：** 既适合快速扫描（仅图片和标题）也适合深度阅读（完整文本）。
 
-### Lifestyle Imagery and Scene-Based Marketing
+### 生活方式图像和场景营销
 
-- **Core Principle:** Activate consumer "mental simulation" — seeing product in real usage scenario helps consumers imagine themselves using it.
-- **Three Elements:** Clear product focus (product is visual focal point), authentic usage scenario (highly relevant to target consumer lifestyle), emotional atmosphere (lighting, tone, expressions create positive associations).
-- **Goal:** Shorten purchase decision path through psychological simulation.
+- **核心原则：** 激活消费者"心理模拟" — 在真实使用场景中看到产品帮助消费者想象自己使用它。
+- **三个要素：** 清晰的产品焦点（产品是视觉焦点）、真实的使用场景（与目标消费者生活方式高度相关）、情感氛围（照明、语调、表情创造积极联想）。
+- **目标：** 通过心理模拟缩短购买决策路径。
 
-### Product Comparison and Differentiation
+### 产品比较和差异化
 
-- **Comparison Chart Module:** Key differentiation tool. Based on "anchoring effect" in consumer decision psychology — clear comparisons reduce decision difficulty.
-- **Dimension Selection:** Choose dimensions buyers care most about (size, material, features, warranty), not all parameters.
-- **Visual Cues:** Place major advantages in prominent positions. Use checkmarks, highlight colors to guide attention.
+- **比较图表模块：** 关键差异化工具。基于消费者决策心理学中的"锚定效应" — 清晰的比较减少决策难度。
+- **维度选择：** 选择买家最关心的维度（尺寸、材质、功能、保修），而非所有参数。
+- **视觉提示：** 将主要优势放在突出位置。使用复选标记、高亮颜色引导注意力。
 
-### Mobile-First Design Principles
+### 移动端优先设计原则
 
-- **Text Size:** Body text at least 14px for small screens.
-- **Aspect Ratio:** Image modules must be compatible with both mobile and desktop (avoid severe cropping or white space).
-- **Above-the-Fold:** Key info (core benefits, pricing) should be visible in mobile first screen.
-- **Module Density:** Avoid too many dense modules causing excessively long pages.
+- **文字大小：** 正文至少14px以适应小屏幕。
+- **纵横比：** 图片模块必须兼容移动端和桌面端（避免严重裁切或留白）。
+- **首屏之上：** 关键信息（核心好处、价格）应在移动端首屏可见。
+- **模块密度：** 避免过多密集模块导致页面过长。
 
-### Brand Consistency Narrative
+### 品牌一致性叙事
 
-- **Brand Story Module:** Most brand-building valuable module in Premium A+.
-- **Cross-Product Consistency:** Same brand visual identity and story across all product pages builds brand memory and associations.
-- **Elements:** Brand logo, tagline, brand origin/brief philosophy, representative product images.
-- **Unified Design Language:** Consistent color scheme, typography style, image style.
+- **品牌故事模块：** 高级A+中最具品牌价值的模块。
+- **跨产品一致性：** 所有产品页面一致的品牌视觉识别和故事建立品牌记忆和联想。
+- **要素：** 品牌标志、标语、品牌起源/简短理念、代表性产品图片。
+- **统一设计语言：** 一致的配色方案、排版风格、图片风格。
 
-### Module Selection Strategy by Product Type
+### 按产品类型的模块选择策略
 
-- **Functional Products (electronics, tools):** Detailed spec charts, feature breakdowns, comparison modules.
-- **Fashion/Home Products:** Lifestyle imagery, brand story modules.
-- **Multi-SKU Product Lines:** Product line showcase, comparison modules.
-- **New Products:** Brand story, core technology introduction modules.
+- **功能性产品（电子、工具）：** 详细规格图表、功能分解、比较模块。
+- **时尚/家居产品：** 生活方式图像、品牌故事模块。
+- **多SKU产品线：** 产品线展示、比较模块。
+- **新产品：** 品牌故事、核心技术介绍模块。
 
-### Data Sources
+### 数据来源
 
-- No external data sources. Based on Amazon Premium A+ Content official documentation.
-- User provides brand positioning, target audience, product features, competitive analysis, creative assets.
+- 无外部数据来源。基于亚马逊高级A+内容官方文档。
+- 用户提供：品牌定位、目标受众、产品特点、竞品分析、创意素材。
 
-### Limitations
+### 局限性
 
-- Requires Amazon Brand Registry enrollment.
-- Premium A+ requires meeting certain sales thresholds.
-- Complex layouts limited by Amazon A+ editor capabilities.
-- Design brief text vs final visual may differ — preview recommended.
-- Mobile-first design critical (70%+ mobile traffic).
-- A/B testing needed to measure actual conversion impact.
+- 需要亚马逊品牌备案注册。
+- 高级A+需要达到一定的销售阈值。
+- 复杂布局受亚马逊A+编辑器能力限制。
+- 设计稿文本与最终视觉可能有差异 — 建议预览。
+- 移动端优先设计至关重要（70%+移动端流量）。
+- 需要A/B测试来衡量实际转化影响。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

@@ -1,90 +1,89 @@
 ---
 name: amazon-listing-images
-description: "Plan Amazon product listing images for maximum conversion. Create shot lists, infographic layouts, lifestyle scene briefs, and A/B testing plans following Amazon's image requirements and best practices."
+description: "为亚马逊产品listing图片制定最大转化计划。按照亚马逊的图片要求和最佳实践创建拍摄清单、信息图布局、生活场景简介和A/B测试计划。"
 metadata:
   nexscope:
     emoji: "📸"
     category: amazon
 ---
 
-# Amazon Listing Images 📸
+# Amazon Listing图片 📸
 
-Plan Amazon product listing images for maximum conversion. Create shot lists, infographic layouts, lifestyle scene briefs, and A/B testing plans following Amazon's image requirements and best practices.
+为亚马逊产品listing图片制定最大转化计划。按照亚马逊的图片要求和最佳实践创建拍摄清单、信息图布局、生活场景简介和A/B测试计划。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Plan the listing images for my portable blender. Target audience: gym-goers and office workers. Key features: USB rechargeable, 6 blades, BPA-free, 16oz.
+为我便携式榨汁杯规划listing图片。目标受众：健身爱好者和上班族。核心特点：USB充电、6叶刀片、BPA-free、16oz。
 ```
 
-## Capabilities
+## 功能
 
-- 7-image strategy planning (main + 6 supporting images)
-- Main image optimization (white background, fill ratio, lighting)
-- Infographic layout design with callouts and feature highlights
-- Lifestyle image scene planning (target customer context)
-- Size/scale reference image planning
-- Mobile-optimized image design (readable on small screens)
-- Image A/B testing strategy
+- 7图策略规划（主图 + 6张辅图）
+- 主图优化（白底、填充比、照明）
+- 信息图布局设计，包含标注和特点高亮
+- 生活场景图片规划（目标客户场景）
+- 尺寸/比例参考图规划
+- 移动端优化图片设计（小屏幕可读）
+- 图片A/B测试策略
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Seven-Image Strategy Framework
+### 七图策略框架
 
-Amazon allows up to 9 images, but first 7 images (main + 6 secondary) are most impactful on conversion:
+亚马逊最多允许9张图片，但前7张（主图 + 6张辅图）对转化影响最大：
 
-1. **Main Image (Hero):** Must meet Amazon specs (white background, product 85%+ of frame, no text/watermark). Attracts clicks in search results and creates first impression. Lighting, angle, and composition determine appeal.
-2. **Multi-Angle View:** Show angles not visible in main (back, side, bottom, inside). Eliminates uncertainty about product appearance.
-3. **Core Benefits Infographic:** Visualize 2-3 most important benefits. Follows "one image, one benefit" principle. Key elements: concise icons, powerful short phrases, clear visual guide lines.
-4. **Functional Detail Infographic:** Deep dive into product features — material close-ups, interface details, structural breakdowns. Use annotation lines and magnification effects.
-5. **Size/Scale Reference:** Answer "how big is this really?" Show product alongside familiar objects (hand, coin, phone) or provide precise dimension diagrams.
-6. **Lifestyle Scene:** Place product in real usage context. Match scene elements and models to target audience demographics (age, gender, lifestyle). Consumers need to "see themselves" in the scene.
-7. **Packaging & Contents:** Show package design and all included accessories. Eliminate "what's inside the box" questions. Convey brand quality through premium packaging presentation.
+1. **主图（英雄图）：** 必须符合亚马逊规格（白底、产品占画面85%以上、无文字/水印）。在搜索结果中吸引点击并创造第一印象。照明、角度和构图决定吸引力。
+2. **多角度视图：** 展示主图看不到的角度（背面、侧面、底部、内部）。消除对产品外观的不确定性。
+3. **核心卖点信息图：** 可视化2-3个最重要的好处。遵循"一张图一个卖点"原则。关键元素：简洁的图标、有力的短句、清晰的视觉引导线。
+4. **功能细节信息图：** 深入展示产品特点 — 材质特写、界面细节、结构分解。使用标注线和放大效果。
+5. **尺寸/比例参考：** 回答"这个到底有多大？"将产品与常见物品（手、硬币、手机）并列展示，或提供精确尺寸图。
+6. **生活场景图：** 将产品置于真实使用场景中。场景元素和模特匹配目标受众人口统计（年龄、性别、生活方式）。消费者需要"看到自己"在场景中。
+7. **包装和内容物：** 展示包装设计和所有包含的配件。消除"盒子里有什么"的问题。通过高端包装呈现传达品牌品质。
 
-### Infographic Design Principles
+### 信息图设计原则
 
-- **Information Hierarchy:** Consumers have limited visual attention. Each infographic should effectively convey only 1-3 core points. Hierarchy: headline (largest, core benefit) → supporting text (medium, details) → data points (smallest, quantified parameters).
-- **Color Psychology:** Different colors convey different emotions. Green for eco-friendly products, dark tones/metal colors for premium products. Match color scheme to product type and target audience.
-- **Visual Guide Paths:** Use arrows, annotation lines, magnification frames to guide eye movement along designed path.
-- **Data Visualization:** Transform abstract parameters into intuitive visuals. "24-hour battery life" → circular progress graphic. "IPX7 waterproof" → underwater usage scene. "180g lightweight" → weight comparison with common objects.
+- **信息层次：** 消费者视觉注意力有限。每张信息图应有效传达仅1-3个核心点。层次：标题（最大，核心卖点） → 支持文字（中等，细节） → 数据点（最小，定量参数）。
+- **色彩心理学：** 不同颜色传达不同情感。环保产品用绿色，高端产品用深色调/金属色。配色方案需匹配产品类型和目标受众。
+- **视觉引导路径：** 使用箭头、标注线、放大框引导视线沿设计路径移动。
+- **数据可视化：** 将抽象参数转化为直观视觉。"24小时电池续航" → 圆形进度图形。"IPX7防水" → 水下使用场景。"180g轻量" → 与常见物体重量对比。
 
-### Mobile Display Optimization
+### 移动端展示优化
 
-70%+ of Amazon traffic comes from mobile, so images must be designed for phone screens:
+70%+的亚马逊流量来自移动端，因此图片必须为手机屏幕设计：
 
-- **Font Readability:** Main headlines should be at least 5% of image's shorter dimension. Ensure clarity on small screens.
-- **Vertical Composition Priority:** Phone screens are vertical. Vertical composition better utilizes screen space. Prioritize vertical aspect ratios to avoid key info being cut off.
-- **Simplified Information Density:** Each mobile infographic should convey only one core point.
-- **Thumbnail Recognizability:** Secondary images appear as thumbnails in search. Ensure each image remains recognizable when shrunk. Avoid detail-rich images as secondary images.
+- **字体可读性：** 主标题应至少占图片较短边的5%。确保在小屏幕上清晰。
+- **竖版构图优先：** 手机屏幕是竖版的。竖版构图更好地利用屏幕空间。优先使用竖版比例以避免关键信息被裁切。
+- **简化信息密度：** 每张移动端信息图只传达一个核心点。
+- **缩略图识别度：** 辅图在搜索中显示为缩略图。确保每张图片缩小时仍然可识别。避免将细节丰富的图片作为辅图。
 
-### Data Sources
+### 数据来源
 
-- User provides product type, target audience, competitive listing analysis.
-- No external data sources. Strategy based on e-commerce visual marketing best practices.
+- 用户提供产品类型、目标受众、竞品listing分析。
+- 无外部数据来源。策略基于电商视觉营销最佳实践。
 
-### Limitations
+### 局限性
 
-- Professional photography required for highest quality results.
-- Lifestyle photography may require models, locations, equipment — significant investment.
-- Amazon image requirements vary by category — must verify category-specific rules.
-- Mobile optimization may sacrifice some desktop viewing experience.
-- Image quality alone cannot compensate for poor product offering or pricing.
+- 专业摄影需要才能获得最高质量结果。
+- 生活摄影可能需要模特、场地、设备 — 大量投入。
+- 亚马逊图片要求因类目而异 — 必须验证类目特定规则。
+- 移动端优化可能牺牲部分桌面端体验。
+- 图片质量本身无法弥补产品或定价的不足。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

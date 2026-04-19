@@ -1,96 +1,95 @@
 ---
 name: amazon-brand-tailored-promotions
-description: "Brand Tailored Promotions — audience targeting, discount tiers, customer segmentation, repeat purchase incentives"
+description: "品牌定向促销 — 受众定向、折扣层级、客户细分、复购激励"
 metadata:
   nexscope:
     category: amazon
 ---
 
-# Amazon Brand Tailored Promotions
+# Amazon 品牌定向促销
 
-Brand Tailored Promotions — audience targeting, discount tiers, customer segmentation, repeat purchase incentives
+品牌定向促销 — 受众定向、折扣层级、客户细分、复购激励
 
-**Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
+**支持的平台：** Amazon（美国、英国、德国、加拿大、日本、澳大利亚及所有市场）。
 
-
-## Usage
+## 使用方法
 
 ```
-Help me with amazon brand tailored promotions for my e-commerce business.
+帮我处理亚马逊品牌定向促销。
 ```
 
-## Capabilities
+## 功能
 
-- Brand Tailored Promotions
-- audience targeting
-- discount tiers
-- customer segmentation
-- repeat purchase incentives
+- 品牌定向促销
+- 受众定向
+- 折扣层级
+- 客户细分
+- 复购激励
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Buyer Audience Segmentation Framework
+### 买家受众细分框架
 
-- **Brand Shoppers:** Buyers who purchased brand products in past 12 months. Can be split into recent buyers and repeat buyers. Lower price sensitivity — 5-10% discount may be enough for repurchase.
-- **Browse Retargeting:** Buyers who viewed brand products in past 14 days but didn't purchase. Mid-range price sensitivity.
-- **Cart Abandoners:** Buyers who added brand items to cart but didn't checkout. High conversion potential — they're close to purchase decision.
-- **Competitor Audience:** Buyers who browsed specific competitor ASINs. Higher price sensitivity — need 15-25% discount to shift brand inertia.
-- **High-Value Buyers:** Historical high-ticket purchasers. Target for loyalty programs.
-- **Holiday Shoppers:** Buyers active during specific seasonal periods.
+- **品牌购物者：** 过去12个月购买过品牌产品的买家。可细分为近期买家和复购买家。价格敏感度较低 — 5-10%的折扣可能足以驱动复购。
+- **浏览再定向：** 过去14天浏览过品牌产品但未购买的买家。价格敏感度中等。
+- **购物车放弃者：** 将品牌商品加入购物车但未结账的买家。转化潜力高 — 他们已接近购买决策。
+- **竞品受众：** 浏览过特定竞品ASIN的买家。价格敏感度较高 — 需要15-25%的折扣才能打破品牌惯性。
+- **高价值买家：** 历史高客单价购买者。会员计划目标群体。
+- **节日购物者：** 特定季节期间活跃的买家。
 
-### Discount Tiering and Margin Balance Model
+### 折扣层级与利润平衡模型
 
-- **Price Elasticity by Segment:** Brand loyalists have lower elasticity — smaller discount drives repurchase. Competitor shoppers have higher elasticity — need bigger discount for brand switch.
-- **Margin Calculation:** Calculate profit impact at each discount level. Ensure positive margin (or controlled loss for ranking/review strategy).
-- **Discount Types:** Percentage off vs fixed dollar amount. Percentage often cleaner for buyers, fixed works for lower-priced items.
-- **Minimum Discount Rules:** Amazon typically requires at least 10% off or $5 off, whichever is greater.
+- **各细分市场的价格弹性：** 品牌忠诚者弹性较低 — 较小折扣就能驱动复购。竞品购物者弹性较高 — 需要更大折扣才能转换品牌。
+- **利润计算：** 计算各折扣级别的利润影响。确保正向利润（或为排名/评论策略的有控亏损）。
+- **折扣类型：** 百分比折扣 vs 固定金额。百分比对买家通常更清晰，低价商品适合固定金额。
+- **最低折扣规则：** 亚马逊通常要求至少10%off或5美元off，取较大值。
 
-### Conversion Funnel Optimization
+### 转化漏斗优化
 
-- **Browse Stage:** Discount attracts clicks from browsers.
-- **Consideration Stage:** Discount drives add-to-cart.
-- **Purchase Stage:** Discount completes checkout.
-- **Retargeting Funnel:** Set up promotions at each key drop-off point to reduce leak rate.
+- **浏览阶段：** 折扣吸引浏览者点击。
+- **考虑阶段：** 折扣推动加入购物车。
+- **购买阶段：** 折扣完成结账。
+- **再定向漏斗：** 在各关键流失点设置促销以降低泄漏率。
 
-### Customer Lifetime Value (CLV) Maximization
+### 客户终身价值（CLV）最大化
 
-- **First-Time Buyer → Repeat:** Offer repurchase incentive to convert one-time buyers.
-- **High-Value Retention:** Exclusive discounts for top customers to boost loyalty.
-- **Win-Back Campaigns:** Target dormant customers (past purchases but no recent activity) with reactivation discounts.
-- **Cross-Sell Opportunities:** Promote complementary products to existing customers.
+- **新买家 → 复购：** 提供复购激励将一次性买家转化为重复买家。
+- **高价值留存：** 为顶级客户提供专属折扣以提升忠诚度。
+- **唤醒活动：** 以重新激活折扣定向休眠客户（有历史购买但近期无活动）。
+- **交叉销售机会：** 向现有客户推广互补产品。
 
-### Competitor Traffic Interception Strategy
+### 竞品流量拦截策略
 
-- **Target Selection:** Choose competitors with similar products but higher price, lower rating, or fewer features. These are "beatable" competitors.
-- **Discount Calibration:** Discount must overcome buyer brand inertia but not destroy margin.
-- **Timing:** Competitor audience targeting works best when competitor has active promotions or negative reviews accumulating.
+- **目标选择：** 选择有类似产品但价格更高、评分更低或功能更少的竞品。这些是"可打败"的竞品。
+- **折扣校准：** 折扣必须克服买家品牌惯性但不能破坏利润。
+- **时机：** 竞品受众定向在竞品有活跃促销或负面评论积累时效果最佳。
 
-### Data Sources
+### 数据来源
 
-- No external data sources. Based on Amazon Brand Tailored Promotions official documentation.
-- User provides brand products, customer data, target audience characteristics.
+- 无外部数据源。基于亚马逊品牌定向促销官方文档。
+- 用户提供品牌产品、客户数据、目标受众特征。
 
-### Limitations
+### 局限性
 
-- Requires Amazon Brand Registry enrollment.
-- Audience precision limited by Amazon's data dimensions. Cannot target by age group or specific geography.
-- Ad placement and frequency controlled by Amazon algorithm — no guarantee target audience sees promotions.
-- Stacking discounts (BTP + coupons + deals) may cause unexpected deep discounts.
-- Competitor targeting limited to Amazon-recognized competitors only.
-- Frequent promotions may train buyers to wait for discounts, weakening full-price sales.
+- 需要亚马逊品牌备案注册。
+- 受众精度受限于亚马逊的数据维度。无法按年龄组或特定地区定向。
+- 广告投放和频率由亚马逊算法控制 — 无法保证目标受众看到促销。
+- 折扣叠加（BTP + 优惠券 + 活动）可能导致意外深度折扣。
+- 竞品定向仅限亚马逊认可的竞品。
+- 频繁促销可能训练买家等待折扣，削弱正价销售。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

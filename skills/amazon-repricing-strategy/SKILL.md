@@ -1,52 +1,59 @@
 ---
 name: amazon-repricing-strategy
-description: "Amazon repricing strategy advisor — competitive pricing rules, Buy Box optimization, margin protection, and repricing tool selection. Builds custom repricing logic based on your goals: Buy Box win rate, margin targets, or velocity."
+description: "亚马逊重新定价策略顾问 — 竞争定价规则、购物车优化、利润保护和重新定价工具选择。基于您的目标构建自定义重新定价逻辑：购物车赢取率、利润目标或销量速度。"
 metadata:
   nexscope:
     emoji: "🔄"
     category: amazon
 ---
 
-# Amazon Repricing Strategy 🔄
+# 亚马逊重新定价策略 🔄
 
-Amazon repricing strategy advisor — competitive pricing rules, Buy Box optimization, margin protection, and repricing tool selection. Builds custom repricing logic based on your goals: Buy Box win rate, margin targets, or velocity.
+亚马逊重新定价策略顾问 — 竞争定价规则、购物车优化、利润保护和重新定价工具选择。基于您的目标构建自定义重新定价逻辑：购物车赢取率、利润目标或销量速度。
 
-**Supported platforms:** Amazon (all marketplaces — US, UK, DE, CA, JP, AU, etc.).
+**支持的平台：** 亚马逊（所有市场 — 美国、英国、德国、加拿大、日本、澳大利亚等）。
 
-
-## Usage
+## 使用方法
 
 ```
-I'm losing the Buy Box on 30% of my listings. I have 200 SKUs in electronics, price range $15-$80. Help me build a repricing strategy that wins Buy Box without destroying margins.
+我在30%的listing上失去了购物车。我有200个电子产品SKU，价格范围15-80美元。帮我建立一个能赢得购物车但不会破坏利润的重新定价策略。
 ```
 
-## Capabilities
+## 功能
 
-- Buy Box algorithm analysis: price, fulfillment, seller metrics, shipping speed weighting
-- Repricing rule design: floor/ceiling prices, competitor-based rules, velocity-based adjustments
-- Margin protection: minimum margin guardrails, break-even price floors, fee-aware pricing
-- Competitive landscape assessment: number of sellers, FBA vs FBM mix, pricing patterns
-- Repricing tool comparison: Amazon Automate Pricing vs third-party (RepricerExpress, Informed, BQool, Aura)
-- Scenario-specific strategies: private label, wholesale, arbitrage, seasonal products
-- Buy Box win rate optimization: identify which factors are costing you the Box
-- Time-based repricing: peak hours, day-of-week patterns, seasonal adjustments
+- 购物车算法分析：价格、履约、卖家指标、发货速度权重
+- 重新定价规则设计：最低/最高价格、基于竞争对手的规则、基于速度的调整
+- 利润保护：最低利润 guardrails、保本价格底线、费用感知定价
+- 竞争格局评估：卖家数量、FBA vs FBM比例、定价模式
+- 重新定价工具比较：亚马逊自动定价 vs 第三方（RepricerExpress、Informed、BQool、Aura）
+- 场景特定策略：自有品牌、批发、套利、季节性产品
+- 购物车赢取率优化：识别哪些因素让您失去购物车
+- 基于时间的重新定价：高峰时段、一周中的日期模式、季节性调整
 
-## How This Skill Works
+## 工作流程
 
-**Step 1:** Collect seller details — number of SKUs, categories, current Buy Box win rate, fulfillment method, average margin, pricing range, current repricing approach.
+**第一步：** 收集卖家详情 — SKU数量、类目、当前购物车赢取率、履约方式、平均利润、定价范围、当前重新定价方法。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 使用多项选择题格式提出一个后续问题。允许简写回答（例如"1b 2c 3a"）。
 
-**Step 3:** Analyze the competitive landscape and design repricing rules tailored to the seller's goals and product mix.
+**第三步：** 使用以下框架和方法论进行研究分析。
 
-**Step 4:** Deliver a complete repricing strategy with specific rules, tool recommendations, and implementation steps.
+**购物车算法价格权重机制：** 亚马逊购物车归属算法是多因素评分系统，价格是最重要权重因子之一，但非唯一因素。算法综合评估：售价、配送方式（FBA优于FBM）、配送速度、卖家反馈评分、订单缺陷率（ODR）、准时发货率、库存充足率。理解机制：有时小幅提价加上FBA保障，比拼最低价更能保护利润。
 
-## Output Format
+**地板/天花板定价规则：** 地板价应基于产品盈亏平衡点计算，确保任何情况下不会亏本销售。天花板价基于市场承受能力和竞品定价确定。地板价计算必须考虑所有成本项（商品成本、佣金、FBA费用、广告分摊、退货分摊等），而非仅扣除商品成本。
 
-- Current state diagnosis: Buy Box win rate issues, margin analysis, competitive position
-- Repricing rules: specific logic for each product segment (floor, ceiling, match/beat rules)
-- Tool recommendation with setup instructions
-- Implementation timeline: phased rollout to minimize risk
-- KPIs to track: Buy Box %, margin %, velocity, revenue impact
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+**竞争响应规则设计：** 针对不同类型竞争对手制定差异化响应策略。对于FBA竞争对手，由于配送优势可能需要更激进价格跟进；对于FBM竞争对手，可采用"仅通知不跟进"策略。还需区分"值得争夺的对手"（信誉好、评分高、库存充足）和"不值得浪费精力应对的对手"（即将断货、评分极低、即将退出市场）。
+
+**速度与时间维度调价：** 高峰购物时段（工作日晚间和周末）消费者价格敏感度较低，可适当维持较高售价；竞争者较少时段（深夜和清晨），适度降价可能以较小代价赢取购物车。季节性产品还需考虑旺季前蓄水期定价和旺季高峰利润最大化定价之间的节奏配合。
+
+**第四步：** 提供完整的重新定价策略，包含具体规则、工具建议和实施步骤。
+
+## 输出格式
+
+- 当前状态诊断：购物车赢取率问题、利润分析、竞争位置
+- 重新定价规则：每个产品细分的具体逻辑（底价、顶价、匹配/击败规则）
+- 工具建议及设置说明
+- 实施时间线：分阶段推出以最小化风险
+- 跟踪的KPI：购物车%、利润%、速度、收入影响
+- 当基于不完整数据时用⚠️标记估计值
+- 以具体的后续步骤结束

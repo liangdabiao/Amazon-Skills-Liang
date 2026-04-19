@@ -1,240 +1,240 @@
 ---
 name: amazon-one-shot
-description: "Deep-dive Amazon product research in one shot. Analyze any ASIN with 9 comprehensive reports: product info extraction, keyword research, competitor analysis, review deep analysis (login required for best results), sales/revenue estimation, listing optimization audit, image strategy, reusable listing templates, and product selection feasibility score. Use this skill whenever the user provides an Amazon ASIN, product URL, or says 'deep research' / 'deep analysis' / '调研' / '深度调研' / 'product research' / '选品分析' about an Amazon product. Also triggers for phrases like 'analyze this product', 'what do you think of this listing', 'competitive analysis', 'review analysis', or any request involving Amazon product intelligence."
+description: "一站式深度亚马逊产品调研。分析任意ASIN，生成9份综合报告：产品信息提取、关键词研究、竞品分析、评论深度分析（需要登录以获得最佳结果）、销售/收入估算、listing优化审计、图片策略、可复用的listing模板和产品选品可行性评分。当用户提供亚马逊ASIN、产品URL或说'深度调研'/'深度分析'/'调研'/'product research'/'选品分析'时使用此技能。也适用于'analyze this product'、'what do you think of this listing'、'competitive analysis'、'review analysis'等短语，或任何涉及亚马逊产品情报的请求。"
 ---
 
-# Amazon One-Shot Product Research
+# 亚马逊一站式产品调研
 
-One-shot comprehensive Amazon product analysis. Generates 9 reports for any ASIN.
+一站式综合亚马逊产品分析。为任意ASIN生成9份报告。
 
-## Workflow Overview
+## 工作流程概述
 
-**Phase 1: Data Collection** — Scrape target product + competitors via Playwright
-**Phase 2: Report Generation** — Write 9 markdown reports to a timestamped directory
+**第一阶段：数据收集** — 通过Playwright抓取目标产品和竞争对手
+**第二阶段：报告生成** — 将9份markdown报告写入带时间戳的目录
 
-## Phase 1: Data Collection
+## 第一阶段：数据收集
 
-### Step 1: Extract Target Product Info
+### 第一步：提取目标产品信息
 
-Navigate to `https://www.amazon.com/dp/{ASIN}` and extract:
-
-```
-Use browser_evaluate() to extract:
-- Title (document.getElementById('productTitle'))
-- Price (.a-price-whole + .a-price-fraction) — NOTE: may display in CNY
-- Rating (#acrCustomerReviewText, .a-icon-star .a-icon-alt)
-- Review count (#acrCustomerReviewText)
-- Brand (#bylineInfo)
-- Bullets (#feature-bullets ul li span) — all 5
-- Image count (#altImages img count, exclude video thumbnails)
-- Has A+ content (querySelector('#aplus') || querySelector('.aplus-v2'))
-- A+ text (#aplus_feature_div innerText, first 1500 chars)
-- Reviews ([data-hook="review-body"] first 10 reviews, first 200 chars each)
-- BSR and category info from product detail tables
-- Star distribution (86% 7% 2% 1% 4% pattern from histogram)
-- Product details tables (all table.productDetails, table.a-keyvalue)
-- Breadcrumb path (#wayfinding-breadcrumbs_container a)
-- Important info/warnings (#importantInformation_feature_div)
-- Byline/brand store link (#bylineInfo)
-```
-
-### Step 2: Keyword Research
-
-For the target product, navigate to Amazon search with 5+ keyword variations:
+导航到 `https://www.amazon.com/dp/{ASIN}` 并提取：
 
 ```
-Search keywords to use (derive from product title + category):
-1. "{main_keyword} toy" (e.g., "buzz lightyear toy")
-2. "{main_keyword} action figure"
-3. "{brand} {main_keyword}" (e.g., "disney toy story figure")
-4. "{main_keyword} talking toy {size}" 
-5. "{brand} {category} interactive toy gift kids"
-
-For each search, record:
-- Total search results count (bodyText.match(/共([\d,]+)条/))
-- Top 10 product titles with prices (.a-price .a-offscreen)
-- This gives competition density and price range data
+使用 browser_evaluate() 提取：
+- 标题 (document.getElementById('productTitle'))
+- 价格 (.a-price-whole + .a-price-fraction) — 注意：可能以CNY显示
+- 评分 (#acrCustomerReviewText, .a-icon-star .a-icon-alt)
+- 评论数 (#acrCustomerReviewText)
+- 品牌 (#bylineInfo)
+- 五点 (#feature-bullets ul li span) — 全部5条
+- 图片数量 (#altImages img count，排除视频缩略图)
+- 是否有A+内容 (querySelector('#aplus') || querySelector('.aplus-v2'))
+- A+文本 (#aplus_feature_div innerText，前1500字符)
+- 评论 ([data-hook="review-body"] 前10条评论，每条前200字符)
+- BSR和来自产品详情表格的类目信息
+- 星级分布（86% 7% 2% 1% 4% 直方图模式）
+- 产品详情表格（所有table.productDetails、table.a-keyvalue）
+- 面包屑路径 (#wayfinding-breadcrumbs_container a)
+- 重要信息/警告 (#importantInformation_feature_div)
+- Byline/品牌店铺链接 (#bylineInfo)
 ```
 
-### Step 3: Find Competitors
+### 第二步：关键词研究
 
-From the first search results page:
-
-```
-Use browser_evaluate() to extract:
-- All product links: document.querySelectorAll('a[href*="/dp/"]')
-- Extract ASIN from href: href.match(/\/dp\/([A-Z0-9]+)/)
-- Match titles to find top 3-4 direct competitors (same category, similar function)
-```
-
-Then navigate to each competitor ASIN page and extract the same data as Step 1 (title, price, rating, review count, bullets, BSR, A+ type, product details tables).
-
-### Step 4: Review Analysis (Enhanced with Login)
-
-If logged in, navigate to review pages by star rating:
+针对目标产品，导航到5+个关键词变体的亚马逊搜索：
 
 ```
-1-star reviews: /product-reviews/{ASIN}?filterByStar=one_star&sortBy=helpful
-2-star reviews: /product-reviews/{ASIN}?filterByStar=two_star&sortBy=helpful
-3-star reviews: /product-reviews/{ASIN}?filterByStar=three_star&sortBy=recent
-Latest reviews: /product-reviews/{ASIN}?sortBy=recent
+使用的搜索关键词（从产品标题和类目派生）：
+1. "{主关键词} toy"（例如 "buzz lightyear toy"）
+2. "{主关键词} action figure"
+3. "{品牌} {主关键词}"（例如 "disney toy story figure"）
+4. "{主关键词} talking toy {尺寸}"
+5. "{品牌} {类目} interactive toy gift kids"
 
-Extract from each page:
-- Review body ([data-hook="review-body"] span)
-- Date ([data-hook="review-date"])
-- Format/variant ([data-hook="format-strip"]) — CRITICAL: identifies which product variant the review is about
-- Verified purchase ([data-hook="avp-badge"])
-- Helpful votes ([data-hook="helpful-vote-statement"])
-
-Target: 10 reviews per star level (1-star, 2-star, 3-star) + 10 most recent = 40 total reviews
+对于每个搜索，记录：
+- 总搜索结果数 (bodyText.match(/共([\d,]+)条/))
+- 前10个产品标题及价格 (.a-price .a-offscreen)
+- 这给出了竞争密度和价格范围数据
 ```
 
-**If NOT logged in:** Extract reviews from the product detail page directly (usually 8-15 reviews visible). Note this limitation in the report.
+### 第三步：寻找竞争对手
 
-### Step 5: Image Analysis
+从第一个搜索结果页面：
 
 ```
-From the product page:
-- Count all images (#altImages img, exclude video thumbnails with .SS40 or .SX in URL)
-- Note video presence
-- Take screenshots of the product page top section for visual reference
-- Record image URLs and alt text
+使用 browser_evaluate() 提取：
+- 所有产品链接：document.querySelectorAll('a[href*="/dp/"]')
+- 从href中提取ASIN：href.match(/\/dp\/([A-Z0-9]+)/)
+- 匹配标题以找到前3-4个直接竞争对手（相同类目、相似功能）
 ```
 
-## Phase 2: Report Generation
+然后导航到每个竞争对手ASIN页面，提取与第一步相同的数据（标题、价格、评分、评论数、五点、BSR、A+类型、产品详情表格）。
 
-Save all reports to `reports/{YYYY-MM-DD}_{ASIN}/` directory.
+### 第四步：评论分析（需要登录增强版）
 
-### Report 1: Product Overview (`01_product_info.md`)
+如果已登录，导航到按星级筛选的评论页面：
 
-Structure:
-- Basic info table (ASIN, title, brand, price, CNY + USD estimate ÷7.26, rating, review count, BSR, category path)
-- 5 bullet points (full text)
-- A+ content summary
-- Product details tables (material, dimensions, weight, battery, age range, UPC, model number)
-- Important warnings
-- Image count + video info
+```
+1星评论：/product-reviews/{ASIN}?filterByStar=one_star&sortBy=helpful
+2星评论：/product-reviews/{ASIN}?filterByStar=two_star&sortBy=helpful
+3星评论：/product-reviews/{ASIN}?filterByStar=three_star&sortBy=recent
+最新评论：/product-reviews/{ASIN}?sortBy=recent
 
-### Report 2: Keyword Research (`02_keyword_research.md`)
+从每个页面提取：
+- 评论正文 ([data-hook="review-body"] span)
+- 日期 ([data-hook="review-date"])
+- 格式/变体 ([data-hook="format-strip"]) — 关键：识别评论是关于哪个产品变体的
+- 已验证购买 ([data-hook="avp-badge"])
+- 有帮助投票 ([data-hook="helpful-vote-statement"])
 
-Structure:
-- Keyword search volume table (keyword, result count, competition density, our ranking)
-- High commercial intent keywords
-- Long-tail opportunity keywords (low results = high opportunity)
-- Competition landscape (brand distribution, price range analysis)
-- Seasonal trends (Q4 peak 55-65%, Prime Day, Black Friday)
-- Market opportunity score (1-10, explain reasoning)
-- Selection recommendation
+目标：每个星级（1星、2星、3星）10条评论 + 10条最新评论 = 40条总评论
+```
 
-### Report 3: Competitor Analysis (`03_competitor_analysis.md`)
+**如果未登录：** 直接从产品详情页面提取评论（通常可见8-15条评论）。在报告中注明此限制。
 
-Structure:
-- Competitor overview table (ASIN, brand, price, size, reviews, rating, BSR, weight, battery, material)
-- Listing quality comparison (title, bullets, images, A+)
-- BSR ranking comparison with visual bar chart
-- Review volume and market share estimation
-- Price positioning map
-- Review sentiment comparison
-- Differentiation strategy summary
-- Competitive landscape conclusion (pyramid)
-- Selection recommendation
+### 第五步：图片分析
 
-### Report 4: Review Deep Analysis (`04_review_analysis.md`)
+```
+从产品页面：
+- 统计所有图片 (#altImages img，排除URL中含.SS40或.SX的视频缩略图)
+- 记录视频存在情况
+- 截取产品页面上部截图作为视觉参考
+- 记录图片URL和alt文本
+```
 
-Structure:
-- Star distribution (86/7/2/1/4) with calculation verification
-- Positive theme word frequency ranking
-- Negative theme word frequency ranking
-- 1-star review root cause analysis (with direct quotes)
-- 2-star review root cause analysis
-- 3-star review root cause analysis
-- Product variant quality breakdown (which variant has most issues)
-- Buyer persona analysis (identity %, use cases, geography)
-- Recent trend analysis (2026 latest reviews)
-- UGC mining (marketing copy extracted from real reviews)
-- Product improvement priority matrix (P0/P1/P2)
-- Shared review pool discovery (if detected)
+## 第二阶段：报告生成
 
-### Report 5: Sales & Revenue Estimation (`05_sales_revenue.md`)
+将所有报告保存到 `reports/{YYYY-MM-DD}_{ASIN}/` 目录。
 
-Structure:
-- FBA fee calculation (size tier, fulfillment fee, commission, storage, total Amazon fees)
-- Profit analysis (gross profit, net profit, margin %, ROI)
-- Monthly sales estimation based on BSR (conservative/medium/optimistic)
-- Single product vs series breakdown (if shared review pool detected)
-- Annual revenue estimation
-- Comment growth verification method
-- Seasonal sales distribution (Q1-Q4)
-- Key sales events (Prime Day, Black Friday, Christmas)
-- Selection financial feasibility summary
+### 报告1：产品概览 (`01_product_info.md`)
 
-### Report 6: Listing Optimization Audit (`06_listing_optimization.md`)
+结构：
+- 基本信息表（ASIN、标题、品牌、价格、CNY + 美元估算÷7.26、评分、评论数、BSR、类目路径）
+- 5条五点（完整文本）
+- A+内容摘要
+- 产品详情表格（材质、尺寸、重量、电池、年龄范围、UPC、型号）
+- 重要警告
+- 图片数量 + 视频信息
 
-Structure:
-- 8-dimension audit score table (title/15, bullets/15, images/15, A+/10, description/10, pricing/10, reviews/15, SEO/10)
-- Title analysis (keyword coverage, length optimization, missing terms)
-- Bullet analysis (structure assessment, keyword embedding, improvement suggestions)
-- Image assessment (current count, missing types, competitor comparison)
-- A+ content evaluation (custom vs template, narrative style)
-- SEO keyword coverage matrix (which keywords appear where, gaps)
-- Gap analysis (before/after optimization suggestions)
-- Reusable strategies extracted
+### 报告2：关键词研究 (`02_keyword_research.md`)
 
-### Report 7: Image Strategy (`07_image_strategy.md`)
+结构：
+- 关键词搜索量表（关键词、结果数、竞争密度、我们的排名）
+- 高商业意图关键词
+- 长尾机会关键词（低结果 = 高机会）
+- 竞争格局（品牌分布、价格范围分析）
+- 季节性趋势（Q4高峰55-65%、会员日、黑五）
+- 市场机会评分（1-10，说明理由）
+- 选品建议
 
-Structure:
-- Current image configuration summary
-- Per-image evaluation (content, quality, score, what's missing)
-- Video evaluation
-- 8-dimension image scoring
-- Missing image types identified (size comparison, infographic, lifestyle, what's-in-box, interaction demo, competitor comparison)
-- Shooting checklist (7 images + 2 videos recommended, with specific requirements)
-- Photography notes based on common review complaints
+### 报告3：竞品分析 (`03_competitor_analysis.md`)
 
-### Report 8: Listing Templates (`08_listing_templates.md`)
+结构：
+- 竞争对手概览表（ASIN、品牌、价格、尺寸、评论数、评分、BSR、重量、电池、材质）
+- Listing质量比较（标题、五点、图片、A+）
+- BSR排名比较与可视化条形图
+- 评论量和市场份额估算
+- 价格定位图
+- 评论情感比较
+- 差异化策略总结
+- 竞争格局结论（金字塔）
+- 选品建议
 
-Structure:
-- Title template extraction (formula from Disney's title structure)
-- Bullet template extraction (functional progression structure)
-- A+ Content template extraction (first-person narrative structure)
-- Backend search terms suggestion
-- Universal template (can be adapted for any interactive toy/product)
-- Writing rules summary
+### 报告4：评论深度分析 (`04_review_analysis.md`)
 
-### Report 9: Final Assessment (`09_final_assessment.md`)
+结构：
+- 星级分布（86/7/2/1/4）及计算验证
+- 正面主题词频排名
+- 负面主题词频排名
+- 1星评论根因分析（带直接引用）
+- 2星评论根因分析
+- 3星评论根因分析
+- 产品变体质量细分（哪个变体问题最多）
+- 买家画像分析（身份%、使用场景、地区）
+- 近期趋势分析（2026最新评论）
+- UGC挖掘（从真实评论中提取的营销文案）
+- 产品改进优先级矩阵（P0/P1/P2）
+- 共享评论池发现（如果检测到）
 
-Structure:
-- Market attractiveness matrix (8 dimensions scored 1-10)
-- SWOT analysis (strengths, weaknesses, opportunities, threats)
-- Product selection scoring card for 3 strategies:
-  - Same-IP competitor (usually not feasible)
-  - Non-IP interactive product
-  - Accessories/peripherals
-- Each strategy: feasibility, expected monthly profit, entry cost, recommendation score
-- Top 5 learnings from this product (regardless of whether you enter this market)
-- MVP suggestion if entering
-- Risk warnings
-- Report index (all 9 reports listed)
+### 报告5：销售与收入估算 (`05_sales_revenue.md`)
 
-## Important Implementation Notes
+结构：
+- FBA费用计算（尺寸层级、履约费、佣金、仓储、总亚马逊费用）
+- 利润分析（毛利润、净利润、利润率%、投资回报率）
+- 基于BSR的月销量估算（保守/中等/乐观）
+- 单品 vs 系列细分（如果检测到共享评论池）
+- 年收入估算
+- 评论增长验证方法
+- 季节性销售分布（Q1-Q4）
+- 关键销售事件（会员日、黑五、圣诞节）
+- 选品财务可行性总结
 
-1. **CNY Pricing:** Amazon may display prices in CNY. Divide by ~7.26 for USD estimate. Always note both values.
+### 报告6：Listing优化审计 (`06_listing_optimization.md`)
 
-2. **Shared Review Pool:** Disney/publisher products may share reviews across variants. Check if review count and BSR are nearly identical across ASINs. Check `format: 样式:` tag in reviews to identify which variant each review is about.
+结构：
+- 8维度审计评分表（标题/15、五点/15、图片/15、A+/10、描述/10、定价/10、评论/15、SEO/10）
+- 标题分析（关键词覆盖、长度优化、缺失术语）
+- 五点分析（结构评估、关键词嵌入、改进建议）
+- 图片评估（当前数量、缺失类型、竞争对手比较）
+- A+内容评估（自定义 vs 模板、叙事风格）
+- SEO关键词覆盖矩阵（哪些关键词出现在哪里，差距）
+- 差距分析（优化前后建议）
+- 提取的可复用策略
 
-3. **Browser Limitations:** 
-   - If product details tables don't load on first try, scroll down and wait 3 seconds, then retry
-   - Review pages require login — if not logged in, extract from product page only and note the limitation
-   - Amazon may redirect to login/captcha — wait and retry
-   - Google Trends may not be accessible — use general knowledge for seasonal trends
+### 报告7：图片策略 (`07_image_strategy.md`)
 
-4. **Error Recovery:**
-   - If page returns empty product data, wait 3 seconds and retry
-   - If navigation is blocked by captcha, close browser, reopen, and continue
-   - If review pages redirect to login, try the product page reviews section instead
+结构：
+- 当前图片配置总结
+- 每张图片评估（内容、质量、评分、缺失内容）
+- 视频评估
+- 8维度图片评分
+- 识别的缺失图片类型（尺寸对比、信息图、生活方式、开箱内容、互动演示、竞争对手比较）
+- 拍摄清单（建议7张图片 + 2个视频，含具体要求）
+- 基于常见评论投诉的摄影备注
 
-5. **Language:** The skill works on Chinese locale Amazon pages (text in Chinese). All report output should be in Chinese.
+### 报告8：Listing模板 (`08_listing_templates.md`)
 
-6. **Output:** Save all 9 reports as markdown files to `reports/{YYYY-MM-DD}_{ASIN}/` directory. Use the session's working directory as the base for the `reports/` path.
+结构：
+- 标题模板提取（从Disney标题结构得出的公式）
+- 五点模板提取（功能递进结构）
+- A+内容模板提取（第一人称叙事结构）
+- 后台搜索词建议
+- 通用模板（可适应任何互动玩具/产品）
+- 写作规则总结
 
-7. **Tone:** Objective, data-driven analysis. Present facts and numbers clearly. Use tables extensively. Include direct review quotes where relevant. Mark estimates with ⚠️.
+### 报告9：最终评估 (`09_final_assessment.md`)
+
+结构：
+- 市场吸引力矩阵（8个维度各1-10分）
+- SWOT分析（优势、劣势、机会、威胁）
+- 三种策略的产品选品评分卡：
+  - 同IP竞争对手（通常不可行）
+  - 非IP互动产品
+  - 配件/外设
+- 每种策略：可行性、预期月利润、入场成本、建议评分
+- 从该产品中学到的Top 5（无论是否进入该市场）
+- 如果进入的MVP建议
+- 风险警告
+- 报告索引（列出全部9份报告）
+
+## 重要实施说明
+
+1. **人民币定价：** 亚马逊可能以人民币显示价格。除以~7.26得到美元估算。始终注明两个值。
+
+2. **共享评论池：** Disney/出版商产品可能在变体间共享评论。检查ASIN间的评论数和BSR是否几乎相同。检查评论中的`样式:`标签以识别每条评论是关于哪个变体的。
+
+3. **浏览器限制：**
+   - 如果产品详情表格首次未加载，向下滚动并等待3秒，然后重试
+   - 评论页面需要登录 — 如果未登录，只从产品页面提取并在报告中注明限制
+   - 亚马逊可能重定向到登录/captcha — 等待并重试
+   - 谷歌趋势可能无法访问 — 使用一般知识判断季节性趋势
+
+4. **错误恢复：**
+   - 如果页面返回空产品数据，等待3秒并重试
+   - 如果导航被captcha阻止，关闭浏览器，重新打开，然后继续
+   - 如果评论页面重定向到登录，尝试产品页面的评论部分
+
+5. **语言：** 该技能适用于中文语言环境亚马逊页面（文本为中文）。所有报告输出应为中文。
+
+6. **输出：** 将所有9份报告保存为markdown文件到 `reports/{YYYY-MM-DD}_{ASIN}/` 目录。使用会话的工作目录作为 `reports/` 路径的基础。
+
+7. **语气：** 客观、数据驱动的分析。清晰呈现事实和数据。广泛使用表格。在相关处包含直接评论引用。用⚠️标记估计值。

@@ -1,88 +1,87 @@
 ---
 name: amazon-a-plus-content
-description: "Plan and create Amazon A+ Content (Enhanced Brand Content). Design module layouts, write persuasive copy, plan comparison charts, and create image briefs that convert browsers into buyers."
+description: "规划和创建亚马逊A+内容（增强品牌内容）。设计模块布局、撰写有说服力的文案、规划对比图表，并创建能将浏览者转化为买家的图片简报。"
 metadata:
   nexscope:
     emoji: "🎨"
     category: amazon
 ---
 
-# Amazon A+ Content 🎨
+# Amazon A+内容 🎨
 
-Plan and create Amazon A+ Content (Enhanced Brand Content). Design module layouts, write persuasive copy, plan comparison charts, and create image briefs that convert browsers into buyers.
+规划和创建亚马逊A+内容（增强品牌内容）。设计模块布局、撰写有说服力的文案、规划对比图表，并创建能将浏览者转化为买家的图片简报。
 
-**Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
+**支持的平台：** Amazon、Shopify、WooCommerce、Walmart、TikTok Shop、Etsy、eBay、BigCommerce。
 
-
-## Usage
+## 使用方法
 
 ```
-Create an A+ Content plan for my premium stainless steel water bottle on Amazon. Key features: double-wall insulation, leak-proof lid, 3 sizes.
+为我在亚马逊上的高端不锈钢水壶创建A+内容计划。关键特点：双层保温、防漏盖、3个尺寸。
 ```
 
-## Capabilities
+## 功能
 
-- A+ module selection and layout planning (up to 7 modules)
-- Persuasive copy writing for each module
-- Comparison chart design (your product vs alternatives)
-- Image brief generation for designers (dimensions, content, style)
-- Brand story module optimization
-- Mobile-first design recommendations
-- A/B testing strategy for A+ content
+- A+模块选择和布局规划（最多7个模块）
+- 每个模块的有说服力文案撰写
+- 对比图表设计（你的产品 vs 替代品）
+- 面向设计师的图片简报生成（尺寸、内容、风格）
+- 品牌故事模块优化
+- 移动优先设计建议
+- A+内容A/B测试策略
 
-## How This Skill Works
+## 工作原理
 
-**Step 1:** Collect information from the user's message — product, platform, current situation, and goals.
+**第一步：** 从用户消息中收集信息 — 产品、平台、当前状况和目标。
 
-**Step 2:** Ask one follow-up with all remaining questions using multiple-choice format. Allow shorthand answers (e.g., "1b 2c 3a").
+**第二步：** 用多选格式一次性提出所有后续问题。允许简写回答（如"1b 2c 3a"）。
 
-**Step 3:** Research and analyze using the frameworks and methodology below.
+**第三步：** 使用下方的框架和方法论进行研究分析。
 
-### Module Layout Design System
+### 模块布局设计系统
 
-- **Attention Capture Module:** First screen of A+ must capture attention immediately. Use full-width image or standard image module with strong brand statement or core value proposition. F-shaped reading pattern means most important info goes top-left.
-- **Trust Building Module:** Brand story module for brand values, technical advantage module for engineering details, quality certification module for third-party endorsements.
-- **Needs Matching Module:** Scene display and usage guide modules to help consumers match product features with their needs.
-- **Comparison Guidance Module:** Product comparison chart module to structurally compare your product vs competitors or variants.
+- **注意力捕获模块：** A+第一屏必须立即捕获注意力。使用全宽图片或标准图片模块，配以强有力的品牌声明或核心价值主张。F型阅读模式意味着最重要的信息放在左上角。
+- **信任建立模块：** 品牌故事模块展示品牌价值观、技术优势模块展示工程细节、质量认证模块展示第三方背书。
+- **需求匹配模块：** 场景展示和使用指南模块帮助消费者将产品特点与需求匹配。
+- **对比指导模块：** 产品对比图表模块从结构上对比你的产品 vs 竞品或变体。
 
-### Persuasive Copy Engineering
+### 有说服力文案工程
 
-- **F-Scan Reading Optimization:** Place most important info where eyes scan first (headers, top-left area). Use bold and color to guide reading path.
-- **Feature-Advantage-Benefit Framework:** Each module follows: Feature ("304 stainless steel") → Advantage ("corrosion resistant, won't rust") → Benefit ("no food safety concerns, lasts for years").
-- **Emotional Resonance Triggers:** Evoke desired usage scenarios to inspire purchase desire.
-- **Action Guidance:** Plant CTA statements at key points to guide purchase behavior.
+- **F扫描阅读优化：** 将最重要的信息放在眼睛首先扫描的位置（标题、左上区域）。使用粗体和颜色引导阅读路径。
+- **特点-优势-利益框架：** 每个模块遵循：特点（"304不锈钢"）→ 优势（"耐腐蚀、不生锈"）→ 利益（"无食品安全顾虑、使用多年"）。
+- **情感共鸣触发器：** 唤起理想的使用场景以激发购买欲望。
+- **行动指导：** 在关键点植入CTA声明以引导购买行为。
 
-### Comparison Chart Design Logic
+### 对比图表设计逻辑
 
-- **Dimension Selection:** Choose dimensions that highlight your differentiated advantages, not just listing parameters.
-- **Visual Symbol System:** Use consistent symbols (checkmarks, X marks, stars) so consumers understand conclusions in one second.
-- **Fairness Balance:** Maintain objective comparison to build credibility while highlighting your advantages.
+- **维度选择：** 选择能突出你差异化优势的维度，而不仅仅是listing参数。
+- **视觉符号系统：** 使用一致的符号（勾选、X标记、星号），让消费者一秒理解结论。
+- **公平平衡：** 保持客观对比以建立可信度，同时突出你的优势。
 
-### Mobile-First Design Strategy
+### 移动优先设计策略
 
-- **Font Readability:** Set minimum font size recommendations for phone screens.
-- **Information Density Control:** Limit info density per module for small screens.
-- **Touch Interaction Adaptation:** Ensure interactive elements have sufficient click area.
+- **字体可读性：** 为手机屏幕设置最小字体大小建议。
+- **信息密度控制：** 限制每个模块在小屏幕上的信息密度。
+- **触摸交互适配：** 确保交互元素有足够的点击区域。
 
-### Data Sources
+### 数据来源
 
-- No external data sources. Based on Amazon A+ Content module specifications and e-commerce design best practices.
-- User provides product features, competitor ASINs (optional), and brand info.
+- 无外部数据源。基于亚马逊A+内容模块规格和电商设计最佳实践。
+- 用户提供产品特点、竞品ASIN（可选）和品牌信息。
 
-### Limitations
+### 局限性
 
-- A+ module availability depends on seller brand registry status and premium A+ sales thresholds.
-- A+ content cannot compensate for poor product competitiveness or pricing.
-- Design briefs may differ from final visual presentation. Preview recommended.
-- Complex layouts may be limited by Amazon A+ editor capabilities.
-- A/B test results require sufficient traffic for statistical significance.
+- A+模块可用性取决于卖家品牌备案状态和高级A+销售阈值。
+- A+内容无法弥补产品竞争力不足或定价问题。
+- 设计简报可能与最终视觉呈现不同。建议预览。
+- 复杂布局可能受亚马逊A+编辑器功能限制。
+- A/B测试结果需要足够流量才能具有统计显著性。
 
-**Step 4:** Deliver structured, actionable output with specific recommendations, not vague advice.
+**第四步：** 提供结构化、可执行的输出，包含具体建议，而非模糊指导。
 
-## Output Format
+## 输出格式
 
-- Start with a summary of findings
-- Include specific data points and benchmarks where available
-- Provide prioritized action items
-- Mark estimates with ⚠️ when based on incomplete data
-- End with concrete next steps
+- 先给出发现总结
+- 包含具体数据点和基准（若有）
+- 提供优先排序的行动项
+- 基于不完整数据的估算需标注 ⚠️
+- 以具体的后续步骤结尾

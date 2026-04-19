@@ -142,15 +142,7 @@ amazon-[skill-name]/
 | **脚本驱动型** | 含Python/Bash脚本，提供实际计算和数据采集能力 | fba-calculator, keyword-research, tariff-calculator |
 | **Prompt驱动型** | 纯AI策略指导，依赖公开数据和用户输入 | listing-optimization, ppc-campaign, sales-estimator |
 
-### 安装方式
 
-```bash
-# 安装全部技能
-npx skills add nexscope-ai/Amazon-Skills -g
-
-# 安装单个技能
-npx skills add nexscope-ai/Amazon-Skills --skill amazon-fba-calculator -g
-```
 
 ## 数据来源说明
 

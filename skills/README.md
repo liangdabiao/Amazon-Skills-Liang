@@ -1,8 +1,6 @@
 ![Amazon Skills Banner](./banner.png)
 
-# 🔍 Amazon Skills by Nexscope
-
-[![GitHub stars](https://img.shields.io/github/stars/nexscope-ai/Amazon-Skills?style=social)](https://github.com/nexscope-ai/Amazon-Skills)
+# 🔍 Amazon Skills  Liang
 
 > ⭐ If you find these skills useful, please star the repo — it helps others discover it!
 
@@ -18,7 +16,7 @@ Works with **OpenClaw**, **Claude Code**, **Cursor**, **Windsurf**, **Codex**, a
 
 | Skill | Description | Status |
 |-------|-------------|--------|
-| [**amazon-one-shot**](./amazon-one-shot/) | **One-shot comprehensive product research. Provide one ASIN → get 9 professional reports: product info extraction, keyword research, competitor analysis, review deep analysis, sales/revenue estimation, listing optimization audit, image strategy, reusable listing templates, and product selection feasibility score.** Powered by Playwright browser automation — scrapes Amazon pages in real-time, no API key needed. [→ Full README](./amazon-one-shot/README.md) | ✅ Available |
+| [**amazon-one-shot**](../skills/amazon-one-shot/) | **One-shot comprehensive product research. Provide one ASIN → get 9 professional reports: product info extraction, keyword research, competitor analysis, review deep analysis, sales/revenue estimation, listing optimization audit, image strategy, reusable listing templates, and product selection feasibility score.** Powered by Playwright browser automation — scrapes Amazon pages in real-time, no API key needed. [→ Full README](../skills/amazon-one-shot/README.md) | ✅ Available |
 | [**amazon-category-research**](../skills/amazon-category-research/SKILL.md) | **Category-level deep research. Provide an Amazon Best Sellers URL → get 5 professional reports: niche analysis, competitor landscape, keyword SEO strategy, profit analysis, and a 9-chapter comprehensive report.** Scrapes main Top 30 + 5 subcategories Top 20 (130 products total) via Playwright. 4 analysis agents run in parallel. Reports saved to `reports/{category-slug}/`. Verified: Toys & Games, Building & Construction Toys. | ✅ Available |
 | [**amazon-store-research**](../skills/amazon-store-research/SKILL.md) | **Store-level deep research. Provide an Amazon Stores URL → get 5 professional reports: product portfolio, competitive positioning, revenue estimation, growth strategy, and an 8-chapter comprehensive report.** Scrapes home page, Best Sellers, New Releases, and all theme collection pages. 4 analysis agents run in parallel. Reports saved to `reports/{store-slug}/`. Verified: JMBricklayer. | ✅ Available |
 

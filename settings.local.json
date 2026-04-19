@@ -25,7 +25,11 @@
       "Read(//c/Users/49707/.claude/plugins/cache/claude-plugins-official/skill-creator/bb7730114d87/skills/**)",
       "Read(//c/Users/49707/.claude/skills/**)",
       "Bash(mv \"D:/Amazon-Skills-n/reports/toys_games_\"* \"D:/Amazon-Skills-n/reports/toys-and-games/\")",
-      "Bash(mv \"D:/Amazon-Skills-n/reports/building_toys_\"* \"D:/Amazon-Skills-n/reports/building-toys/\")"
+      "Bash(mv \"D:/Amazon-Skills-n/reports/building_toys_\"* \"D:/Amazon-Skills-n/reports/building-toys/\")",
+      "mcp__playwright__browser_run_code",
+      "Bash(mkdir -p D:/Amazon-Skills-n/.claude/skills/amazon-category-research)",
+      "Bash(cp C:/Users/49707/.claude/skills/amazon-category-research/SKILL.md D:/Amazon-Skills-n/.claude/skills/amazon-category-research/SKILL.md)",
+      "Bash(cp C:/Users/49707/.claude/skills/amazon-category-research/README.md D:/Amazon-Skills-n/.claude/skills/amazon-category-research/README.md)"
     ]
   }
 }

@@ -13,12 +13,6 @@ Subscribe & Save optimization — enrollment, discount tiers, frequency optimiza
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-subscribe-save
-```
-
 ## Usage
 
 ```

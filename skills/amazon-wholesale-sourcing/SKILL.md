@@ -13,12 +13,6 @@ Wholesale product sourcing — supplier discovery, negotiation, MOQ optimization
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-wholesale-sourcing
-```
-
 ## Usage
 
 ```

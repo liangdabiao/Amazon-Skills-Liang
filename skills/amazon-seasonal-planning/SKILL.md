@@ -13,12 +13,6 @@ Seasonal sales calendar — Prime Day, Black Friday, Q4 prep, inventory planning
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-seasonal-planning
-```
-
 ## Usage
 
 ```

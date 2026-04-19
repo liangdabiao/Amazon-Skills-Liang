@@ -14,12 +14,6 @@ Evaluate and plan Amazon marketplace expansion to international sites. Market si
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-global-selling -g
-```
-
 ## Usage
 
 ```

@@ -13,12 +13,6 @@ Parent-child variation planning — when to merge/split, color/size variations, 
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-variation-strategy
-```
-
 ## Usage
 
 ```

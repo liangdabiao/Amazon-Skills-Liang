@@ -13,12 +13,6 @@ Return rate reduction — root cause analysis, listing accuracy, packaging impro
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-return-reduction
-```
-
 ## Usage
 
 ```

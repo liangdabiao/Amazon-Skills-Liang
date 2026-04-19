@@ -13,12 +13,6 @@ Vine review program strategy — enrollment, product selection, timing, review q
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-vine-program
-```
-
 ## Usage
 
 ```

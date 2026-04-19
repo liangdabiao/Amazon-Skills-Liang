@@ -13,12 +13,6 @@ Private label launch playbook — product selection, branding, supplier manageme
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-private-label
-```
-
 ## Usage
 
 ```

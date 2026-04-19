@@ -14,12 +14,6 @@ Build a comprehensive Amazon advertising strategy combining Sponsored Products, 
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-advertising-strategy -g
-```
-
 ## Usage
 
 ```

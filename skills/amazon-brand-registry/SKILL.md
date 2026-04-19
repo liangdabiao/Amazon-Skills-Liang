@@ -13,12 +13,6 @@ Brand Registry enrollment guide — eligibility, application, benefits, A+ Conte
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-brand-registry
-```
-
 ## Usage
 
 ```

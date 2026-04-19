@@ -14,12 +14,6 @@ Comprehensive Amazon product research and opportunity analysis. Evaluate market 
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-product-research -g
-```
-
 ## Usage
 
 ```

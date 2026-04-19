@@ -13,12 +13,6 @@ Premium A+ and Brand Story — module design, lifestyle imagery, comparison char
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-enhanced-brand-content
-```
-
 ## Usage
 
 ```

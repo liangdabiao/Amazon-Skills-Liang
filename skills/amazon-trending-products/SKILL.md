@@ -14,12 +14,6 @@ Discover trending products and rising categories on Amazon. Analyzes Best Seller
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-trending-products -g
-```
-
 ## Usage
 
 ```

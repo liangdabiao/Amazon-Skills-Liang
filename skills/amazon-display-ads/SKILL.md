@@ -14,12 +14,6 @@ Plan and optimize Amazon Sponsored Display campaigns. Audience targeting, produc
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-display-ads -g
-```
-
 ## Usage
 
 ```

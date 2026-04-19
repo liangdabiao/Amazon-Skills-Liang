@@ -14,12 +14,6 @@ Plan Amazon product listing images for maximum conversion. Create shot lists, in
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-listing-images -g
-```
-
 ## Usage
 
 ```

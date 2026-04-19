@@ -26,12 +26,6 @@ AI-powered Amazon price tracking and monitoring skill. Analyzes price history, c
 - Provides data-driven recommendations with industry benchmarks
 - Outputs ready-to-implement plans, not just generic advice
 
-## Install
-
-```
-clawhub install amazon-price-tracker
-```
-
 ## Usage
 
 **Input:**

@@ -13,12 +13,6 @@ Product bundling strategy — virtual bundles, multi-pack pricing, cross-sell bu
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-product-bundling
-```
-
 ## Usage
 
 ```

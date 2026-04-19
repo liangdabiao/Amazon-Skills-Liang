@@ -13,12 +13,6 @@ Category and brand ungating — requirements, documentation, appeal process, res
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-category-ungating
-```
-
 ## Usage
 
 ```

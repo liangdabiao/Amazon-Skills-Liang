@@ -14,12 +14,6 @@ Discover profitable Amazon niches with low competition and high demand. Evaluate
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-niche-finder -g
-```
-
 ## Usage
 
 ```

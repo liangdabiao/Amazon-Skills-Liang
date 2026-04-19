@@ -13,12 +13,6 @@ Product compliance and safety — certifications, labeling requirements, restric
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-product-compliance
-```
-
 ## Usage
 
 ```

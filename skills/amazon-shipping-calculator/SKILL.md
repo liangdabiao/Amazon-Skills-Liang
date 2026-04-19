@@ -14,12 +14,6 @@ Calculate Amazon shipping and fulfillment costs for FBA and FBM. Dimensional wei
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-shipping-calculator -g
-```
-
 ## Usage
 
 ```

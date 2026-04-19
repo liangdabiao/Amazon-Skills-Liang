@@ -13,12 +13,6 @@ Multi-marketplace listing management — translation, pricing localization, BIL 
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-international-listings
-```
-
 ## Usage
 
 ```

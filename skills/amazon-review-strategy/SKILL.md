@@ -13,12 +13,6 @@ Review generation strategy — Request a Review, follow-up emails, insert cards,
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-review-strategy
-```
-
 ## Usage
 
 ```

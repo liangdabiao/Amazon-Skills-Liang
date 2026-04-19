@@ -13,12 +13,6 @@ Brand Tailored Promotions — audience targeting, discount tiers, customer segme
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-brand-tailored-promotions
-```
-
 ## Usage
 
 ```

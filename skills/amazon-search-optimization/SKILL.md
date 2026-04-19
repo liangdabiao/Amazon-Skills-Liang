@@ -14,12 +14,6 @@ Optimize product visibility in Amazon search results. Analyze current search ran
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-search-optimization -g
-```
-
 ## Usage
 
 ```

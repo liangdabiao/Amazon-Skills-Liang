@@ -13,12 +13,6 @@ Coupon and promotion planning — coupon types, stacking rules, deal timing, red
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-coupon-strategy
-```
-
 ## Usage
 
 ```

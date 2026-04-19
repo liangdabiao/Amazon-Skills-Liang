@@ -14,12 +14,6 @@ Plan and optimize Amazon promotional deals — Lightning Deals, Best Deals, Coup
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-deal-finder -g
-```
-
 ## Usage
 
 ```

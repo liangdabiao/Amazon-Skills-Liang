@@ -14,12 +14,6 @@ Track and analyze Amazon keyword rankings. Set up rank monitoring workflows, int
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-rank-tracker -g
-```
-
 ## Usage
 
 ```

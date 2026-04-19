@@ -14,12 +14,6 @@ Interpret and act on Amazon Brand Analytics data. Analyze Search Frequency Rank 
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-brand-analytics -g
-```
-
 ## Usage
 
 ```

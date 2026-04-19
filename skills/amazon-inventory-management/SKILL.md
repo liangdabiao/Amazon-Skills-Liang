@@ -13,12 +13,6 @@ FBA inventory planning — restock timing, safety stock, IPI score optimization,
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/Amazon-Skills --skill amazon-inventory-management -g
-```
-
 ## Usage
 
 ```

@@ -8,12 +8,6 @@ metadata: {"nexscope":{"emoji":"📊","category":"amazon"}}
 
 Estimate monthly sales from BSR, analyze market size, and benchmark competitor performance. No API key — works out of the box.
 
-## Installation
-
-```bash
-npx skills add nexscope-ai/Amazon-Skills --skill amazon-sales-estimator -g
-```
-
 ## Three Modes
 
 | Mode | When to Use | Input | Output |

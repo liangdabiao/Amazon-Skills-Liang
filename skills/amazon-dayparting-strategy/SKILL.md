@@ -13,12 +13,6 @@ PPC dayparting — bid scheduling by hour/day, peak shopping times, budget optim
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-dayparting-strategy
-```
-
 ## Usage
 
 ```

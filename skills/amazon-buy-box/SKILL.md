@@ -14,12 +14,6 @@ Win and maintain the Amazon Buy Box. Analyze Buy Box eligibility factors, compet
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-buy-box -g
-```
-
 ## Usage
 
 ```

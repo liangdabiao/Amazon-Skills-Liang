@@ -14,12 +14,6 @@ Complete FBA preparation guide. Product labeling, packaging requirements, shipme
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-fba-prep -g
-```
-
 ## Usage
 
 ```

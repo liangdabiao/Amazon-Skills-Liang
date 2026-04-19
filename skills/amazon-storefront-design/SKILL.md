@@ -13,12 +13,6 @@ Amazon Store builder — page layouts, brand story, shoppable images, traffic dr
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-storefront-design
-```
-
 ## Usage
 
 ```

@@ -8,12 +8,6 @@ metadata: {"nexscope":{"emoji":"📝","category":"amazon"}}
 
 Build keyword-optimized listings from scratch, or audit and optimize existing ones. No API key — works out of the box.
 
-## Installation
-
-```bash
-npx skills add nexscope-ai/Amazon-Skills --skill amazon-listing-optimization -g
-```
-
 ## Two Modes
 
 | Mode | When to Use | Input | Output |

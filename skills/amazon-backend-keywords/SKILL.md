@@ -14,12 +14,6 @@ Optimize Amazon backend search terms for maximum discoverability. Generate the o
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-backend-keywords -g
-```
-
 ## Usage
 
 ```

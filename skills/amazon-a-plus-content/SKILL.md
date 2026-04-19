@@ -14,12 +14,6 @@ Plan and create Amazon A+ Content (Enhanced Brand Content). Design module layout
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill amazon-a-plus-content -g
-```
-
 ## Usage
 
 ```

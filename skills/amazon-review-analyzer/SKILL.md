@@ -14,12 +14,6 @@ Deep-dive Amazon review analysis. Extract sentiment patterns, recurring complain
 **Supported platforms:** Amazon, Shopify, WooCommerce, Walmart, TikTok Shop, Etsy, eBay, BigCommerce.
 
 
-## Install
-
-```bash
-npx skills add nexscope-ai/Amazon-Skills --skill amazon-review-analyzer -g
-```
-
 ## Usage
 
 ```

@@ -14,12 +14,6 @@ Comprehensive Amazon profit analysis — revenue breakdown, fee structure, true 
 **Supported platforms:** Amazon (US, UK, DE, CA, JP, AU, and all marketplaces).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-profit-analyzer
-```
-
 ## Usage
 
 ```

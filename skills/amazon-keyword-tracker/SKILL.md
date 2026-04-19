@@ -27,12 +27,6 @@ AI-powered Amazon keyword ranking tracker skill. Monitors organic and sponsored 
 - Provides data-driven recommendations with industry benchmarks
 - Outputs ready-to-implement plans, not just generic advice
 
-## Install
-
-```
-clawhub install amazon-keyword-tracker
-```
-
 ## Usage
 
 **Input:**

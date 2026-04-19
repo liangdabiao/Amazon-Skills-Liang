@@ -14,12 +14,6 @@ Amazon repricing strategy advisor — competitive pricing rules, Buy Box optimiz
 **Supported platforms:** Amazon (all marketplaces — US, UK, DE, CA, JP, AU, etc.).
 
 
-## Install
-
-```bash
-npx skills add nexscope/amazon-repricing-strategy
-```
-
 ## Usage
 
 ```
